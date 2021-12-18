@@ -1,0 +1,70 @@
+// Body
+$body-bg: #f8fafc;
+
+// Typography
+$font-family-sans-serif: 'Nunito',
+sans-serif;
+$font-size-base: 0.9rem;
+$line-height-base: 1.6;
+
+// Colors
+$blue: #3490dc;
+$indigo: #6574cd;
+$purple: #9561e2;
+$pink: #f66d9b;
+$red: #e3342f;
+$orange: #f6993f;
+$yellow: #ffed4a;
+$green: #38c172;
+$teal: #4dc0b5;
+$cyan: #6cb2eb;
+
+$light-one: #FAF3DD;
+$light-two: #696D7D;
+
+$light-three: #8FC0A9;
+$light-four: #68B0AB;
+
+$dark-one: #4A306D;
+$dark-two: #A167A5;
+
+$dark-three: #E8D7F1;
+$dark-four: #D3BCCC;
+
+$light-accent: #C8D5B9;
+$dark-accent: #0E273C;
+
+@mixin theme-colors($light-theme: true, $alt: false, $accent: false) {
+
+    @if not $alt {
+        @if $light-theme {
+            background-color: $light-one;
+            color: $light-two;
+        }
+
+        @else if not $light-theme {
+            background-color: $dark-one;
+            color: $dark-two;
+        }
+    }
+
+    @else {
+        @if $light-theme {
+            background-color: $light-three;
+            color: $light-four;
+
+            @if $accent {
+                background-color: $light-accent;
+            }
+        }
+
+        @else if not $light-theme {
+            background-color: $dark-three;
+            color: $dark-four;
+
+            @if $accent {
+                background-color: $dark-accent;
+            }
+        }
+    }
+}

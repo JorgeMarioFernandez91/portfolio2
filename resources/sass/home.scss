@@ -1,0 +1,58 @@
+@import "resources/sass/_variables.scss";
+
+.banner {
+    @include theme-colors($light-theme: true, $alt: false);
+
+    &.dark {
+        @include theme-colors($light-theme: false, $alt: false);
+    }
+}
+
+.description {
+    @include theme-colors($light-theme: true, $alt: true);
+
+    .accent {
+        @include theme-colors($light-theme: true, $alt: true, $accent: true);
+    }
+
+    &.dark {
+        @include theme-colors($light-theme: false, $alt: true);
+
+        .accent {
+            @include theme-colors($light-theme: false, $alt: true, $accent: true);
+        }
+    }
+}
+
+.banner {
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    .logo,
+    .name,
+    .theme-btn {
+        font-size: 40px;
+        padding: 20px;
+    }
+}
+
+.description {
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-around;
+
+    .photo {
+        height: 200px;
+        width: 200px;
+    }
+
+    .text {
+        height: 200px;
+        width: 850px;
+    }
+}
