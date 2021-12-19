@@ -2218,6 +2218,50 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 // import { BFormCheckboxGroup, BFormCheckbox } from "bootstrap-vue";
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   name: "Home",
@@ -6797,7 +6841,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".banner[data-v-b3c5cf30] {\n  background-color: #FAF3DD;\n  color: #696D7D;\n}\n.banner.dark[data-v-b3c5cf30] {\n  background-color: #4A306D;\n  color: #A167A5;\n}\n.description[data-v-b3c5cf30] {\n  background-color: #8FC0A9;\n  color: #68B0AB;\n}\n.description .accent[data-v-b3c5cf30] {\n  background-color: #8FC0A9;\n  color: #68B0AB;\n  background-color: #C8D5B9;\n}\n.description.dark[data-v-b3c5cf30] {\n  background-color: #E8D7F1;\n  color: #D3BCCC;\n}\n.description.dark .accent[data-v-b3c5cf30] {\n  background-color: #E8D7F1;\n  color: #D3BCCC;\n  background-color: #0E273C;\n}\n.banner[data-v-b3c5cf30] {\n  height: 500px;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  flex-direction: column;\n}\n.banner .logo[data-v-b3c5cf30],\n.banner .name[data-v-b3c5cf30],\n.banner .theme-btn[data-v-b3c5cf30] {\n  font-size: 40px;\n  padding: 20px;\n}\n.description[data-v-b3c5cf30] {\n  height: 300px;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  justify-content: space-around;\n}\n.description .photo[data-v-b3c5cf30] {\n  height: 200px;\n  width: 200px;\n}\n.description .text[data-v-b3c5cf30] {\n  height: 200px;\n  width: 850px;\n}", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, ".banner[data-v-b3c5cf30],\n.projects[data-v-b3c5cf30],\n.experiences[data-v-b3c5cf30] {\n  background-color: #FAF3DD;\n  color: #696D7D;\n}\n.banner .accent[data-v-b3c5cf30],\n.projects .accent[data-v-b3c5cf30],\n.experiences .accent[data-v-b3c5cf30] {\n  background-color: #FAF3DD;\n  color: #696D7D;\n  background-color: #C8D5B9;\n}\n.banner.dark[data-v-b3c5cf30],\n.projects.dark[data-v-b3c5cf30],\n.experiences.dark[data-v-b3c5cf30] {\n  background-color: #4A306D;\n  color: #A167A5;\n}\n.banner.dark .accent[data-v-b3c5cf30],\n.projects.dark .accent[data-v-b3c5cf30],\n.experiences.dark .accent[data-v-b3c5cf30] {\n  background-color: #4A306D;\n  color: #A167A5;\n  background-color: #CD9FCC;\n}\n.description[data-v-b3c5cf30],\n.skills[data-v-b3c5cf30] {\n  background-color: #8FC0A9;\n  color: #68B0AB;\n}\n.description .accent[data-v-b3c5cf30],\n.skills .accent[data-v-b3c5cf30] {\n  background-color: #8FC0A9;\n  color: #68B0AB;\n  background-color: #B97375;\n}\n.description.dark[data-v-b3c5cf30],\n.skills.dark[data-v-b3c5cf30] {\n  background-color: #E8D7F1;\n  color: #D3BCCC;\n}\n.description.dark .accent[data-v-b3c5cf30],\n.skills.dark .accent[data-v-b3c5cf30] {\n  background-color: #E8D7F1;\n  color: #D3BCCC;\n  background-color: #0E273C;\n}\n.banner[data-v-b3c5cf30] {\n  height: 500px;\n}\n.descriptions[data-v-b3c5cf30],\n.projects[data-v-b3c5cf30],\n.skills[data-v-b3c5cf30],\n.contact-medias[data-v-b3c5cf30] {\n  height: 400px;\n}\n.experiences[data-v-b3c5cf30] {\n  height: 600px;\n}\n.banner[data-v-b3c5cf30] {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  flex-direction: column;\n}\n.banner .logo[data-v-b3c5cf30],\n.banner .name[data-v-b3c5cf30],\n.banner .theme-btn[data-v-b3c5cf30] {\n  font-size: 40px;\n  padding: 20px;\n}\n.description[data-v-b3c5cf30] {\n  height: 300px;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  justify-content: space-around;\n}\n.description .photo[data-v-b3c5cf30] {\n  height: 200px;\n  width: 200px;\n}\n.description .text[data-v-b3c5cf30] {\n  height: 200px;\n  width: 850px;\n}\n.projects .header[data-v-b3c5cf30],\n.skills .header[data-v-b3c5cf30],\n.experiences .header[data-v-b3c5cf30] {\n  text-align: center;\n  font-size: 40px;\n  padding: 30px 0;\n}\n.projects .content[data-v-b3c5cf30],\n.skills .content[data-v-b3c5cf30],\n.experiences .content[data-v-b3c5cf30] {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  justify-content: space-around;\n}\n.projects .content.experience .row .col .row[data-v-b3c5cf30],\n.skills .content.experience .row .col .row[data-v-b3c5cf30],\n.experiences .content.experience .row .col .row[data-v-b3c5cf30] {\n  height: 150px;\n}\n.projects .content.experience .row .col .row .circle[data-v-b3c5cf30],\n.skills .content.experience .row .col .row .circle[data-v-b3c5cf30],\n.experiences .content.experience .row .col .row .circle[data-v-b3c5cf30] {\n  height: 100px;\n  width: 100px;\n  border-radius: 100px;\n  background-color: black;\n}\n.projects .content.experience .vertical-line[data-v-b3c5cf30],\n.skills .content.experience .vertical-line[data-v-b3c5cf30],\n.experiences .content.experience .vertical-line[data-v-b3c5cf30] {\n  border: 5px solid black;\n  height: 400px;\n  margin: 0 100px;\n}\n.projects .project[data-v-b3c5cf30],\n.projects .skill[data-v-b3c5cf30],\n.skills .project[data-v-b3c5cf30],\n.skills .skill[data-v-b3c5cf30],\n.experiences .project[data-v-b3c5cf30],\n.experiences .skill[data-v-b3c5cf30] {\n  height: 200px;\n  width: 200px;\n}\n.projects .skill[data-v-b3c5cf30],\n.skills .skill[data-v-b3c5cf30],\n.experiences .skill[data-v-b3c5cf30] {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  font-size: 40px;\n}\n.contact-medias[data-v-b3c5cf30] {\n  background-color: #545775;\n}\n.contact-medias.dark[data-v-b3c5cf30] {\n  background-color: #127475;\n}", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -38650,6 +38694,33 @@ var render = function () {
         _c("div", { staticClass: "text accent" }),
       ]
     ),
+    _vm._v(" "),
+    _c("div", { staticClass: "projects", class: _vm.checked ? "dark" : "" }, [
+      _c("div", { staticClass: "header" }, [_vm._v("Projects")]),
+      _vm._v(" "),
+      _vm._m(1),
+    ]),
+    _vm._v(" "),
+    _c("div", { staticClass: "skills", class: _vm.checked ? "dark" : "" }, [
+      _c("div", { staticClass: "header" }, [_vm._v("Skills")]),
+      _vm._v(" "),
+      _vm._m(2),
+    ]),
+    _vm._v(" "),
+    _c(
+      "div",
+      { staticClass: "experiences", class: _vm.checked ? "dark" : "" },
+      [
+        _c("div", { staticClass: "header" }, [_vm._v("Experience")]),
+        _vm._v(" "),
+        _vm._m(3),
+      ]
+    ),
+    _vm._v(" "),
+    _c("div", {
+      staticClass: "contact-medias",
+      class: _vm.checked ? "dark" : "",
+    }),
   ])
 }
 var staticRenderFns = [
@@ -38659,6 +38730,68 @@ var staticRenderFns = [
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "logo" }, [
       _c("i", { staticClass: "fas fa-code" }),
+    ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "content" }, [
+      _c("div", { staticClass: "project accent" }),
+      _vm._v(" "),
+      _c("div", { staticClass: "project accent" }),
+      _vm._v(" "),
+      _c("div", { staticClass: "project accent" }),
+    ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "content" }, [
+      _c("div", { staticClass: "skill accent" }, [_vm._v("Vue")]),
+      _vm._v(" "),
+      _c("div", { staticClass: "skill accent" }, [_vm._v("Laravel")]),
+      _vm._v(" "),
+      _c("div", { staticClass: "skill accent" }, [_vm._v("MySQL")]),
+      _vm._v(" "),
+      _c("div", { staticClass: "skill accent" }, [_vm._v("PHP")]),
+      _vm._v(" "),
+      _c("div", { staticClass: "skill accent" }, [_vm._v("SCSS")]),
+      _vm._v(" "),
+      _c("div", { staticClass: "skill accent" }, [_vm._v("HTML")]),
+    ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "content experience" }, [
+      _c("div", { staticClass: "row" }, [
+        _c("div", { staticClass: "col" }, [
+          _c("div", { staticClass: "row" }, [
+            _c("div", { staticClass: "circle" }),
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "row" }),
+          _vm._v(" "),
+          _c("div", { staticClass: "row" }, [
+            _c("div", { staticClass: "circle" }),
+          ]),
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "vertical-line" }),
+        _vm._v(" "),
+        _c("div", { staticClass: "col" }, [
+          _c("div", { staticClass: "row" }),
+          _vm._v(" "),
+          _c("div", { staticClass: "row" }, [
+            _c("div", { staticClass: "circle" }),
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "row" }),
+        ]),
+      ]),
     ])
   },
 ]

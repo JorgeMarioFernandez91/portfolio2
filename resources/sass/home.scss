@@ -1,14 +1,25 @@
 @import "resources/sass/_variables.scss";
 
-.banner {
+.banner,
+.projects,
+.experiences {
     @include theme-colors($light-theme: true, $alt: false);
+
+    .accent {
+        @include theme-colors($light-theme: true, $alt: false, $accent: true);
+    }
 
     &.dark {
         @include theme-colors($light-theme: false, $alt: false);
+
+        .accent {
+            @include theme-colors($light-theme: false, $alt: false, $accent: true);
+        }
     }
 }
 
-.description {
+.description,
+.skills {
     @include theme-colors($light-theme: true, $alt: true);
 
     .accent {
@@ -26,6 +37,20 @@
 
 .banner {
     height: 500px;
+}
+
+.descriptions,
+.projects,
+.skills,
+.contact-medias {
+    height: 400px;
+}
+
+.experiences {
+    height: 600px;
+}
+
+.banner {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -54,5 +79,67 @@
     .text {
         height: 200px;
         width: 850px;
+    }
+}
+
+.projects,
+.skills,
+.experiences {
+
+    .header {
+        text-align: center;
+        font-size: 40px;
+        padding: 30px 0;
+    }
+
+    .content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        justify-content: space-around;
+
+        &.experience {
+            .row {
+                .col {
+                    .row {
+                        height: 150px;
+
+                        .circle {
+                            height: 100px;
+                            width: 100px;
+                            border-radius: 100px;
+                            background-color: black;
+                        }
+                    }
+                }
+            }
+
+            .vertical-line {
+                border: 5px solid black;
+                height: 400px;
+                margin: 0 100px;
+            }
+        }
+    }
+
+    .project,
+    .skill {
+        height: 200px;
+        width: 200px;
+    }
+
+    .skill {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 40px;
+    }
+}
+
+.contact-medias {
+    background-color: $light-five;
+
+    &.dark {
+        background-color: $dark-five;
     }
 }

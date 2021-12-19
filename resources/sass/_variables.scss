@@ -21,18 +21,21 @@ $cyan: #6cb2eb;
 
 $light-one: #FAF3DD;
 $light-two: #696D7D;
-
 $light-three: #8FC0A9;
 $light-four: #68B0AB;
+$light-five: #545775;
+
+$light-accent-one: #C8D5B9;
+$light-accent-two: #B97375;
 
 $dark-one: #4A306D;
 $dark-two: #A167A5;
-
 $dark-three: #E8D7F1;
 $dark-four: #D3BCCC;
+$dark-five: #127475;
 
-$light-accent: #C8D5B9;
-$dark-accent: #0E273C;
+$dark-accent-one: #0E273C;
+$dark-accent-two: #CD9FCC;
 
 @mixin theme-colors($light-theme: true, $alt: false, $accent: false) {
 
@@ -40,11 +43,19 @@ $dark-accent: #0E273C;
         @if $light-theme {
             background-color: $light-one;
             color: $light-two;
+
+            @if $accent {
+                background-color: $light-accent-one;
+            }
         }
 
         @else if not $light-theme {
             background-color: $dark-one;
             color: $dark-two;
+
+            @if $accent {
+                background-color: $dark-accent-two;
+            }
         }
     }
 
@@ -54,7 +65,7 @@ $dark-accent: #0E273C;
             color: $light-four;
 
             @if $accent {
-                background-color: $light-accent;
+                background-color: $light-accent-two;
             }
         }
 
@@ -63,7 +74,7 @@ $dark-accent: #0E273C;
             color: $dark-four;
 
             @if $accent {
-                background-color: $dark-accent;
+                background-color: $dark-accent-one;
             }
         }
     }

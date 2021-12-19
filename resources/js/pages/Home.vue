@@ -19,6 +19,50 @@
       <div class="photo accent"></div>
       <div class="text accent"></div>
     </div>
+    <div class="projects" :class="checked ? 'dark' : ''">
+      <div class="header">Projects</div>
+      <div class="content">
+        <div class="project accent"></div>
+        <div class="project accent"></div>
+        <div class="project accent"></div>
+      </div>
+    </div>
+    <div class="skills" :class="checked ? 'dark' : ''">
+      <div class="header">Skills</div>
+      <div class="content">
+        <div class="skill accent">Vue</div>
+        <div class="skill accent">Laravel</div>
+        <div class="skill accent">MySQL</div>
+        <div class="skill accent">PHP</div>
+        <div class="skill accent">SCSS</div>
+        <div class="skill accent">HTML</div>
+      </div>
+    </div>
+    <div class="experiences" :class="checked ? 'dark' : ''">
+      <div class="header">Experience</div>
+      <div class="content experience">
+        <div class="row">
+          <div class="col">
+            <div class="row">
+              <div class="circle"></div>
+            </div>
+            <div class="row"></div>
+            <div class="row">
+              <div class="circle"></div>
+            </div>
+          </div>
+          <div class="vertical-line"></div>
+          <div class="col">
+            <div class="row"></div>
+            <div class="row">
+              <div class="circle"></div>
+            </div>
+            <div class="row"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="contact-medias" :class="checked ? 'dark' : ''"></div>
   </div>
 </template>
 
