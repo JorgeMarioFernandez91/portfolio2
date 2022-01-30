@@ -1,6 +1,33 @@
 <template>
   <div class="main">
-    <div class="banner" :class="checked ? 'dark' : ''">
+    <div class="side-nav">
+      <div class="initials">MF</div>
+      <div class="button-container">
+        <div class="button"><i class="fas fa-house-user"></i> Home</div>
+        <div class="button"><i class="far fa-address-card"></i> About</div>
+        <div class="button"><i class="fas fa-laptop-code"></i> Skills</div>
+        <div class="button"><i class="fas fa-briefcase"></i> Work</div>
+        <div class="button"><i class="fas fa-envelope-open"></i> Contact</div>
+      </div>
+    </div>
+    <div class="content">
+      <div class="home">
+        <div class="image"></div>
+        <div class="content">
+          <p>HI THERE! I'M</p>
+          <p>Mario Fernandez</p>
+          <p>
+            A <span>Full-Stack Developer</span> passionate about creating
+            interactive applications that solve real world problems
+          </p>
+        </div>
+      </div>
+      <div class="about"></div>
+      <div class="skills"></div>
+      <div class="works"></div>
+      <div class="contact"></div>
+    </div>
+    <!-- <div class="banner" :class="checked ? 'dark' : ''">
       <div class="logo"><i class="fas fa-code"></i></div>
       <div class="name">Jorge Mario Fernandez</div>
       <div class="titles">
@@ -62,7 +89,7 @@
         </div>
       </div>
     </div>
-    <div class="contact-medias" :class="checked ? 'dark' : ''"></div>
+    <div class="contact-medias" :class="checked ? 'dark' : ''"></div> -->
   </div>
 </template>
 
