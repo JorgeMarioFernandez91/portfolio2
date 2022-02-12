@@ -1,14 +1,16 @@
 @import "resources/sass/_variables.scss";
 
 .main {
-    height: 100vh;
     display: flex;
 
     .side-nav {
         background-color: aquamarine;
         position: sticky;
         width: 200px;
-        height: 100%;
+
+        position: -webkit-sticky;
+        position: sticky;
+        top: 0;
 
         .initials,
         .button {
@@ -20,10 +22,13 @@
             text-align: center;
             padding: 30px;
             background-color: #57dbae;
+            position: sticky;
+            top: 0;
         }
 
         .button-container {
-            margin-top: 210px;
+            position: sticky;
+            top: 325px;
         }
 
         .button {
@@ -49,17 +54,47 @@
 
     .content {
         background-color: #8080802b;
-        height: 100vh;
         width: 100%;
 
-        // need to make this the height of any screen, look into this
-        .home {
-            .image {}
+        .home,
+        .about,
+        .skills,
+        .work,
+        .contact {
+            height: 100vh;
+        }
 
-            .content {
-                span {
-                    color: #57dbae;
+        .home {
+            display: flex;
+
+            .image {
+                width: 150px;
+                height: 150px;
+                margin: auto;
+                background-color: purple;
+            }
+
+            .home-content {
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
+                margin: auto;
+
+                p:nth-child(2) {
+                    font-size: 42px;
+
+                    span {
+                        color: #57dbae;
+                    }
                 }
+
+                p:nth-child(3) {
+                    span {
+                        color: #57dbae;
+                    }
+                }
+
+
             }
         }
     }

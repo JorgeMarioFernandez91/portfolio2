@@ -6868,7 +6868,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".main[data-v-b3c5cf30] {\n  height: 100vh;\n  display: flex;\n}\n.main .side-nav[data-v-b3c5cf30] {\n  background-color: aquamarine;\n  position: -webkit-sticky;\n  position: sticky;\n  width: 200px;\n  height: 100%;\n}\n.main .side-nav .initials[data-v-b3c5cf30],\n.main .side-nav .button[data-v-b3c5cf30] {\n  color: #256c62;\n}\n.main .side-nav .initials[data-v-b3c5cf30] {\n  font-size: 35px;\n  text-align: center;\n  padding: 30px;\n  background-color: #57dbae;\n}\n.main .side-nav .button-container[data-v-b3c5cf30] {\n  margin-top: 210px;\n}\n.main .side-nav .button[data-v-b3c5cf30] {\n  padding: 0 38px;\n  margin: 10px;\n  font-size: 22px;\n  border-radius: 5px;\n  height: 48px;\n  display: flex;\n  align-items: center;\n}\n.main .side-nav .button[data-v-b3c5cf30]:hover {\n  background-color: #57dbae;\n  box-shadow: 5px 10px #a8a8a85c;\n}\n.main .side-nav .button .fas[data-v-b3c5cf30],\n.main .side-nav .button .far[data-v-b3c5cf30] {\n  margin-right: 12px;\n}\n.main .content[data-v-b3c5cf30] {\n  background-color: #8080802b;\n  height: 100vh;\n  width: 100%;\n}\n.main .content .home .content span[data-v-b3c5cf30] {\n  color: #57dbae;\n}", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, ".main[data-v-b3c5cf30] {\n  display: flex;\n}\n.main .side-nav[data-v-b3c5cf30] {\n  background-color: aquamarine;\n  position: sticky;\n  width: 200px;\n  position: -webkit-sticky;\n  position: sticky;\n  top: 0;\n}\n.main .side-nav .initials[data-v-b3c5cf30],\n.main .side-nav .button[data-v-b3c5cf30] {\n  color: #256c62;\n}\n.main .side-nav .initials[data-v-b3c5cf30] {\n  font-size: 35px;\n  text-align: center;\n  padding: 30px;\n  background-color: #57dbae;\n  position: -webkit-sticky;\n  position: sticky;\n  top: 0;\n}\n.main .side-nav .button-container[data-v-b3c5cf30] {\n  position: -webkit-sticky;\n  position: sticky;\n  top: 325px;\n}\n.main .side-nav .button[data-v-b3c5cf30] {\n  padding: 0 38px;\n  margin: 10px;\n  font-size: 22px;\n  border-radius: 5px;\n  height: 48px;\n  display: flex;\n  align-items: center;\n}\n.main .side-nav .button[data-v-b3c5cf30]:hover {\n  background-color: #57dbae;\n  box-shadow: 5px 10px #a8a8a85c;\n}\n.main .side-nav .button .fas[data-v-b3c5cf30],\n.main .side-nav .button .far[data-v-b3c5cf30] {\n  margin-right: 12px;\n}\n.main .content[data-v-b3c5cf30] {\n  background-color: #8080802b;\n  width: 100%;\n}\n.main .content .home[data-v-b3c5cf30],\n.main .content .about[data-v-b3c5cf30],\n.main .content .skills[data-v-b3c5cf30],\n.main .content .work[data-v-b3c5cf30],\n.main .content .contact[data-v-b3c5cf30] {\n  height: 100vh;\n}\n.main .content .home[data-v-b3c5cf30] {\n  display: flex;\n}\n.main .content .home .image[data-v-b3c5cf30] {\n  width: 150px;\n  height: 150px;\n  margin: auto;\n  background-color: purple;\n}\n.main .content .home .home-content[data-v-b3c5cf30] {\n  display: flex;\n  justify-content: center;\n  flex-direction: column;\n  margin: auto;\n}\n.main .content .home .home-content p[data-v-b3c5cf30]:nth-child(2) {\n  font-size: 42px;\n}\n.main .content .home .home-content p:nth-child(2) span[data-v-b3c5cf30] {\n  color: #57dbae;\n}\n.main .content .home .home-content p:nth-child(3) span[data-v-b3c5cf30] {\n  color: #57dbae;\n}", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -38724,10 +38724,10 @@ var staticRenderFns = [
         _c("div", { staticClass: "home" }, [
           _c("div", { staticClass: "image" }),
           _vm._v(" "),
-          _c("div", { staticClass: "content" }, [
+          _c("div", { staticClass: "home-content" }, [
             _c("p", [_vm._v("HI THERE! I'M")]),
             _vm._v(" "),
-            _c("p", [_vm._v("Mario Fernandez")]),
+            _c("p", [_c("span", [_vm._v("Mario")]), _vm._v(" Fernandez")]),
             _vm._v(" "),
             _c("p", [
               _vm._v("\n          A "),

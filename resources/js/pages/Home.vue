@@ -13,9 +13,9 @@
     <div class="content">
       <div class="home">
         <div class="image"></div>
-        <div class="content">
+        <div class="home-content">
           <p>HI THERE! I'M</p>
-          <p>Mario Fernandez</p>
+          <p><span>Mario</span> Fernandez</p>
           <p>
             A <span>Full-Stack Developer</span> passionate about creating
             interactive applications that solve real world problems
