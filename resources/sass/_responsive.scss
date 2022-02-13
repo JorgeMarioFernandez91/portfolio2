@@ -1,0 +1,33 @@
+$retina: "only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3/2), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5)";
+
+// less than desktop size
+$ltDesktop: "(max-width: 991px)";
+
+// greater than tablet
+$gtTablet: "(min-width: 992px)";
+
+// greater than mobile
+$gtMobile: "(min-width: 768px)";
+
+// very small mobile (usually older phones)
+$xsMobile: "(max-width: 359px)";
+
+$mobile: "(max-width: 767px)";
+
+// tablet size
+$small: "(min-width: 768px) and (max-width: 991px)";
+
+// size about tablet but with a max width
+$medium: "(min-width: 992px) and (max-width: 1199px)";
+
+// regular desktop size
+$large: "(min-width: 1200px)";
+
+$wide: "(min-width: 1500px)";
+
+$xwide: "(min-width: 1700px)";
+
+// for resolutions greater than 1080p
+$gigantic: "(min-width: 1921px)";
+
+$tall: "(min-height: 1281px)";

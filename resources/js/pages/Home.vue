@@ -22,74 +22,26 @@
           </p>
         </div>
       </div>
-      <div class="about"></div>
+      <div class="about">
+        <div class="header">
+          <hr />
+          About
+        </div>
+        <div class="card">
+          I'm a Full-Stack Developer with close to 2 years of professional
+          development experience. Lorem ipsum dolor sit amet, consectetur
+          adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+          magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+          ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+          irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+          fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+          sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </div>
+      </div>
       <div class="skills"></div>
       <div class="works"></div>
       <div class="contact"></div>
     </div>
-    <!-- <div class="banner" :class="checked ? 'dark' : ''">
-      <div class="logo"><i class="fas fa-code"></i></div>
-      <div class="name">Jorge Mario Fernandez</div>
-      <div class="titles">
-        {{ currentTitle }}
-      </div>
-      <div class="theme-btn">
-        <i
-          v-if="checked"
-          class="fas fa-toggle-on"
-          @click="checked = !checked"
-        ></i>
-        <i v-else class="fas fa-toggle-off" @click="checked = !checked"></i>
-      </div>
-    </div>
-    <div class="description" :class="checked ? 'dark' : ''">
-      <div class="photo accent"></div>
-      <div class="text accent"></div>
-    </div>
-    <div class="projects" :class="checked ? 'dark' : ''">
-      <div class="header">Projects</div>
-      <div class="content">
-        <div class="project accent"></div>
-        <div class="project accent"></div>
-        <div class="project accent"></div>
-      </div>
-    </div>
-    <div class="skills" :class="checked ? 'dark' : ''">
-      <div class="header">Skills</div>
-      <div class="content">
-        <div class="skill accent">Vue</div>
-        <div class="skill accent">Laravel</div>
-        <div class="skill accent">MySQL</div>
-        <div class="skill accent">PHP</div>
-        <div class="skill accent">SCSS</div>
-        <div class="skill accent">HTML</div>
-      </div>
-    </div>
-    <div class="experiences" :class="checked ? 'dark' : ''">
-      <div class="header">Experience</div>
-      <div class="content experience">
-        <div class="row">
-          <div class="col">
-            <div class="row">
-              <div class="circle"></div>
-            </div>
-            <div class="row"></div>
-            <div class="row">
-              <div class="circle"></div>
-            </div>
-          </div>
-          <div class="vertical-line"></div>
-          <div class="col">
-            <div class="row"></div>
-            <div class="row">
-              <div class="circle"></div>
-            </div>
-            <div class="row"></div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="contact-medias" :class="checked ? 'dark' : ''"></div> -->
   </div>
 </template>
 

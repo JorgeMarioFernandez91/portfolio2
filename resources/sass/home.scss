@@ -1,4 +1,5 @@
 @import "resources/sass/_variables.scss";
+@import "resources/sass/_responsive.scss";
 
 .main {
     display: flex;
@@ -11,6 +12,10 @@
         position: -webkit-sticky;
         position: sticky;
         top: 0;
+
+        @media #{$mobile} {
+            display: none;
+        }
 
         .initials,
         .button {
@@ -62,16 +67,43 @@
         .work,
         .contact {
             height: 100vh;
+            padding: 50px;
+
+            .header {
+                display: flex;
+                width: 100px;
+
+                hr {
+                    width: 40px;
+                    margin-top: 12px;
+                    border-top: 2px solid rgba(0, 0, 0, 0.45);
+                }
+            }
+
+            .card {
+                padding: 16px;
+                border-radius: 15px;
+            }
         }
 
         .home {
             display: flex;
 
+            @media #{$mobile} {
+                flex-direction: column;
+            }
+
             .image {
-                width: 150px;
+                min-width: 150px;
                 height: 150px;
-                margin: auto;
                 background-color: purple;
+                margin: auto 50px auto auto;
+
+                @media #{$mobile} {
+                    margin: auto auto 20px auto;
+                    width: 250px;
+                    height: 300px;
+                }
             }
 
             .home-content {
@@ -79,6 +111,11 @@
                 justify-content: center;
                 flex-direction: column;
                 margin: auto;
+
+                @media #{$mobile} {
+                    width: 100%;
+                    margin: 20px auto auto auto;
+                }
 
                 p:nth-child(2) {
                     font-size: 42px;
