@@ -9,10 +9,10 @@ $color-four: #f1f4fb;
 $accent-three: #737d58;
 $accent-four: #50645f;
 
-$button-colour: $accent-four;
+$button-colour: $color-two;
 $button-shadow: #a8a8a85c;
 
-$sidenav-width: 200px;
+$sidenav-width: 230px;
 
 .main {
     display: flex;
@@ -56,7 +56,7 @@ $sidenav-width: 200px;
 
         .button-container {
             position: sticky;
-            top: 325px;
+            top: 275px;
         }
 
         .button {
@@ -69,20 +69,23 @@ $sidenav-width: 200px;
             align-items: center;
 
             &:hover {
+                color: white;
                 background-color: $button-colour;
                 box-shadow: 5px 10px $button-shadow;
                 cursor: pointer;
+                text-decoration: none;
             }
 
             .fas,
-            .far {
+            .far,
+            .fa {
                 margin-right: 12px;
             }
         }
     }
 
     .background-img {
-        background: url('../../images/abstract-background-wide.jpg');
+        background: url('/images/abstract-background-wide.jpg');
         background-position: center;
         background-size: inherit;
     }
@@ -111,14 +114,15 @@ $sidenav-width: 200px;
             width: 440px;
             display: flex;
             padding: 15px;
-            // position: relative;
             bottom: 40px;
             margin: auto;
             text-align: center;
             box-shadow: 6.2px 12.5px 12.5px hsla(0, 0%, 0%, 0.12);
+
             div {
                 width: 33.3%;
             }
+
             .center {
                 border-left: 2px solid #00000042;
                 border-right: 2px solid #00000042;
@@ -191,15 +195,16 @@ $sidenav-width: 200px;
                 .btn-container {
                     display: flex;
 
-                    .resume-btn, .contact-btn {
+                    .resume-btn,
+                    .contact-btn {
                         padding: 10px 20px;
                         border-radius: 25px;
 
                         &:hover {
                             cursor: pointer;
                         }
-                    }      
-                    
+                    }
+
                     .resume-btn {
                         color: white;
                         margin-right: 20px;
@@ -211,6 +216,7 @@ $sidenav-width: 200px;
                     }
                 }
             }
+
             .right {
                 width: 50%;
             }
@@ -226,28 +232,32 @@ $sidenav-width: 200px;
             .faded-overlay {
                 display: flex;
                 flex-direction: row;
+
                 .left {
                     width: 50%;
                 }
+
                 .right {
                     width: 50%;
                     display: flex;
                     flex-direction: column;
                     justify-content: center;
                     justify-content: space-evenly;
+
                     .header {
                         font-weight: bold;
                     }
-        
-                    .description {
-        
-                    }
-        
+
+                    .description {}
+
                     .info-container {
-                        .name, .phone, .email {
+
+                        .name,
+                        .phone,
+                        .email {
                             display: flex;
-                        } 
-                    } 
+                        }
+                    }
                 }
             }
         }
@@ -259,37 +269,46 @@ $sidenav-width: 200px;
             justify-content: center;
             height: 40vh;
             padding: 25px;
+
             .skills-header {
                 margin: 0 auto 30px auto;
                 font-weight: bold;
             }
+
             .skills-container {
                 display: flex;
+
                 .left {
                     padding-left: 50px;
+
                     .skill-container {
                         margin-bottom: 20px;
                     }
                 }
+
                 .right {
                     padding-right: 50px;
                     display: flex;
                     flex-direction: column;
-                    align-items: end;
+                    align-items: flex-end;
                 }
-                .left, .right {
+
+                .left,
+                .right {
                     width: 50%;
                 }
+
                 .skill-container {
                     width: 90%;
 
                     .header {
                         width: auto;
+
                         span {
                             margin-left: auto;
                         }
                     }
-                    
+
                     .skill-bar {
                         height: 10px;
                         border: 1px solid #00000042;
@@ -304,47 +323,34 @@ $sidenav-width: 200px;
                         height: 10px;
                         background-color: $color-two;
                     }
-                    
-                    #vue, #php, #mysql, #html, #cssScss {
+
+                    #vue,
+                    #php,
+                    #mysql,
+                    #html,
+                    #cssScss {
                         width: 1%;
                     }
-
-                    // .vue {
-                    //     background-image: linear-gradient( to right, $color-two 90%, #fff 90%);
-                    // }
-
-                    // .php {
-                    //     background-image: linear-gradient( to right, $color-two 80%, #fff 80%);
-                    // }
-
-                    // .mysql {
-                    //     background-image: linear-gradient( to right, $color-two 80%, #fff 80%);
-                    // }
-
-                    // .html {
-                    //     background-image: linear-gradient( to right, $color-two 90%, #fff 90%);
-                    // }
-
-                    // .css-scss {
-                    //     background-image: linear-gradient( to right, $color-two 85%, #fff 85%);
-                    // }
                 }
             }
         }
 
         .education-work {
             height: 40vh;
+
             .faded-overlay {
                 .education-header {
                     text-align: center;
                     margin: 30px 0 50px 0;
                     font-weight: bold;
                 }
+
                 .education-container {
                     display: flex;
                     flex-direction: row;
-                    
-                    .education, .experience {
+
+                    .education,
+                    .experience {
                         width: 50%;
                         display: flex;
                         flex-direction: column;
@@ -357,40 +363,63 @@ $sidenav-width: 200px;
                         .content-container {
                             display: flex;
                             margin-bottom: 15px;
+
                             .left {
                                 margin-right: 15px;
+
                                 .fa {
                                     color: #9d8c5d;
                                 }
                             }
                         }
                     }
-        
+
                     .education {
                         padding-left: 50px;
+                        padding-right: 10px;
+
+                        .header {
+                            text-align: right;
+                        }
+
+                        .content-container {
+                            justify-content: end;
+
+                            .right {
+                                .fa {
+                                    color: #9d8c5d;
+                                }
+                            }
+                        }
                     }
+
                     .experience {
                         padding-right: 50px;
+                        padding-left: 10px;
                     }
                 }
             }
         }
 
-        .offer {
+        .product {
             height: 50vh;
             background-color: $color-one;
             padding: 25px;
+
             .skills-header {
                 text-align: center;
                 font-weight: bold;
             }
-            .top, .bottom {
+
+            .top,
+            .bottom {
                 display: flex;
                 flex-direction: row;
                 justify-content: space-evenly;
             }
+
             .offer-container {
-                
+
                 .fa {
                     position: relative;
                     top: 14px;
@@ -401,6 +430,7 @@ $sidenav-width: 200px;
                     color: white;
                     box-shadow: 2.9px 8px 3.3px rgba(0, 0, 0, 0.48);
                 }
+
                 .offer-box {
                     border: 1px solid #00000030;
                     border-radius: 5px 25px 5px 5px;
@@ -418,25 +448,34 @@ $sidenav-width: 200px;
 
         .recent-works {
             height: 40vh;
+
             .faded-overlay {
                 .header {
                     text-align: center;
                     font-weight: bold;
                 }
+
                 .works-container {
                     display: flex;
                     flex-direction: column;
-                    .top, .bottom {
+
+                    .top,
+                    .bottom {
                         display: flex;
                         flex-direction: row;
                         justify-content: space-evenly;
                         padding: 15px 0;
+
                         .work {
                             height: 120px;
                             width: 180px;
                             background-color: grey;
                             border-radius: 10px;
-                            border: 1px solid rgba(0, 0, 0, 0.274)
+                            border: 1px solid rgba(0, 0, 0, 0.274);
+
+                            &:hover {
+                                cursor: pointer
+                            }
                         }
                     }
                 }
@@ -449,33 +488,62 @@ $sidenav-width: 200px;
             justify-content: center;
             height: 40vh;
             background-color: $color-one;
+            padding: 25px 20%;
+
             .heading {
                 text-align: center;
                 font-weight: bold;
             }
+
             .contact-container {
                 display: flex;
-                flex-direction: row;
-                justify-content: space-evenly;
+                flex-direction: column;
 
-                .left, .right {
-                    display: flex;
-                    flex-direction: column;
-                    align-items: center;
+                .fa {
+                    font-size: 40px;
+                }
 
-                    background-color: $color-two;
-                    color: white;
+                #group-contact,
+                #group-message {
 
-                    border-radius: 100%;
-                    height: 250px;
-                    width: 250px;
-                    justify-content: center;
-
-                    .fa {
-                        font-size: 40px;
+                    #name,
+                    #subject {
+                        margin-bottom: 1rem;
                     }
                 }
-            }               
+
+                .form-control {
+                    border-radius: 10px;
+                }
+
+                .btn-container {
+                    display: flex;
+                    justify-content: center;
+
+                    .btn {
+                        background-color: $color-two;
+                        border-color: $color-two;
+                        border-radius: 25px;
+                    }
+                }
+            }
+        }
+
+        .footer {
+            height: 70px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
     }
+
+    .modal-content {
+        border-radius: 15px;
+        height: 320px;
+    }
+
+    .modal-backdrop {
+        opacity: 0.5 !important;
+    }
+
 }

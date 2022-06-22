@@ -1,0 +1,274 @@
+$xsMobile: "(max-width: 359px)";
+
+$mobile: "(max-width: 767px)";
+
+$small: "(min-width: 768px) and (max-width: 991px)";
+
+$normal: "(min-width: 992px) and (max-width: 1199px)";
+
+$ltLarge: "(max-width: 1199px)";
+$large: "(min-width: 1200px)";
+
+$wide: "(min-width: 1500px)";
+
+$xwide: "(min-width: 1700px)";
+
+$gigantic: "(min-width: 1921px)";
+
+.main {
+    background-image: url("/images/coffee-background.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+
+    @media #{$mobile} {
+        background-attachment: unset;
+    }
+
+    .header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+        background-color: #00000038;
+
+        h2 {
+            color: #e6a756;
+            text-transform: capitalize;
+            font-weight: bold;
+            font-family: 'Brush Script MT', cursive;
+            font-weight: bold;
+            font-size: 60px;
+        }
+
+        h1 {
+            color: white;
+            text-transform: uppercase;
+        }
+    }
+
+    .nav {
+        padding: 20px;
+        background-color: #361e17e3;
+
+
+        ul {
+            padding-left: 0;
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            margin-bottom: 0;
+
+            li {
+                list-style: none;
+                margin: 20px;
+                color: white;
+                text-transform: uppercase;
+                font-weight: bold;
+
+                &:hover {
+                    cursor: pointer;
+                    color: rgb(184, 183, 183);
+                }
+            }
+        }
+    }
+
+    .section-1 {
+        padding: 20px;
+        height: 450px;
+        height: 600px;
+        display: flex;
+        justify-content: center;
+
+        @media #{$small},
+        #{$mobile} {
+            height: 1030px;
+        }
+
+        .inner-container {
+            height: 100%;
+            width: 770px;
+
+            @media #{$small},
+            #{$mobile} {
+                width: 100%;
+            }
+        }
+
+        .left {
+            padding: 20px;
+            width: 450px;
+            border-radius: 8px;
+            background-color: #f6e1c5;
+            z-index: 1;
+            position: relative;
+            top: 60px;
+
+            @media #{$small},
+            #{$mobile} {
+                position: unset;
+                margin: auto;
+                margin-bottom: 70px;
+            }
+
+            .text-box {
+                padding: 35px;
+
+                @media #{$small},
+                #{$mobile} {
+                    padding: 20px;
+                }
+
+                .title-1,
+                .title-2 {
+                    text-align: center;
+                    margin-bottom: 10px;
+                }
+
+                .title-1 {
+                    font-size: 18px;
+                    text-transform: uppercase;
+                }
+
+                .title-2 {
+                    font-size: 42px;
+                    text-transform: capitalize;
+                    font-family: 'Brush Script MT', cursive;
+                    font-weight: bold;
+                }
+            }
+
+            .action-btn {
+                padding: 20px;
+                text-align: center;
+                text-align: center;
+                background-color: #e6a756;
+                width: 200px;
+                position: absolute;
+                left: 130px;
+                border-radius: 5px;
+                font-weight: bold;
+                top: 370px;
+
+                @media #{$small},
+                #{$mobile} {
+                    left: 325px;
+                    top: 636px;
+                    position: relative;
+                    left: 100px;
+                    top: 54px;
+                }
+
+                &:hover {
+                    cursor: pointer;
+                    font-weight: bold;
+                    background-color: #edbd7f;
+                    color: #4e4e4e;
+                }
+            }
+        }
+
+        .right {
+            width: 400px;
+            z-index: 0;
+            height: 500px;
+            border-radius: 8px;
+            overflow: hidden;
+            position: relative;
+            bottom: 320px;
+            left: 370px;
+
+            @media #{$small},
+            #{$mobile} {
+                position: unset;
+                margin: auto;
+            }
+
+            .img-container {
+                background-image: url("/images/barista-greg.jpg");
+                height: 100%;
+                background-size: contain;
+                background-repeat: no-repeat;
+                transform: scaleX(-1);
+            }
+        }
+    }
+
+    .section-2 {
+        display: flex;
+        justify-content: center;
+        padding: 20px;
+        background-color: #d2974ed4;
+        margin-bottom: 60px;
+        height: 500px;
+        align-items: center;
+
+        @media #{$small} {
+            height: 350px;
+        }
+
+        @media #{$mobile} {
+            height: 420px;
+        }
+
+        .outline-container {
+            padding: 5px;
+            border-radius: 8px;
+            border: 5px solid #e6a756;
+            width: 800px;
+
+            @media #{$mobile} {
+                width: 95%;
+            }
+
+            @media #{$small} {
+                width: 700px;
+            }
+
+            @media #{$large} {
+                width: 1000px;
+            }
+
+            .box-container {
+                border-radius: 8px;
+                padding: 50px;
+                background-color: #f6e1c5;
+
+                @media #{$mobile} {
+                    padding: 30px;
+                }
+
+                @media #{$small} {
+                    padding: 40px;
+                }
+
+                .title-1,
+                .title-2 {
+                    text-align: center;
+
+                }
+
+                .title-1 {
+                    font-size: 16px;
+                    text-transform: uppercase;
+                }
+
+                .title-2 {
+                    font-size: 36px;
+                    text-transform: capitalize;
+                    font-family: 'Brush Script MT', cursive;
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+
+    .footer {
+        padding: 20px;
+        text-align: center;
+        background-color: #361e17e3;
+        color: white;
+    }
+
+}

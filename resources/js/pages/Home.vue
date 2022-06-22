@@ -3,15 +3,29 @@
     <div class="side-nav">
       <div class="initials">MF</div>
       <div class="button-container">
-        <div class="button"><i class="fas fa-house-user"></i> Home</div>
-        <div class="button"><i class="far fa-address-card"></i> About</div>
-        <div class="button"><i class="fas fa-laptop-code"></i> Skills</div>
-        <div class="button"><i class="fas fa-briefcase"></i> Work</div>
-        <div class="button"><i class="fas fa-envelope-open"></i> Contact</div>
+        <a href="#home" class="button"
+          ><i class="fas fa-house-user"></i> Home</a
+        >
+        <a href="#about" class="button"
+          ><i class="far fa-address-card"></i> About</a
+        >
+        <a href="#skills" class="button"
+          ><i class="fas fa-laptop-code"></i> Skills</a
+        >
+        <a href="#education" class="button"
+          ><i class="fa fa-graduation-cap"></i> Education</a
+        >
+        <a href="#product" class="button"
+          ><i class="fa fa-cubes"></i> Product</a
+        >
+        <a href="#work" class="button"><i class="fas fa-briefcase"></i>Work</a>
+        <a href="#contact" class="button"
+          ><i class="fas fa-envelope-open"></i> Contact</a
+        >
       </div>
     </div>
     <div class="content">
-      <div class="home">
+      <div class="home" id="home">
         <div class="left">
           <p class="style">Hi, I'm</p>
           <h1>Mario Fernandez</h1>
@@ -27,17 +41,14 @@
         </div>
         <div class="right"></div>
       </div>
-      <div
-        :class="isScrollOver65 ? 'fade-in' : 'invisible'"
-        class="pop-out-container"
-      >
+      <div :class="popOut ? 'fade-in' : 'invisible'" class="pop-out-container">
         <div class="pop-out">
           <div class="left">Several Years Experience</div>
           <div class="center">Multiple Clients Satisified</div>
           <div class="right">Constant Support</div>
         </div>
       </div>
-      <div class="about background-img">
+      <div class="about background-img" id="about">
         <div class="faded-overlay">
           <div class="left">photo</div>
           <div class="right">
@@ -67,7 +78,7 @@
           </div>
         </div>
       </div>
-      <div class="skills">
+      <div class="skills" id="skills">
         <h3 class="skills-header">My Expertise Areas</h3>
         <div class="skills-container">
           <div class="left">
@@ -106,29 +117,23 @@
           </div>
         </div>
       </div>
-      <div class="education-work background-img">
+      <div class="education-work background-img" id="education">
         <div class="faded-overlay">
           <h3 class="education-header">My Awesome Journey</h3>
           <div class="education-container">
             <div class="education">
               <div class="header">Education</div>
               <div class="content-container">
-                <div class="left">
-                  <i class="fa fa-graduation-cap"></i>
-                </div>
-                <div class="right">Honors in Computer Science</div>
+                <div class="left">Honors in Computer Science</div>
+                <div class="right"><i class="fa fa-graduation-cap"></i></div>
               </div>
               <div class="content-container">
-                <div class="left">
-                  <i class="fa fa-graduation-cap"></i>
-                </div>
-                <div class="right">Honors in Health Sciences</div>
+                <div class="left">Honors in Health Sciences</div>
+                <div class="right"><i class="fa fa-graduation-cap"></i></div>
               </div>
               <div class="content-container">
-                <div class="left">
-                  <i class="fa fa-graduation-cap"></i>
-                </div>
-                <div class="right">Secondary School Certificate</div>
+                <div class="left">Secondary School Certificate</div>
+                <div class="right"><i class="fa fa-graduation-cap"></i></div>
               </div>
             </div>
             <div class="experience">
@@ -158,7 +163,7 @@
           </div>
         </div>
       </div>
-      <div class="offer">
+      <div class="product" id="product">
         <h3 class="skills-header">What I Offer</h3>
         <div class="top">
           <div class="offer-container">
@@ -215,48 +220,105 @@
           </div>
         </div>
       </div>
-      <div class="recent-works background-img">
+      <div class="recent-works background-img" id="work">
         <div class="faded-overlay">
           <h3 class="header">Recent Works</h3>
           <div class="works-container">
             <div class="top">
-              <div class="work"></div>
-              <div class="work"></div>
-              <div class="work"></div>
-            </div>
-            <div class="bottom">
-              <div class="work"></div>
-              <div class="work"></div>
+              <div class="work" @click="toSite('coffee-site')"></div>
+              <div class="work" @click="toSite('black-white-site')"></div>
               <div class="work"></div>
             </div>
+            <!-- <div class="bottom">
+              <div class="work"></div>
+              <div class="work"></div>
+              <div class="work"></div>
+            </div> -->
           </div>
         </div>
         <div class="contact">
           <h3 class="heading">Get in Touch</h3>
           <div class="contact-container">
-            <div class="left">
-              <i class="fa fa-envelope"></i>
-              <div class="link">jmferna91@gmail.com</div>
-              Email Me
-            </div>
-            <div class="right">
-              <i class="fa fa-calendar"></i>
-              <div class="link">A Link</div>
-              Schedule a Meeting
-            </div>
+            <!-- <i class="fa fa-envelope"></i> -->
+            <!-- <div class="link">jmferna91@gmail.com</div>
+              Email Me -->
+            <b-form @submit="onSubmit">
+              <b-form-group id="group-contact">
+                <b-form-input
+                  id="name"
+                  v-model="form.name"
+                  placeholder="Your Name*"
+                  required
+                ></b-form-input>
+                <b-form-input
+                  id="email"
+                  v-model="form.email"
+                  type="email"
+                  placeholder="Your Email*"
+                  required
+                ></b-form-input>
+              </b-form-group>
+
+              <b-form-group id="group-message">
+                <b-form-input
+                  id="subject"
+                  v-model="form.subject"
+                  placeholder="Subject*"
+                  required
+                ></b-form-input>
+                <b-form-textarea
+                  id="message"
+                  v-model="form.message"
+                  placeholder="Your Message*"
+                  required
+                ></b-form-textarea>
+              </b-form-group>
+              <div class="btn-container">
+                <b-button variant="primary" @click="onSubmit()"
+                  >Submit</b-button
+                >
+              </div>
+            </b-form>
           </div>
         </div>
+        <div class="footer">&copy; Mario Fernandez 2022</div>
       </div>
     </div>
+    <b-modal
+      id="modal"
+      title="Message Received"
+      ref="contactModal"
+      hide-footer
+      centered
+    >
+      <h3 class="my-4">Thank you for your message!</h3>
+      <p class="my-4">We'll get in touch with you soon.</p>
+    </b-modal>
   </div>
 </template>
 
 <script>
-// import { BFormCheckboxGroup, BFormCheckbox } from "bootstrap-vue";
+import {
+  BFormGroup,
+  BFormInput,
+  BForm,
+  BButton,
+  BFormTextarea,
+  BModal,
+} from "bootstrap-vue";
+import API from "../../../routes/api/api";
 export default {
   name: "Home",
 
-  // components: { BFormCheckboxGroup, BFormCheckbox },
+  components: {
+    BFormGroup,
+    BFormInput,
+    BForm,
+    BButton,
+    BFormTextarea,
+    BModal,
+    API,
+  },
   data() {
     return {
       checked: false,
@@ -274,6 +336,13 @@ export default {
       iscssScssBarFilled: false,
       resetProgressBars: false,
       canReset: true,
+      popOut: false,
+      form: {
+        name: null,
+        email: null,
+        subject: null,
+        message: null,
+      },
     };
   },
 
@@ -286,7 +355,30 @@ export default {
     window.removeEventListener("scroll", this.scrollHandler);
   },
   methods: {
+    onSubmit() {
+      for (const key in this.form) {
+        if (this.form[key] === null || this.form[key] === "") {
+          return;
+        }
+      }
+      try {
+        // const result = API.test();
+
+        this.$refs.contactModal.show();
+      } catch (error) {}
+    },
+    toSite(route) {
+      this.$router.push({
+        path: route,
+      });
+    },
     scrollHandler(e) {
+      if (window.pageYOffset > 65) {
+        this.popOut = true;
+      } else {
+        this.popOut = false;
+      }
+
       if (
         this.canReset &&
         (window.pageYOffset < 250 || window.pageYOffset > 1800)
