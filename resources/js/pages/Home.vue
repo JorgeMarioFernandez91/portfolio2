@@ -31,7 +31,7 @@
           <h1>Mario Fernandez</h1>
           <p class="style">Web Developer</p>
           <p>
-            A Full-Stack Web Developer passionate about creating interactive
+            Full-Stack Web Developer passionate about creating interactive
             applications that solve real world problems
           </p>
           <div class="btn-container">
@@ -43,9 +43,9 @@
       </div>
       <div :class="popOut ? 'fade-in' : 'invisible'" class="pop-out-container">
         <div class="pop-out">
-          <div class="left">Several Years Experience</div>
-          <div class="center">Multiple Clients Satisified</div>
-          <div class="right">Constant Support</div>
+          <div class="left"><span class="client" /> Client Focused</div>
+          <div class="center"><span class="stack" /> Full Stack Experience</div>
+          <div class="right"><span class="question" /> Support</div>
         </div>
       </div>
       <div class="about background-img" id="about">
@@ -119,45 +119,44 @@
       </div>
       <div class="education-work background-img" id="education">
         <div class="faded-overlay">
-          <h3 class="education-header">My Awesome Journey</h3>
-          <div class="education-container">
-            <div class="education">
-              <div class="header">Education</div>
-              <div class="content-container">
-                <div class="left">Honors in Computer Science</div>
-                <div class="right"><i class="fa fa-graduation-cap"></i></div>
-              </div>
-              <div class="content-container">
-                <div class="left">Honors in Health Sciences</div>
-                <div class="right"><i class="fa fa-graduation-cap"></i></div>
-              </div>
-              <div class="content-container">
-                <div class="left">Secondary School Certificate</div>
-                <div class="right"><i class="fa fa-graduation-cap"></i></div>
-              </div>
-            </div>
+          <h3 class="education-work-header">My Awesome Journey</h3>
+          <div class="education-work-container">
             <div class="experience">
               <div class="header">Experiences</div>
+
               <div class="content-container">
-                <div class="left">
-                  <i class="fa fa-briefcase"></i>
-                </div>
-                <div class="right">RentSync</div>
+                <i class="fa fa-circle"></i>
+                <div class="text">RentSync</div>
+                <div class="date">2020-2022</div>
               </div>
               <div class="content-container">
-                <div class="left">
-                  <i class="fa fa-briefcase"></i>
-                </div>
-                <div class="right">Freelance Developer</div>
+                <i class="fa fa-circle"></i>
+                <div class="text">Freelance Developer</div>
+                <div class="date">2020</div>
               </div>
               <div class="content-container">
-                <div class="left">
-                  <i class="fa fa-briefcase"></i>
-                </div>
-                <div class="right">
-                  University Researcher
-                  <div></div>
-                </div>
+                <i class="fa fa-circle"></i>
+                <div class="text">University Researcher</div>
+                <div class="date">2018-2020</div>
+              </div>
+            </div>
+            <div class="education">
+              <div class="header">Education</div>
+
+              <div class="content-container">
+                <i class="fa fa-circle"></i>
+                <div class="text">Honors in Computer Science</div>
+                <div class="date">2016-2020</div>
+              </div>
+              <div class="content-container">
+                <i class="fa fa-circle"></i>
+                <div class="text">Honors in Health Sciences</div>
+                <div class="date">2010-2014</div>
+              </div>
+              <div class="content-container">
+                <i class="fa fa-circle"></i>
+                <div class="text">Secondary School Certificate</div>
+                <div class="date">2005-2010</div>
               </div>
             </div>
           </div>
@@ -224,65 +223,65 @@
         <div class="faded-overlay">
           <h3 class="header">Recent Works</h3>
           <div class="works-container">
-            <div class="top">
-              <div class="work" @click="toSite('coffee-site')"></div>
-              <div class="work" @click="toSite('black-white-site')"></div>
-              <div class="work"></div>
-            </div>
-            <!-- <div class="bottom">
-              <div class="work"></div>
-              <div class="work"></div>
-              <div class="work"></div>
-            </div> -->
+            <div class="work coffee" @click="toSite('coffee-site')"></div>
+            <div
+              class="work black-white"
+              @click="toSite('black-white-site')"
+            ></div>
+            <div
+              class="work finder"
+              @click="toSite('business-finder-site')"
+            ></div>
           </div>
         </div>
-        <div class="contact">
-          <h3 class="heading">Get in Touch</h3>
-          <div class="contact-container">
-            <!-- <i class="fa fa-envelope"></i> -->
-            <!-- <div class="link">jmferna91@gmail.com</div>
-              Email Me -->
-            <b-form @submit="onSubmit">
-              <b-form-group id="group-contact">
-                <b-form-input
-                  id="name"
-                  v-model="form.name"
-                  placeholder="Your Name*"
-                  required
-                ></b-form-input>
-                <b-form-input
-                  id="email"
-                  v-model="form.email"
-                  type="email"
-                  placeholder="Your Email*"
-                  required
-                ></b-form-input>
-              </b-form-group>
-
-              <b-form-group id="group-message">
-                <b-form-input
-                  id="subject"
-                  v-model="form.subject"
-                  placeholder="Subject*"
-                  required
-                ></b-form-input>
-                <b-form-textarea
-                  id="message"
-                  v-model="form.message"
-                  placeholder="Your Message*"
-                  required
-                ></b-form-textarea>
-              </b-form-group>
-              <div class="btn-container">
-                <b-button variant="primary" @click="onSubmit()"
-                  >Submit</b-button
-                >
-              </div>
-            </b-form>
-          </div>
-        </div>
-        <div class="footer">&copy; Mario Fernandez 2022</div>
       </div>
+      <div class="contact">
+        <h3 class="header">Get in Touch</h3>
+        <div class="contact-container">
+          <b-form @submit="onSubmit">
+            <b-form-group id="group-contact">
+              <b-form-input
+                id="name"
+                v-model="form.name"
+                placeholder="Your Name*"
+                :state="nameState"
+                required
+              ></b-form-input>
+              <b-form-input
+                id="email"
+                v-model="form.email"
+                type="email"
+                placeholder="Your Email*"
+                :state="emailState"
+                required
+              ></b-form-input>
+            </b-form-group>
+
+            <b-form-group id="group-message">
+              <b-form-input
+                id="subject"
+                v-model="form.subject"
+                placeholder="Subject*"
+                :state="subjectState"
+                required
+              ></b-form-input>
+              <b-form-textarea
+                id="message"
+                v-model="form.message"
+                placeholder="Your Message*"
+                :state="messageState"
+                rows="3"
+                max-rows="4"
+                required
+              ></b-form-textarea>
+            </b-form-group>
+            <div class="btn-container">
+              <b-button variant="primary" @click="onSubmit()">Submit</b-button>
+            </div>
+          </b-form>
+        </div>
+      </div>
+      <div class="footer">&copy; Mario Fernandez 2022</div>
     </div>
     <b-modal
       id="modal"
@@ -337,11 +336,15 @@ export default {
       resetProgressBars: false,
       canReset: true,
       popOut: false,
+      nameState: null,
+      emailState: null,
+      subjectState: null,
+      messageState: null,
       form: {
-        name: null,
-        email: null,
-        subject: null,
-        message: null,
+        name: "",
+        email: "",
+        subject: "",
+        message: "",
       },
     };
   },
@@ -356,17 +359,23 @@ export default {
   },
   methods: {
     onSubmit() {
+      let allFilled = true;
       for (const key in this.form) {
-        if (this.form[key] === null || this.form[key] === "") {
-          return;
+        if (this.form[key] === "") {
+          this[key + "State"] = false;
+          allFilled = false;
+        } else {
+          this[key + "State"] = null;
         }
       }
-      try {
-        // const result = API.test();
-
-        this.$refs.contactModal.show();
-      } catch (error) {}
+      if (allFilled) {
+        try {
+          API.mail(this.form);
+          this.$refs.contactModal.show();
+        } catch (error) {}
+      }
     },
+
     toSite(route) {
       this.$router.push({
         path: route,

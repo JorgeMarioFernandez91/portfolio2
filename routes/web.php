@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,25 +15,18 @@ use Illuminate\Support\Facades\Route;
 */
 
 
-Route::get('send-mail', function () {
-   
+Route::post('send-mail', function (Request $request) {
 
     $details = [
-
-        'title' => 'Mail from ItSolutionStuff.com',
-
-        'body' => 'This is for testing email using smtp'
-
-    ];
-
-   
+        'name' => $request->get('name'),
+        'email' => $request->get('email'),
+        'subject' => $request->get('subject'),
+        'message' => $request->get('message')
+    ];   
 
     \Mail::to('your_receiver_email@gmail.com')->send(new \App\Mail\PortfolioMail($details));
 
-   
-    print_r('in send-mail');
     return 'success';   
-
 });
 
 Route::get('/{any}', function () {

@@ -2381,6 +2381,260 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/pages/BusinessFinderSite.vue?vue&type=script&lang=js&":
+/*!********************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/pages/BusinessFinderSite.vue?vue&type=script&lang=js& ***!
+  \********************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var bootstrap_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! bootstrap-vue */ "./node_modules/bootstrap-vue/esm/components/form-input/form-input.js");
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  name: "BusinessFinderSite",
+  components: {
+    BFormInput: bootstrap_vue__WEBPACK_IMPORTED_MODULE_0__.BFormInput
+  },
+  props: {},
+  data: function data() {
+    return {
+      search: null,
+      email: null
+    };
+  },
+  methods: {}
+});
+
+/***/ }),
+
 /***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/pages/CoffeeSite.vue?vue&type=script&lang=js&":
 /*!************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/pages/CoffeeSite.vue?vue&type=script&lang=js& ***!
@@ -2765,7 +3019,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
 
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
@@ -2797,11 +3050,15 @@ __webpack_require__.r(__webpack_exports__);
       resetProgressBars: false,
       canReset: true,
       popOut: false,
+      nameState: null,
+      emailState: null,
+      subjectState: null,
+      messageState: null,
       form: {
-        name: null,
-        email: null,
-        subject: null,
-        message: null
+        name: "",
+        email: "",
+        subject: "",
+        message: ""
       }
     };
   },
@@ -2815,16 +3072,23 @@ __webpack_require__.r(__webpack_exports__);
   },
   methods: {
     onSubmit: function onSubmit() {
+      var allFilled = true;
+
       for (var key in this.form) {
-        if (this.form[key] === null || this.form[key] === "") {
-          return;
+        if (this.form[key] === "") {
+          this[key + "State"] = false;
+          allFilled = false;
+        } else {
+          this[key + "State"] = null;
         }
       }
 
-      try {
-        // const result = API.test();
-        this.$refs.contactModal.show();
-      } catch (error) {}
+      if (allFilled) {
+        try {
+          _routes_api_api__WEBPACK_IMPORTED_MODULE_0__["default"].mail(this.form);
+          this.$refs.contactModal.show();
+        } catch (error) {}
+      }
     },
     toSite: function toSite(route) {
       this.$router.push({
@@ -3005,18 +3269,20 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm.js");
-/* harmony import */ var vue_router__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! vue-router */ "./node_modules/vue-router/dist/vue-router.esm.js");
+/* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm.js");
+/* harmony import */ var vue_router__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! vue-router */ "./node_modules/vue-router/dist/vue-router.esm.js");
 /* harmony import */ var _pages_Home_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./pages/Home.vue */ "./resources/js/pages/Home.vue");
 /* harmony import */ var _pages_CoffeeSite_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./pages/CoffeeSite.vue */ "./resources/js/pages/CoffeeSite.vue");
 /* harmony import */ var _pages_BlackWhiteSite_vue__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./pages/BlackWhiteSite.vue */ "./resources/js/pages/BlackWhiteSite.vue");
+/* harmony import */ var _pages_BusinessFinderSite_vue__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./pages/BusinessFinderSite.vue */ "./resources/js/pages/BusinessFinderSite.vue");
 
 
 
 
 
-vue__WEBPACK_IMPORTED_MODULE_3__["default"].use(vue_router__WEBPACK_IMPORTED_MODULE_4__["default"]);
-var router = new vue_router__WEBPACK_IMPORTED_MODULE_4__["default"]({
+
+vue__WEBPACK_IMPORTED_MODULE_4__["default"].use(vue_router__WEBPACK_IMPORTED_MODULE_5__["default"]);
+var router = new vue_router__WEBPACK_IMPORTED_MODULE_5__["default"]({
   mode: 'history',
   linkExactActiveClass: 'active',
   routes: [{
@@ -3031,6 +3297,10 @@ var router = new vue_router__WEBPACK_IMPORTED_MODULE_4__["default"]({
     path: '/black-white-site',
     name: 'black-white-site',
     component: _pages_BlackWhiteSite_vue__WEBPACK_IMPORTED_MODULE_2__["default"]
+  }, {
+    path: '/business-finder-site',
+    name: 'business-finder-site',
+    component: _pages_BusinessFinderSite_vue__WEBPACK_IMPORTED_MODULE_3__["default"]
   }],
   // ensures page loads at the top
   scrollBehavior: function scrollBehavior(to, from, savedPosition) {
@@ -3092,10 +3362,10 @@ var API = /*#__PURE__*/function (_BaseApi) {
   }
 
   _createClass(API, [{
-    key: "test",
-    value: function test() {
-      console.log('in test()');
-      return this.get('send-mail');
+    key: "mail",
+    value: function mail(params) {
+      // console.log(params)
+      return this.get('send-mail', params);
     }
   }]);
 
@@ -3176,8 +3446,7 @@ var BaseApi = /*#__PURE__*/function () {
           while (1) {
             switch (_context.prev = _context.next) {
               case 0:
-                console.log(resource);
-                _context.prev = 1;
+                _context.prev = 0;
                 // const response = await this.axios({
                 //     method: 'get',
                 //     url: resource,
@@ -3185,36 +3454,35 @@ var BaseApi = /*#__PURE__*/function () {
                 //     headers: this.getHeaders(),
                 // })
                 url = window.location.origin;
-                _context.next = 5;
-                return axios__WEBPACK_IMPORTED_MODULE_1___default().get(url + '/' + resource);
+                _context.next = 4;
+                return axios__WEBPACK_IMPORTED_MODULE_1___default().post(url + '/' + resource, queryParams);
 
-              case 5:
+              case 4:
                 response = _context.sent;
-                console.log(response);
                 return _context.abrupt("return", response.data);
 
-              case 10:
-                _context.prev = 10;
-                _context.t0 = _context["catch"](1);
+              case 8:
+                _context.prev = 8;
+                _context.t0 = _context["catch"](0);
 
                 if (!(_context.t0.response.data.message === 'Unauthenticated.')) {
-                  _context.next = 16;
+                  _context.next = 14;
                   break;
                 }
 
                 vue__WEBPACK_IMPORTED_MODULE_2__["default"].prototype.store.dispatch('auth/logout');
-                _context.next = 17;
+                _context.next = 15;
                 break;
 
-              case 16:
+              case 14:
                 throw _context.t0;
 
-              case 17:
+              case 15:
               case "end":
                 return _context.stop();
             }
           }
-        }, _callee, null, [[1, 10]]);
+        }, _callee, null, [[0, 8]]);
       }));
 
       function get(_x, _x2) {
@@ -15559,6 +15827,45 @@ ___CSS_LOADER_EXPORT___.push([module.id, ".main .nav[data-v-892d79cc] {\n  posit
 
 /***/ }),
 
+/***/ "./node_modules/css-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[2]!./node_modules/sass-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[3]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/pages/BusinessFinderSite.vue?vue&type=style&index=0&id=c6187194&lang=scss&scoped=true&":
+/*!***********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[2]!./node_modules/sass-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[3]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/pages/BusinessFinderSite.vue?vue&type=style&index=0&id=c6187194&lang=scss&scoped=true& ***!
+  \***********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/***/ ((module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../node_modules/css-loader/dist/runtime/getUrl.js */ "./node_modules/css-loader/dist/runtime/getUrl.js");
+/* harmony import */ var _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _public_assets_full_star_svg__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../public/assets/full-star.svg */ "./public/assets/full-star.svg");
+/* harmony import */ var _public_assets_half_star_svg__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../public/assets/half-star.svg */ "./public/assets/half-star.svg");
+/* harmony import */ var _public_assets_empty_star_svg__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../public/assets/empty-star.svg */ "./public/assets/empty-star.svg");
+/* harmony import */ var _public_assets_house_svg__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../../public/assets/house.svg */ "./public/assets/house.svg");
+// Imports
+
+
+
+
+
+
+var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
+var ___CSS_LOADER_URL_REPLACEMENT_0___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_1___default()(_public_assets_full_star_svg__WEBPACK_IMPORTED_MODULE_2__["default"]);
+var ___CSS_LOADER_URL_REPLACEMENT_1___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_1___default()(_public_assets_half_star_svg__WEBPACK_IMPORTED_MODULE_3__["default"]);
+var ___CSS_LOADER_URL_REPLACEMENT_2___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_1___default()(_public_assets_empty_star_svg__WEBPACK_IMPORTED_MODULE_4__["default"]);
+var ___CSS_LOADER_URL_REPLACEMENT_3___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_1___default()(_public_assets_house_svg__WEBPACK_IMPORTED_MODULE_5__["default"]);
+// Module
+___CSS_LOADER_EXPORT___.push([module.id, ".main .nav[data-v-c6187194] {\n  background-color: white;\n}\n.main .nav .left[data-v-c6187194],\n.main .nav .right[data-v-c6187194] {\n  width: 50%;\n  padding: 20px 40px;\n}\n.main .nav .left ul[data-v-c6187194],\n.main .nav .right ul[data-v-c6187194] {\n  display: flex;\n  list-style: none;\n  width: 100%;\n  margin: 0;\n  align-items: center;\n}\n.main .nav .left ul li[data-v-c6187194],\n.main .nav .right ul li[data-v-c6187194] {\n  padding: 5px 10px;\n}\n.main .nav .left ul li .btn[data-v-c6187194],\n.main .nav .right ul li .btn[data-v-c6187194] {\n  padding: 0;\n}\n.main .nav .left ul[data-v-c6187194] {\n  justify-content: left;\n}\n.main .nav .right ul[data-v-c6187194] {\n  justify-content: space-evenly;\n}\n.main .nav .right ul[data-v-c6187194] :last-child {\n  background-color: #00ba94;\n  border-radius: 5px;\n  cursor: pointer;\n}\n.main .nav .right ul :last-child .btn[data-v-c6187194] {\n  color: white;\n}\n.main .master-header[data-v-c6187194] {\n  background-image: linear-gradient(rgba(0, 0, 0, 0.527), rgba(0, 0, 0, 0.5)), url(\"/images/breakfast-coffee-pancakes.jpg\");\n  height: 550px;\n  background-size: cover;\n  background-position: center;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n}\n.main .master-header .content-container h1[data-v-c6187194] {\n  color: white;\n  text-align: center;\n}\n.main .master-header .content-container .subtitle[data-v-c6187194] {\n  color: #dbd8d8;\n  text-align: center;\n  margin-bottom: 25px;\n}\n.main .master-header .content-container .input-container[data-v-c6187194] {\n  display: flex;\n  max-width: 550px;\n  margin: auto;\n}\n.main .master-header .content-container .input-container .form-control[data-v-c6187194] {\n  width: 70%;\n  height: 50px;\n}\n.main .master-header .content-container .input-container .btn-container[data-v-c6187194] {\n  margin-left: auto;\n  background-color: #00ba94;\n  border-radius: 5px;\n  display: flex;\n  align-items: center;\n  cursor: pointer;\n}\n.main .master-header .content-container .input-container .btn-container .btn[data-v-c6187194] {\n  color: white;\n}\n.main .master-header[data-v-c6187194]:after {\n  content: \"\";\n  position: absolute;\n  top: 560px;\n  left: -10px;\n  height: 650px;\n  width: 110%;\n  transform: rotate(-2.5deg);\n  background: #eff6fe;\n}\n.main .section-1[data-v-c6187194],\n.main .section-2[data-v-c6187194] {\n  position: relative;\n}\n.main .section-1 .header-container[data-v-c6187194] {\n  margin: 10px 0 40px 0;\n}\n.main .section-1 .header-container .title-1[data-v-c6187194],\n.main .section-1 .header-container .title-2[data-v-c6187194] {\n  text-align: center;\n}\n.main .section-1 .header-container .title-1[data-v-c6187194] {\n  color: #00ba94;\n  font-weight: bold;\n}\n.main .section-1 .header-container .title-2[data-v-c6187194] {\n  color: grey;\n}\n.main .section-1 .card-container[data-v-c6187194] {\n  margin: 20px auto;\n  max-width: 1150px;\n}\n.main .section-1 .top[data-v-c6187194],\n.main .section-1 .bottom[data-v-c6187194] {\n  display: flex;\n  justify-content: space-between;\n  margin: 20px 0;\n}\n.main .section-1 .top .card-item[data-v-c6187194],\n.main .section-1 .bottom .card-item[data-v-c6187194] {\n  width: 250px;\n  height: 170px;\n  border-radius: 5px;\n  box-shadow: 1px 0px 13.5px rgba(0, 0, 0, 0.5);\n  background-color: white;\n  position: relative;\n  bottom: 0;\n  transition: all 0.2s;\n  -moz-transition: all 0.2s;\n  -webkit-transition: all 0.2s;\n  -o-transition: all 0.2s;\n}\n.main .section-1 .top .card-item .img-background[data-v-c6187194],\n.main .section-1 .bottom .card-item .img-background[data-v-c6187194] {\n  height: 70%;\n  background-position: center;\n  background-size: cover;\n  border-top-left-radius: 5px;\n  border-top-right-radius: 5px;\n}\n.main .section-1 .top .card-item .img-background.resto[data-v-c6187194],\n.main .section-1 .bottom .card-item .img-background.resto[data-v-c6187194] {\n  background-image: url(\"/images/burger-fries.jpg\");\n}\n.main .section-1 .top .card-item .img-background.coffee[data-v-c6187194],\n.main .section-1 .bottom .card-item .img-background.coffee[data-v-c6187194] {\n  background-image: url(\"/images/blue-cups-coffee.jpg\");\n}\n.main .section-1 .top .card-item .img-background.medical[data-v-c6187194],\n.main .section-1 .bottom .card-item .img-background.medical[data-v-c6187194] {\n  background-image: url(\"/images/medical-heart.jpg\");\n}\n.main .section-1 .top .card-item .img-background.auto[data-v-c6187194],\n.main .section-1 .bottom .card-item .img-background.auto[data-v-c6187194] {\n  background-image: url(\"/images/auto.jpg\");\n}\n.main .section-1 .top .card-item .img-background.events[data-v-c6187194],\n.main .section-1 .bottom .card-item .img-background.events[data-v-c6187194] {\n  background-image: url(\"/images/events.jpg\");\n}\n.main .section-1 .top .card-item .img-background.breweries[data-v-c6187194],\n.main .section-1 .bottom .card-item .img-background.breweries[data-v-c6187194] {\n  background-image: url(\"/images/brewery.jpg\");\n}\n.main .section-1 .top .card-item .img-background.gym[data-v-c6187194],\n.main .section-1 .bottom .card-item .img-background.gym[data-v-c6187194] {\n  background-image: url(\"/images/gym.jpg\");\n}\n.main .section-1 .top .card-item .img-background.marketing[data-v-c6187194],\n.main .section-1 .bottom .card-item .img-background.marketing[data-v-c6187194] {\n  background-image: url(\"/images/marketing.jpg\");\n}\n.main .section-1 .top .card-item .text[data-v-c6187194],\n.main .section-1 .bottom .card-item .text[data-v-c6187194] {\n  text-align: center;\n  padding: 10px;\n  color: #4a4a4a;\n  font-weight: bold;\n}\n.main .section-1 .top .card-item[data-v-c6187194]:hover,\n.main .section-1 .bottom .card-item[data-v-c6187194]:hover {\n  position: relative;\n  cursor: pointer;\n  box-shadow: 6px 0px 17px rgba(0, 0, 0, 0.699);\n  bottom: 5px;\n}\n.main .section-2[data-v-c6187194] {\n  margin: 50px 0;\n}\n.main .section-2 .content-container[data-v-c6187194] {\n  width: 100%;\n  margin: 50px auto;\n  display: flex;\n  justify-content: space-around;\n  border: 1px solid #00000038;\n  border-radius: 5px;\n  padding: 50px;\n  background: white;\n  box-shadow: 1px 0px 13.5px rgba(0, 0, 0, 0.25);\n  margin: 20px auto;\n  max-width: 1150px;\n}\n.main .section-2 .content-container .left[data-v-c6187194],\n.main .section-2 .content-container .right[data-v-c6187194] {\n  display: flex;\n}\n.main .section-2 .content-container .left[data-v-c6187194] {\n  flex-direction: column;\n}\n.main .section-2 .content-container .left .title[data-v-c6187194] {\n  font-weight: bold;\n  font-size: 20px;\n}\n.main .section-2 .content-container .left .subtitle[data-v-c6187194] {\n  color: grey;\n}\n.main .section-2 .content-container .right[data-v-c6187194] {\n  align-items: center;\n  flex-direction: row;\n}\n.main .section-2 .content-container .right .form-control[data-v-c6187194] {\n  background: #eff6fe;\n}\n.main .section-2 .content-container .right .btn-container[data-v-c6187194] {\n  width: 150px;\n  margin-left: 20px;\n  background-color: #00ba94;\n  border-radius: 5px;\n  display: flex;\n  justify-content: center;\n}\n.main .section-2 .content-container .right .btn-container .btn[data-v-c6187194] {\n  color: white;\n}\n.main .section-3[data-v-c6187194] {\n  height: 740px;\n}\n.main .section-3 .title[data-v-c6187194] {\n  color: #00ba94;\n  font-weight: bold;\n}\n.main .section-3 .title[data-v-c6187194],\n.main .section-3 .subtitle[data-v-c6187194] {\n  text-align: center;\n}\n.main .section-3 .card-container[data-v-c6187194] {\n  display: flex;\n  justify-content: space-between;\n  margin: 50px 0;\n  margin: 20px auto;\n  max-width: 1150px;\n}\n.main .section-3 .card-item[data-v-c6187194] {\n  border-radius: 5px;\n  box-shadow: 1px 0px 13.5px rgba(0, 0, 0, 0.5);\n  background-color: white;\n  width: 350px;\n  height: 435px;\n  position: relative;\n  bottom: 0;\n  transition: all 0.2s;\n  -moz-transition: all 0.2s;\n  -webkit-transition: all 0.2s;\n  -o-transition: all 0.2s;\n}\n.main .section-3 .card-item .img-background[data-v-c6187194] {\n  height: 275px;\n  background-position: center;\n  background-size: cover;\n  border-top-left-radius: 5px;\n  border-top-right-radius: 5px;\n}\n.main .section-3 .card-item .img-background.mexican[data-v-c6187194] {\n  background-image: url(\"/images/mexican-resto.jpg\");\n}\n.main .section-3 .card-item .img-background.burger[data-v-c6187194] {\n  background-image: url(\"/images/burger-resto.jpg\");\n}\n.main .section-3 .card-item .img-background.fish[data-v-c6187194] {\n  background-image: url(\"/images/fish-resto.jpg\");\n}\n.main .section-3 .card-item .title[data-v-c6187194] {\n  color: black;\n  font-weight: normal;\n}\n.main .section-3 .card-item .text[data-v-c6187194] {\n  text-align: center;\n  padding: 10px;\n  color: #4a4a4a;\n  font-weight: bold;\n}\n.main .section-3 .card-item[data-v-c6187194]:hover {\n  position: relative;\n  cursor: pointer;\n  box-shadow: 6px 0px 17px rgba(0, 0, 0, 0.699);\n  bottom: 5px;\n}\n.main .section-3 .card-item .business-info[data-v-c6187194] {\n  padding: 15px;\n}\n.main .section-3 .card-item .business-info .stars[data-v-c6187194] {\n  display: flex;\n  justify-content: center;\n}\n.main .section-3 .card-item .business-info .stars .full-star[data-v-c6187194] {\n  background: url(" + ___CSS_LOADER_URL_REPLACEMENT_0___ + ");\n}\n.main .section-3 .card-item .business-info .stars .half-star[data-v-c6187194] {\n  background: url(" + ___CSS_LOADER_URL_REPLACEMENT_1___ + ");\n}\n.main .section-3 .card-item .business-info .stars .empty-star[data-v-c6187194] {\n  background: url(" + ___CSS_LOADER_URL_REPLACEMENT_2___ + ");\n}\n.main .section-3 .card-item .business-info .stars .full-star[data-v-c6187194],\n.main .section-3 .card-item .business-info .stars .half-star[data-v-c6187194],\n.main .section-3 .card-item .business-info .stars .empty-star[data-v-c6187194] {\n  height: 18px;\n  width: 20px;\n  background-repeat: no-repeat;\n}\n.main .section-3 .card-item .business-info .num-reviews[data-v-c6187194],\n.main .section-3 .card-item .business-info .address[data-v-c6187194] {\n  text-align: center;\n  color: grey;\n}\n.main .section-3 .card-item .opened-date[data-v-c6187194] {\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  font-size: 12px;\n  background-color: #eff6fe;\n  border: 1px solid #0000000f;\n  border-bottom-left-radius: 5px;\n  border-bottom-right-radius: 5px;\n}\n.main .section-3 .card-item .opened-date .house[data-v-c6187194] {\n  background: url(" + ___CSS_LOADER_URL_REPLACEMENT_3___ + ");\n  height: 20px;\n  width: 20px;\n  background-repeat: no-repeat;\n  margin-right: 20px;\n}\n.main .section-3 .card-item .opened-date .text[data-v-c6187194] {\n  color: grey;\n}\n.main .footer[data-v-c6187194] {\n  background: #405164;\n  position: relative;\n  height: 370px;\n}\n.main .footer .top[data-v-c6187194] {\n  display: flex;\n  justify-content: space-evenly;\n  padding: 50px;\n}\n.main .footer .top .column[data-v-c6187194] {\n  width: 180px;\n}\n.main .footer .top .column .header[data-v-c6187194],\n.main .footer .top .column .link[data-v-c6187194] {\n  color: #b0b0b0;\n}\n.main .footer .top .column .header[data-v-c6187194] {\n  font-weight: bold;\n  margin-bottom: 10px;\n}\n.main .footer .top .column .link[data-v-c6187194]:hover {\n  cursor: pointer;\n  color: #dfdfdf;\n}\n.main .footer .bottom[data-v-c6187194] {\n  display: flex;\n  justify-content: space-evenly;\n  padding: 50px;\n}\n.main .footer .bottom .column[data-v-c6187194] {\n  width: 180px;\n}\n.main .footer .bottom .column .header[data-v-c6187194],\n.main .footer .bottom .column .link[data-v-c6187194] {\n  color: #b0b0b0;\n}\n.main .footer .bottom .column .header[data-v-c6187194] {\n  font-weight: bold;\n}\n.main .footer .bottom .column .link[data-v-c6187194]:hover {\n  cursor: pointer;\n  color: #dfdfdf;\n}\n.main .footer[data-v-c6187194]::after {\n  content: \"\";\n  position: absolute;\n  left: -10px;\n  width: 110%;\n  transform: rotate(-2.5deg);\n  background: #405164;\n  bottom: 320px;\n  height: 100px;\n  z-index: -1;\n}", ""]);
+// Exports
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
+
+
+/***/ }),
+
 /***/ "./node_modules/css-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[2]!./node_modules/sass-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[3]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/pages/CoffeeSite.vue?vue&type=style&index=0&id=5bac6dfc&lang=scss&scoped=true&":
 /*!***************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/css-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[2]!./node_modules/sass-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[3]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/pages/CoffeeSite.vue?vue&type=style&index=0&id=5bac6dfc&lang=scss&scoped=true& ***!
@@ -15596,11 +15903,23 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
 /* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../node_modules/css-loader/dist/runtime/getUrl.js */ "./node_modules/css-loader/dist/runtime/getUrl.js");
+/* harmony import */ var _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _public_assets_stack_svg__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../public/assets/stack.svg */ "./public/assets/stack.svg");
+/* harmony import */ var _public_assets_client_svg__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../public/assets/client.svg */ "./public/assets/client.svg");
+/* harmony import */ var _public_assets_question_svg__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../public/assets/question.svg */ "./public/assets/question.svg");
 // Imports
 
+
+
+
+
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
+var ___CSS_LOADER_URL_REPLACEMENT_0___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_1___default()(_public_assets_stack_svg__WEBPACK_IMPORTED_MODULE_2__["default"]);
+var ___CSS_LOADER_URL_REPLACEMENT_1___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_1___default()(_public_assets_client_svg__WEBPACK_IMPORTED_MODULE_3__["default"]);
+var ___CSS_LOADER_URL_REPLACEMENT_2___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_1___default()(_public_assets_question_svg__WEBPACK_IMPORTED_MODULE_4__["default"]);
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".main[data-v-b3c5cf30] {\n  display: flex;\n}\n.main .invisible[data-v-b3c5cf30] {\n  opacity: 0;\n}\n.main .fade-in[data-v-b3c5cf30] {\n  opacity: 1;\n  transition: 1.5s all ease-out;\n  transform: scale(1);\n}\n.main .side-nav[data-v-b3c5cf30] {\n  background-color: white;\n  position: sticky;\n  width: 230px;\n  border-right: 1px solid #0000001c;\n  position: -webkit-sticky;\n  position: sticky;\n  top: 0;\n}\n@media (max-width: 767px) {\n.main .side-nav[data-v-b3c5cf30] {\n    display: none;\n}\n}\n.main .side-nav .initials[data-v-b3c5cf30],\n.main .side-nav .button[data-v-b3c5cf30] {\n  color: #9d8c5d;\n}\n.main .side-nav .initials[data-v-b3c5cf30] {\n  font-size: 35px;\n  text-align: center;\n  padding: 30px;\n  background-color: white;\n  position: -webkit-sticky;\n  position: sticky;\n  top: 0;\n}\n.main .side-nav .button-container[data-v-b3c5cf30] {\n  position: -webkit-sticky;\n  position: sticky;\n  top: 275px;\n}\n.main .side-nav .button[data-v-b3c5cf30] {\n  padding: 0 38px;\n  margin: 10px;\n  font-size: 22px;\n  border-radius: 5px;\n  height: 48px;\n  display: flex;\n  align-items: center;\n}\n.main .side-nav .button[data-v-b3c5cf30]:hover {\n  color: white;\n  background-color: #9d8c5d;\n  box-shadow: 5px 10px #a8a8a85c;\n  cursor: pointer;\n  text-decoration: none;\n}\n.main .side-nav .button .fas[data-v-b3c5cf30],\n.main .side-nav .button .far[data-v-b3c5cf30],\n.main .side-nav .button .fa[data-v-b3c5cf30] {\n  margin-right: 12px;\n}\n.main .background-img[data-v-b3c5cf30] {\n  background: url(\"/images/abstract-background-wide.jpg\");\n  background-position: center;\n  background-size: inherit;\n}\n.main .faded-overlay[data-v-b3c5cf30] {\n  height: 100%;\n  width: 100%;\n  background-color: #ffffffde;\n  padding: 25px;\n}\n.main .content[data-v-b3c5cf30] {\n  width: 100%;\n  background-color: white;\n}\n.main .content .pop-out-container[data-v-b3c5cf30] {\n  width: calc(100% - 230px);\n  position: absolute;\n  top: 895px;\n}\n.main .content .pop-out[data-v-b3c5cf30] {\n  background-color: white;\n  border: 1px solid #8080804f;\n  border-radius: 50px;\n  width: 440px;\n  display: flex;\n  padding: 15px;\n  bottom: 40px;\n  margin: auto;\n  text-align: center;\n  box-shadow: 6.2px 12.5px 12.5px rgba(0, 0, 0, 0.12);\n}\n.main .content .pop-out div[data-v-b3c5cf30] {\n  width: 33.3%;\n}\n.main .content .pop-out .center[data-v-b3c5cf30] {\n  border-left: 2px solid #00000042;\n  border-right: 2px solid #00000042;\n}\n.main .content .about[data-v-b3c5cf30],\n.main .content .skills[data-v-b3c5cf30],\n.main .content .works[data-v-b3c5cf30],\n.main .content .contact[data-v-b3c5cf30] {\n  height: 50vh;\n}\n.main .content .about .header[data-v-b3c5cf30],\n.main .content .skills .header[data-v-b3c5cf30],\n.main .content .works .header[data-v-b3c5cf30],\n.main .content .contact .header[data-v-b3c5cf30] {\n  display: flex;\n  margin-bottom: 20px;\n}\n.main .content .about .header hr[data-v-b3c5cf30],\n.main .content .skills .header hr[data-v-b3c5cf30],\n.main .content .works .header hr[data-v-b3c5cf30],\n.main .content .contact .header hr[data-v-b3c5cf30] {\n  width: 40px;\n  margin-top: 12px;\n  border-top: 2px solid rgba(0, 0, 0, 0.45);\n}\n.main .content .about .card[data-v-b3c5cf30],\n.main .content .skills .card[data-v-b3c5cf30],\n.main .content .works .card[data-v-b3c5cf30],\n.main .content .contact .card[data-v-b3c5cf30] {\n  padding: 40px;\n  background-color: transparent;\n  border: none;\n}\n.main .content .about .card svg[data-v-b3c5cf30],\n.main .content .about .card img[data-v-b3c5cf30],\n.main .content .skills .card svg[data-v-b3c5cf30],\n.main .content .skills .card img[data-v-b3c5cf30],\n.main .content .works .card svg[data-v-b3c5cf30],\n.main .content .works .card img[data-v-b3c5cf30],\n.main .content .contact .card svg[data-v-b3c5cf30],\n.main .content .contact .card img[data-v-b3c5cf30] {\n  width: 70px;\n}\n.main .content .home[data-v-b3c5cf30] {\n  display: flex;\n  height: 100vh;\n  background-color: #e4e6e5;\n}\n.main .content .home h1[data-v-b3c5cf30] {\n  font-weight: bold;\n}\n@media (max-width: 767px) {\n.main .content .home[data-v-b3c5cf30] {\n    flex-direction: column;\n}\n}\n.main .content .home .left[data-v-b3c5cf30] {\n  display: flex;\n  justify-content: center;\n  flex-direction: column;\n  width: 50%;\n  padding: 50px;\n}\n@media (max-width: 767px) {\n.main .content .home .left[data-v-b3c5cf30] {\n    width: 100%;\n    margin: 20px auto auto auto;\n}\n}\n.main .content .home .left h2[data-v-b3c5cf30] {\n  font-weight: bold;\n}\n.main .content .home .left .style[data-v-b3c5cf30] {\n  color: #9d8c5d;\n  font-weight: bold;\n}\n.main .content .home .left .btn-container[data-v-b3c5cf30] {\n  display: flex;\n}\n.main .content .home .left .btn-container .resume-btn[data-v-b3c5cf30],\n.main .content .home .left .btn-container .contact-btn[data-v-b3c5cf30] {\n  padding: 10px 20px;\n  border-radius: 25px;\n}\n.main .content .home .left .btn-container .resume-btn[data-v-b3c5cf30]:hover,\n.main .content .home .left .btn-container .contact-btn[data-v-b3c5cf30]:hover {\n  cursor: pointer;\n}\n.main .content .home .left .btn-container .resume-btn[data-v-b3c5cf30] {\n  color: white;\n  margin-right: 20px;\n  background-color: #9d8c5d;\n}\n.main .content .home .left .btn-container .contact-btn[data-v-b3c5cf30] {\n  border: 1px solid #9d8c5d;\n}\n.main .content .home .right[data-v-b3c5cf30] {\n  width: 50%;\n}\n.main .content .about[data-v-b3c5cf30] {\n  color: black;\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  height: 45vh;\n}\n.main .content .about .faded-overlay[data-v-b3c5cf30] {\n  display: flex;\n  flex-direction: row;\n}\n.main .content .about .faded-overlay .left[data-v-b3c5cf30] {\n  width: 50%;\n}\n.main .content .about .faded-overlay .right[data-v-b3c5cf30] {\n  width: 50%;\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  justify-content: space-evenly;\n}\n.main .content .about .faded-overlay .right .header[data-v-b3c5cf30] {\n  font-weight: bold;\n}\n.main .content .about .faded-overlay .right .info-container .name[data-v-b3c5cf30],\n.main .content .about .faded-overlay .right .info-container .phone[data-v-b3c5cf30],\n.main .content .about .faded-overlay .right .info-container .email[data-v-b3c5cf30] {\n  display: flex;\n}\n.main .content .skills[data-v-b3c5cf30] {\n  background-color: #e4e6e5;\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  height: 40vh;\n  padding: 25px;\n}\n.main .content .skills .skills-header[data-v-b3c5cf30] {\n  margin: 0 auto 30px auto;\n  font-weight: bold;\n}\n.main .content .skills .skills-container[data-v-b3c5cf30] {\n  display: flex;\n}\n.main .content .skills .skills-container .left[data-v-b3c5cf30] {\n  padding-left: 50px;\n}\n.main .content .skills .skills-container .left .skill-container[data-v-b3c5cf30] {\n  margin-bottom: 20px;\n}\n.main .content .skills .skills-container .right[data-v-b3c5cf30] {\n  padding-right: 50px;\n  display: flex;\n  flex-direction: column;\n  align-items: flex-end;\n}\n.main .content .skills .skills-container .left[data-v-b3c5cf30],\n.main .content .skills .skills-container .right[data-v-b3c5cf30] {\n  width: 50%;\n}\n.main .content .skills .skills-container .skill-container[data-v-b3c5cf30] {\n  width: 90%;\n}\n.main .content .skills .skills-container .skill-container .header[data-v-b3c5cf30] {\n  width: auto;\n}\n.main .content .skills .skills-container .skill-container .header span[data-v-b3c5cf30] {\n  margin-left: auto;\n}\n.main .content .skills .skills-container .skill-container .skill-bar[data-v-b3c5cf30] {\n  height: 10px;\n  border: 1px solid #00000042;\n}\n.main .content .skills .skills-container .skill-container #barBackground[data-v-b3c5cf30] {\n  width: 100%;\n  background-color: #fff;\n}\n.main .content .skills .skills-container .skill-container .bar[data-v-b3c5cf30] {\n  height: 10px;\n  background-color: #9d8c5d;\n}\n.main .content .skills .skills-container .skill-container #vue[data-v-b3c5cf30],\n.main .content .skills .skills-container .skill-container #php[data-v-b3c5cf30],\n.main .content .skills .skills-container .skill-container #mysql[data-v-b3c5cf30],\n.main .content .skills .skills-container .skill-container #html[data-v-b3c5cf30],\n.main .content .skills .skills-container .skill-container #cssScss[data-v-b3c5cf30] {\n  width: 1%;\n}\n.main .content .education-work[data-v-b3c5cf30] {\n  height: 40vh;\n}\n.main .content .education-work .faded-overlay .education-header[data-v-b3c5cf30] {\n  text-align: center;\n  margin: 30px 0 50px 0;\n  font-weight: bold;\n}\n.main .content .education-work .faded-overlay .education-container[data-v-b3c5cf30] {\n  display: flex;\n  flex-direction: row;\n}\n.main .content .education-work .faded-overlay .education-container .education[data-v-b3c5cf30],\n.main .content .education-work .faded-overlay .education-container .experience[data-v-b3c5cf30] {\n  width: 50%;\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n}\n.main .content .education-work .faded-overlay .education-container .education .header[data-v-b3c5cf30],\n.main .content .education-work .faded-overlay .education-container .experience .header[data-v-b3c5cf30] {\n  margin-bottom: 15px;\n}\n.main .content .education-work .faded-overlay .education-container .education .content-container[data-v-b3c5cf30],\n.main .content .education-work .faded-overlay .education-container .experience .content-container[data-v-b3c5cf30] {\n  display: flex;\n  margin-bottom: 15px;\n}\n.main .content .education-work .faded-overlay .education-container .education .content-container .left[data-v-b3c5cf30],\n.main .content .education-work .faded-overlay .education-container .experience .content-container .left[data-v-b3c5cf30] {\n  margin-right: 15px;\n}\n.main .content .education-work .faded-overlay .education-container .education .content-container .left .fa[data-v-b3c5cf30],\n.main .content .education-work .faded-overlay .education-container .experience .content-container .left .fa[data-v-b3c5cf30] {\n  color: #9d8c5d;\n}\n.main .content .education-work .faded-overlay .education-container .education[data-v-b3c5cf30] {\n  padding-left: 50px;\n  padding-right: 10px;\n}\n.main .content .education-work .faded-overlay .education-container .education .header[data-v-b3c5cf30] {\n  text-align: right;\n}\n.main .content .education-work .faded-overlay .education-container .education .content-container[data-v-b3c5cf30] {\n  justify-content: end;\n}\n.main .content .education-work .faded-overlay .education-container .education .content-container .right .fa[data-v-b3c5cf30] {\n  color: #9d8c5d;\n}\n.main .content .education-work .faded-overlay .education-container .experience[data-v-b3c5cf30] {\n  padding-right: 50px;\n  padding-left: 10px;\n}\n.main .content .product[data-v-b3c5cf30] {\n  height: 50vh;\n  background-color: #e4e6e5;\n  padding: 25px;\n}\n.main .content .product .skills-header[data-v-b3c5cf30] {\n  text-align: center;\n  font-weight: bold;\n}\n.main .content .product .top[data-v-b3c5cf30],\n.main .content .product .bottom[data-v-b3c5cf30] {\n  display: flex;\n  flex-direction: row;\n  justify-content: space-evenly;\n}\n.main .content .product .offer-container .fa[data-v-b3c5cf30] {\n  position: relative;\n  top: 14px;\n  left: 30px;\n  background-color: #9d8c5d;\n  padding: 10px;\n  border-radius: 10px;\n  color: white;\n  box-shadow: 2.9px 8px 3.3px rgba(0, 0, 0, 0.48);\n}\n.main .content .product .offer-container .offer-box[data-v-b3c5cf30] {\n  border: 1px solid #00000030;\n  border-radius: 5px 25px 5px 5px;\n  padding: 20px;\n  width: 280px;\n  height: 140px;\n}\n.main .content .product .offer-container .offer-box .header[data-v-b3c5cf30] {\n  font-weight: bold;\n  margin-bottom: 10px;\n}\n.main .content .recent-works[data-v-b3c5cf30] {\n  height: 40vh;\n}\n.main .content .recent-works .faded-overlay .header[data-v-b3c5cf30] {\n  text-align: center;\n  font-weight: bold;\n}\n.main .content .recent-works .faded-overlay .works-container[data-v-b3c5cf30] {\n  display: flex;\n  flex-direction: column;\n}\n.main .content .recent-works .faded-overlay .works-container .top[data-v-b3c5cf30],\n.main .content .recent-works .faded-overlay .works-container .bottom[data-v-b3c5cf30] {\n  display: flex;\n  flex-direction: row;\n  justify-content: space-evenly;\n  padding: 15px 0;\n}\n.main .content .recent-works .faded-overlay .works-container .top .work[data-v-b3c5cf30],\n.main .content .recent-works .faded-overlay .works-container .bottom .work[data-v-b3c5cf30] {\n  height: 120px;\n  width: 180px;\n  background-color: grey;\n  border-radius: 10px;\n  border: 1px solid rgba(0, 0, 0, 0.274);\n}\n.main .content .recent-works .faded-overlay .works-container .top .work[data-v-b3c5cf30]:hover,\n.main .content .recent-works .faded-overlay .works-container .bottom .work[data-v-b3c5cf30]:hover {\n  cursor: pointer;\n}\n.main .content .contact[data-v-b3c5cf30] {\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  height: 40vh;\n  background-color: #e4e6e5;\n  padding: 25px 20%;\n}\n.main .content .contact .heading[data-v-b3c5cf30] {\n  text-align: center;\n  font-weight: bold;\n}\n.main .content .contact .contact-container[data-v-b3c5cf30] {\n  display: flex;\n  flex-direction: column;\n}\n.main .content .contact .contact-container .fa[data-v-b3c5cf30] {\n  font-size: 40px;\n}\n.main .content .contact .contact-container #group-contact #name[data-v-b3c5cf30],\n.main .content .contact .contact-container #group-contact #subject[data-v-b3c5cf30],\n.main .content .contact .contact-container #group-message #name[data-v-b3c5cf30],\n.main .content .contact .contact-container #group-message #subject[data-v-b3c5cf30] {\n  margin-bottom: 1rem;\n}\n.main .content .contact .contact-container .form-control[data-v-b3c5cf30] {\n  border-radius: 10px;\n}\n.main .content .contact .contact-container .btn-container[data-v-b3c5cf30] {\n  display: flex;\n  justify-content: center;\n}\n.main .content .contact .contact-container .btn-container .btn[data-v-b3c5cf30] {\n  background-color: #9d8c5d;\n  border-color: #9d8c5d;\n  border-radius: 25px;\n}\n.main .content .footer[data-v-b3c5cf30] {\n  height: 70px;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n}\n.main .modal-content[data-v-b3c5cf30] {\n  border-radius: 15px;\n  height: 320px;\n}\n.main .modal-backdrop[data-v-b3c5cf30] {\n  opacity: 0.5 !important;\n}", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, ".main[data-v-b3c5cf30] {\n  display: flex;\n}\n.main .invisible[data-v-b3c5cf30] {\n  opacity: 0;\n}\n.main .fade-in[data-v-b3c5cf30] {\n  opacity: 1;\n  transition: 1.5s all ease-out;\n  transform: scale(1);\n}\n.main .side-nav[data-v-b3c5cf30] {\n  background-color: white;\n  position: sticky;\n  width: 230px;\n  border-right: 1px solid #0000001c;\n  position: -webkit-sticky;\n  position: sticky;\n  top: 0;\n}\n@media (max-width: 767px) {\n.main .side-nav[data-v-b3c5cf30] {\n    display: none;\n}\n}\n.main .side-nav .initials[data-v-b3c5cf30],\n.main .side-nav .button[data-v-b3c5cf30] {\n  color: #9d8c5d;\n}\n.main .side-nav .initials[data-v-b3c5cf30] {\n  font-size: 35px;\n  text-align: center;\n  padding: 30px;\n  background-color: white;\n  position: -webkit-sticky;\n  position: sticky;\n  top: 0;\n}\n.main .side-nav .button-container[data-v-b3c5cf30] {\n  position: -webkit-sticky;\n  position: sticky;\n  top: 275px;\n}\n.main .side-nav .button[data-v-b3c5cf30] {\n  padding: 0 38px;\n  margin: 10px;\n  font-size: 22px;\n  border-radius: 5px;\n  height: 48px;\n  display: flex;\n  align-items: center;\n}\n.main .side-nav .button[data-v-b3c5cf30]:hover {\n  color: white;\n  background-color: #9d8c5d;\n  box-shadow: 5px 10px #a8a8a85c;\n  cursor: pointer;\n  text-decoration: none;\n}\n.main .side-nav .button .fas[data-v-b3c5cf30],\n.main .side-nav .button .far[data-v-b3c5cf30],\n.main .side-nav .button .fa[data-v-b3c5cf30] {\n  margin-right: 12px;\n}\n.main .background-img[data-v-b3c5cf30] {\n  background: url(\"/images/abstract-background-wide.jpg\");\n  background-position: center;\n  background-size: inherit;\n}\n.main .faded-overlay[data-v-b3c5cf30] {\n  height: 100%;\n  width: 100%;\n  background-color: #ffffffde;\n  padding: 25px;\n}\n.main .content[data-v-b3c5cf30] {\n  width: 100%;\n  background-color: white;\n}\n.main .content .pop-out-container[data-v-b3c5cf30] {\n  width: calc(100% - 230px);\n  position: absolute;\n  top: 895px;\n}\n.main .content .pop-out[data-v-b3c5cf30] {\n  background-color: white;\n  border: 1px solid #8080804f;\n  border-radius: 50px;\n  display: flex;\n  padding: 15px;\n  bottom: 40px;\n  margin: auto;\n  text-align: center;\n  box-shadow: 6.2px 12.5px 12.5px rgba(0, 0, 0, 0.12);\n  width: 650px;\n  height: 80px;\n  justify-content: center;\n}\n.main .content .pop-out div[data-v-b3c5cf30] {\n  width: 33.3%;\n}\n.main .content .pop-out .stack[data-v-b3c5cf30] {\n  background: url(" + ___CSS_LOADER_URL_REPLACEMENT_0___ + ");\n}\n.main .content .pop-out .client[data-v-b3c5cf30] {\n  background: url(" + ___CSS_LOADER_URL_REPLACEMENT_1___ + ");\n}\n.main .content .pop-out .question[data-v-b3c5cf30] {\n  background: url(" + ___CSS_LOADER_URL_REPLACEMENT_2___ + ");\n}\n.main .content .pop-out .stack[data-v-b3c5cf30],\n.main .content .pop-out .client[data-v-b3c5cf30],\n.main .content .pop-out .question[data-v-b3c5cf30] {\n  height: 23px;\n  width: 23px;\n  margin-right: 10px;\n  background-repeat: no-repeat;\n}\n.main .content .pop-out .left[data-v-b3c5cf30],\n.main .content .pop-out .center[data-v-b3c5cf30],\n.main .content .pop-out .right[data-v-b3c5cf30] {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  font-weight: bold;\n  color: #646363;\n}\n.main .content .pop-out .left[data-v-b3c5cf30],\n.main .content .pop-out .right[data-v-b3c5cf30] {\n  width: 28%;\n}\n.main .content .pop-out .center[data-v-b3c5cf30] {\n  width: 41.3%;\n  border-left: 2px solid #00000042;\n  border-right: 2px solid #00000042;\n}\n.main .content .about[data-v-b3c5cf30],\n.main .content .skills[data-v-b3c5cf30],\n.main .content .works[data-v-b3c5cf30],\n.main .content .contact[data-v-b3c5cf30] {\n  height: 50vh;\n}\n.main .content .about .header[data-v-b3c5cf30],\n.main .content .skills .header[data-v-b3c5cf30],\n.main .content .works .header[data-v-b3c5cf30],\n.main .content .contact .header[data-v-b3c5cf30] {\n  display: flex;\n  margin-bottom: 20px;\n}\n.main .content .about .header hr[data-v-b3c5cf30],\n.main .content .skills .header hr[data-v-b3c5cf30],\n.main .content .works .header hr[data-v-b3c5cf30],\n.main .content .contact .header hr[data-v-b3c5cf30] {\n  width: 40px;\n  margin-top: 12px;\n  border-top: 2px solid rgba(0, 0, 0, 0.45);\n}\n.main .content .about .card[data-v-b3c5cf30],\n.main .content .skills .card[data-v-b3c5cf30],\n.main .content .works .card[data-v-b3c5cf30],\n.main .content .contact .card[data-v-b3c5cf30] {\n  padding: 40px;\n  background-color: transparent;\n  border: none;\n}\n.main .content .about .card svg[data-v-b3c5cf30],\n.main .content .about .card img[data-v-b3c5cf30],\n.main .content .skills .card svg[data-v-b3c5cf30],\n.main .content .skills .card img[data-v-b3c5cf30],\n.main .content .works .card svg[data-v-b3c5cf30],\n.main .content .works .card img[data-v-b3c5cf30],\n.main .content .contact .card svg[data-v-b3c5cf30],\n.main .content .contact .card img[data-v-b3c5cf30] {\n  width: 70px;\n}\n.main .content .home[data-v-b3c5cf30] {\n  display: flex;\n  height: 100vh;\n  background-color: #e4e6e5;\n}\n.main .content .home h1[data-v-b3c5cf30] {\n  font-weight: bold;\n  font-size: 49px;\n}\n.main .content .home .style[data-v-b3c5cf30] {\n  font-size: 24px;\n}\n@media (max-width: 767px) {\n.main .content .home[data-v-b3c5cf30] {\n    flex-direction: column;\n}\n}\n.main .content .home .left[data-v-b3c5cf30] {\n  display: flex;\n  justify-content: center;\n  flex-direction: column;\n  width: 50%;\n  padding: 50px;\n}\n@media (max-width: 767px) {\n.main .content .home .left[data-v-b3c5cf30] {\n    width: 100%;\n    margin: 20px auto auto auto;\n}\n}\n.main .content .home .left h2[data-v-b3c5cf30] {\n  font-weight: bold;\n}\n.main .content .home .left .style[data-v-b3c5cf30] {\n  color: #9d8c5d;\n  font-weight: bold;\n}\n.main .content .home .left p[data-v-b3c5cf30]:nth-child(4) {\n  color: #383838;\n}\n.main .content .home .left .btn-container[data-v-b3c5cf30] {\n  display: flex;\n}\n.main .content .home .left .btn-container .resume-btn[data-v-b3c5cf30],\n.main .content .home .left .btn-container .contact-btn[data-v-b3c5cf30] {\n  padding: 10px 20px;\n  border-radius: 25px;\n  display: flex;\n  align-items: center;\n}\n.main .content .home .left .btn-container .resume-btn[data-v-b3c5cf30]:hover,\n.main .content .home .left .btn-container .contact-btn[data-v-b3c5cf30]:hover {\n  cursor: pointer;\n}\n.main .content .home .left .btn-container .resume-btn[data-v-b3c5cf30] {\n  color: white;\n  margin-right: 20px;\n  background-color: #9d8c5d;\n}\n.main .content .home .left .btn-container .resume-btn[data-v-b3c5cf30]:hover {\n  background-color: #c6b176;\n}\n.main .content .home .left .btn-container .contact-btn[data-v-b3c5cf30] {\n  border: 2px solid #9d8c5d;\n}\n.main .content .home .left .btn-container .contact-btn[data-v-b3c5cf30]:hover {\n  border: 2px solid #c6b176;\n  background-color: #c6b176;\n  color: white;\n}\n.main .content .home .right[data-v-b3c5cf30] {\n  width: 50%;\n}\n.main .content .about[data-v-b3c5cf30] {\n  color: black;\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  height: 45vh;\n}\n.main .content .about .faded-overlay[data-v-b3c5cf30] {\n  display: flex;\n  flex-direction: row;\n}\n.main .content .about .faded-overlay .left[data-v-b3c5cf30] {\n  width: 50%;\n}\n.main .content .about .faded-overlay .right[data-v-b3c5cf30] {\n  width: 50%;\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  justify-content: space-evenly;\n}\n.main .content .about .faded-overlay .right .header[data-v-b3c5cf30] {\n  font-weight: bold;\n  color: #9d8c5d;\n}\n.main .content .about .faded-overlay .right .info-container .name[data-v-b3c5cf30],\n.main .content .about .faded-overlay .right .info-container .phone[data-v-b3c5cf30],\n.main .content .about .faded-overlay .right .info-container .email[data-v-b3c5cf30] {\n  display: flex;\n}\n.main .content .about .faded-overlay .right .info-container .name div[data-v-b3c5cf30],\n.main .content .about .faded-overlay .right .info-container .phone div[data-v-b3c5cf30],\n.main .content .about .faded-overlay .right .info-container .email div[data-v-b3c5cf30] {\n  width: 25%;\n}\n.main .content .skills[data-v-b3c5cf30] {\n  background-color: #e4e6e5;\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  height: 40vh;\n  padding: 25px;\n}\n.main .content .skills .skills-header[data-v-b3c5cf30] {\n  margin: 0 auto 30px auto;\n  font-weight: bold;\n  color: #9d8c5d;\n}\n.main .content .skills .skills-container[data-v-b3c5cf30] {\n  display: flex;\n}\n.main .content .skills .skills-container .left[data-v-b3c5cf30] {\n  padding-left: 50px;\n}\n.main .content .skills .skills-container .right[data-v-b3c5cf30] {\n  padding-right: 50px;\n  display: flex;\n  flex-direction: column;\n  align-items: flex-end;\n}\n.main .content .skills .skills-container .left[data-v-b3c5cf30],\n.main .content .skills .skills-container .right[data-v-b3c5cf30] {\n  width: 50%;\n}\n.main .content .skills .skills-container .left .skill-container[data-v-b3c5cf30],\n.main .content .skills .skills-container .right .skill-container[data-v-b3c5cf30] {\n  margin-bottom: 20px;\n}\n.main .content .skills .skills-container .skill-container[data-v-b3c5cf30] {\n  width: 90%;\n}\n.main .content .skills .skills-container .skill-container .header[data-v-b3c5cf30] {\n  width: auto;\n  font-weight: bold;\n  color: #6a5d5d;\n}\n.main .content .skills .skills-container .skill-container .header span[data-v-b3c5cf30] {\n  margin-left: auto;\n}\n.main .content .skills .skills-container .skill-container .skill-bar[data-v-b3c5cf30] {\n  height: 10px;\n  border: 1px solid #00000042;\n}\n.main .content .skills .skills-container .skill-container #barBackground[data-v-b3c5cf30] {\n  width: 100%;\n  background-color: #fff;\n  border-radius: 10px;\n}\n.main .content .skills .skills-container .skill-container .bar[data-v-b3c5cf30] {\n  height: 10px;\n  background-color: #9d8c5d;\n  border-radius: 10px;\n}\n.main .content .skills .skills-container .skill-container #vue[data-v-b3c5cf30],\n.main .content .skills .skills-container .skill-container #php[data-v-b3c5cf30],\n.main .content .skills .skills-container .skill-container #mysql[data-v-b3c5cf30],\n.main .content .skills .skills-container .skill-container #html[data-v-b3c5cf30],\n.main .content .skills .skills-container .skill-container #cssScss[data-v-b3c5cf30] {\n  width: 1%;\n}\n.main .content .education-work[data-v-b3c5cf30] {\n  height: 55vh;\n}\n.main .content .education-work .faded-overlay .education-work-header[data-v-b3c5cf30] {\n  text-align: center;\n  margin: 30px 0 35px 0;\n  font-weight: bold;\n  color: #9d8c5d;\n}\n.main .content .education-work .faded-overlay .education-work-container[data-v-b3c5cf30] {\n  display: flex;\n  flex-direction: row;\n  padding: 0 240px;\n  justify-content: center;\n}\n.main .content .education-work .faded-overlay .education-work-container .education[data-v-b3c5cf30],\n.main .content .education-work .faded-overlay .education-work-container .experience[data-v-b3c5cf30] {\n  width: 40%;\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n}\n.main .content .education-work .faded-overlay .education-work-container .education .header[data-v-b3c5cf30],\n.main .content .education-work .faded-overlay .education-work-container .experience .header[data-v-b3c5cf30] {\n  margin-bottom: 15px;\n  font-weight: bold;\n  color: #6a5d5d;\n}\n.main .content .education-work .faded-overlay .education-work-container .education .content-container[data-v-b3c5cf30],\n.main .content .education-work .faded-overlay .education-work-container .experience .content-container[data-v-b3c5cf30] {\n  display: flex;\n  flex-direction: column;\n  padding: 5px 23px;\n  margin-bottom: 15px;\n  border-left-color: #9d8c5d;\n  border-left-style: solid;\n  border-left-width: 2px;\n}\n.main .content .education-work .faded-overlay .education-work-container .education .content-container .fa[data-v-b3c5cf30],\n.main .content .education-work .faded-overlay .education-work-container .experience .content-container .fa[data-v-b3c5cf30] {\n  position: relative;\n  right: 32px;\n  bottom: 12px;\n  color: #9d8c5d;\n  transition: all 1s;\n  -moz-transition: all 1s;\n  -webkit-transition: all 1s;\n  -o-transition: all 1s;\n}\n.main .content .education-work .faded-overlay .education-work-container .education .content-container[data-v-b3c5cf30]:hover,\n.main .content .education-work .faded-overlay .education-work-container .experience .content-container[data-v-b3c5cf30]:hover {\n  cursor: pointer;\n}\n.main .content .education-work .faded-overlay .education-work-container .education .content-container:hover .text[data-v-b3c5cf30],\n.main .content .education-work .faded-overlay .education-work-container .education .content-container:hover .date[data-v-b3c5cf30],\n.main .content .education-work .faded-overlay .education-work-container .experience .content-container:hover .text[data-v-b3c5cf30],\n.main .content .education-work .faded-overlay .education-work-container .experience .content-container:hover .date[data-v-b3c5cf30] {\n  color: #6a5d5d;\n}\n.main .content .education-work .faded-overlay .education-work-container .education .content-container:hover .fa[data-v-b3c5cf30],\n.main .content .education-work .faded-overlay .education-work-container .experience .content-container:hover .fa[data-v-b3c5cf30] {\n  bottom: -25px;\n}\n.main .content .education-work .faded-overlay .education-work-container .experience[data-v-b3c5cf30] {\n  margin-left: 70px;\n}\n.main .content .product[data-v-b3c5cf30] {\n  height: 55vh;\n  background-color: #e4e6e5;\n  padding: 25px;\n}\n.main .content .product .skills-header[data-v-b3c5cf30] {\n  text-align: center;\n  font-weight: bold;\n  color: #9d8c5d;\n}\n.main .content .product .top[data-v-b3c5cf30],\n.main .content .product .bottom[data-v-b3c5cf30] {\n  display: flex;\n  flex-direction: row;\n  justify-content: space-evenly;\n}\n.main .content .product .offer-container .fa[data-v-b3c5cf30] {\n  position: relative;\n  top: 14px;\n  right: 25px;\n  background-color: #9d8c5d;\n  padding: 10px;\n  border-radius: 10px;\n  color: white;\n  box-shadow: 2.9px 8px 3.3px rgba(0, 0, 0, 0.48);\n  height: 50px;\n  width: 50px;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  transition: all 0.2s;\n  -moz-transition: all 0.2s;\n  -webkit-transition: all 0.2s;\n  -o-transition: all 0.2s;\n}\n.main .content .product .offer-container .fa[data-v-b3c5cf30]::before {\n  font-size: 25px;\n}\n.main .content .product .offer-container .offer-box[data-v-b3c5cf30] {\n  border: 1px solid #00000030;\n  border-radius: 5px 25px 5px 5px;\n  padding: 20px;\n  width: 280px;\n  height: 140px;\n  top: 20px;\n}\n.main .content .product .offer-container .offer-box .header[data-v-b3c5cf30] {\n  font-weight: bold;\n  margin-bottom: 10px;\n  color: #6a5d5d;\n}\n.main .content .product .offer-container[data-v-b3c5cf30]:hover {\n  cursor: pointer;\n}\n.main .content .product .offer-container:hover .fa[data-v-b3c5cf30] {\n  top: 5px;\n}\n.main .content .product .offer-container:hover .text[data-v-b3c5cf30] {\n  color: #6a5d5d;\n}\n.main .content .recent-works[data-v-b3c5cf30] {\n  height: 40vh;\n}\n.main .content .recent-works .faded-overlay .header[data-v-b3c5cf30] {\n  text-align: center;\n  font-weight: bold;\n  color: #9d8c5d;\n}\n.main .content .recent-works .faded-overlay .works-container[data-v-b3c5cf30] {\n  display: flex;\n  justify-content: space-evenly;\n  padding: 15px 0;\n  height: 80%;\n  align-items: center;\n}\n.main .content .recent-works .faded-overlay .works-container .work[data-v-b3c5cf30] {\n  height: 180px;\n  width: 260px;\n  background-color: grey;\n  border-radius: 10px;\n  box-shadow: 1px 0px 13.5px rgba(0, 0, 0, 0.5);\n  transition: all 0.2s;\n  -moz-transition: all 0.2s;\n  -webkit-transition: all 0.2s;\n  -o-transition: all 0.2s;\n}\n.main .content .recent-works .faded-overlay .works-container .work.coffee[data-v-b3c5cf30], .main .content .recent-works .faded-overlay .works-container .work.black-white[data-v-b3c5cf30], .main .content .recent-works .faded-overlay .works-container .work.finder[data-v-b3c5cf30] {\n  background-size: cover;\n  background-repeat: no-repeat;\n}\n.main .content .recent-works .faded-overlay .works-container .work.coffee[data-v-b3c5cf30] {\n  background-image: url(\"/images/coffee-site-preview.png\");\n}\n.main .content .recent-works .faded-overlay .works-container .work.black-white[data-v-b3c5cf30] {\n  background-image: url(\"/images/black-white-site-preview.png\");\n}\n.main .content .recent-works .faded-overlay .works-container .work.finder[data-v-b3c5cf30] {\n  background-image: url(\"/images/business-finder-preview.png\");\n}\n.main .content .recent-works .faded-overlay .works-container .work[data-v-b3c5cf30]:hover {\n  position: relative;\n  cursor: pointer;\n  box-shadow: 6px 0px 17px rgba(0, 0, 0, 0.699);\n  bottom: 5px;\n}\n.main .content .contact[data-v-b3c5cf30] {\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  height: 45vh;\n  background-color: #e4e6e5;\n  padding: 25px 20%;\n}\n.main .content .contact .header[data-v-b3c5cf30] {\n  text-align: center;\n  font-weight: bold;\n  color: #9d8c5d;\n}\n.main .content .contact .contact-container[data-v-b3c5cf30] {\n  display: flex;\n  flex-direction: column;\n}\n.main .content .contact .contact-container .fa[data-v-b3c5cf30] {\n  font-size: 40px;\n}\n.main .content .contact .contact-container #group-contact #name[data-v-b3c5cf30],\n.main .content .contact .contact-container #group-contact #subject[data-v-b3c5cf30],\n.main .content .contact .contact-container #group-message #name[data-v-b3c5cf30],\n.main .content .contact .contact-container #group-message #subject[data-v-b3c5cf30] {\n  margin-bottom: 1rem;\n}\n.main .content .contact .contact-container .form-control[data-v-b3c5cf30] {\n  border-radius: 10px;\n}\n.main .content .contact .contact-container .btn-container[data-v-b3c5cf30] {\n  display: flex;\n  justify-content: center;\n}\n.main .content .contact .contact-container .btn-container .btn[data-v-b3c5cf30] {\n  background-color: #9d8c5d;\n  border-color: #9d8c5d;\n  border-radius: 25px;\n}\n.main .content .contact .contact-container .btn-container .btn[data-v-b3c5cf30]:hover {\n  cursor: pointer;\n  border-color: #c6b176;\n  background-color: #c6b176;\n}\n.main .content .footer[data-v-b3c5cf30] {\n  height: 70px;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  background-color: #9d8c5d;\n  color: white;\n  font-weight: bold;\n  font-size: 18px;\n}\n.main .modal-content[data-v-b3c5cf30] {\n  border-radius: 15px;\n  height: 320px;\n}\n.main .modal-backdrop[data-v-b3c5cf30] {\n  opacity: 0.5 !important;\n}", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -15680,6 +15999,155 @@ module.exports = function (cssWithMappingToString) {
 
   return list;
 };
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/dist/runtime/getUrl.js":
+/*!********************************************************!*\
+  !*** ./node_modules/css-loader/dist/runtime/getUrl.js ***!
+  \********************************************************/
+/***/ ((module) => {
+
+"use strict";
+
+
+module.exports = function (url, options) {
+  if (!options) {
+    // eslint-disable-next-line no-param-reassign
+    options = {};
+  } // eslint-disable-next-line no-underscore-dangle, no-param-reassign
+
+
+  url = url && url.__esModule ? url.default : url;
+
+  if (typeof url !== "string") {
+    return url;
+  } // If url is already wrapped in quotes, remove them
+
+
+  if (/^['"].*['"]$/.test(url)) {
+    // eslint-disable-next-line no-param-reassign
+    url = url.slice(1, -1);
+  }
+
+  if (options.hash) {
+    // eslint-disable-next-line no-param-reassign
+    url += options.hash;
+  } // Should url be wrapped?
+  // See https://drafts.csswg.org/css-values-3/#urls
+
+
+  if (/["'() \t\n]/.test(url) || options.needQuotes) {
+    return "\"".concat(url.replace(/"/g, '\\"').replace(/\n/g, "\\n"), "\"");
+  }
+
+  return url;
+};
+
+/***/ }),
+
+/***/ "./public/assets/client.svg":
+/*!**********************************!*\
+  !*** ./public/assets/client.svg ***!
+  \**********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("/images/client.svg?4b25129cbc9a414bcfea6f92b6b196a6");
+
+/***/ }),
+
+/***/ "./public/assets/empty-star.svg":
+/*!**************************************!*\
+  !*** ./public/assets/empty-star.svg ***!
+  \**************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("/images/empty-star.svg?e5cf323759ec59003593be1c5a29e06e");
+
+/***/ }),
+
+/***/ "./public/assets/full-star.svg":
+/*!*************************************!*\
+  !*** ./public/assets/full-star.svg ***!
+  \*************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("/images/full-star.svg?8835f298336ea8213c001f1b4aabcd6a");
+
+/***/ }),
+
+/***/ "./public/assets/half-star.svg":
+/*!*************************************!*\
+  !*** ./public/assets/half-star.svg ***!
+  \*************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("/images/half-star.svg?9f02f4d09942f3a7a0bac408bc132675");
+
+/***/ }),
+
+/***/ "./public/assets/house.svg":
+/*!*********************************!*\
+  !*** ./public/assets/house.svg ***!
+  \*********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("/images/house.svg?adc1901766babc3486a3ba98d3cc92d7");
+
+/***/ }),
+
+/***/ "./public/assets/question.svg":
+/*!************************************!*\
+  !*** ./public/assets/question.svg ***!
+  \************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("/images/question.svg?df402f9d6d01083a526c2ceeb5a9c2e5");
+
+/***/ }),
+
+/***/ "./public/assets/stack.svg":
+/*!*********************************!*\
+  !*** ./public/assets/stack.svg ***!
+  \*********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("/images/stack.svg?cae76a18eb7d4603603ddb0129d7c051");
 
 /***/ }),
 
@@ -47449,6 +47917,36 @@ var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js
 
 /***/ }),
 
+/***/ "./node_modules/style-loader/dist/cjs.js!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[2]!./node_modules/sass-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[3]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/pages/BusinessFinderSite.vue?vue&type=style&index=0&id=c6187194&lang=scss&scoped=true&":
+/*!***************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/style-loader/dist/cjs.js!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[2]!./node_modules/sass-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[3]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/pages/BusinessFinderSite.vue?vue&type=style&index=0&id=c6187194&lang=scss&scoped=true& ***!
+  \***************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !../../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js");
+/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _node_modules_css_loader_dist_cjs_js_clonedRuleSet_12_0_rules_0_use_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_12_0_rules_0_use_2_node_modules_sass_loader_dist_cjs_js_clonedRuleSet_12_0_rules_0_use_3_node_modules_vue_loader_lib_index_js_vue_loader_options_BusinessFinderSite_vue_vue_type_style_index_0_id_c6187194_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! !!../../../node_modules/css-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[1]!../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[2]!../../../node_modules/sass-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[3]!../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./BusinessFinderSite.vue?vue&type=style&index=0&id=c6187194&lang=scss&scoped=true& */ "./node_modules/css-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[2]!./node_modules/sass-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[3]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/pages/BusinessFinderSite.vue?vue&type=style&index=0&id=c6187194&lang=scss&scoped=true&");
+
+            
+
+var options = {};
+
+options.insert = "head";
+options.singleton = false;
+
+var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default()(_node_modules_css_loader_dist_cjs_js_clonedRuleSet_12_0_rules_0_use_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_12_0_rules_0_use_2_node_modules_sass_loader_dist_cjs_js_clonedRuleSet_12_0_rules_0_use_3_node_modules_vue_loader_lib_index_js_vue_loader_options_BusinessFinderSite_vue_vue_type_style_index_0_id_c6187194_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_1__["default"], options);
+
+
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_css_loader_dist_cjs_js_clonedRuleSet_12_0_rules_0_use_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_12_0_rules_0_use_2_node_modules_sass_loader_dist_cjs_js_clonedRuleSet_12_0_rules_0_use_3_node_modules_vue_loader_lib_index_js_vue_loader_options_BusinessFinderSite_vue_vue_type_style_index_0_id_c6187194_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_1__["default"].locals || {});
+
+/***/ }),
+
 /***/ "./node_modules/style-loader/dist/cjs.js!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[2]!./node_modules/sass-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[3]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/pages/CoffeeSite.vue?vue&type=style&index=0&id=5bac6dfc&lang=scss&scoped=true&":
 /*!*******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/style-loader/dist/cjs.js!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[2]!./node_modules/sass-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[3]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/pages/CoffeeSite.vue?vue&type=style&index=0&id=5bac6dfc&lang=scss&scoped=true& ***!
@@ -47926,6 +48424,47 @@ component.options.__file = "resources/js/pages/BlackWhiteSite.vue"
 
 /***/ }),
 
+/***/ "./resources/js/pages/BusinessFinderSite.vue":
+/*!***************************************************!*\
+  !*** ./resources/js/pages/BusinessFinderSite.vue ***!
+  \***************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _BusinessFinderSite_vue_vue_type_template_id_c6187194_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./BusinessFinderSite.vue?vue&type=template&id=c6187194&scoped=true& */ "./resources/js/pages/BusinessFinderSite.vue?vue&type=template&id=c6187194&scoped=true&");
+/* harmony import */ var _BusinessFinderSite_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./BusinessFinderSite.vue?vue&type=script&lang=js& */ "./resources/js/pages/BusinessFinderSite.vue?vue&type=script&lang=js&");
+/* harmony import */ var _BusinessFinderSite_vue_vue_type_style_index_0_id_c6187194_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./BusinessFinderSite.vue?vue&type=style&index=0&id=c6187194&lang=scss&scoped=true& */ "./resources/js/pages/BusinessFinderSite.vue?vue&type=style&index=0&id=c6187194&lang=scss&scoped=true&");
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! !../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+;
+
+
+/* normalize component */
+
+var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__["default"])(
+  _BusinessFinderSite_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _BusinessFinderSite_vue_vue_type_template_id_c6187194_scoped_true___WEBPACK_IMPORTED_MODULE_0__.render,
+  _BusinessFinderSite_vue_vue_type_template_id_c6187194_scoped_true___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns,
+  false,
+  null,
+  "c6187194",
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/pages/BusinessFinderSite.vue"
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (component.exports);
+
+/***/ }),
+
 /***/ "./resources/js/pages/CoffeeSite.vue":
 /*!*******************************************!*\
   !*** ./resources/js/pages/CoffeeSite.vue ***!
@@ -48056,6 +48595,22 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./resources/js/pages/BusinessFinderSite.vue?vue&type=script&lang=js&":
+/*!****************************************************************************!*\
+  !*** ./resources/js/pages/BusinessFinderSite.vue?vue&type=script&lang=js& ***!
+  \****************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_BusinessFinderSite_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./BusinessFinderSite.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/pages/BusinessFinderSite.vue?vue&type=script&lang=js&");
+ /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_BusinessFinderSite_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
 /***/ "./resources/js/pages/CoffeeSite.vue?vue&type=script&lang=js&":
 /*!********************************************************************!*\
   !*** ./resources/js/pages/CoffeeSite.vue?vue&type=script&lang=js& ***!
@@ -48110,6 +48665,19 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _node_modules_style_loader_dist_cjs_js_node_modules_css_loader_dist_cjs_js_clonedRuleSet_12_0_rules_0_use_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_12_0_rules_0_use_2_node_modules_sass_loader_dist_cjs_js_clonedRuleSet_12_0_rules_0_use_3_node_modules_vue_loader_lib_index_js_vue_loader_options_BlackWhiteSite_vue_vue_type_style_index_0_id_892d79cc_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/style-loader/dist/cjs.js!../../../node_modules/css-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[1]!../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[2]!../../../node_modules/sass-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[3]!../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./BlackWhiteSite.vue?vue&type=style&index=0&id=892d79cc&lang=scss&scoped=true& */ "./node_modules/style-loader/dist/cjs.js!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[2]!./node_modules/sass-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[3]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/pages/BlackWhiteSite.vue?vue&type=style&index=0&id=892d79cc&lang=scss&scoped=true&");
+
+
+/***/ }),
+
+/***/ "./resources/js/pages/BusinessFinderSite.vue?vue&type=style&index=0&id=c6187194&lang=scss&scoped=true&":
+/*!*************************************************************************************************************!*\
+  !*** ./resources/js/pages/BusinessFinderSite.vue?vue&type=style&index=0&id=c6187194&lang=scss&scoped=true& ***!
+  \*************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_style_loader_dist_cjs_js_node_modules_css_loader_dist_cjs_js_clonedRuleSet_12_0_rules_0_use_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_12_0_rules_0_use_2_node_modules_sass_loader_dist_cjs_js_clonedRuleSet_12_0_rules_0_use_3_node_modules_vue_loader_lib_index_js_vue_loader_options_BusinessFinderSite_vue_vue_type_style_index_0_id_c6187194_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/style-loader/dist/cjs.js!../../../node_modules/css-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[1]!../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[2]!../../../node_modules/sass-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[3]!../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./BusinessFinderSite.vue?vue&type=style&index=0&id=c6187194&lang=scss&scoped=true& */ "./node_modules/style-loader/dist/cjs.js!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[2]!./node_modules/sass-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[3]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/pages/BusinessFinderSite.vue?vue&type=style&index=0&id=c6187194&lang=scss&scoped=true&");
 
 
 /***/ }),
@@ -48187,6 +48755,23 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "staticRenderFns": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_BlackWhiteSite_vue_vue_type_template_id_892d79cc_scoped_true___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
 /* harmony export */ });
 /* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_BlackWhiteSite_vue_vue_type_template_id_892d79cc_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./BlackWhiteSite.vue?vue&type=template&id=892d79cc&scoped=true& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/pages/BlackWhiteSite.vue?vue&type=template&id=892d79cc&scoped=true&");
+
+
+/***/ }),
+
+/***/ "./resources/js/pages/BusinessFinderSite.vue?vue&type=template&id=c6187194&scoped=true&":
+/*!**********************************************************************************************!*\
+  !*** ./resources/js/pages/BusinessFinderSite.vue?vue&type=template&id=c6187194&scoped=true& ***!
+  \**********************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_BusinessFinderSite_vue_vue_type_template_id_c6187194_scoped_true___WEBPACK_IMPORTED_MODULE_0__.render),
+/* harmony export */   "staticRenderFns": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_BusinessFinderSite_vue_vue_type_template_id_c6187194_scoped_true___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
+/* harmony export */ });
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_BusinessFinderSite_vue_vue_type_template_id_c6187194_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./BusinessFinderSite.vue?vue&type=template&id=c6187194&scoped=true& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/pages/BusinessFinderSite.vue?vue&type=template&id=c6187194&scoped=true&");
 
 
 /***/ }),
@@ -48651,6 +49236,428 @@ render._withStripped = true
 
 /***/ }),
 
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/pages/BusinessFinderSite.vue?vue&type=template&id=c6187194&scoped=true&":
+/*!*************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/pages/BusinessFinderSite.vue?vue&type=template&id=c6187194&scoped=true& ***!
+  \*************************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* binding */ render),
+/* harmony export */   "staticRenderFns": () => (/* binding */ staticRenderFns)
+/* harmony export */ });
+var render = function () {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("div", { staticClass: "main" }, [
+    _vm._m(0),
+    _vm._v(" "),
+    _c("div", { staticClass: "master-header" }, [
+      _c("div", { staticClass: "content-container" }, [
+        _c("h1", [_vm._v("Find the best business in town")]),
+        _vm._v(" "),
+        _c("div", { staticClass: "subtitle" }, [
+          _vm._v(
+            "\n        Search for restaurants, contractors, and other local businesses in\n        your area to find out which ones are the best!\n      "
+          ),
+        ]),
+        _vm._v(" "),
+        _c(
+          "div",
+          { staticClass: "input-container" },
+          [
+            _c("b-form-input", {
+              attrs: { id: "search", placeholder: "Find a local business..." },
+              model: {
+                value: _vm.search,
+                callback: function ($$v) {
+                  _vm.search = $$v
+                },
+                expression: "search",
+              },
+            }),
+            _vm._v(" "),
+            _vm._m(1),
+          ],
+          1
+        ),
+      ]),
+    ]),
+    _vm._v(" "),
+    _vm._m(2),
+    _vm._v(" "),
+    _c("section", { staticClass: "section-2" }, [
+      _c("div", { staticClass: "content-container" }, [
+        _vm._m(3),
+        _vm._v(" "),
+        _c(
+          "div",
+          { staticClass: "right" },
+          [
+            _c("b-form-input", {
+              attrs: { id: "email", placeholder: "Enter your email..." },
+              model: {
+                value: _vm.email,
+                callback: function ($$v) {
+                  _vm.email = $$v
+                },
+                expression: "email",
+              },
+            }),
+            _vm._v(" "),
+            _vm._m(4),
+          ],
+          1
+        ),
+      ]),
+    ]),
+    _vm._v(" "),
+    _vm._m(5),
+    _vm._v(" "),
+    _vm._m(6),
+  ])
+}
+var staticRenderFns = [
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("nav", { staticClass: "nav" }, [
+      _c("div", { staticClass: "left" }, [
+        _c("ul", [_c("li", [_vm._v("Business Finder Pro")])]),
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "right" }, [
+        _c("ul", [
+          _c("li", [_vm._v("Home")]),
+          _vm._v(" "),
+          _c("li", [_vm._v("Pages")]),
+          _vm._v(" "),
+          _c("li", [_vm._v("Products")]),
+          _vm._v(" "),
+          _c("li", [_vm._v("Documentation")]),
+          _vm._v(" "),
+          _c("li", [
+            _c("div", { staticClass: "btn-container" }, [
+              _c("div", { staticClass: "btn" }, [_vm._v("Buy Now")]),
+            ]),
+          ]),
+        ]),
+      ]),
+    ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "btn-container" }, [
+      _c("div", { staticClass: "btn" }, [_vm._v("Get Started")]),
+    ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("section", { staticClass: "section-1" }, [
+      _c("div", { staticClass: "header-container" }, [
+        _c("div", { staticClass: "title-1" }, [
+          _vm._v("Browse Local Businesses"),
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "title-2" }, [
+          _vm._v(
+            "\n        Not sure what you're looking for? Here are some popoular business near\n        you!\n      "
+          ),
+        ]),
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "card-container" }, [
+        _c("div", { staticClass: "top" }, [
+          _c("div", { staticClass: "card-item" }, [
+            _c("div", { staticClass: "img-background resto" }),
+            _vm._v(" "),
+            _c("div", { staticClass: "text" }, [_vm._v("Restaurants")]),
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "card-item" }, [
+            _c("div", { staticClass: "img-background coffee" }),
+            _vm._v(" "),
+            _c("div", { staticClass: "text" }, [_vm._v("Coffee")]),
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "card-item" }, [
+            _c("div", { staticClass: "img-background medical" }),
+            _vm._v(" "),
+            _c("div", { staticClass: "text" }, [_vm._v("Medical")]),
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "card-item" }, [
+            _c("div", { staticClass: "img-background auto" }),
+            _vm._v(" "),
+            _c("div", { staticClass: "text" }, [_vm._v("Auto")]),
+          ]),
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "bottom" }, [
+          _c("div", { staticClass: "card-item" }, [
+            _c("div", { staticClass: "img-background events" }),
+            _vm._v(" "),
+            _c("div", { staticClass: "text" }, [_vm._v("Events")]),
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "card-item" }, [
+            _c("div", { staticClass: "img-background breweries" }),
+            _vm._v(" "),
+            _c("div", { staticClass: "text" }, [_vm._v("Breweries")]),
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "card-item" }, [
+            _c("div", { staticClass: "img-background gym" }),
+            _vm._v(" "),
+            _c("div", { staticClass: "text" }, [_vm._v("Gyms")]),
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "card-item" }, [
+            _c("div", { staticClass: "img-background marketing" }),
+            _vm._v(" "),
+            _c("div", { staticClass: "text" }, [_vm._v("Marketing")]),
+          ]),
+        ]),
+      ]),
+    ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "left" }, [
+      _c("div", { staticClass: "title" }, [_vm._v("Want to stay up to date?")]),
+      _vm._v(" "),
+      _c("div", { staticClass: "subtitle" }, [
+        _vm._v("Sign up now to receive the latest news"),
+      ]),
+    ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "btn-container" }, [
+      _c("div", { staticClass: "btn" }, [_vm._v("Sign Up")]),
+    ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("section", { staticClass: "section-3" }, [
+      _c("div", { staticClass: "content-container" }, [
+        _c("div", { staticClass: "title" }, [_vm._v("Top New Businesses")]),
+        _vm._v(" "),
+        _c("div", { staticClass: "subtitle" }, [
+          _vm._v("Here are the top new businesses in your area"),
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "card-container" }, [
+          _c("div", { staticClass: "card-item" }, [
+            _c("div", { staticClass: "img-background mexican" }),
+            _vm._v(" "),
+            _c("div", { staticClass: "business-info" }, [
+              _c("div", { staticClass: "title" }, [_vm._v("Diablo's Corner")]),
+              _vm._v(" "),
+              _c("div", { staticClass: "stars" }, [
+                _c("div", { staticClass: "full-star" }),
+                _vm._v(" "),
+                _c("div", { staticClass: "full-star" }),
+                _vm._v(" "),
+                _c("div", { staticClass: "full-star" }),
+                _vm._v(" "),
+                _c("div", { staticClass: "full-star" }),
+                _vm._v(" "),
+                _c("div", { staticClass: "half-star" }),
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "num-reviews" }, [
+                _vm._v("(15 Reviews)"),
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "address" }, [
+                _vm._v("402 El Paso Way, CA"),
+              ]),
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "opened-date" }, [
+              _c("div", { staticClass: "house" }),
+              _vm._v(" "),
+              _c("div", { staticClass: "text" }, [
+                _vm._v("Opened 3 weeks ago"),
+              ]),
+            ]),
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "card-item" }, [
+            _c("div", { staticClass: "img-background burger" }),
+            _vm._v(" "),
+            _c("div", { staticClass: "business-info" }, [
+              _c("div", { staticClass: "title" }, [_vm._v("Burger Street")]),
+              _vm._v(" "),
+              _c("div", { staticClass: "stars" }, [
+                _c("div", { staticClass: "full-star" }),
+                _vm._v(" "),
+                _c("div", { staticClass: "full-star" }),
+                _vm._v(" "),
+                _c("div", { staticClass: "full-star" }),
+                _vm._v(" "),
+                _c("div", { staticClass: "full-star" }),
+                _vm._v(" "),
+                _c("div", { staticClass: "half-star" }),
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "num-reviews" }, [
+                _vm._v("(12 Reviews)"),
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "address" }, [
+                _vm._v("473 Martin St., CA"),
+              ]),
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "opened-date" }, [
+              _c("div", { staticClass: "house" }),
+              _vm._v(" "),
+              _c("div", { staticClass: "text" }, [
+                _vm._v("Opened 2 weeks ago"),
+              ]),
+            ]),
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "card-item" }, [
+            _c("div", { staticClass: "img-background fish" }),
+            _vm._v(" "),
+            _c("div", { staticClass: "business-info" }, [
+              _c("div", { staticClass: "title" }, [_vm._v("Pesco's")]),
+              _vm._v(" "),
+              _c("div", { staticClass: "stars" }, [
+                _c("div", { staticClass: "full-star" }),
+                _vm._v(" "),
+                _c("div", { staticClass: "full-star" }),
+                _vm._v(" "),
+                _c("div", { staticClass: "full-star" }),
+                _vm._v(" "),
+                _c("div", { staticClass: "full-star" }),
+                _vm._v(" "),
+                _c("div", { staticClass: "half-star" }),
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "num-reviews" }, [
+                _vm._v("(18 Reviews)"),
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "address" }, [
+                _vm._v("612 Oceania, CA"),
+              ]),
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "opened-date" }, [
+              _c("div", { staticClass: "house" }),
+              _vm._v(" "),
+              _c("div", { staticClass: "text" }, [
+                _vm._v("Opened 4 weeks ago"),
+              ]),
+            ]),
+          ]),
+        ]),
+      ]),
+    ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("footer", { staticClass: "footer" }, [
+      _c("div", { staticClass: "top" }, [
+        _c("div", { staticClass: "column" }, [
+          _c("div", { staticClass: "header" }, [_vm._v("Business Finder Pro")]),
+          _vm._v(" "),
+          _c("div", { staticClass: "link" }, [_vm._v("Contact us")]),
+          _vm._v(" "),
+          _c("div", { staticClass: "link" }),
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "column" }, [
+          _c("div", { staticClass: "header" }, [_vm._v("Product")]),
+          _vm._v(" "),
+          _c("div", { staticClass: "link" }, [_vm._v("Landing")]),
+          _vm._v(" "),
+          _c("div", { staticClass: "link" }, [_vm._v("Pages")]),
+          _vm._v(" "),
+          _c("div", { staticClass: "link" }, [_vm._v("Sections")]),
+          _vm._v(" "),
+          _c("div", { staticClass: "link" }, [_vm._v("Documentation")]),
+          _vm._v(" "),
+          _c("div", { staticClass: "link" }, [_vm._v("Changelog")]),
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "column" }, [
+          _c("div", { staticClass: "header" }, [_vm._v("Tech")]),
+          _vm._v(" "),
+          _c("div", { staticClass: "link" }, [_vm._v("Documentation")]),
+          _vm._v(" "),
+          _c("div", { staticClass: "link" }, [_vm._v("Changelog")]),
+          _vm._v(" "),
+          _c("div", { staticClass: "link" }, [_vm._v("Theme Customizer")]),
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "column" }, [
+          _c("div", { staticClass: "header" }, [_vm._v("Includes")]),
+          _vm._v(" "),
+          _c("div", { staticClass: "link" }, [_vm._v("Utilities")]),
+          _vm._v(" "),
+          _c("div", { staticClass: "link" }, [_vm._v("Components")]),
+          _vm._v(" "),
+          _c("div", { staticClass: "link" }, [_vm._v("Layouts")]),
+          _vm._v(" "),
+          _c("div", { staticClass: "link" }, [_vm._v("Code Snippets")]),
+          _vm._v(" "),
+          _c("div", { staticClass: "link" }, [_vm._v("Updates")]),
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "column" }, [
+          _c("div", { staticClass: "header" }, [_vm._v("Legal")]),
+          _vm._v(" "),
+          _c("div", { staticClass: "link" }, [_vm._v("Privacy Policy")]),
+          _vm._v(" "),
+          _c("div", { staticClass: "link" }, [_vm._v("Terms and Conditions")]),
+        ]),
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "bottom" }, [
+        _c("div", { staticClass: "column" }, [
+          _c("div", { staticClass: "link" }, [_vm._v("Copyright © 2022")]),
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "column" }),
+        _vm._v(" "),
+        _c("div", { staticClass: "column" }),
+        _vm._v(" "),
+        _c("div", { staticClass: "column" }),
+        _vm._v(" "),
+        _c("div", { staticClass: "column" }, [
+          _c("div", { staticClass: "link" }, [_vm._v("Terms and Conditions")]),
+        ]),
+      ]),
+    ])
+  },
+]
+render._withStripped = true
+
+
+
+/***/ }),
+
 /***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/pages/CoffeeSite.vue?vue&type=template&id=5bac6dfc&scoped=true&":
 /*!*****************************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/pages/CoffeeSite.vue?vue&type=template&id=5bac6dfc&scoped=true& ***!
@@ -48797,134 +49804,144 @@ var render = function () {
               _c("h3", { staticClass: "header" }, [_vm._v("Recent Works")]),
               _vm._v(" "),
               _c("div", { staticClass: "works-container" }, [
-                _c("div", { staticClass: "top" }, [
-                  _c("div", {
-                    staticClass: "work",
-                    on: {
-                      click: function ($event) {
-                        return _vm.toSite("coffee-site")
-                      },
+                _c("div", {
+                  staticClass: "work coffee",
+                  on: {
+                    click: function ($event) {
+                      return _vm.toSite("coffee-site")
                     },
-                  }),
-                  _vm._v(" "),
-                  _c("div", {
-                    staticClass: "work",
-                    on: {
-                      click: function ($event) {
-                        return _vm.toSite("black-white-site")
-                      },
+                  },
+                }),
+                _vm._v(" "),
+                _c("div", {
+                  staticClass: "work black-white",
+                  on: {
+                    click: function ($event) {
+                      return _vm.toSite("black-white-site")
                     },
-                  }),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "work" }),
-                ]),
+                  },
+                }),
+                _vm._v(" "),
+                _c("div", {
+                  staticClass: "work finder",
+                  on: {
+                    click: function ($event) {
+                      return _vm.toSite("business-finder-site")
+                    },
+                  },
+                }),
               ]),
             ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "contact" }, [
-              _c("h3", { staticClass: "heading" }, [_vm._v("Get in Touch")]),
-              _vm._v(" "),
+          ]
+        ),
+        _vm._v(" "),
+        _c("div", { staticClass: "contact" }, [
+          _c("h3", { staticClass: "header" }, [_vm._v("Get in Touch")]),
+          _vm._v(" "),
+          _c(
+            "div",
+            { staticClass: "contact-container" },
+            [
               _c(
-                "div",
-                { staticClass: "contact-container" },
+                "b-form",
+                { on: { submit: _vm.onSubmit } },
                 [
                   _c(
-                    "b-form",
-                    { on: { submit: _vm.onSubmit } },
+                    "b-form-group",
+                    { attrs: { id: "group-contact" } },
+                    [
+                      _c("b-form-input", {
+                        attrs: {
+                          id: "name",
+                          placeholder: "Your Name*",
+                          state: _vm.nameState,
+                          required: "",
+                        },
+                        model: {
+                          value: _vm.form.name,
+                          callback: function ($$v) {
+                            _vm.$set(_vm.form, "name", $$v)
+                          },
+                          expression: "form.name",
+                        },
+                      }),
+                      _vm._v(" "),
+                      _c("b-form-input", {
+                        attrs: {
+                          id: "email",
+                          type: "email",
+                          placeholder: "Your Email*",
+                          state: _vm.emailState,
+                          required: "",
+                        },
+                        model: {
+                          value: _vm.form.email,
+                          callback: function ($$v) {
+                            _vm.$set(_vm.form, "email", $$v)
+                          },
+                          expression: "form.email",
+                        },
+                      }),
+                    ],
+                    1
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "b-form-group",
+                    { attrs: { id: "group-message" } },
+                    [
+                      _c("b-form-input", {
+                        attrs: {
+                          id: "subject",
+                          placeholder: "Subject*",
+                          state: _vm.subjectState,
+                          required: "",
+                        },
+                        model: {
+                          value: _vm.form.subject,
+                          callback: function ($$v) {
+                            _vm.$set(_vm.form, "subject", $$v)
+                          },
+                          expression: "form.subject",
+                        },
+                      }),
+                      _vm._v(" "),
+                      _c("b-form-textarea", {
+                        attrs: {
+                          id: "message",
+                          placeholder: "Your Message*",
+                          state: _vm.messageState,
+                          rows: "3",
+                          "max-rows": "4",
+                          required: "",
+                        },
+                        model: {
+                          value: _vm.form.message,
+                          callback: function ($$v) {
+                            _vm.$set(_vm.form, "message", $$v)
+                          },
+                          expression: "form.message",
+                        },
+                      }),
+                    ],
+                    1
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "div",
+                    { staticClass: "btn-container" },
                     [
                       _c(
-                        "b-form-group",
-                        { attrs: { id: "group-contact" } },
-                        [
-                          _c("b-form-input", {
-                            attrs: {
-                              id: "name",
-                              placeholder: "Your Name*",
-                              required: "",
+                        "b-button",
+                        {
+                          attrs: { variant: "primary" },
+                          on: {
+                            click: function ($event) {
+                              return _vm.onSubmit()
                             },
-                            model: {
-                              value: _vm.form.name,
-                              callback: function ($$v) {
-                                _vm.$set(_vm.form, "name", $$v)
-                              },
-                              expression: "form.name",
-                            },
-                          }),
-                          _vm._v(" "),
-                          _c("b-form-input", {
-                            attrs: {
-                              id: "email",
-                              type: "email",
-                              placeholder: "Your Email*",
-                              required: "",
-                            },
-                            model: {
-                              value: _vm.form.email,
-                              callback: function ($$v) {
-                                _vm.$set(_vm.form, "email", $$v)
-                              },
-                              expression: "form.email",
-                            },
-                          }),
-                        ],
-                        1
-                      ),
-                      _vm._v(" "),
-                      _c(
-                        "b-form-group",
-                        { attrs: { id: "group-message" } },
-                        [
-                          _c("b-form-input", {
-                            attrs: {
-                              id: "subject",
-                              placeholder: "Subject*",
-                              required: "",
-                            },
-                            model: {
-                              value: _vm.form.subject,
-                              callback: function ($$v) {
-                                _vm.$set(_vm.form, "subject", $$v)
-                              },
-                              expression: "form.subject",
-                            },
-                          }),
-                          _vm._v(" "),
-                          _c("b-form-textarea", {
-                            attrs: {
-                              id: "message",
-                              placeholder: "Your Message*",
-                              required: "",
-                            },
-                            model: {
-                              value: _vm.form.message,
-                              callback: function ($$v) {
-                                _vm.$set(_vm.form, "message", $$v)
-                              },
-                              expression: "form.message",
-                            },
-                          }),
-                        ],
-                        1
-                      ),
-                      _vm._v(" "),
-                      _c(
-                        "div",
-                        { staticClass: "btn-container" },
-                        [
-                          _c(
-                            "b-button",
-                            {
-                              attrs: { variant: "primary" },
-                              on: {
-                                click: function ($event) {
-                                  return _vm.onSubmit()
-                                },
-                              },
-                            },
-                            [_vm._v("Submit")]
-                          ),
-                        ],
-                        1
+                          },
+                        },
+                        [_vm._v("Submit")]
                       ),
                     ],
                     1
@@ -48932,13 +49949,14 @@ var render = function () {
                 ],
                 1
               ),
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "footer" }, [
-              _vm._v("© Mario Fernandez 2022"),
-            ]),
-          ]
-        ),
+            ],
+            1
+          ),
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "footer" }, [
+          _vm._v("© Mario Fernandez 2022"),
+        ]),
       ]),
       _vm._v(" "),
       _c(
@@ -49026,7 +50044,7 @@ var staticRenderFns = [
         _vm._v(" "),
         _c("p", [
           _vm._v(
-            "\n          A Full-Stack Web Developer passionate about creating interactive\n          applications that solve real world problems\n        "
+            "\n          Full-Stack Web Developer passionate about creating interactive\n          applications that solve real world problems\n        "
           ),
         ]),
         _vm._v(" "),
@@ -49045,13 +50063,20 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "pop-out" }, [
-      _c("div", { staticClass: "left" }, [_vm._v("Several Years Experience")]),
-      _vm._v(" "),
-      _c("div", { staticClass: "center" }, [
-        _vm._v("Multiple Clients Satisified"),
+      _c("div", { staticClass: "left" }, [
+        _c("span", { staticClass: "client" }),
+        _vm._v(" Client Focused"),
       ]),
       _vm._v(" "),
-      _c("div", { staticClass: "right" }, [_vm._v("Constant Support")]),
+      _c("div", { staticClass: "center" }, [
+        _c("span", { staticClass: "stack" }),
+        _vm._v(" Full Stack Experience"),
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "right" }, [
+        _c("span", { staticClass: "question" }),
+        _vm._v(" Support"),
+      ]),
     ])
   },
   function () {
@@ -49181,77 +50206,74 @@ var staticRenderFns = [
       },
       [
         _c("div", { staticClass: "faded-overlay" }, [
-          _c("h3", { staticClass: "education-header" }, [
+          _c("h3", { staticClass: "education-work-header" }, [
             _vm._v("My Awesome Journey"),
           ]),
           _vm._v(" "),
-          _c("div", { staticClass: "education-container" }, [
-            _c("div", { staticClass: "education" }, [
-              _c("div", { staticClass: "header" }, [_vm._v("Education")]),
-              _vm._v(" "),
-              _c("div", { staticClass: "content-container" }, [
-                _c("div", { staticClass: "left" }, [
-                  _vm._v("Honors in Computer Science"),
-                ]),
-                _vm._v(" "),
-                _c("div", { staticClass: "right" }, [
-                  _c("i", { staticClass: "fa fa-graduation-cap" }),
-                ]),
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "content-container" }, [
-                _c("div", { staticClass: "left" }, [
-                  _vm._v("Honors in Health Sciences"),
-                ]),
-                _vm._v(" "),
-                _c("div", { staticClass: "right" }, [
-                  _c("i", { staticClass: "fa fa-graduation-cap" }),
-                ]),
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "content-container" }, [
-                _c("div", { staticClass: "left" }, [
-                  _vm._v("Secondary School Certificate"),
-                ]),
-                _vm._v(" "),
-                _c("div", { staticClass: "right" }, [
-                  _c("i", { staticClass: "fa fa-graduation-cap" }),
-                ]),
-              ]),
-            ]),
-            _vm._v(" "),
+          _c("div", { staticClass: "education-work-container" }, [
             _c("div", { staticClass: "experience" }, [
               _c("div", { staticClass: "header" }, [_vm._v("Experiences")]),
               _vm._v(" "),
               _c("div", { staticClass: "content-container" }, [
-                _c("div", { staticClass: "left" }, [
-                  _c("i", { staticClass: "fa fa-briefcase" }),
-                ]),
+                _c("i", { staticClass: "fa fa-circle" }),
                 _vm._v(" "),
-                _c("div", { staticClass: "right" }, [_vm._v("RentSync")]),
+                _c("div", { staticClass: "text" }, [_vm._v("RentSync")]),
+                _vm._v(" "),
+                _c("div", { staticClass: "date" }, [_vm._v("2020-2022")]),
               ]),
               _vm._v(" "),
               _c("div", { staticClass: "content-container" }, [
-                _c("div", { staticClass: "left" }, [
-                  _c("i", { staticClass: "fa fa-briefcase" }),
-                ]),
+                _c("i", { staticClass: "fa fa-circle" }),
                 _vm._v(" "),
-                _c("div", { staticClass: "right" }, [
+                _c("div", { staticClass: "text" }, [
                   _vm._v("Freelance Developer"),
                 ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "date" }, [_vm._v("2020")]),
               ]),
               _vm._v(" "),
               _c("div", { staticClass: "content-container" }, [
-                _c("div", { staticClass: "left" }, [
-                  _c("i", { staticClass: "fa fa-briefcase" }),
+                _c("i", { staticClass: "fa fa-circle" }),
+                _vm._v(" "),
+                _c("div", { staticClass: "text" }, [
+                  _vm._v("University Researcher"),
                 ]),
                 _vm._v(" "),
-                _c("div", { staticClass: "right" }, [
-                  _vm._v(
-                    "\n                University Researcher\n                "
-                  ),
-                  _c("div"),
+                _c("div", { staticClass: "date" }, [_vm._v("2018-2020")]),
+              ]),
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "education" }, [
+              _c("div", { staticClass: "header" }, [_vm._v("Education")]),
+              _vm._v(" "),
+              _c("div", { staticClass: "content-container" }, [
+                _c("i", { staticClass: "fa fa-circle" }),
+                _vm._v(" "),
+                _c("div", { staticClass: "text" }, [
+                  _vm._v("Honors in Computer Science"),
                 ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "date" }, [_vm._v("2016-2020")]),
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "content-container" }, [
+                _c("i", { staticClass: "fa fa-circle" }),
+                _vm._v(" "),
+                _c("div", { staticClass: "text" }, [
+                  _vm._v("Honors in Health Sciences"),
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "date" }, [_vm._v("2010-2014")]),
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "content-container" }, [
+                _c("i", { staticClass: "fa fa-circle" }),
+                _vm._v(" "),
+                _c("div", { staticClass: "text" }, [
+                  _vm._v("Secondary School Certificate"),
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "date" }, [_vm._v("2005-2010")]),
               ]),
             ]),
           ]),

@@ -5,9 +5,9 @@ class API extends BaseApi {
         super();
     }
 
-    test() {
-        console.log('in test()');
-        return this.get('send-mail');
+    mail(params) {
+        // console.log(params)
+        return this.get('send-mail', params);
     }
 }
 

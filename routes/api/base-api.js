@@ -28,7 +28,8 @@ class BaseApi {
      * @param queryParams - the query params
      */
     async get(resource, queryParams) {
-        console.log(resource)
+        // console.log(resource)
+        // console.log(queryParams)
 
         try {
             // const response = await this.axios({
@@ -38,8 +39,8 @@ class BaseApi {
             //     headers: this.getHeaders(),
             // })
             let url = window.location.origin;
-            const response = await Axios.get(url + '/' + resource)
-            console.log(response)
+            const response = await Axios.post(url + '/' + resource, queryParams)
+            // console.log(response)
 
             return response.data
         } catch (error) {

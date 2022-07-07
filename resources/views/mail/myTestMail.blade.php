@@ -4,20 +4,18 @@
 
 <head>
 
-    <title>ItsolutionStuff.com</title>
+    <title>Message From Portfolio</title>
 
 </head>
 
-<body>
+    <body>
+        <h2>Subject: {{ $details['subject'] }}</h2>
 
-    <h1>{{ $details['title'] }}</h1>
+        <p>Name: {{ $details['name'] }}</p>
 
-    <p>{{ $details['body'] }}</p>
+        <p>Email: {{ $details['email'] }}</p>
 
-   
-
-    <p>Thank you</p>
-
-</body>
+        <p>Message: {{ $details['message'] }}</p>
+    </body>
 
 </html>

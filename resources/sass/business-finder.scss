@@ -1,0 +1,486 @@
+.main {
+
+    .nav {
+        background-color: white;
+
+        .left,
+        .right {
+            width: 50%;
+            padding: 20px 40px;
+
+            ul {
+                display: flex;
+                list-style: none;
+                width: 100%;
+                margin: 0;
+                align-items: center;
+
+                li {
+                    padding: 5px 10px;
+
+                    .btn {
+                        padding: 0;
+                    }
+                }
+            }
+        }
+
+        .left {
+            ul {
+                justify-content: left;
+            }
+        }
+
+        .right {
+            ul {
+                justify-content: space-evenly;
+
+                :last-child {
+                    background-color: #00ba94;
+                    border-radius: 5px;
+                    cursor: pointer;
+
+                    .btn {
+                        color: white;
+                    }
+                }
+            }
+        }
+    }
+
+    .master-header {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.527), rgba(0, 0, 0, 0.5)), url("/images/breakfast-coffee-pancakes.jpg");
+        height: 550px;
+        background-size: cover;
+        background-position: center;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .content-container {
+            h1 {
+                color: white;
+                text-align: center;
+            }
+
+            .subtitle {
+                color: #dbd8d8;
+                text-align: center;
+                margin-bottom: 25px;
+            }
+
+            .input-container {
+                display: flex;
+                max-width: 550px;
+                margin: auto;
+
+                .form-control {
+                    width: 70%;
+                    height: 50px;
+                }
+
+                .btn-container {
+                    margin-left: auto;
+                    background-color: #00ba94;
+                    border-radius: 5px;
+                    display: flex;
+                    align-items: center;
+                    cursor: pointer;
+
+                    .btn {
+                        color: white;
+                    }
+                }
+            }
+        }
+    }
+
+    .master-header:after {
+        content: "";
+        position: absolute;
+        top: 560px;
+        left: -10px;
+        height: 650px;
+        width: 110%;
+        -webkit-transform: rotate(-2.5deg);
+        -moz-transform: rotate(-2.5deg);
+        transform: rotate(-2.5deg);
+        background: #eff6fe;
+    }
+
+    .section-1,
+    .section-2 {
+        position: relative;
+    }
+
+    .section-1 {
+
+        .header-container {
+            margin: 10px 0 40px 0;
+
+            .title-1,
+            .title-2 {
+                text-align: center;
+            }
+
+            .title-1 {
+                color: #00ba94;
+                font-weight: bold;
+            }
+
+            .title-2 {
+                color: grey;
+            }
+        }
+
+        .card-container {
+            margin: 20px auto;
+            max-width: 1150px;
+        }
+
+        .top,
+        .bottom {
+            display: flex;
+            justify-content: space-between;
+            margin: 20px 0;
+
+            .card-item {
+                width: 250px;
+                height: 170px;
+                border-radius: 5px;
+                box-shadow: 1px 0px 13.5px rgba(0, 0, 0, 0.5);
+                background-color: white;
+
+                position: relative;
+                bottom: 0;
+
+                transition: all .2s;
+                -moz-transition: all .2s;
+                -webkit-transition: all .2s;
+                -o-transition: all .2s;
+
+                .img-background {
+                    height: 70%;
+                    background-position: center;
+                    background-size: cover;
+                    border-top-left-radius: 5px;
+                    border-top-right-radius: 5px;
+
+                    &.resto {
+                        background-image: url("/images/burger-fries.jpg");
+                    }
+
+                    &.coffee {
+                        background-image: url("/images/blue-cups-coffee.jpg");
+                    }
+
+                    &.medical {
+                        background-image: url("/images/medical-heart.jpg");
+                    }
+
+                    &.auto {
+                        background-image: url("/images/auto.jpg");
+                    }
+
+                    &.events {
+                        background-image: url("/images/events.jpg");
+                    }
+
+                    &.breweries {
+                        background-image: url("/images/brewery.jpg");
+                    }
+
+                    &.gym {
+                        background-image: url("/images/gym.jpg");
+                    }
+
+                    &.marketing {
+                        background-image: url("/images/marketing.jpg");
+                    }
+                }
+
+                .text {
+                    text-align: center;
+                    padding: 10px;
+                    color: #4a4a4a;
+                    font-weight: bold;
+                }
+
+                &:hover {
+                    position: relative;
+                    cursor: pointer;
+                    box-shadow: 6px 0px 17px rgba(0, 0, 0, 0.699);
+                    bottom: 5px;
+                }
+            }
+        }
+    }
+
+    .section-2 {
+        margin: 50px 0;
+
+        .content-container {
+            width: 100%;
+            margin: 50px auto;
+            display: flex;
+            justify-content: space-around;
+            border: 1px solid #00000038;
+            border-radius: 5px;
+            padding: 50px;
+            background: white;
+            box-shadow: 1px 0px 13.5px rgba(0, 0, 0, 0.25);
+            margin: 20px auto;
+            max-width: 1150px;
+
+            .left,
+            .right {
+                display: flex;
+            }
+
+            .left {
+                flex-direction: column;
+
+                .title {
+                    font-weight: bold;
+                    font-size: 20px;
+                }
+
+                .subtitle {
+                    color: grey;
+                }
+            }
+
+            .right {
+                align-items: center;
+                flex-direction: row;
+
+                .form-control {
+                    background: #eff6fe;
+                }
+
+                .btn-container {
+                    width: 150px;
+                    margin-left: 20px;
+                    background-color: #00ba94;
+                    border-radius: 5px;
+                    display: flex;
+                    justify-content: center;
+
+                    .btn {
+                        color: white;
+                    }
+                }
+            }
+        }
+    }
+
+    .section-3 {
+        height: 740px;
+
+        .title {
+            color: #00ba94;
+            font-weight: bold;
+        }
+
+        .title,
+        .subtitle {
+            text-align: center;
+        }
+
+        .card-container {
+            display: flex;
+            justify-content: space-between;
+            margin: 50px 0;
+            margin: 20px auto;
+            max-width: 1150px;
+        }
+
+        .card-item {
+            border-radius: 5px;
+            box-shadow: 1px 0px 13.5px rgba(0, 0, 0, 0.5);
+            background-color: white;
+            width: 350px;
+            height: 435px;
+
+            position: relative;
+            bottom: 0;
+
+            transition: all .2s;
+            -moz-transition: all .2s;
+            -webkit-transition: all .2s;
+            -o-transition: all .2s;
+
+            .img-background {
+                height: 275px;
+                background-position: center;
+                background-size: cover;
+                border-top-left-radius: 5px;
+                border-top-right-radius: 5px;
+
+                &.mexican {
+                    background-image: url("/images/mexican-resto.jpg");
+                }
+
+                &.burger {
+                    background-image: url("/images/burger-resto.jpg");
+                }
+
+                &.fish {
+                    background-image: url("/images/fish-resto.jpg");
+                }
+            }
+
+            .title {
+                color: black;
+                font-weight: normal;
+            }
+
+            .text {
+                text-align: center;
+                padding: 10px;
+                color: #4a4a4a;
+                font-weight: bold;
+            }
+
+            &:hover {
+                position: relative;
+                // bottom: 5px;
+                cursor: pointer;
+                box-shadow: 6px 0px 17px rgba(0, 0, 0, 0.699);
+                bottom: 5px;
+            }
+
+            .business-info {
+                padding: 15px;
+
+                .stars {
+                    display: flex;
+                    justify-content: center;
+
+                    .full-star {
+                        background: url("../../../public/assets/full-star.svg");
+                    }
+
+                    .half-star {
+                        background: url("../../../public/assets/half-star.svg");
+                    }
+
+                    .empty-star {
+                        background: url("../../../public/assets/empty-star.svg");
+                    }
+
+                    .full-star,
+                    .half-star,
+                    .empty-star {
+                        height: 18px;
+                        width: 20px;
+                        background-repeat: no-repeat;
+                    }
+                }
+
+                .num-reviews,
+                .address {
+                    text-align: center;
+                    color: grey;
+                }
+            }
+
+            .opened-date {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 12px;
+                background-color: #eff6fe;
+                border: 1px solid #0000000f;
+                border-bottom-left-radius: 5px;
+                border-bottom-right-radius: 5px;
+
+                .house {
+                    background: url("../../../public/assets/house.svg");
+                    height: 20px;
+                    width: 20px;
+                    background-repeat: no-repeat;
+                    margin-right: 20px;
+                }
+
+                .text {
+                    color: grey;
+                }
+            }
+        }
+    }
+
+    .footer {
+        background: #405164;
+        position: relative;
+        height: 370px;
+
+        .top {
+            display: flex;
+            justify-content: space-evenly;
+            padding: 50px;
+
+            .column {
+                width: 180px;
+
+                .header,
+                .link {
+                    color: #b0b0b0;
+                }
+
+                .header {
+                    font-weight: bold;
+                    margin-bottom: 10px;
+                }
+
+                .link {
+                    &:hover {
+                        cursor: pointer;
+                        color: #dfdfdf;
+                    }
+                }
+            }
+        }
+
+        .bottom {
+            display: flex;
+            justify-content: space-evenly;
+            padding: 50px;
+
+            .column {
+                width: 180px;
+
+                .header,
+                .link {
+                    color: #b0b0b0;
+                }
+
+                .header {
+                    font-weight: bold;
+                }
+
+                .link {
+                    &:hover {
+                        cursor: pointer;
+                        color: #dfdfdf;
+                    }
+                }
+            }
+        }
+    }
+
+    .footer::after {
+        content: "";
+        position: absolute;
+        left: -10px;
+        width: 110%;
+        -webkit-transform: rotate(-2.5deg);
+        -moz-transform: rotate(-2.5deg);
+        transform: rotate(-2.5deg);
+        background: #405164;
+        bottom: 320px;
+        height: 100px;
+        z-index: -1;
+    }
+}
