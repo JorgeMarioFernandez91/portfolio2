@@ -3,29 +3,32 @@
     <div class="side-nav">
       <div class="initials">MF</div>
       <div class="button-container">
-        <a href="#home" class="button"
+        <a class="button" @click="scrollToRef('home')"
           ><i class="fas fa-house-user"></i> Home</a
         >
-        <a href="#about" class="button"
+        <a class="button" @click="scrollToRef('about')"
           ><i class="far fa-address-card"></i> About</a
         >
-        <a href="#skills" class="button"
+        <a class="button" @click="scrollToRef('skills')"
           ><i class="fas fa-laptop-code"></i> Skills</a
         >
-        <a href="#education" class="button"
+        <a class="button" @click="scrollToRef('education')"
           ><i class="fa fa-graduation-cap"></i> Education</a
         >
-        <a href="#product" class="button"
+        <a class="button" @click="scrollToRef('product')"
           ><i class="fa fa-cubes"></i> Product</a
         >
-        <a href="#work" class="button"><i class="fas fa-briefcase"></i>Work</a>
-        <a href="#contact" class="button"
+        <a class="button" @click="scrollToRef('work')"
+          ><i class="fas fa-briefcase"></i>Work</a
+        >
+        <a @click="scrollToRef('contact')" class="button"
           ><i class="fas fa-envelope-open"></i> Contact</a
         >
       </div>
     </div>
     <div class="content">
-      <div class="home" id="home">
+      <div class="home" ref="home">
+        <div class="faded-overlay"></div>
         <div class="left">
           <p class="style">Hi, I'm</p>
           <h1>Mario Fernandez</h1>
@@ -39,32 +42,33 @@
             <div class="contact-btn">Contact Me</div>
           </div>
         </div>
-        <div class="right"></div>
+        <div class="right">
+          <div class="self-img"></div>
+        </div>
       </div>
-      <div :class="popOut ? 'fade-in' : 'invisible'" class="pop-out-container">
+      <!-- <div :class="popOut ? 'fade-in' : 'invisible'" class="pop-out-container">
         <div class="pop-out">
           <div class="left"><span class="client" /> Client Focused</div>
           <div class="center"><span class="stack" /> Full Stack Experience</div>
           <div class="right"><span class="question" /> Support</div>
         </div>
-      </div>
-      <div class="about background-img" id="about">
+      </div> -->
+      <div class="about background-img" ref="about">
         <div class="faded-overlay">
-          <div class="left">photo</div>
-          <div class="right">
+          <div class="about-container">
             <h3 class="header">About Me</h3>
             <div class="description">
-              I'm a Full-Stack Developer with close to 2 years of professional
-              development experience. Lorem ipsum dolor sit amet, consectetur
-              adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-              dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-              exercitation ullamco laboris nisi ut aliquip ex ea commodo
-              consequat. Duis aute irure dolor in reprehenderit in voluptate
-              velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-              occaecat cupidatat non proident, sunt in culpa qui officia
-              deserunt mollit anim id est laborum.
+              I'm a Full-Stack Developer with professional development
+              experience in working with international companies. I offer a wide
+              range of services that are aimed at delivering high value products
+              for all types of websites. Wheather it's for a small start-up, an
+              aspiring artistic venture, or even for a more robust enterpirse
+              there's a solution for all. If you're interested below are some
+              sample projects that showcase various types of websites. And feel
+              free to reach out to me with the contact form below and I'll be
+              sure to be in contact shortly.
             </div>
-            <div class="info-container">
+            <!-- <div class="info-container">
               <div class="name">
                 <div class="left">Name:</div>
                 <div class="right">Mario Fernandez</div>
@@ -74,11 +78,11 @@
                 <div class="left">Email:</div>
                 <div class="right">jmferna91@gmail.com</div>
               </div>
-            </div>
+            </div> -->
           </div>
         </div>
       </div>
-      <div class="skills" id="skills">
+      <div class="skills" ref="skills">
         <h3 class="skills-header">My Expertise Areas</h3>
         <div class="skills-container">
           <div class="left">
@@ -117,52 +121,57 @@
           </div>
         </div>
       </div>
-      <div class="education-work background-img" id="education">
+      <div class="education-work background-img" ref="education">
         <div class="faded-overlay">
-          <h3 class="education-work-header">My Awesome Journey</h3>
+          <h3 class="education-work-header">My Journey</h3>
           <div class="education-work-container">
             <div class="experience">
               <div class="header">Experiences</div>
 
               <div class="content-container">
-                <i class="fa fa-circle"></i>
+                <div class="exp-gradient" id="exp-1"></div>
                 <div class="text">RentSync</div>
+                <div class="title">Full Stack Web Developer</div>
                 <div class="date">2020-2022</div>
               </div>
               <div class="content-container">
-                <i class="fa fa-circle"></i>
                 <div class="text">Freelance Developer</div>
+                <div class="title">Full Stack Web Developer</div>
                 <div class="date">2020</div>
               </div>
               <div class="content-container">
-                <i class="fa fa-circle"></i>
                 <div class="text">University Researcher</div>
+                <div class="title">Back End Developer</div>
                 <div class="date">2018-2020</div>
               </div>
             </div>
             <div class="education">
               <div class="header">Education</div>
-
               <div class="content-container">
-                <i class="fa fa-circle"></i>
-                <div class="text">Honors in Computer Science</div>
+                <div class="text">Code Academy</div>
+                <div class="title">Intro to Vue.js</div>
+                <div class="date">2020</div>
+              </div>
+              <div class="content-container">
+                <div class="text">Free Code Camp</div>
+                <div class="title">Responsive Web Design</div>
+                <div class="date">2020</div>
+              </div>
+              <div class="content-container">
+                <div class="text">Western University</div>
+                <div class="title">Honors in Computer Science</div>
                 <div class="date">2016-2020</div>
               </div>
               <div class="content-container">
-                <i class="fa fa-circle"></i>
-                <div class="text">Honors in Health Sciences</div>
+                <div class="text">Western University</div>
+                <div class="title">Honors in Health Sciences</div>
                 <div class="date">2010-2014</div>
-              </div>
-              <div class="content-container">
-                <i class="fa fa-circle"></i>
-                <div class="text">Secondary School Certificate</div>
-                <div class="date">2005-2010</div>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <div class="product" id="product">
+      <div class="product" ref="product">
         <h3 class="skills-header">What I Offer</h3>
         <div class="top">
           <div class="offer-container">
@@ -219,7 +228,7 @@
           </div>
         </div>
       </div>
-      <div class="recent-works background-img" id="work">
+      <div class="recent-works background-img" ref="work">
         <div class="faded-overlay">
           <h3 class="header">Recent Works</h3>
           <div class="works-container">
@@ -235,7 +244,7 @@
           </div>
         </div>
       </div>
-      <div class="contact">
+      <div class="contact" ref="contact">
         <h3 class="header">Get in Touch</h3>
         <div class="contact-container">
           <b-form @submit="onSubmit">
@@ -358,6 +367,10 @@ export default {
     window.removeEventListener("scroll", this.scrollHandler);
   },
   methods: {
+    scrollToRef(refName) {
+      var element = this.$refs[refName];
+      element.scrollIntoView({ behavior: "smooth", inline: "center" });
+    },
     onSubmit() {
       let allFilled = true;
       for (const key in this.form) {

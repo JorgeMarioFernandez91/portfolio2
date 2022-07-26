@@ -2,6 +2,7 @@
 
     .nav {
         background-color: white;
+        height: 80px;
 
         .left,
         .right {
@@ -21,6 +22,10 @@
                     .btn {
                         padding: 0;
                     }
+
+                    &:hover {
+                        cursor: pointer;
+                    }
                 }
             }
         }
@@ -28,6 +33,12 @@
         .left {
             ul {
                 justify-content: left;
+
+                li {
+                    &:hover {
+                        color: #00ba94;
+                    }
+                }
             }
         }
 
@@ -42,6 +53,13 @@
 
                     .btn {
                         color: white;
+                    }
+                }
+
+                li {
+                    &:hover {
+                        border-bottom: 3px solid #00ba94;
+                        padding-bottom: 2px;
                     }
                 }
             }

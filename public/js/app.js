@@ -3019,6 +3019,15 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
@@ -3071,6 +3080,13 @@ __webpack_require__.r(__webpack_exports__);
     window.removeEventListener("scroll", this.scrollHandler);
   },
   methods: {
+    scrollToRef: function scrollToRef(refName) {
+      var element = this.$refs[refName];
+      element.scrollIntoView({
+        behavior: "smooth",
+        inline: "center"
+      });
+    },
     onSubmit: function onSubmit() {
       var allFilled = true;
 
@@ -15859,7 +15875,7 @@ var ___CSS_LOADER_URL_REPLACEMENT_1___ = _node_modules_css_loader_dist_runtime_g
 var ___CSS_LOADER_URL_REPLACEMENT_2___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_1___default()(_public_assets_empty_star_svg__WEBPACK_IMPORTED_MODULE_4__["default"]);
 var ___CSS_LOADER_URL_REPLACEMENT_3___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_1___default()(_public_assets_house_svg__WEBPACK_IMPORTED_MODULE_5__["default"]);
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".main .nav[data-v-c6187194] {\n  background-color: white;\n}\n.main .nav .left[data-v-c6187194],\n.main .nav .right[data-v-c6187194] {\n  width: 50%;\n  padding: 20px 40px;\n}\n.main .nav .left ul[data-v-c6187194],\n.main .nav .right ul[data-v-c6187194] {\n  display: flex;\n  list-style: none;\n  width: 100%;\n  margin: 0;\n  align-items: center;\n}\n.main .nav .left ul li[data-v-c6187194],\n.main .nav .right ul li[data-v-c6187194] {\n  padding: 5px 10px;\n}\n.main .nav .left ul li .btn[data-v-c6187194],\n.main .nav .right ul li .btn[data-v-c6187194] {\n  padding: 0;\n}\n.main .nav .left ul[data-v-c6187194] {\n  justify-content: left;\n}\n.main .nav .right ul[data-v-c6187194] {\n  justify-content: space-evenly;\n}\n.main .nav .right ul[data-v-c6187194] :last-child {\n  background-color: #00ba94;\n  border-radius: 5px;\n  cursor: pointer;\n}\n.main .nav .right ul :last-child .btn[data-v-c6187194] {\n  color: white;\n}\n.main .master-header[data-v-c6187194] {\n  background-image: linear-gradient(rgba(0, 0, 0, 0.527), rgba(0, 0, 0, 0.5)), url(\"/images/breakfast-coffee-pancakes.jpg\");\n  height: 550px;\n  background-size: cover;\n  background-position: center;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n}\n.main .master-header .content-container h1[data-v-c6187194] {\n  color: white;\n  text-align: center;\n}\n.main .master-header .content-container .subtitle[data-v-c6187194] {\n  color: #dbd8d8;\n  text-align: center;\n  margin-bottom: 25px;\n}\n.main .master-header .content-container .input-container[data-v-c6187194] {\n  display: flex;\n  max-width: 550px;\n  margin: auto;\n}\n.main .master-header .content-container .input-container .form-control[data-v-c6187194] {\n  width: 70%;\n  height: 50px;\n}\n.main .master-header .content-container .input-container .btn-container[data-v-c6187194] {\n  margin-left: auto;\n  background-color: #00ba94;\n  border-radius: 5px;\n  display: flex;\n  align-items: center;\n  cursor: pointer;\n}\n.main .master-header .content-container .input-container .btn-container .btn[data-v-c6187194] {\n  color: white;\n}\n.main .master-header[data-v-c6187194]:after {\n  content: \"\";\n  position: absolute;\n  top: 560px;\n  left: -10px;\n  height: 650px;\n  width: 110%;\n  transform: rotate(-2.5deg);\n  background: #eff6fe;\n}\n.main .section-1[data-v-c6187194],\n.main .section-2[data-v-c6187194] {\n  position: relative;\n}\n.main .section-1 .header-container[data-v-c6187194] {\n  margin: 10px 0 40px 0;\n}\n.main .section-1 .header-container .title-1[data-v-c6187194],\n.main .section-1 .header-container .title-2[data-v-c6187194] {\n  text-align: center;\n}\n.main .section-1 .header-container .title-1[data-v-c6187194] {\n  color: #00ba94;\n  font-weight: bold;\n}\n.main .section-1 .header-container .title-2[data-v-c6187194] {\n  color: grey;\n}\n.main .section-1 .card-container[data-v-c6187194] {\n  margin: 20px auto;\n  max-width: 1150px;\n}\n.main .section-1 .top[data-v-c6187194],\n.main .section-1 .bottom[data-v-c6187194] {\n  display: flex;\n  justify-content: space-between;\n  margin: 20px 0;\n}\n.main .section-1 .top .card-item[data-v-c6187194],\n.main .section-1 .bottom .card-item[data-v-c6187194] {\n  width: 250px;\n  height: 170px;\n  border-radius: 5px;\n  box-shadow: 1px 0px 13.5px rgba(0, 0, 0, 0.5);\n  background-color: white;\n  position: relative;\n  bottom: 0;\n  transition: all 0.2s;\n  -moz-transition: all 0.2s;\n  -webkit-transition: all 0.2s;\n  -o-transition: all 0.2s;\n}\n.main .section-1 .top .card-item .img-background[data-v-c6187194],\n.main .section-1 .bottom .card-item .img-background[data-v-c6187194] {\n  height: 70%;\n  background-position: center;\n  background-size: cover;\n  border-top-left-radius: 5px;\n  border-top-right-radius: 5px;\n}\n.main .section-1 .top .card-item .img-background.resto[data-v-c6187194],\n.main .section-1 .bottom .card-item .img-background.resto[data-v-c6187194] {\n  background-image: url(\"/images/burger-fries.jpg\");\n}\n.main .section-1 .top .card-item .img-background.coffee[data-v-c6187194],\n.main .section-1 .bottom .card-item .img-background.coffee[data-v-c6187194] {\n  background-image: url(\"/images/blue-cups-coffee.jpg\");\n}\n.main .section-1 .top .card-item .img-background.medical[data-v-c6187194],\n.main .section-1 .bottom .card-item .img-background.medical[data-v-c6187194] {\n  background-image: url(\"/images/medical-heart.jpg\");\n}\n.main .section-1 .top .card-item .img-background.auto[data-v-c6187194],\n.main .section-1 .bottom .card-item .img-background.auto[data-v-c6187194] {\n  background-image: url(\"/images/auto.jpg\");\n}\n.main .section-1 .top .card-item .img-background.events[data-v-c6187194],\n.main .section-1 .bottom .card-item .img-background.events[data-v-c6187194] {\n  background-image: url(\"/images/events.jpg\");\n}\n.main .section-1 .top .card-item .img-background.breweries[data-v-c6187194],\n.main .section-1 .bottom .card-item .img-background.breweries[data-v-c6187194] {\n  background-image: url(\"/images/brewery.jpg\");\n}\n.main .section-1 .top .card-item .img-background.gym[data-v-c6187194],\n.main .section-1 .bottom .card-item .img-background.gym[data-v-c6187194] {\n  background-image: url(\"/images/gym.jpg\");\n}\n.main .section-1 .top .card-item .img-background.marketing[data-v-c6187194],\n.main .section-1 .bottom .card-item .img-background.marketing[data-v-c6187194] {\n  background-image: url(\"/images/marketing.jpg\");\n}\n.main .section-1 .top .card-item .text[data-v-c6187194],\n.main .section-1 .bottom .card-item .text[data-v-c6187194] {\n  text-align: center;\n  padding: 10px;\n  color: #4a4a4a;\n  font-weight: bold;\n}\n.main .section-1 .top .card-item[data-v-c6187194]:hover,\n.main .section-1 .bottom .card-item[data-v-c6187194]:hover {\n  position: relative;\n  cursor: pointer;\n  box-shadow: 6px 0px 17px rgba(0, 0, 0, 0.699);\n  bottom: 5px;\n}\n.main .section-2[data-v-c6187194] {\n  margin: 50px 0;\n}\n.main .section-2 .content-container[data-v-c6187194] {\n  width: 100%;\n  margin: 50px auto;\n  display: flex;\n  justify-content: space-around;\n  border: 1px solid #00000038;\n  border-radius: 5px;\n  padding: 50px;\n  background: white;\n  box-shadow: 1px 0px 13.5px rgba(0, 0, 0, 0.25);\n  margin: 20px auto;\n  max-width: 1150px;\n}\n.main .section-2 .content-container .left[data-v-c6187194],\n.main .section-2 .content-container .right[data-v-c6187194] {\n  display: flex;\n}\n.main .section-2 .content-container .left[data-v-c6187194] {\n  flex-direction: column;\n}\n.main .section-2 .content-container .left .title[data-v-c6187194] {\n  font-weight: bold;\n  font-size: 20px;\n}\n.main .section-2 .content-container .left .subtitle[data-v-c6187194] {\n  color: grey;\n}\n.main .section-2 .content-container .right[data-v-c6187194] {\n  align-items: center;\n  flex-direction: row;\n}\n.main .section-2 .content-container .right .form-control[data-v-c6187194] {\n  background: #eff6fe;\n}\n.main .section-2 .content-container .right .btn-container[data-v-c6187194] {\n  width: 150px;\n  margin-left: 20px;\n  background-color: #00ba94;\n  border-radius: 5px;\n  display: flex;\n  justify-content: center;\n}\n.main .section-2 .content-container .right .btn-container .btn[data-v-c6187194] {\n  color: white;\n}\n.main .section-3[data-v-c6187194] {\n  height: 740px;\n}\n.main .section-3 .title[data-v-c6187194] {\n  color: #00ba94;\n  font-weight: bold;\n}\n.main .section-3 .title[data-v-c6187194],\n.main .section-3 .subtitle[data-v-c6187194] {\n  text-align: center;\n}\n.main .section-3 .card-container[data-v-c6187194] {\n  display: flex;\n  justify-content: space-between;\n  margin: 50px 0;\n  margin: 20px auto;\n  max-width: 1150px;\n}\n.main .section-3 .card-item[data-v-c6187194] {\n  border-radius: 5px;\n  box-shadow: 1px 0px 13.5px rgba(0, 0, 0, 0.5);\n  background-color: white;\n  width: 350px;\n  height: 435px;\n  position: relative;\n  bottom: 0;\n  transition: all 0.2s;\n  -moz-transition: all 0.2s;\n  -webkit-transition: all 0.2s;\n  -o-transition: all 0.2s;\n}\n.main .section-3 .card-item .img-background[data-v-c6187194] {\n  height: 275px;\n  background-position: center;\n  background-size: cover;\n  border-top-left-radius: 5px;\n  border-top-right-radius: 5px;\n}\n.main .section-3 .card-item .img-background.mexican[data-v-c6187194] {\n  background-image: url(\"/images/mexican-resto.jpg\");\n}\n.main .section-3 .card-item .img-background.burger[data-v-c6187194] {\n  background-image: url(\"/images/burger-resto.jpg\");\n}\n.main .section-3 .card-item .img-background.fish[data-v-c6187194] {\n  background-image: url(\"/images/fish-resto.jpg\");\n}\n.main .section-3 .card-item .title[data-v-c6187194] {\n  color: black;\n  font-weight: normal;\n}\n.main .section-3 .card-item .text[data-v-c6187194] {\n  text-align: center;\n  padding: 10px;\n  color: #4a4a4a;\n  font-weight: bold;\n}\n.main .section-3 .card-item[data-v-c6187194]:hover {\n  position: relative;\n  cursor: pointer;\n  box-shadow: 6px 0px 17px rgba(0, 0, 0, 0.699);\n  bottom: 5px;\n}\n.main .section-3 .card-item .business-info[data-v-c6187194] {\n  padding: 15px;\n}\n.main .section-3 .card-item .business-info .stars[data-v-c6187194] {\n  display: flex;\n  justify-content: center;\n}\n.main .section-3 .card-item .business-info .stars .full-star[data-v-c6187194] {\n  background: url(" + ___CSS_LOADER_URL_REPLACEMENT_0___ + ");\n}\n.main .section-3 .card-item .business-info .stars .half-star[data-v-c6187194] {\n  background: url(" + ___CSS_LOADER_URL_REPLACEMENT_1___ + ");\n}\n.main .section-3 .card-item .business-info .stars .empty-star[data-v-c6187194] {\n  background: url(" + ___CSS_LOADER_URL_REPLACEMENT_2___ + ");\n}\n.main .section-3 .card-item .business-info .stars .full-star[data-v-c6187194],\n.main .section-3 .card-item .business-info .stars .half-star[data-v-c6187194],\n.main .section-3 .card-item .business-info .stars .empty-star[data-v-c6187194] {\n  height: 18px;\n  width: 20px;\n  background-repeat: no-repeat;\n}\n.main .section-3 .card-item .business-info .num-reviews[data-v-c6187194],\n.main .section-3 .card-item .business-info .address[data-v-c6187194] {\n  text-align: center;\n  color: grey;\n}\n.main .section-3 .card-item .opened-date[data-v-c6187194] {\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  font-size: 12px;\n  background-color: #eff6fe;\n  border: 1px solid #0000000f;\n  border-bottom-left-radius: 5px;\n  border-bottom-right-radius: 5px;\n}\n.main .section-3 .card-item .opened-date .house[data-v-c6187194] {\n  background: url(" + ___CSS_LOADER_URL_REPLACEMENT_3___ + ");\n  height: 20px;\n  width: 20px;\n  background-repeat: no-repeat;\n  margin-right: 20px;\n}\n.main .section-3 .card-item .opened-date .text[data-v-c6187194] {\n  color: grey;\n}\n.main .footer[data-v-c6187194] {\n  background: #405164;\n  position: relative;\n  height: 370px;\n}\n.main .footer .top[data-v-c6187194] {\n  display: flex;\n  justify-content: space-evenly;\n  padding: 50px;\n}\n.main .footer .top .column[data-v-c6187194] {\n  width: 180px;\n}\n.main .footer .top .column .header[data-v-c6187194],\n.main .footer .top .column .link[data-v-c6187194] {\n  color: #b0b0b0;\n}\n.main .footer .top .column .header[data-v-c6187194] {\n  font-weight: bold;\n  margin-bottom: 10px;\n}\n.main .footer .top .column .link[data-v-c6187194]:hover {\n  cursor: pointer;\n  color: #dfdfdf;\n}\n.main .footer .bottom[data-v-c6187194] {\n  display: flex;\n  justify-content: space-evenly;\n  padding: 50px;\n}\n.main .footer .bottom .column[data-v-c6187194] {\n  width: 180px;\n}\n.main .footer .bottom .column .header[data-v-c6187194],\n.main .footer .bottom .column .link[data-v-c6187194] {\n  color: #b0b0b0;\n}\n.main .footer .bottom .column .header[data-v-c6187194] {\n  font-weight: bold;\n}\n.main .footer .bottom .column .link[data-v-c6187194]:hover {\n  cursor: pointer;\n  color: #dfdfdf;\n}\n.main .footer[data-v-c6187194]::after {\n  content: \"\";\n  position: absolute;\n  left: -10px;\n  width: 110%;\n  transform: rotate(-2.5deg);\n  background: #405164;\n  bottom: 320px;\n  height: 100px;\n  z-index: -1;\n}", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, ".main .nav[data-v-c6187194] {\n  background-color: white;\n  height: 80px;\n}\n.main .nav .left[data-v-c6187194],\n.main .nav .right[data-v-c6187194] {\n  width: 50%;\n  padding: 20px 40px;\n}\n.main .nav .left ul[data-v-c6187194],\n.main .nav .right ul[data-v-c6187194] {\n  display: flex;\n  list-style: none;\n  width: 100%;\n  margin: 0;\n  align-items: center;\n}\n.main .nav .left ul li[data-v-c6187194],\n.main .nav .right ul li[data-v-c6187194] {\n  padding: 5px 10px;\n}\n.main .nav .left ul li .btn[data-v-c6187194],\n.main .nav .right ul li .btn[data-v-c6187194] {\n  padding: 0;\n}\n.main .nav .left ul li[data-v-c6187194]:hover,\n.main .nav .right ul li[data-v-c6187194]:hover {\n  cursor: pointer;\n}\n.main .nav .left ul[data-v-c6187194] {\n  justify-content: left;\n}\n.main .nav .left ul li[data-v-c6187194]:hover {\n  color: #00ba94;\n}\n.main .nav .right ul[data-v-c6187194] {\n  justify-content: space-evenly;\n}\n.main .nav .right ul[data-v-c6187194] :last-child {\n  background-color: #00ba94;\n  border-radius: 5px;\n  cursor: pointer;\n}\n.main .nav .right ul :last-child .btn[data-v-c6187194] {\n  color: white;\n}\n.main .nav .right ul li[data-v-c6187194]:hover {\n  border-bottom: 3px solid #00ba94;\n  padding-bottom: 2px;\n}\n.main .master-header[data-v-c6187194] {\n  background-image: linear-gradient(rgba(0, 0, 0, 0.527), rgba(0, 0, 0, 0.5)), url(\"/images/breakfast-coffee-pancakes.jpg\");\n  height: 550px;\n  background-size: cover;\n  background-position: center;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n}\n.main .master-header .content-container h1[data-v-c6187194] {\n  color: white;\n  text-align: center;\n}\n.main .master-header .content-container .subtitle[data-v-c6187194] {\n  color: #dbd8d8;\n  text-align: center;\n  margin-bottom: 25px;\n}\n.main .master-header .content-container .input-container[data-v-c6187194] {\n  display: flex;\n  max-width: 550px;\n  margin: auto;\n}\n.main .master-header .content-container .input-container .form-control[data-v-c6187194] {\n  width: 70%;\n  height: 50px;\n}\n.main .master-header .content-container .input-container .btn-container[data-v-c6187194] {\n  margin-left: auto;\n  background-color: #00ba94;\n  border-radius: 5px;\n  display: flex;\n  align-items: center;\n  cursor: pointer;\n}\n.main .master-header .content-container .input-container .btn-container .btn[data-v-c6187194] {\n  color: white;\n}\n.main .master-header[data-v-c6187194]:after {\n  content: \"\";\n  position: absolute;\n  top: 560px;\n  left: -10px;\n  height: 650px;\n  width: 110%;\n  transform: rotate(-2.5deg);\n  background: #eff6fe;\n}\n.main .section-1[data-v-c6187194],\n.main .section-2[data-v-c6187194] {\n  position: relative;\n}\n.main .section-1 .header-container[data-v-c6187194] {\n  margin: 10px 0 40px 0;\n}\n.main .section-1 .header-container .title-1[data-v-c6187194],\n.main .section-1 .header-container .title-2[data-v-c6187194] {\n  text-align: center;\n}\n.main .section-1 .header-container .title-1[data-v-c6187194] {\n  color: #00ba94;\n  font-weight: bold;\n}\n.main .section-1 .header-container .title-2[data-v-c6187194] {\n  color: grey;\n}\n.main .section-1 .card-container[data-v-c6187194] {\n  margin: 20px auto;\n  max-width: 1150px;\n}\n.main .section-1 .top[data-v-c6187194],\n.main .section-1 .bottom[data-v-c6187194] {\n  display: flex;\n  justify-content: space-between;\n  margin: 20px 0;\n}\n.main .section-1 .top .card-item[data-v-c6187194],\n.main .section-1 .bottom .card-item[data-v-c6187194] {\n  width: 250px;\n  height: 170px;\n  border-radius: 5px;\n  box-shadow: 1px 0px 13.5px rgba(0, 0, 0, 0.5);\n  background-color: white;\n  position: relative;\n  bottom: 0;\n  transition: all 0.2s;\n  -moz-transition: all 0.2s;\n  -webkit-transition: all 0.2s;\n  -o-transition: all 0.2s;\n}\n.main .section-1 .top .card-item .img-background[data-v-c6187194],\n.main .section-1 .bottom .card-item .img-background[data-v-c6187194] {\n  height: 70%;\n  background-position: center;\n  background-size: cover;\n  border-top-left-radius: 5px;\n  border-top-right-radius: 5px;\n}\n.main .section-1 .top .card-item .img-background.resto[data-v-c6187194],\n.main .section-1 .bottom .card-item .img-background.resto[data-v-c6187194] {\n  background-image: url(\"/images/burger-fries.jpg\");\n}\n.main .section-1 .top .card-item .img-background.coffee[data-v-c6187194],\n.main .section-1 .bottom .card-item .img-background.coffee[data-v-c6187194] {\n  background-image: url(\"/images/blue-cups-coffee.jpg\");\n}\n.main .section-1 .top .card-item .img-background.medical[data-v-c6187194],\n.main .section-1 .bottom .card-item .img-background.medical[data-v-c6187194] {\n  background-image: url(\"/images/medical-heart.jpg\");\n}\n.main .section-1 .top .card-item .img-background.auto[data-v-c6187194],\n.main .section-1 .bottom .card-item .img-background.auto[data-v-c6187194] {\n  background-image: url(\"/images/auto.jpg\");\n}\n.main .section-1 .top .card-item .img-background.events[data-v-c6187194],\n.main .section-1 .bottom .card-item .img-background.events[data-v-c6187194] {\n  background-image: url(\"/images/events.jpg\");\n}\n.main .section-1 .top .card-item .img-background.breweries[data-v-c6187194],\n.main .section-1 .bottom .card-item .img-background.breweries[data-v-c6187194] {\n  background-image: url(\"/images/brewery.jpg\");\n}\n.main .section-1 .top .card-item .img-background.gym[data-v-c6187194],\n.main .section-1 .bottom .card-item .img-background.gym[data-v-c6187194] {\n  background-image: url(\"/images/gym.jpg\");\n}\n.main .section-1 .top .card-item .img-background.marketing[data-v-c6187194],\n.main .section-1 .bottom .card-item .img-background.marketing[data-v-c6187194] {\n  background-image: url(\"/images/marketing.jpg\");\n}\n.main .section-1 .top .card-item .text[data-v-c6187194],\n.main .section-1 .bottom .card-item .text[data-v-c6187194] {\n  text-align: center;\n  padding: 10px;\n  color: #4a4a4a;\n  font-weight: bold;\n}\n.main .section-1 .top .card-item[data-v-c6187194]:hover,\n.main .section-1 .bottom .card-item[data-v-c6187194]:hover {\n  position: relative;\n  cursor: pointer;\n  box-shadow: 6px 0px 17px rgba(0, 0, 0, 0.699);\n  bottom: 5px;\n}\n.main .section-2[data-v-c6187194] {\n  margin: 50px 0;\n}\n.main .section-2 .content-container[data-v-c6187194] {\n  width: 100%;\n  margin: 50px auto;\n  display: flex;\n  justify-content: space-around;\n  border: 1px solid #00000038;\n  border-radius: 5px;\n  padding: 50px;\n  background: white;\n  box-shadow: 1px 0px 13.5px rgba(0, 0, 0, 0.25);\n  margin: 20px auto;\n  max-width: 1150px;\n}\n.main .section-2 .content-container .left[data-v-c6187194],\n.main .section-2 .content-container .right[data-v-c6187194] {\n  display: flex;\n}\n.main .section-2 .content-container .left[data-v-c6187194] {\n  flex-direction: column;\n}\n.main .section-2 .content-container .left .title[data-v-c6187194] {\n  font-weight: bold;\n  font-size: 20px;\n}\n.main .section-2 .content-container .left .subtitle[data-v-c6187194] {\n  color: grey;\n}\n.main .section-2 .content-container .right[data-v-c6187194] {\n  align-items: center;\n  flex-direction: row;\n}\n.main .section-2 .content-container .right .form-control[data-v-c6187194] {\n  background: #eff6fe;\n}\n.main .section-2 .content-container .right .btn-container[data-v-c6187194] {\n  width: 150px;\n  margin-left: 20px;\n  background-color: #00ba94;\n  border-radius: 5px;\n  display: flex;\n  justify-content: center;\n}\n.main .section-2 .content-container .right .btn-container .btn[data-v-c6187194] {\n  color: white;\n}\n.main .section-3[data-v-c6187194] {\n  height: 740px;\n}\n.main .section-3 .title[data-v-c6187194] {\n  color: #00ba94;\n  font-weight: bold;\n}\n.main .section-3 .title[data-v-c6187194],\n.main .section-3 .subtitle[data-v-c6187194] {\n  text-align: center;\n}\n.main .section-3 .card-container[data-v-c6187194] {\n  display: flex;\n  justify-content: space-between;\n  margin: 50px 0;\n  margin: 20px auto;\n  max-width: 1150px;\n}\n.main .section-3 .card-item[data-v-c6187194] {\n  border-radius: 5px;\n  box-shadow: 1px 0px 13.5px rgba(0, 0, 0, 0.5);\n  background-color: white;\n  width: 350px;\n  height: 435px;\n  position: relative;\n  bottom: 0;\n  transition: all 0.2s;\n  -moz-transition: all 0.2s;\n  -webkit-transition: all 0.2s;\n  -o-transition: all 0.2s;\n}\n.main .section-3 .card-item .img-background[data-v-c6187194] {\n  height: 275px;\n  background-position: center;\n  background-size: cover;\n  border-top-left-radius: 5px;\n  border-top-right-radius: 5px;\n}\n.main .section-3 .card-item .img-background.mexican[data-v-c6187194] {\n  background-image: url(\"/images/mexican-resto.jpg\");\n}\n.main .section-3 .card-item .img-background.burger[data-v-c6187194] {\n  background-image: url(\"/images/burger-resto.jpg\");\n}\n.main .section-3 .card-item .img-background.fish[data-v-c6187194] {\n  background-image: url(\"/images/fish-resto.jpg\");\n}\n.main .section-3 .card-item .title[data-v-c6187194] {\n  color: black;\n  font-weight: normal;\n}\n.main .section-3 .card-item .text[data-v-c6187194] {\n  text-align: center;\n  padding: 10px;\n  color: #4a4a4a;\n  font-weight: bold;\n}\n.main .section-3 .card-item[data-v-c6187194]:hover {\n  position: relative;\n  cursor: pointer;\n  box-shadow: 6px 0px 17px rgba(0, 0, 0, 0.699);\n  bottom: 5px;\n}\n.main .section-3 .card-item .business-info[data-v-c6187194] {\n  padding: 15px;\n}\n.main .section-3 .card-item .business-info .stars[data-v-c6187194] {\n  display: flex;\n  justify-content: center;\n}\n.main .section-3 .card-item .business-info .stars .full-star[data-v-c6187194] {\n  background: url(" + ___CSS_LOADER_URL_REPLACEMENT_0___ + ");\n}\n.main .section-3 .card-item .business-info .stars .half-star[data-v-c6187194] {\n  background: url(" + ___CSS_LOADER_URL_REPLACEMENT_1___ + ");\n}\n.main .section-3 .card-item .business-info .stars .empty-star[data-v-c6187194] {\n  background: url(" + ___CSS_LOADER_URL_REPLACEMENT_2___ + ");\n}\n.main .section-3 .card-item .business-info .stars .full-star[data-v-c6187194],\n.main .section-3 .card-item .business-info .stars .half-star[data-v-c6187194],\n.main .section-3 .card-item .business-info .stars .empty-star[data-v-c6187194] {\n  height: 18px;\n  width: 20px;\n  background-repeat: no-repeat;\n}\n.main .section-3 .card-item .business-info .num-reviews[data-v-c6187194],\n.main .section-3 .card-item .business-info .address[data-v-c6187194] {\n  text-align: center;\n  color: grey;\n}\n.main .section-3 .card-item .opened-date[data-v-c6187194] {\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  font-size: 12px;\n  background-color: #eff6fe;\n  border: 1px solid #0000000f;\n  border-bottom-left-radius: 5px;\n  border-bottom-right-radius: 5px;\n}\n.main .section-3 .card-item .opened-date .house[data-v-c6187194] {\n  background: url(" + ___CSS_LOADER_URL_REPLACEMENT_3___ + ");\n  height: 20px;\n  width: 20px;\n  background-repeat: no-repeat;\n  margin-right: 20px;\n}\n.main .section-3 .card-item .opened-date .text[data-v-c6187194] {\n  color: grey;\n}\n.main .footer[data-v-c6187194] {\n  background: #405164;\n  position: relative;\n  height: 370px;\n}\n.main .footer .top[data-v-c6187194] {\n  display: flex;\n  justify-content: space-evenly;\n  padding: 50px;\n}\n.main .footer .top .column[data-v-c6187194] {\n  width: 180px;\n}\n.main .footer .top .column .header[data-v-c6187194],\n.main .footer .top .column .link[data-v-c6187194] {\n  color: #b0b0b0;\n}\n.main .footer .top .column .header[data-v-c6187194] {\n  font-weight: bold;\n  margin-bottom: 10px;\n}\n.main .footer .top .column .link[data-v-c6187194]:hover {\n  cursor: pointer;\n  color: #dfdfdf;\n}\n.main .footer .bottom[data-v-c6187194] {\n  display: flex;\n  justify-content: space-evenly;\n  padding: 50px;\n}\n.main .footer .bottom .column[data-v-c6187194] {\n  width: 180px;\n}\n.main .footer .bottom .column .header[data-v-c6187194],\n.main .footer .bottom .column .link[data-v-c6187194] {\n  color: #b0b0b0;\n}\n.main .footer .bottom .column .header[data-v-c6187194] {\n  font-weight: bold;\n}\n.main .footer .bottom .column .link[data-v-c6187194]:hover {\n  cursor: pointer;\n  color: #dfdfdf;\n}\n.main .footer[data-v-c6187194]::after {\n  content: \"\";\n  position: absolute;\n  left: -10px;\n  width: 110%;\n  transform: rotate(-2.5deg);\n  background: #405164;\n  bottom: 320px;\n  height: 100px;\n  z-index: -1;\n}", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -15919,7 +15935,7 @@ var ___CSS_LOADER_URL_REPLACEMENT_0___ = _node_modules_css_loader_dist_runtime_g
 var ___CSS_LOADER_URL_REPLACEMENT_1___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_1___default()(_public_assets_client_svg__WEBPACK_IMPORTED_MODULE_3__["default"]);
 var ___CSS_LOADER_URL_REPLACEMENT_2___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_1___default()(_public_assets_question_svg__WEBPACK_IMPORTED_MODULE_4__["default"]);
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".main[data-v-b3c5cf30] {\n  display: flex;\n}\n.main .invisible[data-v-b3c5cf30] {\n  opacity: 0;\n}\n.main .fade-in[data-v-b3c5cf30] {\n  opacity: 1;\n  transition: 1.5s all ease-out;\n  transform: scale(1);\n}\n.main .side-nav[data-v-b3c5cf30] {\n  background-color: white;\n  position: sticky;\n  width: 230px;\n  border-right: 1px solid #0000001c;\n  position: -webkit-sticky;\n  position: sticky;\n  top: 0;\n}\n@media (max-width: 767px) {\n.main .side-nav[data-v-b3c5cf30] {\n    display: none;\n}\n}\n.main .side-nav .initials[data-v-b3c5cf30],\n.main .side-nav .button[data-v-b3c5cf30] {\n  color: #9d8c5d;\n}\n.main .side-nav .initials[data-v-b3c5cf30] {\n  font-size: 35px;\n  text-align: center;\n  padding: 30px;\n  background-color: white;\n  position: -webkit-sticky;\n  position: sticky;\n  top: 0;\n}\n.main .side-nav .button-container[data-v-b3c5cf30] {\n  position: -webkit-sticky;\n  position: sticky;\n  top: 275px;\n}\n.main .side-nav .button[data-v-b3c5cf30] {\n  padding: 0 38px;\n  margin: 10px;\n  font-size: 22px;\n  border-radius: 5px;\n  height: 48px;\n  display: flex;\n  align-items: center;\n}\n.main .side-nav .button[data-v-b3c5cf30]:hover {\n  color: white;\n  background-color: #9d8c5d;\n  box-shadow: 5px 10px #a8a8a85c;\n  cursor: pointer;\n  text-decoration: none;\n}\n.main .side-nav .button .fas[data-v-b3c5cf30],\n.main .side-nav .button .far[data-v-b3c5cf30],\n.main .side-nav .button .fa[data-v-b3c5cf30] {\n  margin-right: 12px;\n}\n.main .background-img[data-v-b3c5cf30] {\n  background: url(\"/images/abstract-background-wide.jpg\");\n  background-position: center;\n  background-size: inherit;\n}\n.main .faded-overlay[data-v-b3c5cf30] {\n  height: 100%;\n  width: 100%;\n  background-color: #ffffffde;\n  padding: 25px;\n}\n.main .content[data-v-b3c5cf30] {\n  width: 100%;\n  background-color: white;\n}\n.main .content .pop-out-container[data-v-b3c5cf30] {\n  width: calc(100% - 230px);\n  position: absolute;\n  top: 895px;\n}\n.main .content .pop-out[data-v-b3c5cf30] {\n  background-color: white;\n  border: 1px solid #8080804f;\n  border-radius: 50px;\n  display: flex;\n  padding: 15px;\n  bottom: 40px;\n  margin: auto;\n  text-align: center;\n  box-shadow: 6.2px 12.5px 12.5px rgba(0, 0, 0, 0.12);\n  width: 650px;\n  height: 80px;\n  justify-content: center;\n}\n.main .content .pop-out div[data-v-b3c5cf30] {\n  width: 33.3%;\n}\n.main .content .pop-out .stack[data-v-b3c5cf30] {\n  background: url(" + ___CSS_LOADER_URL_REPLACEMENT_0___ + ");\n}\n.main .content .pop-out .client[data-v-b3c5cf30] {\n  background: url(" + ___CSS_LOADER_URL_REPLACEMENT_1___ + ");\n}\n.main .content .pop-out .question[data-v-b3c5cf30] {\n  background: url(" + ___CSS_LOADER_URL_REPLACEMENT_2___ + ");\n}\n.main .content .pop-out .stack[data-v-b3c5cf30],\n.main .content .pop-out .client[data-v-b3c5cf30],\n.main .content .pop-out .question[data-v-b3c5cf30] {\n  height: 23px;\n  width: 23px;\n  margin-right: 10px;\n  background-repeat: no-repeat;\n}\n.main .content .pop-out .left[data-v-b3c5cf30],\n.main .content .pop-out .center[data-v-b3c5cf30],\n.main .content .pop-out .right[data-v-b3c5cf30] {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  font-weight: bold;\n  color: #646363;\n}\n.main .content .pop-out .left[data-v-b3c5cf30],\n.main .content .pop-out .right[data-v-b3c5cf30] {\n  width: 28%;\n}\n.main .content .pop-out .center[data-v-b3c5cf30] {\n  width: 41.3%;\n  border-left: 2px solid #00000042;\n  border-right: 2px solid #00000042;\n}\n.main .content .about[data-v-b3c5cf30],\n.main .content .skills[data-v-b3c5cf30],\n.main .content .works[data-v-b3c5cf30],\n.main .content .contact[data-v-b3c5cf30] {\n  height: 50vh;\n}\n.main .content .about .header[data-v-b3c5cf30],\n.main .content .skills .header[data-v-b3c5cf30],\n.main .content .works .header[data-v-b3c5cf30],\n.main .content .contact .header[data-v-b3c5cf30] {\n  display: flex;\n  margin-bottom: 20px;\n}\n.main .content .about .header hr[data-v-b3c5cf30],\n.main .content .skills .header hr[data-v-b3c5cf30],\n.main .content .works .header hr[data-v-b3c5cf30],\n.main .content .contact .header hr[data-v-b3c5cf30] {\n  width: 40px;\n  margin-top: 12px;\n  border-top: 2px solid rgba(0, 0, 0, 0.45);\n}\n.main .content .about .card[data-v-b3c5cf30],\n.main .content .skills .card[data-v-b3c5cf30],\n.main .content .works .card[data-v-b3c5cf30],\n.main .content .contact .card[data-v-b3c5cf30] {\n  padding: 40px;\n  background-color: transparent;\n  border: none;\n}\n.main .content .about .card svg[data-v-b3c5cf30],\n.main .content .about .card img[data-v-b3c5cf30],\n.main .content .skills .card svg[data-v-b3c5cf30],\n.main .content .skills .card img[data-v-b3c5cf30],\n.main .content .works .card svg[data-v-b3c5cf30],\n.main .content .works .card img[data-v-b3c5cf30],\n.main .content .contact .card svg[data-v-b3c5cf30],\n.main .content .contact .card img[data-v-b3c5cf30] {\n  width: 70px;\n}\n.main .content .home[data-v-b3c5cf30] {\n  display: flex;\n  height: 100vh;\n  background-color: #e4e6e5;\n}\n.main .content .home h1[data-v-b3c5cf30] {\n  font-weight: bold;\n  font-size: 49px;\n}\n.main .content .home .style[data-v-b3c5cf30] {\n  font-size: 24px;\n}\n@media (max-width: 767px) {\n.main .content .home[data-v-b3c5cf30] {\n    flex-direction: column;\n}\n}\n.main .content .home .left[data-v-b3c5cf30] {\n  display: flex;\n  justify-content: center;\n  flex-direction: column;\n  width: 50%;\n  padding: 50px;\n}\n@media (max-width: 767px) {\n.main .content .home .left[data-v-b3c5cf30] {\n    width: 100%;\n    margin: 20px auto auto auto;\n}\n}\n.main .content .home .left h2[data-v-b3c5cf30] {\n  font-weight: bold;\n}\n.main .content .home .left .style[data-v-b3c5cf30] {\n  color: #9d8c5d;\n  font-weight: bold;\n}\n.main .content .home .left p[data-v-b3c5cf30]:nth-child(4) {\n  color: #383838;\n}\n.main .content .home .left .btn-container[data-v-b3c5cf30] {\n  display: flex;\n}\n.main .content .home .left .btn-container .resume-btn[data-v-b3c5cf30],\n.main .content .home .left .btn-container .contact-btn[data-v-b3c5cf30] {\n  padding: 10px 20px;\n  border-radius: 25px;\n  display: flex;\n  align-items: center;\n}\n.main .content .home .left .btn-container .resume-btn[data-v-b3c5cf30]:hover,\n.main .content .home .left .btn-container .contact-btn[data-v-b3c5cf30]:hover {\n  cursor: pointer;\n}\n.main .content .home .left .btn-container .resume-btn[data-v-b3c5cf30] {\n  color: white;\n  margin-right: 20px;\n  background-color: #9d8c5d;\n}\n.main .content .home .left .btn-container .resume-btn[data-v-b3c5cf30]:hover {\n  background-color: #c6b176;\n}\n.main .content .home .left .btn-container .contact-btn[data-v-b3c5cf30] {\n  border: 2px solid #9d8c5d;\n}\n.main .content .home .left .btn-container .contact-btn[data-v-b3c5cf30]:hover {\n  border: 2px solid #c6b176;\n  background-color: #c6b176;\n  color: white;\n}\n.main .content .home .right[data-v-b3c5cf30] {\n  width: 50%;\n}\n.main .content .about[data-v-b3c5cf30] {\n  color: black;\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  height: 45vh;\n}\n.main .content .about .faded-overlay[data-v-b3c5cf30] {\n  display: flex;\n  flex-direction: row;\n}\n.main .content .about .faded-overlay .left[data-v-b3c5cf30] {\n  width: 50%;\n}\n.main .content .about .faded-overlay .right[data-v-b3c5cf30] {\n  width: 50%;\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  justify-content: space-evenly;\n}\n.main .content .about .faded-overlay .right .header[data-v-b3c5cf30] {\n  font-weight: bold;\n  color: #9d8c5d;\n}\n.main .content .about .faded-overlay .right .info-container .name[data-v-b3c5cf30],\n.main .content .about .faded-overlay .right .info-container .phone[data-v-b3c5cf30],\n.main .content .about .faded-overlay .right .info-container .email[data-v-b3c5cf30] {\n  display: flex;\n}\n.main .content .about .faded-overlay .right .info-container .name div[data-v-b3c5cf30],\n.main .content .about .faded-overlay .right .info-container .phone div[data-v-b3c5cf30],\n.main .content .about .faded-overlay .right .info-container .email div[data-v-b3c5cf30] {\n  width: 25%;\n}\n.main .content .skills[data-v-b3c5cf30] {\n  background-color: #e4e6e5;\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  height: 40vh;\n  padding: 25px;\n}\n.main .content .skills .skills-header[data-v-b3c5cf30] {\n  margin: 0 auto 30px auto;\n  font-weight: bold;\n  color: #9d8c5d;\n}\n.main .content .skills .skills-container[data-v-b3c5cf30] {\n  display: flex;\n}\n.main .content .skills .skills-container .left[data-v-b3c5cf30] {\n  padding-left: 50px;\n}\n.main .content .skills .skills-container .right[data-v-b3c5cf30] {\n  padding-right: 50px;\n  display: flex;\n  flex-direction: column;\n  align-items: flex-end;\n}\n.main .content .skills .skills-container .left[data-v-b3c5cf30],\n.main .content .skills .skills-container .right[data-v-b3c5cf30] {\n  width: 50%;\n}\n.main .content .skills .skills-container .left .skill-container[data-v-b3c5cf30],\n.main .content .skills .skills-container .right .skill-container[data-v-b3c5cf30] {\n  margin-bottom: 20px;\n}\n.main .content .skills .skills-container .skill-container[data-v-b3c5cf30] {\n  width: 90%;\n}\n.main .content .skills .skills-container .skill-container .header[data-v-b3c5cf30] {\n  width: auto;\n  font-weight: bold;\n  color: #6a5d5d;\n}\n.main .content .skills .skills-container .skill-container .header span[data-v-b3c5cf30] {\n  margin-left: auto;\n}\n.main .content .skills .skills-container .skill-container .skill-bar[data-v-b3c5cf30] {\n  height: 10px;\n  border: 1px solid #00000042;\n}\n.main .content .skills .skills-container .skill-container #barBackground[data-v-b3c5cf30] {\n  width: 100%;\n  background-color: #fff;\n  border-radius: 10px;\n}\n.main .content .skills .skills-container .skill-container .bar[data-v-b3c5cf30] {\n  height: 10px;\n  background-color: #9d8c5d;\n  border-radius: 10px;\n}\n.main .content .skills .skills-container .skill-container #vue[data-v-b3c5cf30],\n.main .content .skills .skills-container .skill-container #php[data-v-b3c5cf30],\n.main .content .skills .skills-container .skill-container #mysql[data-v-b3c5cf30],\n.main .content .skills .skills-container .skill-container #html[data-v-b3c5cf30],\n.main .content .skills .skills-container .skill-container #cssScss[data-v-b3c5cf30] {\n  width: 1%;\n}\n.main .content .education-work[data-v-b3c5cf30] {\n  height: 55vh;\n}\n.main .content .education-work .faded-overlay .education-work-header[data-v-b3c5cf30] {\n  text-align: center;\n  margin: 30px 0 35px 0;\n  font-weight: bold;\n  color: #9d8c5d;\n}\n.main .content .education-work .faded-overlay .education-work-container[data-v-b3c5cf30] {\n  display: flex;\n  flex-direction: row;\n  padding: 0 240px;\n  justify-content: center;\n}\n.main .content .education-work .faded-overlay .education-work-container .education[data-v-b3c5cf30],\n.main .content .education-work .faded-overlay .education-work-container .experience[data-v-b3c5cf30] {\n  width: 40%;\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n}\n.main .content .education-work .faded-overlay .education-work-container .education .header[data-v-b3c5cf30],\n.main .content .education-work .faded-overlay .education-work-container .experience .header[data-v-b3c5cf30] {\n  margin-bottom: 15px;\n  font-weight: bold;\n  color: #6a5d5d;\n}\n.main .content .education-work .faded-overlay .education-work-container .education .content-container[data-v-b3c5cf30],\n.main .content .education-work .faded-overlay .education-work-container .experience .content-container[data-v-b3c5cf30] {\n  display: flex;\n  flex-direction: column;\n  padding: 5px 23px;\n  margin-bottom: 15px;\n  border-left-color: #9d8c5d;\n  border-left-style: solid;\n  border-left-width: 2px;\n}\n.main .content .education-work .faded-overlay .education-work-container .education .content-container .fa[data-v-b3c5cf30],\n.main .content .education-work .faded-overlay .education-work-container .experience .content-container .fa[data-v-b3c5cf30] {\n  position: relative;\n  right: 32px;\n  bottom: 12px;\n  color: #9d8c5d;\n  transition: all 1s;\n  -moz-transition: all 1s;\n  -webkit-transition: all 1s;\n  -o-transition: all 1s;\n}\n.main .content .education-work .faded-overlay .education-work-container .education .content-container[data-v-b3c5cf30]:hover,\n.main .content .education-work .faded-overlay .education-work-container .experience .content-container[data-v-b3c5cf30]:hover {\n  cursor: pointer;\n}\n.main .content .education-work .faded-overlay .education-work-container .education .content-container:hover .text[data-v-b3c5cf30],\n.main .content .education-work .faded-overlay .education-work-container .education .content-container:hover .date[data-v-b3c5cf30],\n.main .content .education-work .faded-overlay .education-work-container .experience .content-container:hover .text[data-v-b3c5cf30],\n.main .content .education-work .faded-overlay .education-work-container .experience .content-container:hover .date[data-v-b3c5cf30] {\n  color: #6a5d5d;\n}\n.main .content .education-work .faded-overlay .education-work-container .education .content-container:hover .fa[data-v-b3c5cf30],\n.main .content .education-work .faded-overlay .education-work-container .experience .content-container:hover .fa[data-v-b3c5cf30] {\n  bottom: -25px;\n}\n.main .content .education-work .faded-overlay .education-work-container .experience[data-v-b3c5cf30] {\n  margin-left: 70px;\n}\n.main .content .product[data-v-b3c5cf30] {\n  height: 55vh;\n  background-color: #e4e6e5;\n  padding: 25px;\n}\n.main .content .product .skills-header[data-v-b3c5cf30] {\n  text-align: center;\n  font-weight: bold;\n  color: #9d8c5d;\n}\n.main .content .product .top[data-v-b3c5cf30],\n.main .content .product .bottom[data-v-b3c5cf30] {\n  display: flex;\n  flex-direction: row;\n  justify-content: space-evenly;\n}\n.main .content .product .offer-container .fa[data-v-b3c5cf30] {\n  position: relative;\n  top: 14px;\n  right: 25px;\n  background-color: #9d8c5d;\n  padding: 10px;\n  border-radius: 10px;\n  color: white;\n  box-shadow: 2.9px 8px 3.3px rgba(0, 0, 0, 0.48);\n  height: 50px;\n  width: 50px;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  transition: all 0.2s;\n  -moz-transition: all 0.2s;\n  -webkit-transition: all 0.2s;\n  -o-transition: all 0.2s;\n}\n.main .content .product .offer-container .fa[data-v-b3c5cf30]::before {\n  font-size: 25px;\n}\n.main .content .product .offer-container .offer-box[data-v-b3c5cf30] {\n  border: 1px solid #00000030;\n  border-radius: 5px 25px 5px 5px;\n  padding: 20px;\n  width: 280px;\n  height: 140px;\n  top: 20px;\n}\n.main .content .product .offer-container .offer-box .header[data-v-b3c5cf30] {\n  font-weight: bold;\n  margin-bottom: 10px;\n  color: #6a5d5d;\n}\n.main .content .product .offer-container[data-v-b3c5cf30]:hover {\n  cursor: pointer;\n}\n.main .content .product .offer-container:hover .fa[data-v-b3c5cf30] {\n  top: 5px;\n}\n.main .content .product .offer-container:hover .text[data-v-b3c5cf30] {\n  color: #6a5d5d;\n}\n.main .content .recent-works[data-v-b3c5cf30] {\n  height: 40vh;\n}\n.main .content .recent-works .faded-overlay .header[data-v-b3c5cf30] {\n  text-align: center;\n  font-weight: bold;\n  color: #9d8c5d;\n}\n.main .content .recent-works .faded-overlay .works-container[data-v-b3c5cf30] {\n  display: flex;\n  justify-content: space-evenly;\n  padding: 15px 0;\n  height: 80%;\n  align-items: center;\n}\n.main .content .recent-works .faded-overlay .works-container .work[data-v-b3c5cf30] {\n  height: 180px;\n  width: 260px;\n  background-color: grey;\n  border-radius: 10px;\n  box-shadow: 1px 0px 13.5px rgba(0, 0, 0, 0.5);\n  transition: all 0.2s;\n  -moz-transition: all 0.2s;\n  -webkit-transition: all 0.2s;\n  -o-transition: all 0.2s;\n}\n.main .content .recent-works .faded-overlay .works-container .work.coffee[data-v-b3c5cf30], .main .content .recent-works .faded-overlay .works-container .work.black-white[data-v-b3c5cf30], .main .content .recent-works .faded-overlay .works-container .work.finder[data-v-b3c5cf30] {\n  background-size: cover;\n  background-repeat: no-repeat;\n}\n.main .content .recent-works .faded-overlay .works-container .work.coffee[data-v-b3c5cf30] {\n  background-image: url(\"/images/coffee-site-preview.png\");\n}\n.main .content .recent-works .faded-overlay .works-container .work.black-white[data-v-b3c5cf30] {\n  background-image: url(\"/images/black-white-site-preview.png\");\n}\n.main .content .recent-works .faded-overlay .works-container .work.finder[data-v-b3c5cf30] {\n  background-image: url(\"/images/business-finder-preview.png\");\n}\n.main .content .recent-works .faded-overlay .works-container .work[data-v-b3c5cf30]:hover {\n  position: relative;\n  cursor: pointer;\n  box-shadow: 6px 0px 17px rgba(0, 0, 0, 0.699);\n  bottom: 5px;\n}\n.main .content .contact[data-v-b3c5cf30] {\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  height: 45vh;\n  background-color: #e4e6e5;\n  padding: 25px 20%;\n}\n.main .content .contact .header[data-v-b3c5cf30] {\n  text-align: center;\n  font-weight: bold;\n  color: #9d8c5d;\n}\n.main .content .contact .contact-container[data-v-b3c5cf30] {\n  display: flex;\n  flex-direction: column;\n}\n.main .content .contact .contact-container .fa[data-v-b3c5cf30] {\n  font-size: 40px;\n}\n.main .content .contact .contact-container #group-contact #name[data-v-b3c5cf30],\n.main .content .contact .contact-container #group-contact #subject[data-v-b3c5cf30],\n.main .content .contact .contact-container #group-message #name[data-v-b3c5cf30],\n.main .content .contact .contact-container #group-message #subject[data-v-b3c5cf30] {\n  margin-bottom: 1rem;\n}\n.main .content .contact .contact-container .form-control[data-v-b3c5cf30] {\n  border-radius: 10px;\n}\n.main .content .contact .contact-container .btn-container[data-v-b3c5cf30] {\n  display: flex;\n  justify-content: center;\n}\n.main .content .contact .contact-container .btn-container .btn[data-v-b3c5cf30] {\n  background-color: #9d8c5d;\n  border-color: #9d8c5d;\n  border-radius: 25px;\n}\n.main .content .contact .contact-container .btn-container .btn[data-v-b3c5cf30]:hover {\n  cursor: pointer;\n  border-color: #c6b176;\n  background-color: #c6b176;\n}\n.main .content .footer[data-v-b3c5cf30] {\n  height: 70px;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  background-color: #9d8c5d;\n  color: white;\n  font-weight: bold;\n  font-size: 18px;\n}\n.main .modal-content[data-v-b3c5cf30] {\n  border-radius: 15px;\n  height: 320px;\n}\n.main .modal-backdrop[data-v-b3c5cf30] {\n  opacity: 0.5 !important;\n}", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, ".main[data-v-b3c5cf30] {\n  display: flex;\n}\n.main .invisible[data-v-b3c5cf30] {\n  opacity: 0;\n}\n.main .fade-in[data-v-b3c5cf30] {\n  opacity: 1;\n  transition: 1.5s all ease-out;\n  transform: scale(1);\n}\n.main .side-nav[data-v-b3c5cf30] {\n  background-color: white;\n  position: sticky;\n  width: 230px;\n  border-right: 1px solid #0000001c;\n  position: -webkit-sticky;\n  position: sticky;\n  top: 0;\n}\n@media (max-width: 767px) {\n.main .side-nav[data-v-b3c5cf30] {\n    display: none;\n}\n}\n.main .side-nav .initials[data-v-b3c5cf30],\n.main .side-nav .button[data-v-b3c5cf30] {\n  color: #9d8c5d;\n}\n.main .side-nav .initials[data-v-b3c5cf30] {\n  font-size: 35px;\n  text-align: center;\n  padding: 30px;\n  background-color: white;\n  position: -webkit-sticky;\n  position: sticky;\n  top: 0;\n}\n.main .side-nav .button-container[data-v-b3c5cf30] {\n  position: -webkit-sticky;\n  position: sticky;\n  top: 275px;\n}\n.main .side-nav .button[data-v-b3c5cf30] {\n  padding: 0 38px;\n  margin: 10px;\n  font-size: 22px;\n  border-radius: 5px;\n  height: 48px;\n  display: flex;\n  align-items: center;\n}\n.main .side-nav .button[data-v-b3c5cf30]:hover {\n  color: white;\n  background-color: #9d8c5d;\n  box-shadow: 5px 10px #a8a8a85c;\n  cursor: pointer;\n  text-decoration: none;\n}\n.main .side-nav .button .fas[data-v-b3c5cf30],\n.main .side-nav .button .far[data-v-b3c5cf30],\n.main .side-nav .button .fa[data-v-b3c5cf30] {\n  margin-right: 12px;\n}\n.main .background-img[data-v-b3c5cf30] {\n  background: url(\"/images/abstract-background-wide.jpg\");\n  background-position: center;\n  background-size: inherit;\n  background-repeat: no-repeat;\n  background-size: cover;\n}\n.main .faded-overlay[data-v-b3c5cf30] {\n  height: 100%;\n  width: 100%;\n  background-color: #ffffffde;\n  padding: 25px;\n}\n.main .content[data-v-b3c5cf30] {\n  width: 100%;\n  background-color: white;\n}\n.main .content .pop-out-container[data-v-b3c5cf30] {\n  width: calc(100% - 230px);\n  position: absolute;\n  top: 895px;\n}\n.main .content .pop-out[data-v-b3c5cf30] {\n  background-color: white;\n  border: 1px solid #8080804f;\n  border-radius: 50px;\n  display: flex;\n  padding: 15px;\n  bottom: 40px;\n  margin: auto;\n  text-align: center;\n  box-shadow: 6.2px 12.5px 12.5px rgba(0, 0, 0, 0.12);\n  width: 650px;\n  height: 80px;\n  justify-content: center;\n}\n.main .content .pop-out div[data-v-b3c5cf30] {\n  width: 33.3%;\n}\n.main .content .pop-out .stack[data-v-b3c5cf30] {\n  background: url(" + ___CSS_LOADER_URL_REPLACEMENT_0___ + ");\n}\n.main .content .pop-out .client[data-v-b3c5cf30] {\n  background: url(" + ___CSS_LOADER_URL_REPLACEMENT_1___ + ");\n}\n.main .content .pop-out .question[data-v-b3c5cf30] {\n  background: url(" + ___CSS_LOADER_URL_REPLACEMENT_2___ + ");\n}\n.main .content .pop-out .stack[data-v-b3c5cf30],\n.main .content .pop-out .client[data-v-b3c5cf30],\n.main .content .pop-out .question[data-v-b3c5cf30] {\n  height: 23px;\n  width: 23px;\n  margin-right: 10px;\n  background-repeat: no-repeat;\n}\n.main .content .pop-out .left[data-v-b3c5cf30],\n.main .content .pop-out .center[data-v-b3c5cf30],\n.main .content .pop-out .right[data-v-b3c5cf30] {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  font-weight: bold;\n  color: #646363;\n}\n.main .content .pop-out .left[data-v-b3c5cf30],\n.main .content .pop-out .right[data-v-b3c5cf30] {\n  width: 28%;\n}\n.main .content .pop-out .center[data-v-b3c5cf30] {\n  width: 41.3%;\n  border-left: 2px solid #00000042;\n  border-right: 2px solid #00000042;\n}\n.main .content .about[data-v-b3c5cf30],\n.main .content .skills[data-v-b3c5cf30],\n.main .content .works[data-v-b3c5cf30],\n.main .content .contact[data-v-b3c5cf30] {\n  height: 50vh;\n}\n.main .content .about .header[data-v-b3c5cf30],\n.main .content .skills .header[data-v-b3c5cf30],\n.main .content .works .header[data-v-b3c5cf30],\n.main .content .contact .header[data-v-b3c5cf30] {\n  text-align: center;\n  margin-bottom: 20px;\n}\n.main .content .about .header hr[data-v-b3c5cf30],\n.main .content .skills .header hr[data-v-b3c5cf30],\n.main .content .works .header hr[data-v-b3c5cf30],\n.main .content .contact .header hr[data-v-b3c5cf30] {\n  width: 40px;\n  margin-top: 12px;\n  border-top: 2px solid rgba(0, 0, 0, 0.45);\n}\n.main .content .about .card[data-v-b3c5cf30],\n.main .content .skills .card[data-v-b3c5cf30],\n.main .content .works .card[data-v-b3c5cf30],\n.main .content .contact .card[data-v-b3c5cf30] {\n  padding: 40px;\n  background-color: transparent;\n  border: none;\n}\n.main .content .about .card svg[data-v-b3c5cf30],\n.main .content .about .card img[data-v-b3c5cf30],\n.main .content .skills .card svg[data-v-b3c5cf30],\n.main .content .skills .card img[data-v-b3c5cf30],\n.main .content .works .card svg[data-v-b3c5cf30],\n.main .content .works .card img[data-v-b3c5cf30],\n.main .content .contact .card svg[data-v-b3c5cf30],\n.main .content .contact .card img[data-v-b3c5cf30] {\n  width: 70px;\n}\n.main .content .home[data-v-b3c5cf30] {\n  display: flex;\n  height: 100vh;\n  contain: content;\n}\n.main .content .home h1[data-v-b3c5cf30] {\n  font-weight: bold;\n  font-size: 49px;\n}\n.main .content .home .style[data-v-b3c5cf30] {\n  font-size: 24px;\n}\n@media (max-width: 767px) {\n.main .content .home[data-v-b3c5cf30] {\n    flex-direction: column;\n}\n}\n.main .content .home .faded-overlay[data-v-b3c5cf30] {\n  position: absolute;\n  z-index: 1;\n  background-color: unset;\n  background-image: linear-gradient(to right, #e4e6e5 50%, #e4e6e500 70%, #fff0);\n}\n.main .content .home .left[data-v-b3c5cf30] {\n  display: flex;\n  justify-content: center;\n  flex-direction: column;\n  width: 50%;\n  padding: 50px;\n  position: relative;\n  z-index: 1;\n}\n@media (max-width: 767px) {\n.main .content .home .left[data-v-b3c5cf30] {\n    width: 100%;\n    margin: 20px auto auto auto;\n}\n}\n.main .content .home .left h2[data-v-b3c5cf30] {\n  font-weight: bold;\n}\n.main .content .home .left .style[data-v-b3c5cf30] {\n  color: #9d8c5d;\n  font-weight: bold;\n}\n.main .content .home .left p[data-v-b3c5cf30]:nth-child(4) {\n  color: #383838;\n}\n.main .content .home .left .btn-container[data-v-b3c5cf30] {\n  display: flex;\n}\n.main .content .home .left .btn-container .resume-btn[data-v-b3c5cf30],\n.main .content .home .left .btn-container .contact-btn[data-v-b3c5cf30] {\n  padding: 10px 20px;\n  border-radius: 25px;\n  display: flex;\n  align-items: center;\n}\n.main .content .home .left .btn-container .resume-btn[data-v-b3c5cf30]:hover,\n.main .content .home .left .btn-container .contact-btn[data-v-b3c5cf30]:hover {\n  cursor: pointer;\n}\n.main .content .home .left .btn-container .resume-btn[data-v-b3c5cf30] {\n  color: white;\n  margin-right: 20px;\n  background-color: #9d8c5d;\n}\n.main .content .home .left .btn-container .resume-btn[data-v-b3c5cf30]:hover {\n  background-color: #c6b176;\n}\n.main .content .home .left .btn-container .contact-btn[data-v-b3c5cf30] {\n  border: 2px solid #9d8c5d;\n}\n.main .content .home .left .btn-container .contact-btn[data-v-b3c5cf30]:hover {\n  border: 2px solid #c6b176;\n  background-color: #c6b176;\n  color: white;\n}\n.main .content .home .right[data-v-b3c5cf30] {\n  width: 50%;\n  background-image: url(\"/images/self-photo.png\");\n  transform: scaleX(-1);\n  background-repeat: no-repeat;\n  background-position: 20% 50%;\n  position: relative;\n  background-size: cover;\n  z-index: 0;\n}\n.main .content .about[data-v-b3c5cf30] {\n  color: black;\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  height: 45vh;\n}\n.main .content .about .faded-overlay[data-v-b3c5cf30] {\n  display: flex;\n  flex-direction: row;\n}\n.main .content .about .faded-overlay .about-container[data-v-b3c5cf30] {\n  padding: 0 50px;\n}\n.main .content .about .faded-overlay .about-container .header[data-v-b3c5cf30] {\n  font-weight: bold;\n  color: #9d8c5d;\n  text-align: center;\n  margin: 50px 0;\n}\n.main .content .about .faded-overlay .about-container .description[data-v-b3c5cf30] {\n  margin: 110px 0;\n}\n.main .content .about .faded-overlay .about-container .info-container .name[data-v-b3c5cf30],\n.main .content .about .faded-overlay .about-container .info-container .phone[data-v-b3c5cf30],\n.main .content .about .faded-overlay .about-container .info-container .email[data-v-b3c5cf30] {\n  display: flex;\n}\n.main .content .about .faded-overlay .about-container .info-container .name div[data-v-b3c5cf30],\n.main .content .about .faded-overlay .about-container .info-container .phone div[data-v-b3c5cf30],\n.main .content .about .faded-overlay .about-container .info-container .email div[data-v-b3c5cf30] {\n  width: 25%;\n}\n.main .content .skills[data-v-b3c5cf30] {\n  background-color: #e4e6e5;\n  height: 45vh;\n  padding: 25px;\n}\n.main .content .skills .skills-header[data-v-b3c5cf30] {\n  margin: 50px 0;\n  text-align: center;\n  font-weight: bold;\n  color: #9d8c5d;\n}\n.main .content .skills .skills-container[data-v-b3c5cf30] {\n  display: flex;\n}\n.main .content .skills .skills-container .left[data-v-b3c5cf30] {\n  padding-left: 50px;\n}\n.main .content .skills .skills-container .right[data-v-b3c5cf30] {\n  padding-right: 50px;\n  display: flex;\n  flex-direction: column;\n  align-items: flex-end;\n}\n.main .content .skills .skills-container .left[data-v-b3c5cf30],\n.main .content .skills .skills-container .right[data-v-b3c5cf30] {\n  width: 50%;\n}\n.main .content .skills .skills-container .left .skill-container[data-v-b3c5cf30],\n.main .content .skills .skills-container .right .skill-container[data-v-b3c5cf30] {\n  margin-bottom: 20px;\n}\n.main .content .skills .skills-container .skill-container[data-v-b3c5cf30] {\n  width: 90%;\n}\n.main .content .skills .skills-container .skill-container .header[data-v-b3c5cf30] {\n  width: auto;\n  font-weight: bold;\n  color: #6a5d5d;\n}\n.main .content .skills .skills-container .skill-container .header span[data-v-b3c5cf30] {\n  margin-left: auto;\n}\n.main .content .skills .skills-container .skill-container .skill-bar[data-v-b3c5cf30] {\n  height: 10px;\n  border: 1px solid #00000042;\n}\n.main .content .skills .skills-container .skill-container #barBackground[data-v-b3c5cf30] {\n  width: 100%;\n  background-color: #fff;\n  border-radius: 10px;\n}\n.main .content .skills .skills-container .skill-container .bar[data-v-b3c5cf30] {\n  height: 10px;\n  background-color: #9d8c5d;\n  border-radius: 10px;\n}\n.main .content .skills .skills-container .skill-container #vue[data-v-b3c5cf30],\n.main .content .skills .skills-container .skill-container #php[data-v-b3c5cf30],\n.main .content .skills .skills-container .skill-container #mysql[data-v-b3c5cf30],\n.main .content .skills .skills-container .skill-container #html[data-v-b3c5cf30],\n.main .content .skills .skills-container .skill-container #cssScss[data-v-b3c5cf30] {\n  width: 1%;\n}\n.main .content .education-work[data-v-b3c5cf30] {\n  height: 50vh;\n}\n.main .content .education-work .faded-overlay .education-work-header[data-v-b3c5cf30] {\n  text-align: center;\n  margin: 50px 0;\n  font-weight: bold;\n  color: #9d8c5d;\n}\n.main .content .education-work .faded-overlay .education-work-container[data-v-b3c5cf30] {\n  display: flex;\n  justify-content: space-between;\n  flex-direction: column;\n  margin: 70px 0;\n}\n.main .content .education-work .faded-overlay .education-work-container .education[data-v-b3c5cf30],\n.main .content .education-work .faded-overlay .education-work-container .experience[data-v-b3c5cf30] {\n  display: flex;\n  flex-direction: row;\n  justify-content: center;\n}\n.main .content .education-work .faded-overlay .education-work-container .education .header[data-v-b3c5cf30],\n.main .content .education-work .faded-overlay .education-work-container .experience .header[data-v-b3c5cf30] {\n  margin-bottom: 15px;\n  font-weight: bold;\n  color: #6a5d5d;\n  display: flex;\n  align-items: center;\n  min-width: 140px;\n  justify-content: center;\n}\n.main .content .education-work .faded-overlay .education-work-container .education .content-container[data-v-b3c5cf30],\n.main .content .education-work .faded-overlay .education-work-container .experience .content-container[data-v-b3c5cf30] {\n  display: flex;\n  flex-direction: column;\n  padding: 5px 23px;\n  margin-bottom: 15px;\n  border-left-color: #9d8c5d;\n  border-left-style: solid;\n  border-left-width: 2px;\n  min-width: 260px;\n  background-color: #dedede00;\n}\n.main .content .education-work .faded-overlay .education-work-container .education .content-container .exp-gradient[data-v-b3c5cf30],\n.main .content .education-work .faded-overlay .education-work-container .experience .content-container .exp-gradient[data-v-b3c5cf30] {\n  background-color: grey;\n}\n.main .content .education-work .faded-overlay .education-work-container .education .content-container .title[data-v-b3c5cf30],\n.main .content .education-work .faded-overlay .education-work-container .experience .content-container .title[data-v-b3c5cf30] {\n  font-style: italic;\n}\n.main .content .education-work .faded-overlay .education-work-container .education .content-container[data-v-b3c5cf30]:hover,\n.main .content .education-work .faded-overlay .education-work-container .experience .content-container[data-v-b3c5cf30]:hover {\n  cursor: default;\n}\n.main .content .education-work .faded-overlay .education-work-container .education .content-container:hover .text[data-v-b3c5cf30],\n.main .content .education-work .faded-overlay .education-work-container .education .content-container:hover .title[data-v-b3c5cf30],\n.main .content .education-work .faded-overlay .education-work-container .education .content-container:hover .date[data-v-b3c5cf30],\n.main .content .education-work .faded-overlay .education-work-container .experience .content-container:hover .text[data-v-b3c5cf30],\n.main .content .education-work .faded-overlay .education-work-container .experience .content-container:hover .title[data-v-b3c5cf30],\n.main .content .education-work .faded-overlay .education-work-container .experience .content-container:hover .date[data-v-b3c5cf30] {\n  color: #6a5d5d;\n}\n.main .content .product[data-v-b3c5cf30] {\n  height: 65vh;\n  background-color: #e4e6e5;\n  padding: 25px;\n}\n.main .content .product .skills-header[data-v-b3c5cf30] {\n  text-align: center;\n  font-weight: bold;\n  color: #9d8c5d;\n  margin: 50px 0 30px 0;\n}\n.main .content .product .top[data-v-b3c5cf30],\n.main .content .product .bottom[data-v-b3c5cf30] {\n  display: flex;\n  flex-direction: row;\n  justify-content: space-evenly;\n}\n.main .content .product .offer-container .fa[data-v-b3c5cf30] {\n  position: relative;\n  top: 14px;\n  right: 25px;\n  background-color: #9d8c5d;\n  padding: 10px;\n  border-radius: 10px;\n  color: white;\n  box-shadow: 2.9px 8px 3.3px rgba(0, 0, 0, 0.48);\n  height: 50px;\n  width: 50px;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  transition: all 0.2s;\n  -moz-transition: all 0.2s;\n  -webkit-transition: all 0.2s;\n  -o-transition: all 0.2s;\n}\n.main .content .product .offer-container .fa[data-v-b3c5cf30]::before {\n  font-size: 25px;\n}\n.main .content .product .offer-container .offer-box[data-v-b3c5cf30] {\n  border: 1px solid #00000030;\n  border-radius: 5px 25px 5px 5px;\n  padding: 20px;\n  width: 280px;\n  height: 140px;\n  top: 20px;\n}\n.main .content .product .offer-container .offer-box .header[data-v-b3c5cf30] {\n  font-weight: bold;\n  margin-bottom: 10px;\n  color: #6a5d5d;\n}\n.main .content .product .offer-container[data-v-b3c5cf30]:hover {\n  cursor: pointer;\n}\n.main .content .product .offer-container:hover .fa[data-v-b3c5cf30] {\n  top: 5px;\n}\n.main .content .product .offer-container:hover .text[data-v-b3c5cf30] {\n  color: #6a5d5d;\n}\n.main .content .recent-works[data-v-b3c5cf30] {\n  height: 48vh;\n}\n.main .content .recent-works .faded-overlay .header[data-v-b3c5cf30] {\n  text-align: center;\n  font-weight: bold;\n  color: #9d8c5d;\n  margin: 50px 0;\n}\n.main .content .recent-works .faded-overlay .works-container[data-v-b3c5cf30] {\n  display: flex;\n  justify-content: space-evenly;\n  align-items: center;\n}\n.main .content .recent-works .faded-overlay .works-container .work[data-v-b3c5cf30] {\n  height: 180px;\n  width: 260px;\n  background-color: grey;\n  border-radius: 10px;\n  box-shadow: 1px 0px 13.5px rgba(0, 0, 0, 0.5);\n  transition: all 0.2s;\n  -moz-transition: all 0.2s;\n  -webkit-transition: all 0.2s;\n  -o-transition: all 0.2s;\n}\n.main .content .recent-works .faded-overlay .works-container .work.coffee[data-v-b3c5cf30], .main .content .recent-works .faded-overlay .works-container .work.black-white[data-v-b3c5cf30], .main .content .recent-works .faded-overlay .works-container .work.finder[data-v-b3c5cf30] {\n  background-size: cover;\n  background-repeat: no-repeat;\n}\n.main .content .recent-works .faded-overlay .works-container .work.coffee[data-v-b3c5cf30] {\n  background-image: url(\"/images/coffee-site-preview.png\");\n}\n.main .content .recent-works .faded-overlay .works-container .work.black-white[data-v-b3c5cf30] {\n  background-image: url(\"/images/black-white-site-preview.png\");\n}\n.main .content .recent-works .faded-overlay .works-container .work.finder[data-v-b3c5cf30] {\n  background-image: url(\"/images/business-finder-preview.png\");\n}\n.main .content .recent-works .faded-overlay .works-container .work[data-v-b3c5cf30]:hover {\n  position: relative;\n  cursor: pointer;\n  box-shadow: 6px 0px 17px rgba(0, 0, 0, 0.699);\n  bottom: 5px;\n}\n.main .content .contact[data-v-b3c5cf30] {\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  height: 45vh;\n  background-color: #e4e6e5;\n  padding: 25px 20%;\n}\n.main .content .contact .header[data-v-b3c5cf30] {\n  text-align: center;\n  font-weight: bold;\n  color: #9d8c5d;\n}\n.main .content .contact .contact-container[data-v-b3c5cf30] {\n  display: flex;\n  flex-direction: column;\n}\n.main .content .contact .contact-container .fa[data-v-b3c5cf30] {\n  font-size: 40px;\n}\n.main .content .contact .contact-container #group-contact #name[data-v-b3c5cf30],\n.main .content .contact .contact-container #group-contact #subject[data-v-b3c5cf30],\n.main .content .contact .contact-container #group-message #name[data-v-b3c5cf30],\n.main .content .contact .contact-container #group-message #subject[data-v-b3c5cf30] {\n  margin-bottom: 1rem;\n}\n.main .content .contact .contact-container .form-control[data-v-b3c5cf30] {\n  border-radius: 10px;\n}\n.main .content .contact .contact-container .btn-container[data-v-b3c5cf30] {\n  display: flex;\n  justify-content: center;\n}\n.main .content .contact .contact-container .btn-container .btn[data-v-b3c5cf30] {\n  background-color: #9d8c5d;\n  border-color: #9d8c5d;\n  border-radius: 25px;\n}\n.main .content .contact .contact-container .btn-container .btn[data-v-b3c5cf30]:hover {\n  cursor: pointer;\n  border-color: #c6b176;\n  background-color: #c6b176;\n}\n.main .content .footer[data-v-b3c5cf30] {\n  height: 70px;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  background-color: #9d8c5d;\n  color: white;\n  font-weight: bold;\n  font-size: 18px;\n}\n.main .modal-content[data-v-b3c5cf30] {\n  border-radius: 15px;\n  height: 320px;\n}\n.main .modal-backdrop[data-v-b3c5cf30] {\n  opacity: 0.5 !important;\n}", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -49774,68 +49790,180 @@ var render = function () {
     "div",
     { staticClass: "main" },
     [
-      _vm._m(0),
+      _c("div", { staticClass: "side-nav" }, [
+        _c("div", { staticClass: "initials" }, [_vm._v("MF")]),
+        _vm._v(" "),
+        _c("div", { staticClass: "button-container" }, [
+          _c(
+            "a",
+            {
+              staticClass: "button",
+              on: {
+                click: function ($event) {
+                  return _vm.scrollToRef("home")
+                },
+              },
+            },
+            [_c("i", { staticClass: "fas fa-house-user" }), _vm._v(" Home")]
+          ),
+          _vm._v(" "),
+          _c(
+            "a",
+            {
+              staticClass: "button",
+              on: {
+                click: function ($event) {
+                  return _vm.scrollToRef("about")
+                },
+              },
+            },
+            [_c("i", { staticClass: "far fa-address-card" }), _vm._v(" About")]
+          ),
+          _vm._v(" "),
+          _c(
+            "a",
+            {
+              staticClass: "button",
+              on: {
+                click: function ($event) {
+                  return _vm.scrollToRef("skills")
+                },
+              },
+            },
+            [_c("i", { staticClass: "fas fa-laptop-code" }), _vm._v(" Skills")]
+          ),
+          _vm._v(" "),
+          _c(
+            "a",
+            {
+              staticClass: "button",
+              on: {
+                click: function ($event) {
+                  return _vm.scrollToRef("education")
+                },
+              },
+            },
+            [
+              _c("i", { staticClass: "fa fa-graduation-cap" }),
+              _vm._v(" Education"),
+            ]
+          ),
+          _vm._v(" "),
+          _c(
+            "a",
+            {
+              staticClass: "button",
+              on: {
+                click: function ($event) {
+                  return _vm.scrollToRef("product")
+                },
+              },
+            },
+            [_c("i", { staticClass: "fa fa-cubes" }), _vm._v(" Product")]
+          ),
+          _vm._v(" "),
+          _c(
+            "a",
+            {
+              staticClass: "button",
+              on: {
+                click: function ($event) {
+                  return _vm.scrollToRef("work")
+                },
+              },
+            },
+            [_c("i", { staticClass: "fas fa-briefcase" }), _vm._v("Work")]
+          ),
+          _vm._v(" "),
+          _c(
+            "a",
+            {
+              staticClass: "button",
+              on: {
+                click: function ($event) {
+                  return _vm.scrollToRef("contact")
+                },
+              },
+            },
+            [
+              _c("i", { staticClass: "fas fa-envelope-open" }),
+              _vm._v(" Contact"),
+            ]
+          ),
+        ]),
+      ]),
       _vm._v(" "),
       _c("div", { staticClass: "content" }, [
-        _vm._m(1),
+        _c("div", { ref: "home", staticClass: "home" }, [
+          _c("div", { staticClass: "faded-overlay" }),
+          _vm._v(" "),
+          _vm._m(0),
+          _vm._v(" "),
+          _vm._m(1),
+        ]),
+        _vm._v(" "),
+        _c("div", { ref: "about", staticClass: "about background-img" }, [
+          _vm._m(2),
+        ]),
+        _vm._v(" "),
+        _c("div", { ref: "skills", staticClass: "skills" }, [
+          _c("h3", { staticClass: "skills-header" }, [
+            _vm._v("My Expertise Areas"),
+          ]),
+          _vm._v(" "),
+          _vm._m(3),
+        ]),
         _vm._v(" "),
         _c(
           "div",
-          {
-            staticClass: "pop-out-container",
-            class: _vm.popOut ? "fade-in" : "invisible",
-          },
-          [_vm._m(2)]
+          { ref: "education", staticClass: "education-work background-img" },
+          [_vm._m(4)]
         ),
         _vm._v(" "),
-        _vm._m(3),
+        _c("div", { ref: "product", staticClass: "product" }, [
+          _c("h3", { staticClass: "skills-header" }, [_vm._v("What I Offer")]),
+          _vm._v(" "),
+          _vm._m(5),
+          _vm._v(" "),
+          _vm._m(6),
+        ]),
         _vm._v(" "),
-        _vm._m(4),
-        _vm._v(" "),
-        _vm._m(5),
-        _vm._v(" "),
-        _vm._m(6),
-        _vm._v(" "),
-        _c(
-          "div",
-          { staticClass: "recent-works background-img", attrs: { id: "work" } },
-          [
-            _c("div", { staticClass: "faded-overlay" }, [
-              _c("h3", { staticClass: "header" }, [_vm._v("Recent Works")]),
+        _c("div", { ref: "work", staticClass: "recent-works background-img" }, [
+          _c("div", { staticClass: "faded-overlay" }, [
+            _c("h3", { staticClass: "header" }, [_vm._v("Recent Works")]),
+            _vm._v(" "),
+            _c("div", { staticClass: "works-container" }, [
+              _c("div", {
+                staticClass: "work coffee",
+                on: {
+                  click: function ($event) {
+                    return _vm.toSite("coffee-site")
+                  },
+                },
+              }),
               _vm._v(" "),
-              _c("div", { staticClass: "works-container" }, [
-                _c("div", {
-                  staticClass: "work coffee",
-                  on: {
-                    click: function ($event) {
-                      return _vm.toSite("coffee-site")
-                    },
+              _c("div", {
+                staticClass: "work black-white",
+                on: {
+                  click: function ($event) {
+                    return _vm.toSite("black-white-site")
                   },
-                }),
-                _vm._v(" "),
-                _c("div", {
-                  staticClass: "work black-white",
-                  on: {
-                    click: function ($event) {
-                      return _vm.toSite("black-white-site")
-                    },
+                },
+              }),
+              _vm._v(" "),
+              _c("div", {
+                staticClass: "work finder",
+                on: {
+                  click: function ($event) {
+                    return _vm.toSite("business-finder-site")
                   },
-                }),
-                _vm._v(" "),
-                _c("div", {
-                  staticClass: "work finder",
-                  on: {
-                    click: function ($event) {
-                      return _vm.toSite("business-finder-site")
-                    },
-                  },
-                }),
-              ]),
+                },
+              }),
             ]),
-          ]
-        ),
+          ]),
+        ]),
         _vm._v(" "),
-        _c("div", { staticClass: "contact" }, [
+        _c("div", { ref: "contact", staticClass: "contact" }, [
           _c("h3", { staticClass: "header" }, [_vm._v("Get in Touch")]),
           _vm._v(" "),
           _c(
@@ -49989,44 +50117,23 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "side-nav" }, [
-      _c("div", { staticClass: "initials" }, [_vm._v("MF")]),
+    return _c("div", { staticClass: "left" }, [
+      _c("p", { staticClass: "style" }, [_vm._v("Hi, I'm")]),
       _vm._v(" "),
-      _c("div", { staticClass: "button-container" }, [
-        _c("a", { staticClass: "button", attrs: { href: "#home" } }, [
-          _c("i", { staticClass: "fas fa-house-user" }),
-          _vm._v(" Home"),
-        ]),
+      _c("h1", [_vm._v("Mario Fernandez")]),
+      _vm._v(" "),
+      _c("p", { staticClass: "style" }, [_vm._v("Web Developer")]),
+      _vm._v(" "),
+      _c("p", [
+        _vm._v(
+          "\n          Full-Stack Web Developer passionate about creating interactive\n          applications that solve real world problems\n        "
+        ),
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "btn-container" }, [
+        _c("div", { staticClass: "resume-btn" }, [_vm._v("Download CV")]),
         _vm._v(" "),
-        _c("a", { staticClass: "button", attrs: { href: "#about" } }, [
-          _c("i", { staticClass: "far fa-address-card" }),
-          _vm._v(" About"),
-        ]),
-        _vm._v(" "),
-        _c("a", { staticClass: "button", attrs: { href: "#skills" } }, [
-          _c("i", { staticClass: "fas fa-laptop-code" }),
-          _vm._v(" Skills"),
-        ]),
-        _vm._v(" "),
-        _c("a", { staticClass: "button", attrs: { href: "#education" } }, [
-          _c("i", { staticClass: "fa fa-graduation-cap" }),
-          _vm._v(" Education"),
-        ]),
-        _vm._v(" "),
-        _c("a", { staticClass: "button", attrs: { href: "#product" } }, [
-          _c("i", { staticClass: "fa fa-cubes" }),
-          _vm._v(" Product"),
-        ]),
-        _vm._v(" "),
-        _c("a", { staticClass: "button", attrs: { href: "#work" } }, [
-          _c("i", { staticClass: "fas fa-briefcase" }),
-          _vm._v("Work"),
-        ]),
-        _vm._v(" "),
-        _c("a", { staticClass: "button", attrs: { href: "#contact" } }, [
-          _c("i", { staticClass: "fas fa-envelope-open" }),
-          _vm._v(" Contact"),
-        ]),
+        _c("div", { staticClass: "contact-btn" }, [_vm._v("Contact Me")]),
       ]),
     ])
   },
@@ -50034,161 +50141,86 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "home", attrs: { id: "home" } }, [
-      _c("div", { staticClass: "left" }, [
-        _c("p", { staticClass: "style" }, [_vm._v("Hi, I'm")]),
+    return _c("div", { staticClass: "right" }, [
+      _c("div", { staticClass: "self-img" }),
+    ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "faded-overlay" }, [
+      _c("div", { staticClass: "about-container" }, [
+        _c("h3", { staticClass: "header" }, [_vm._v("About Me")]),
         _vm._v(" "),
-        _c("h1", [_vm._v("Mario Fernandez")]),
-        _vm._v(" "),
-        _c("p", { staticClass: "style" }, [_vm._v("Web Developer")]),
-        _vm._v(" "),
-        _c("p", [
+        _c("div", { staticClass: "description" }, [
           _vm._v(
-            "\n          Full-Stack Web Developer passionate about creating interactive\n          applications that solve real world problems\n        "
+            "\n            I'm a Full-Stack Developer with professional development\n            experience in working with international companies. I offer a wide\n            range of services that are aimed at delivering high value products\n            for all types of websites. Wheather it's for a small start-up, an\n            aspiring artistic venture, or even for a more robust enterpirse\n            there's a solution for all. If you're interested below are some\n            sample projects that showcase various types of websites. And feel\n            free to reach out to me with the contact form below and I'll be\n            sure to be in contact shortly.\n          "
           ),
         ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "btn-container" }, [
-          _c("div", { staticClass: "resume-btn" }, [_vm._v("Download CV")]),
-          _vm._v(" "),
-          _c("div", { staticClass: "contact-btn" }, [_vm._v("Contact Me")]),
-        ]),
       ]),
-      _vm._v(" "),
-      _c("div", { staticClass: "right" }),
     ])
   },
   function () {
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "pop-out" }, [
+    return _c("div", { staticClass: "skills-container" }, [
       _c("div", { staticClass: "left" }, [
-        _c("span", { staticClass: "client" }),
-        _vm._v(" Client Focused"),
-      ]),
-      _vm._v(" "),
-      _c("div", { staticClass: "center" }, [
-        _c("span", { staticClass: "stack" }),
-        _vm._v(" Full Stack Experience"),
+        _c("div", { staticClass: "skill-container" }, [
+          _c("div", { staticClass: "header" }, [
+            _vm._v("Vue.js "),
+            _c("span", [_vm._v("90%")]),
+          ]),
+          _vm._v(" "),
+          _c("div", { attrs: { id: "barBackground" } }, [
+            _c("div", { staticClass: "bar", attrs: { id: "vue" } }),
+          ]),
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "skill-container" }, [
+          _c("div", { staticClass: "header" }, [
+            _vm._v("PHP "),
+            _c("span", [_vm._v("80%")]),
+          ]),
+          _vm._v(" "),
+          _c("div", { attrs: { id: "barBackground" } }, [
+            _c("div", { staticClass: "bar", attrs: { id: "php" } }),
+          ]),
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "skill-container" }, [
+          _c("div", { staticClass: "header" }, [
+            _vm._v("MySQL "),
+            _c("span", [_vm._v("80%")]),
+          ]),
+          _vm._v(" "),
+          _c("div", { attrs: { id: "barBackground" } }, [
+            _c("div", { staticClass: "bar", attrs: { id: "mysql" } }),
+          ]),
+        ]),
       ]),
       _vm._v(" "),
       _c("div", { staticClass: "right" }, [
-        _c("span", { staticClass: "question" }),
-        _vm._v(" Support"),
-      ]),
-    ])
-  },
-  function () {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c(
-      "div",
-      { staticClass: "about background-img", attrs: { id: "about" } },
-      [
-        _c("div", { staticClass: "faded-overlay" }, [
-          _c("div", { staticClass: "left" }, [_vm._v("photo")]),
-          _vm._v(" "),
-          _c("div", { staticClass: "right" }, [
-            _c("h3", { staticClass: "header" }, [_vm._v("About Me")]),
-            _vm._v(" "),
-            _c("div", { staticClass: "description" }, [
-              _vm._v(
-                "\n            I'm a Full-Stack Developer with close to 2 years of professional\n            development experience. Lorem ipsum dolor sit amet, consectetur\n            adipiscing elit, sed do eiusmod tempor incididunt ut labore et\n            dolore magna aliqua. Ut enim ad minim veniam, quis nostrud\n            exercitation ullamco laboris nisi ut aliquip ex ea commodo\n            consequat. Duis aute irure dolor in reprehenderit in voluptate\n            velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint\n            occaecat cupidatat non proident, sunt in culpa qui officia\n            deserunt mollit anim id est laborum.\n          "
-              ),
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "info-container" }, [
-              _c("div", { staticClass: "name" }, [
-                _c("div", { staticClass: "left" }, [_vm._v("Name:")]),
-                _vm._v(" "),
-                _c("div", { staticClass: "right" }, [
-                  _vm._v("Mario Fernandez"),
-                ]),
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "phone" }),
-              _vm._v(" "),
-              _c("div", { staticClass: "email" }, [
-                _c("div", { staticClass: "left" }, [_vm._v("Email:")]),
-                _vm._v(" "),
-                _c("div", { staticClass: "right" }, [
-                  _vm._v("jmferna91@gmail.com"),
-                ]),
-              ]),
-            ]),
-          ]),
-        ]),
-      ]
-    )
-  },
-  function () {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "skills", attrs: { id: "skills" } }, [
-      _c("h3", { staticClass: "skills-header" }, [
-        _vm._v("My Expertise Areas"),
-      ]),
-      _vm._v(" "),
-      _c("div", { staticClass: "skills-container" }, [
-        _c("div", { staticClass: "left" }, [
-          _c("div", { staticClass: "skill-container" }, [
-            _c("div", { staticClass: "header" }, [
-              _vm._v("Vue.js "),
-              _c("span", [_vm._v("90%")]),
-            ]),
-            _vm._v(" "),
-            _c("div", { attrs: { id: "barBackground" } }, [
-              _c("div", { staticClass: "bar", attrs: { id: "vue" } }),
-            ]),
+        _c("div", { staticClass: "skill-container" }, [
+          _c("div", { staticClass: "header" }, [
+            _vm._v("HTML "),
+            _c("span", [_vm._v("90%")]),
           ]),
           _vm._v(" "),
-          _c("div", { staticClass: "skill-container" }, [
-            _c("div", { staticClass: "header" }, [
-              _vm._v("PHP "),
-              _c("span", [_vm._v("80%")]),
-            ]),
-            _vm._v(" "),
-            _c("div", { attrs: { id: "barBackground" } }, [
-              _c("div", { staticClass: "bar", attrs: { id: "php" } }),
-            ]),
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "skill-container" }, [
-            _c("div", { staticClass: "header" }, [
-              _vm._v("MySQL "),
-              _c("span", [_vm._v("80%")]),
-            ]),
-            _vm._v(" "),
-            _c("div", { attrs: { id: "barBackground" } }, [
-              _c("div", { staticClass: "bar", attrs: { id: "mysql" } }),
-            ]),
+          _c("div", { attrs: { id: "barBackground" } }, [
+            _c("div", { staticClass: "bar", attrs: { id: "html" } }),
           ]),
         ]),
         _vm._v(" "),
-        _c("div", { staticClass: "right" }, [
-          _c("div", { staticClass: "skill-container" }, [
-            _c("div", { staticClass: "header" }, [
-              _vm._v("HTML "),
-              _c("span", [_vm._v("90%")]),
-            ]),
-            _vm._v(" "),
-            _c("div", { attrs: { id: "barBackground" } }, [
-              _c("div", { staticClass: "bar", attrs: { id: "html" } }),
-            ]),
+        _c("div", { staticClass: "skill-container" }, [
+          _c("div", { staticClass: "header" }, [
+            _vm._v("CSS/SCSS "),
+            _c("span", [_vm._v("85%")]),
           ]),
           _vm._v(" "),
-          _c("div", { staticClass: "skill-container" }, [
-            _c("div", { staticClass: "header" }, [
-              _vm._v("CSS/SCSS "),
-              _c("span", [_vm._v("85%")]),
-            ]),
-            _vm._v(" "),
-            _c("div", { attrs: { id: "barBackground" } }, [
-              _c("div", { staticClass: "bar", attrs: { id: "cssScss" } }),
-            ]),
+          _c("div", { attrs: { id: "barBackground" } }, [
+            _c("div", { staticClass: "bar", attrs: { id: "cssScss" } }),
           ]),
         ]),
       ]),
@@ -50198,178 +50230,181 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c(
-      "div",
-      {
-        staticClass: "education-work background-img",
-        attrs: { id: "education" },
-      },
-      [
-        _c("div", { staticClass: "faded-overlay" }, [
-          _c("h3", { staticClass: "education-work-header" }, [
-            _vm._v("My Awesome Journey"),
-          ]),
+    return _c("div", { staticClass: "faded-overlay" }, [
+      _c("h3", { staticClass: "education-work-header" }, [
+        _vm._v("My Journey"),
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "education-work-container" }, [
+        _c("div", { staticClass: "experience" }, [
+          _c("div", { staticClass: "header" }, [_vm._v("Experiences")]),
           _vm._v(" "),
-          _c("div", { staticClass: "education-work-container" }, [
-            _c("div", { staticClass: "experience" }, [
-              _c("div", { staticClass: "header" }, [_vm._v("Experiences")]),
-              _vm._v(" "),
-              _c("div", { staticClass: "content-container" }, [
-                _c("i", { staticClass: "fa fa-circle" }),
-                _vm._v(" "),
-                _c("div", { staticClass: "text" }, [_vm._v("RentSync")]),
-                _vm._v(" "),
-                _c("div", { staticClass: "date" }, [_vm._v("2020-2022")]),
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "content-container" }, [
-                _c("i", { staticClass: "fa fa-circle" }),
-                _vm._v(" "),
-                _c("div", { staticClass: "text" }, [
-                  _vm._v("Freelance Developer"),
-                ]),
-                _vm._v(" "),
-                _c("div", { staticClass: "date" }, [_vm._v("2020")]),
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "content-container" }, [
-                _c("i", { staticClass: "fa fa-circle" }),
-                _vm._v(" "),
-                _c("div", { staticClass: "text" }, [
-                  _vm._v("University Researcher"),
-                ]),
-                _vm._v(" "),
-                _c("div", { staticClass: "date" }, [_vm._v("2018-2020")]),
-              ]),
+          _c("div", { staticClass: "content-container" }, [
+            _c("div", { staticClass: "exp-gradient", attrs: { id: "exp-1" } }),
+            _vm._v(" "),
+            _c("div", { staticClass: "text" }, [_vm._v("RentSync")]),
+            _vm._v(" "),
+            _c("div", { staticClass: "title" }, [
+              _vm._v("Full Stack Web Developer"),
             ]),
             _vm._v(" "),
-            _c("div", { staticClass: "education" }, [
-              _c("div", { staticClass: "header" }, [_vm._v("Education")]),
-              _vm._v(" "),
-              _c("div", { staticClass: "content-container" }, [
-                _c("i", { staticClass: "fa fa-circle" }),
-                _vm._v(" "),
-                _c("div", { staticClass: "text" }, [
-                  _vm._v("Honors in Computer Science"),
-                ]),
-                _vm._v(" "),
-                _c("div", { staticClass: "date" }, [_vm._v("2016-2020")]),
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "content-container" }, [
-                _c("i", { staticClass: "fa fa-circle" }),
-                _vm._v(" "),
-                _c("div", { staticClass: "text" }, [
-                  _vm._v("Honors in Health Sciences"),
-                ]),
-                _vm._v(" "),
-                _c("div", { staticClass: "date" }, [_vm._v("2010-2014")]),
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "content-container" }, [
-                _c("i", { staticClass: "fa fa-circle" }),
-                _vm._v(" "),
-                _c("div", { staticClass: "text" }, [
-                  _vm._v("Secondary School Certificate"),
-                ]),
-                _vm._v(" "),
-                _c("div", { staticClass: "date" }, [_vm._v("2005-2010")]),
-              ]),
+            _c("div", { staticClass: "date" }, [_vm._v("2020-2022")]),
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "content-container" }, [
+            _c("div", { staticClass: "text" }, [_vm._v("Freelance Developer")]),
+            _vm._v(" "),
+            _c("div", { staticClass: "title" }, [
+              _vm._v("Full Stack Web Developer"),
             ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "date" }, [_vm._v("2020")]),
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "content-container" }, [
+            _c("div", { staticClass: "text" }, [
+              _vm._v("University Researcher"),
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "title" }, [_vm._v("Back End Developer")]),
+            _vm._v(" "),
+            _c("div", { staticClass: "date" }, [_vm._v("2018-2020")]),
           ]),
         ]),
-      ]
-    )
+        _vm._v(" "),
+        _c("div", { staticClass: "education" }, [
+          _c("div", { staticClass: "header" }, [_vm._v("Education")]),
+          _vm._v(" "),
+          _c("div", { staticClass: "content-container" }, [
+            _c("div", { staticClass: "text" }, [_vm._v("Code Academy")]),
+            _vm._v(" "),
+            _c("div", { staticClass: "title" }, [_vm._v("Intro to Vue.js")]),
+            _vm._v(" "),
+            _c("div", { staticClass: "date" }, [_vm._v("2020")]),
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "content-container" }, [
+            _c("div", { staticClass: "text" }, [_vm._v("Free Code Camp")]),
+            _vm._v(" "),
+            _c("div", { staticClass: "title" }, [
+              _vm._v("Responsive Web Design"),
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "date" }, [_vm._v("2020")]),
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "content-container" }, [
+            _c("div", { staticClass: "text" }, [_vm._v("Western University")]),
+            _vm._v(" "),
+            _c("div", { staticClass: "title" }, [
+              _vm._v("Honors in Computer Science"),
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "date" }, [_vm._v("2016-2020")]),
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "content-container" }, [
+            _c("div", { staticClass: "text" }, [_vm._v("Western University")]),
+            _vm._v(" "),
+            _c("div", { staticClass: "title" }, [
+              _vm._v("Honors in Health Sciences"),
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "date" }, [_vm._v("2010-2014")]),
+          ]),
+        ]),
+      ]),
+    ])
   },
   function () {
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "product", attrs: { id: "product" } }, [
-      _c("h3", { staticClass: "skills-header" }, [_vm._v("What I Offer")]),
-      _vm._v(" "),
-      _c("div", { staticClass: "top" }, [
-        _c("div", { staticClass: "offer-container" }, [
-          _c("i", { staticClass: "fa fa-code" }),
-          _vm._v(" "),
-          _c("div", { staticClass: "offer-box" }, [
-            _c("div", { staticClass: "header" }, [_vm._v("Web Design")]),
-            _vm._v(" "),
-            _c("div", { staticClass: "text" }, [
-              _vm._v(
-                "\n              Modern web layouts to best showcase your products\n            "
-              ),
-            ]),
-          ]),
-        ]),
+    return _c("div", { staticClass: "top" }, [
+      _c("div", { staticClass: "offer-container" }, [
+        _c("i", { staticClass: "fa fa-code" }),
         _vm._v(" "),
-        _c("div", { staticClass: "offer-container" }, [
-          _c("i", { staticClass: "fa fa-laptop-code" }),
+        _c("div", { staticClass: "offer-box" }, [
+          _c("div", { staticClass: "header" }, [_vm._v("Web Design")]),
           _vm._v(" "),
-          _c("div", { staticClass: "offer-box" }, [
-            _c("div", { staticClass: "header" }, [
-              _vm._v("Full Web Development"),
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "text" }, [
-              _vm._v(
-                "\n              Implement all aspects of modern and responsive websites\n            "
-              ),
-            ]),
-          ]),
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "offer-container" }, [
-          _c("i", { staticClass: "fa fa-pen-fancy" }),
-          _vm._v(" "),
-          _c("div", { staticClass: "offer-box" }, [
-            _c("div", { staticClass: "header" }, [_vm._v("UI/UX Updates")]),
-            _vm._v(" "),
-            _c("div", { staticClass: "text" }, [
-              _vm._v("Breath new life into existing websites"),
-            ]),
+          _c("div", { staticClass: "text" }, [
+            _vm._v(
+              "\n              Modern web layouts to best showcase your products\n            "
+            ),
           ]),
         ]),
       ]),
       _vm._v(" "),
-      _c("div", { staticClass: "bottom" }, [
-        _c("div", { staticClass: "offer-container" }, [
-          _c("i", { staticClass: "fa fa-eye" }),
+      _c("div", { staticClass: "offer-container" }, [
+        _c("i", { staticClass: "fa fa-laptop-code" }),
+        _vm._v(" "),
+        _c("div", { staticClass: "offer-box" }, [
+          _c("div", { staticClass: "header" }, [
+            _vm._v("Full Web Development"),
+          ]),
           _vm._v(" "),
-          _c("div", { staticClass: "offer-box" }, [
-            _c("div", { staticClass: "header" }, [_vm._v("SEO")]),
-            _vm._v(" "),
-            _c("div", { staticClass: "text" }, [
-              _vm._v(
-                "\n              Ensure website is able to rate well in modern search engines\n            "
-              ),
-            ]),
+          _c("div", { staticClass: "text" }, [
+            _vm._v(
+              "\n              Implement all aspects of modern and responsive websites\n            "
+            ),
           ]),
         ]),
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "offer-container" }, [
+        _c("i", { staticClass: "fa fa-pen-fancy" }),
         _vm._v(" "),
-        _c("div", { staticClass: "offer-container" }, [
-          _c("i", { staticClass: "fa fa-headset" }),
+        _c("div", { staticClass: "offer-box" }, [
+          _c("div", { staticClass: "header" }, [_vm._v("UI/UX Updates")]),
           _vm._v(" "),
-          _c("div", { staticClass: "offer-box" }, [
-            _c("div", { staticClass: "header" }, [_vm._v("Flexible Support")]),
-            _vm._v(" "),
-            _c("div", { staticClass: "text" }, [
-              _vm._v("Support schedule to fit all business types"),
-            ]),
+          _c("div", { staticClass: "text" }, [
+            _vm._v("Breath new life into existing websites"),
           ]),
         ]),
+      ]),
+    ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "bottom" }, [
+      _c("div", { staticClass: "offer-container" }, [
+        _c("i", { staticClass: "fa fa-eye" }),
         _vm._v(" "),
-        _c("div", { staticClass: "offer-container" }, [
-          _c("i", { staticClass: "fa fa-comments-dollar" }),
+        _c("div", { staticClass: "offer-box" }, [
+          _c("div", { staticClass: "header" }, [_vm._v("SEO")]),
           _vm._v(" "),
-          _c("div", { staticClass: "offer-box" }, [
-            _c("div", { staticClass: "header" }, [_vm._v("Flixible Plans")]),
-            _vm._v(" "),
-            _c("div", { staticClass: "text" }, [
-              _vm._v(
-                "\n              Plans that are catered to everyones needs and budgets\n            "
-              ),
-            ]),
+          _c("div", { staticClass: "text" }, [
+            _vm._v(
+              "\n              Ensure website is able to rate well in modern search engines\n            "
+            ),
+          ]),
+        ]),
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "offer-container" }, [
+        _c("i", { staticClass: "fa fa-headset" }),
+        _vm._v(" "),
+        _c("div", { staticClass: "offer-box" }, [
+          _c("div", { staticClass: "header" }, [_vm._v("Flexible Support")]),
+          _vm._v(" "),
+          _c("div", { staticClass: "text" }, [
+            _vm._v("Support schedule to fit all business types"),
+          ]),
+        ]),
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "offer-container" }, [
+        _c("i", { staticClass: "fa fa-comments-dollar" }),
+        _vm._v(" "),
+        _c("div", { staticClass: "offer-box" }, [
+          _c("div", { staticClass: "header" }, [_vm._v("Flixible Plans")]),
+          _vm._v(" "),
+          _c("div", { staticClass: "text" }, [
+            _vm._v(
+              "\n              Plans that are catered to everyones needs and budgets\n            "
+            ),
           ]),
         ]),
       ]),
