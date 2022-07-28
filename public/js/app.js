@@ -2720,7 +2720,54 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var bootstrap_vue__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! bootstrap-vue */ "./node_modules/bootstrap-vue/esm/components/button/button.js");
 /* harmony import */ var bootstrap_vue__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! bootstrap-vue */ "./node_modules/bootstrap-vue/esm/components/form-textarea/form-textarea.js");
 /* harmony import */ var bootstrap_vue__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! bootstrap-vue */ "./node_modules/bootstrap-vue/esm/components/modal/modal.js");
+/* harmony import */ var bootstrap_vue__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! bootstrap-vue */ "./node_modules/bootstrap-vue/esm/components/dropdown/dropdown.js");
+/* harmony import */ var bootstrap_vue__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! bootstrap-vue */ "./node_modules/bootstrap-vue/esm/components/dropdown/dropdown-item.js");
 /* harmony import */ var _routes_api_api__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../routes/api/api */ "./routes/api/api.js");
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -3039,7 +3086,9 @@ __webpack_require__.r(__webpack_exports__);
     BButton: bootstrap_vue__WEBPACK_IMPORTED_MODULE_4__.BButton,
     BFormTextarea: bootstrap_vue__WEBPACK_IMPORTED_MODULE_5__.BFormTextarea,
     BModal: bootstrap_vue__WEBPACK_IMPORTED_MODULE_6__.BModal,
-    API: _routes_api_api__WEBPACK_IMPORTED_MODULE_0__["default"]
+    API: _routes_api_api__WEBPACK_IMPORTED_MODULE_0__["default"],
+    BDropdown: bootstrap_vue__WEBPACK_IMPORTED_MODULE_7__.BDropdown,
+    BDropdownItem: bootstrap_vue__WEBPACK_IMPORTED_MODULE_8__.BDropdownItem
   },
   data: function data() {
     return {
@@ -3915,6 +3964,324 @@ var BButton = /*#__PURE__*/_vue__WEBPACK_IMPORTED_MODULE_8__["default"].extend({
       on: on
     };
     return h(link ? _link_link__WEBPACK_IMPORTED_MODULE_1__.BLink : props.tag, (0,_vue__WEBPACK_IMPORTED_MODULE_12__.mergeData)(data, componentData), children);
+  }
+});
+
+/***/ }),
+
+/***/ "./node_modules/bootstrap-vue/esm/components/dropdown/dropdown-item.js":
+/*!*****************************************************************************!*\
+  !*** ./node_modules/bootstrap-vue/esm/components/dropdown/dropdown-item.js ***!
+  \*****************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "props": () => (/* binding */ props),
+/* harmony export */   "BDropdownItem": () => (/* binding */ BDropdownItem)
+/* harmony export */ });
+/* harmony import */ var _vue__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../vue */ "./node_modules/vue/dist/vue.esm.js");
+/* harmony import */ var _constants_components__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../constants/components */ "./node_modules/bootstrap-vue/esm/constants/components.js");
+/* harmony import */ var _constants_events__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../../constants/events */ "./node_modules/bootstrap-vue/esm/constants/events.js");
+/* harmony import */ var _constants_props__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../constants/props */ "./node_modules/bootstrap-vue/esm/constants/props.js");
+/* harmony import */ var _utils_dom__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../utils/dom */ "./node_modules/bootstrap-vue/esm/utils/dom.js");
+/* harmony import */ var _utils_object__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../utils/object */ "./node_modules/bootstrap-vue/esm/utils/object.js");
+/* harmony import */ var _utils_props__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../utils/props */ "./node_modules/bootstrap-vue/esm/utils/props.js");
+/* harmony import */ var _mixins_attrs__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../mixins/attrs */ "./node_modules/bootstrap-vue/esm/mixins/attrs.js");
+/* harmony import */ var _mixins_normalize_slot__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../mixins/normalize-slot */ "./node_modules/bootstrap-vue/esm/mixins/normalize-slot.js");
+/* harmony import */ var _link_link__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../link/link */ "./node_modules/bootstrap-vue/esm/components/link/link.js");
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
+
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+
+
+
+
+
+
+
+
+
+ // --- Props ---
+
+var linkProps = (0,_utils_object__WEBPACK_IMPORTED_MODULE_0__.omit)(_link_link__WEBPACK_IMPORTED_MODULE_1__.props, ['event', 'routerTag']);
+var props = (0,_utils_props__WEBPACK_IMPORTED_MODULE_2__.makePropsConfigurable)((0,_utils_object__WEBPACK_IMPORTED_MODULE_0__.sortKeys)(_objectSpread(_objectSpread({}, linkProps), {}, {
+  linkClass: (0,_utils_props__WEBPACK_IMPORTED_MODULE_2__.makeProp)(_constants_props__WEBPACK_IMPORTED_MODULE_3__.PROP_TYPE_ARRAY_OBJECT_STRING),
+  variant: (0,_utils_props__WEBPACK_IMPORTED_MODULE_2__.makeProp)(_constants_props__WEBPACK_IMPORTED_MODULE_3__.PROP_TYPE_STRING)
+})), _constants_components__WEBPACK_IMPORTED_MODULE_4__.NAME_DROPDOWN_ITEM); // --- Main component ---
+// @vue/component
+
+var BDropdownItem = /*#__PURE__*/_vue__WEBPACK_IMPORTED_MODULE_5__["default"].extend({
+  name: _constants_components__WEBPACK_IMPORTED_MODULE_4__.NAME_DROPDOWN_ITEM,
+  mixins: [_mixins_attrs__WEBPACK_IMPORTED_MODULE_6__.attrsMixin, _mixins_normalize_slot__WEBPACK_IMPORTED_MODULE_7__.normalizeSlotMixin],
+  inject: {
+    bvDropdown: {
+      default: null
+    }
+  },
+  inheritAttrs: false,
+  props: props,
+  computed: {
+    computedAttrs: function computedAttrs() {
+      return _objectSpread(_objectSpread({}, this.bvAttrs), {}, {
+        role: 'menuitem'
+      });
+    }
+  },
+  methods: {
+    closeDropdown: function closeDropdown() {
+      var _this = this;
+
+      // Close on next animation frame to allow <b-link> time to process
+      (0,_utils_dom__WEBPACK_IMPORTED_MODULE_8__.requestAF)(function () {
+        if (_this.bvDropdown) {
+          _this.bvDropdown.hide(true);
+        }
+      });
+    },
+    onClick: function onClick(event) {
+      this.$emit(_constants_events__WEBPACK_IMPORTED_MODULE_9__.EVENT_NAME_CLICK, event);
+      this.closeDropdown();
+    }
+  },
+  render: function render(h) {
+    var linkClass = this.linkClass,
+        variant = this.variant,
+        active = this.active,
+        disabled = this.disabled,
+        onClick = this.onClick,
+        bvAttrs = this.bvAttrs;
+    return h('li', {
+      class: bvAttrs.class,
+      style: bvAttrs.style,
+      attrs: {
+        role: 'presentation'
+      }
+    }, [h(_link_link__WEBPACK_IMPORTED_MODULE_1__.BLink, {
+      staticClass: 'dropdown-item',
+      class: [linkClass, _defineProperty({}, "text-".concat(variant), variant && !(active || disabled))],
+      props: (0,_utils_props__WEBPACK_IMPORTED_MODULE_2__.pluckProps)(linkProps, this.$props),
+      attrs: this.computedAttrs,
+      on: {
+        click: onClick
+      },
+      ref: 'item'
+    }, this.normalizeSlot())]);
+  }
+});
+
+/***/ }),
+
+/***/ "./node_modules/bootstrap-vue/esm/components/dropdown/dropdown.js":
+/*!************************************************************************!*\
+  !*** ./node_modules/bootstrap-vue/esm/components/dropdown/dropdown.js ***!
+  \************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "props": () => (/* binding */ props),
+/* harmony export */   "BDropdown": () => (/* binding */ BDropdown)
+/* harmony export */ });
+/* harmony import */ var _vue__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../vue */ "./node_modules/vue/dist/vue.esm.js");
+/* harmony import */ var _constants_components__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../constants/components */ "./node_modules/bootstrap-vue/esm/constants/components.js");
+/* harmony import */ var _constants_props__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../constants/props */ "./node_modules/bootstrap-vue/esm/constants/props.js");
+/* harmony import */ var _constants_slots__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../../constants/slots */ "./node_modules/bootstrap-vue/esm/constants/slots.js");
+/* harmony import */ var _utils_array__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../utils/array */ "./node_modules/bootstrap-vue/esm/utils/array.js");
+/* harmony import */ var _utils_html__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../../utils/html */ "./node_modules/bootstrap-vue/esm/utils/html.js");
+/* harmony import */ var _utils_props__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../utils/props */ "./node_modules/bootstrap-vue/esm/utils/props.js");
+/* harmony import */ var _utils_string__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../../utils/string */ "./node_modules/bootstrap-vue/esm/utils/string.js");
+/* harmony import */ var _mixins_dropdown__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../mixins/dropdown */ "./node_modules/bootstrap-vue/esm/mixins/dropdown.js");
+/* harmony import */ var _mixins_id__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../mixins/id */ "./node_modules/bootstrap-vue/esm/mixins/id.js");
+/* harmony import */ var _mixins_normalize_slot__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../mixins/normalize-slot */ "./node_modules/bootstrap-vue/esm/mixins/normalize-slot.js");
+/* harmony import */ var _button_button__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../button/button */ "./node_modules/bootstrap-vue/esm/components/button/button.js");
+/* harmony import */ var _utils_object__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../utils/object */ "./node_modules/bootstrap-vue/esm/utils/object.js");
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
+
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+
+
+
+
+
+
+
+
+
+
+
+
+ // --- Props ---
+
+var props = (0,_utils_props__WEBPACK_IMPORTED_MODULE_0__.makePropsConfigurable)((0,_utils_object__WEBPACK_IMPORTED_MODULE_1__.sortKeys)(_objectSpread(_objectSpread(_objectSpread({}, _mixins_id__WEBPACK_IMPORTED_MODULE_2__.props), _mixins_dropdown__WEBPACK_IMPORTED_MODULE_3__.props), {}, {
+  block: (0,_utils_props__WEBPACK_IMPORTED_MODULE_0__.makeProp)(_constants_props__WEBPACK_IMPORTED_MODULE_4__.PROP_TYPE_BOOLEAN, false),
+  html: (0,_utils_props__WEBPACK_IMPORTED_MODULE_0__.makeProp)(_constants_props__WEBPACK_IMPORTED_MODULE_4__.PROP_TYPE_STRING),
+  // If `true`, only render menu contents when open
+  lazy: (0,_utils_props__WEBPACK_IMPORTED_MODULE_0__.makeProp)(_constants_props__WEBPACK_IMPORTED_MODULE_4__.PROP_TYPE_BOOLEAN, false),
+  menuClass: (0,_utils_props__WEBPACK_IMPORTED_MODULE_0__.makeProp)(_constants_props__WEBPACK_IMPORTED_MODULE_4__.PROP_TYPE_ARRAY_OBJECT_STRING),
+  noCaret: (0,_utils_props__WEBPACK_IMPORTED_MODULE_0__.makeProp)(_constants_props__WEBPACK_IMPORTED_MODULE_4__.PROP_TYPE_BOOLEAN, false),
+  role: (0,_utils_props__WEBPACK_IMPORTED_MODULE_0__.makeProp)(_constants_props__WEBPACK_IMPORTED_MODULE_4__.PROP_TYPE_STRING, 'menu'),
+  size: (0,_utils_props__WEBPACK_IMPORTED_MODULE_0__.makeProp)(_constants_props__WEBPACK_IMPORTED_MODULE_4__.PROP_TYPE_STRING),
+  split: (0,_utils_props__WEBPACK_IMPORTED_MODULE_0__.makeProp)(_constants_props__WEBPACK_IMPORTED_MODULE_4__.PROP_TYPE_BOOLEAN, false),
+  splitButtonType: (0,_utils_props__WEBPACK_IMPORTED_MODULE_0__.makeProp)(_constants_props__WEBPACK_IMPORTED_MODULE_4__.PROP_TYPE_STRING, 'button', function (value) {
+    return (0,_utils_array__WEBPACK_IMPORTED_MODULE_5__.arrayIncludes)(['button', 'submit', 'reset'], value);
+  }),
+  splitClass: (0,_utils_props__WEBPACK_IMPORTED_MODULE_0__.makeProp)(_constants_props__WEBPACK_IMPORTED_MODULE_4__.PROP_TYPE_ARRAY_OBJECT_STRING),
+  splitHref: (0,_utils_props__WEBPACK_IMPORTED_MODULE_0__.makeProp)(_constants_props__WEBPACK_IMPORTED_MODULE_4__.PROP_TYPE_STRING),
+  splitTo: (0,_utils_props__WEBPACK_IMPORTED_MODULE_0__.makeProp)(_constants_props__WEBPACK_IMPORTED_MODULE_4__.PROP_TYPE_OBJECT_STRING),
+  splitVariant: (0,_utils_props__WEBPACK_IMPORTED_MODULE_0__.makeProp)(_constants_props__WEBPACK_IMPORTED_MODULE_4__.PROP_TYPE_STRING),
+  text: (0,_utils_props__WEBPACK_IMPORTED_MODULE_0__.makeProp)(_constants_props__WEBPACK_IMPORTED_MODULE_4__.PROP_TYPE_STRING),
+  toggleClass: (0,_utils_props__WEBPACK_IMPORTED_MODULE_0__.makeProp)(_constants_props__WEBPACK_IMPORTED_MODULE_4__.PROP_TYPE_ARRAY_OBJECT_STRING),
+  toggleTag: (0,_utils_props__WEBPACK_IMPORTED_MODULE_0__.makeProp)(_constants_props__WEBPACK_IMPORTED_MODULE_4__.PROP_TYPE_STRING, 'button'),
+  // TODO: This really should be `toggleLabel`
+  toggleText: (0,_utils_props__WEBPACK_IMPORTED_MODULE_0__.makeProp)(_constants_props__WEBPACK_IMPORTED_MODULE_4__.PROP_TYPE_STRING, 'Toggle dropdown'),
+  variant: (0,_utils_props__WEBPACK_IMPORTED_MODULE_0__.makeProp)(_constants_props__WEBPACK_IMPORTED_MODULE_4__.PROP_TYPE_STRING, 'secondary')
+})), _constants_components__WEBPACK_IMPORTED_MODULE_6__.NAME_DROPDOWN); // --- Main component ---
+// @vue/component
+
+var BDropdown = /*#__PURE__*/_vue__WEBPACK_IMPORTED_MODULE_7__["default"].extend({
+  name: _constants_components__WEBPACK_IMPORTED_MODULE_6__.NAME_DROPDOWN,
+  mixins: [_mixins_id__WEBPACK_IMPORTED_MODULE_2__.idMixin, _mixins_dropdown__WEBPACK_IMPORTED_MODULE_3__.dropdownMixin, _mixins_normalize_slot__WEBPACK_IMPORTED_MODULE_8__.normalizeSlotMixin],
+  props: props,
+  computed: {
+    dropdownClasses: function dropdownClasses() {
+      var block = this.block,
+          split = this.split;
+      return [this.directionClass, this.boundaryClass, {
+        show: this.visible,
+        // The 'btn-group' class is required in `split` mode for button alignment
+        // It needs also to be applied when `block` is disabled to allow multiple
+        // dropdowns to be aligned one line
+        'btn-group': split || !block,
+        // When `block` is enabled and we are in `split` mode the 'd-flex' class
+        // needs to be applied to allow the buttons to stretch to full width
+        'd-flex': block && split
+      }];
+    },
+    menuClasses: function menuClasses() {
+      return [this.menuClass, {
+        'dropdown-menu-right': this.right,
+        show: this.visible
+      }];
+    },
+    toggleClasses: function toggleClasses() {
+      var split = this.split;
+      return [this.toggleClass, {
+        'dropdown-toggle-split': split,
+        'dropdown-toggle-no-caret': this.noCaret && !split
+      }];
+    }
+  },
+  render: function render(h) {
+    var visible = this.visible,
+        variant = this.variant,
+        size = this.size,
+        block = this.block,
+        disabled = this.disabled,
+        split = this.split,
+        role = this.role,
+        hide = this.hide,
+        toggle = this.toggle;
+    var commonProps = {
+      variant: variant,
+      size: size,
+      block: block,
+      disabled: disabled
+    };
+    var $buttonChildren = this.normalizeSlot(_constants_slots__WEBPACK_IMPORTED_MODULE_9__.SLOT_NAME_BUTTON_CONTENT);
+    var buttonContentDomProps = this.hasNormalizedSlot(_constants_slots__WEBPACK_IMPORTED_MODULE_9__.SLOT_NAME_BUTTON_CONTENT) ? {} : (0,_utils_html__WEBPACK_IMPORTED_MODULE_10__.htmlOrText)(this.html, this.text);
+    var $split = h();
+
+    if (split) {
+      var splitTo = this.splitTo,
+          splitHref = this.splitHref,
+          splitButtonType = this.splitButtonType;
+
+      var btnProps = _objectSpread(_objectSpread({}, commonProps), {}, {
+        variant: this.splitVariant || variant
+      }); // We add these as needed due to <router-link> issues with
+      // defined property with `undefined`/`null` values
+
+
+      if (splitTo) {
+        btnProps.to = splitTo;
+      } else if (splitHref) {
+        btnProps.href = splitHref;
+      } else if (splitButtonType) {
+        btnProps.type = splitButtonType;
+      }
+
+      $split = h(_button_button__WEBPACK_IMPORTED_MODULE_11__.BButton, {
+        class: this.splitClass,
+        attrs: {
+          id: this.safeId('_BV_button_')
+        },
+        props: btnProps,
+        domProps: buttonContentDomProps,
+        on: {
+          click: this.onSplitClick
+        },
+        ref: 'button'
+      }, $buttonChildren); // Overwrite button content for the toggle when in `split` mode
+
+      $buttonChildren = [h('span', {
+        class: ['sr-only']
+      }, [this.toggleText])];
+      buttonContentDomProps = {};
+    }
+
+    var $toggle = h(_button_button__WEBPACK_IMPORTED_MODULE_11__.BButton, {
+      staticClass: 'dropdown-toggle',
+      class: this.toggleClasses,
+      attrs: {
+        id: this.safeId('_BV_toggle_'),
+        'aria-haspopup': 'true',
+        'aria-expanded': (0,_utils_string__WEBPACK_IMPORTED_MODULE_12__.toString)(visible)
+      },
+      props: _objectSpread(_objectSpread({}, commonProps), {}, {
+        tag: this.toggleTag,
+        block: block && !split
+      }),
+      domProps: buttonContentDomProps,
+      on: {
+        mousedown: this.onMousedown,
+        click: toggle,
+        keydown: toggle // Handle ENTER, SPACE and DOWN
+
+      },
+      ref: 'toggle'
+    }, $buttonChildren);
+    var $menu = h('ul', {
+      staticClass: 'dropdown-menu',
+      class: this.menuClasses,
+      attrs: {
+        role: role,
+        tabindex: '-1',
+        'aria-labelledby': this.safeId(split ? '_BV_button_' : '_BV_toggle_')
+      },
+      on: {
+        keydown: this.onKeydown // Handle UP, DOWN and ESC
+
+      },
+      ref: 'menu'
+    }, [!this.lazy || visible ? this.normalizeSlot(_constants_slots__WEBPACK_IMPORTED_MODULE_9__.SLOT_NAME_DEFAULT, {
+      hide: hide
+    }) : h()]);
+    return h('div', {
+      staticClass: 'dropdown b-dropdown',
+      class: this.dropdownClasses,
+      attrs: {
+        id: this.safeId()
+      }
+    }, [$split, $toggle, $menu]);
   }
 });
 
@@ -7611,6 +7978,35 @@ var CODE_UP = 38;
 
 /***/ }),
 
+/***/ "./node_modules/bootstrap-vue/esm/constants/popper.js":
+/*!************************************************************!*\
+  !*** ./node_modules/bootstrap-vue/esm/constants/popper.js ***!
+  \************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "PLACEMENT_TOP_START": () => (/* binding */ PLACEMENT_TOP_START),
+/* harmony export */   "PLACEMENT_TOP_END": () => (/* binding */ PLACEMENT_TOP_END),
+/* harmony export */   "PLACEMENT_BOTTOM_START": () => (/* binding */ PLACEMENT_BOTTOM_START),
+/* harmony export */   "PLACEMENT_BOTTOM_END": () => (/* binding */ PLACEMENT_BOTTOM_END),
+/* harmony export */   "PLACEMENT_RIGHT_START": () => (/* binding */ PLACEMENT_RIGHT_START),
+/* harmony export */   "PLACEMENT_RIGHT_END": () => (/* binding */ PLACEMENT_RIGHT_END),
+/* harmony export */   "PLACEMENT_LEFT_START": () => (/* binding */ PLACEMENT_LEFT_START),
+/* harmony export */   "PLACEMENT_LEFT_END": () => (/* binding */ PLACEMENT_LEFT_END)
+/* harmony export */ });
+var PLACEMENT_TOP_START = 'top-start';
+var PLACEMENT_TOP_END = 'top-end';
+var PLACEMENT_BOTTOM_START = 'bottom-start';
+var PLACEMENT_BOTTOM_END = 'bottom-end';
+var PLACEMENT_RIGHT_START = 'right-start';
+var PLACEMENT_RIGHT_END = 'right-end';
+var PLACEMENT_LEFT_START = 'left-start';
+var PLACEMENT_LEFT_END = 'left-end';
+
+/***/ }),
+
 /***/ "./node_modules/bootstrap-vue/esm/constants/props.js":
 /*!***********************************************************!*\
   !*** ./node_modules/bootstrap-vue/esm/constants/props.js ***!
@@ -8245,6 +8641,648 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _utils_cache__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../utils/cache */ "./node_modules/bootstrap-vue/esm/utils/cache.js");
 
 var attrsMixin = (0,_utils_cache__WEBPACK_IMPORTED_MODULE_0__.makePropCacheMixin)('$attrs', 'bvAttrs');
+
+/***/ }),
+
+/***/ "./node_modules/bootstrap-vue/esm/mixins/click-out.js":
+/*!************************************************************!*\
+  !*** ./node_modules/bootstrap-vue/esm/mixins/click-out.js ***!
+  \************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "clickOutMixin": () => (/* binding */ clickOutMixin)
+/* harmony export */ });
+/* harmony import */ var _vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../vue */ "./node_modules/vue/dist/vue.esm.js");
+/* harmony import */ var _constants_events__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../constants/events */ "./node_modules/bootstrap-vue/esm/constants/events.js");
+/* harmony import */ var _utils_dom__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../utils/dom */ "./node_modules/bootstrap-vue/esm/utils/dom.js");
+/* harmony import */ var _utils_events__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../utils/events */ "./node_modules/bootstrap-vue/esm/utils/events.js");
+
+
+
+ // @vue/component
+
+var clickOutMixin = _vue__WEBPACK_IMPORTED_MODULE_0__["default"].extend({
+  data: function data() {
+    return {
+      listenForClickOut: false
+    };
+  },
+  watch: {
+    listenForClickOut: function listenForClickOut(newValue, oldValue) {
+      if (newValue !== oldValue) {
+        (0,_utils_events__WEBPACK_IMPORTED_MODULE_1__.eventOff)(this.clickOutElement, this.clickOutEventName, this._clickOutHandler, _constants_events__WEBPACK_IMPORTED_MODULE_2__.EVENT_OPTIONS_NO_CAPTURE);
+
+        if (newValue) {
+          (0,_utils_events__WEBPACK_IMPORTED_MODULE_1__.eventOn)(this.clickOutElement, this.clickOutEventName, this._clickOutHandler, _constants_events__WEBPACK_IMPORTED_MODULE_2__.EVENT_OPTIONS_NO_CAPTURE);
+        }
+      }
+    }
+  },
+  beforeCreate: function beforeCreate() {
+    // Declare non-reactive properties
+    this.clickOutElement = null;
+    this.clickOutEventName = null;
+  },
+  mounted: function mounted() {
+    if (!this.clickOutElement) {
+      this.clickOutElement = document;
+    }
+
+    if (!this.clickOutEventName) {
+      this.clickOutEventName = 'click';
+    }
+
+    if (this.listenForClickOut) {
+      (0,_utils_events__WEBPACK_IMPORTED_MODULE_1__.eventOn)(this.clickOutElement, this.clickOutEventName, this._clickOutHandler, _constants_events__WEBPACK_IMPORTED_MODULE_2__.EVENT_OPTIONS_NO_CAPTURE);
+    }
+  },
+  beforeDestroy: function beforeDestroy() {
+    (0,_utils_events__WEBPACK_IMPORTED_MODULE_1__.eventOff)(this.clickOutElement, this.clickOutEventName, this._clickOutHandler, _constants_events__WEBPACK_IMPORTED_MODULE_2__.EVENT_OPTIONS_NO_CAPTURE);
+  },
+  methods: {
+    isClickOut: function isClickOut(event) {
+      return !(0,_utils_dom__WEBPACK_IMPORTED_MODULE_3__.contains)(this.$el, event.target);
+    },
+    _clickOutHandler: function _clickOutHandler(event) {
+      if (this.clickOutHandler && this.isClickOut(event)) {
+        this.clickOutHandler(event);
+      }
+    }
+  }
+});
+
+/***/ }),
+
+/***/ "./node_modules/bootstrap-vue/esm/mixins/dropdown.js":
+/*!***********************************************************!*\
+  !*** ./node_modules/bootstrap-vue/esm/mixins/dropdown.js ***!
+  \***********************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "props": () => (/* binding */ props),
+/* harmony export */   "dropdownMixin": () => (/* binding */ dropdownMixin)
+/* harmony export */ });
+/* harmony import */ var popper_js__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! popper.js */ "./node_modules/popper.js/dist/esm/popper.js");
+/* harmony import */ var _vue__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../vue */ "./node_modules/vue/dist/vue.esm.js");
+/* harmony import */ var _constants_components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../constants/components */ "./node_modules/bootstrap-vue/esm/constants/components.js");
+/* harmony import */ var _constants_events__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../constants/events */ "./node_modules/bootstrap-vue/esm/constants/events.js");
+/* harmony import */ var _constants_key_codes__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ../constants/key-codes */ "./node_modules/bootstrap-vue/esm/constants/key-codes.js");
+/* harmony import */ var _constants_popper__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ../constants/popper */ "./node_modules/bootstrap-vue/esm/constants/popper.js");
+/* harmony import */ var _constants_props__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../constants/props */ "./node_modules/bootstrap-vue/esm/constants/props.js");
+/* harmony import */ var _constants_safe_types__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../constants/safe-types */ "./node_modules/bootstrap-vue/esm/constants/safe-types.js");
+/* harmony import */ var _utils_bv_event_class__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ../utils/bv-event.class */ "./node_modules/bootstrap-vue/esm/utils/bv-event.class.js");
+/* harmony import */ var _utils_dom__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../utils/dom */ "./node_modules/bootstrap-vue/esm/utils/dom.js");
+/* harmony import */ var _utils_events__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../utils/events */ "./node_modules/bootstrap-vue/esm/utils/events.js");
+/* harmony import */ var _utils_inspect__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ../utils/inspect */ "./node_modules/bootstrap-vue/esm/utils/inspect.js");
+/* harmony import */ var _utils_object__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../utils/object */ "./node_modules/bootstrap-vue/esm/utils/object.js");
+/* harmony import */ var _utils_props__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../utils/props */ "./node_modules/bootstrap-vue/esm/utils/props.js");
+/* harmony import */ var _utils_warn__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ../utils/warn */ "./node_modules/bootstrap-vue/esm/utils/warn.js");
+/* harmony import */ var _click_out__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./click-out */ "./node_modules/bootstrap-vue/esm/mixins/click-out.js");
+/* harmony import */ var _focus_in__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./focus-in */ "./node_modules/bootstrap-vue/esm/mixins/focus-in.js");
+/* harmony import */ var _id__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./id */ "./node_modules/bootstrap-vue/esm/mixins/id.js");
+/* harmony import */ var _listen_on_root__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./listen-on-root */ "./node_modules/bootstrap-vue/esm/mixins/listen-on-root.js");
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
+
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ // --- Constants ---
+
+var ROOT_EVENT_NAME_SHOWN = (0,_utils_events__WEBPACK_IMPORTED_MODULE_0__.getRootEventName)(_constants_components__WEBPACK_IMPORTED_MODULE_1__.NAME_DROPDOWN, _constants_events__WEBPACK_IMPORTED_MODULE_2__.EVENT_NAME_SHOWN);
+var ROOT_EVENT_NAME_HIDDEN = (0,_utils_events__WEBPACK_IMPORTED_MODULE_0__.getRootEventName)(_constants_components__WEBPACK_IMPORTED_MODULE_1__.NAME_DROPDOWN, _constants_events__WEBPACK_IMPORTED_MODULE_2__.EVENT_NAME_HIDDEN); // CSS selectors
+
+var SELECTOR_FORM_CHILD = '.dropdown form';
+var SELECTOR_ITEM = ['.dropdown-item', '.b-dropdown-form'].map(function (selector) {
+  return "".concat(selector, ":not(.disabled):not([disabled])");
+}).join(', '); // --- Helper methods ---
+// Return an array of visible items
+
+var filterVisibles = function filterVisibles(els) {
+  return (els || []).filter(_utils_dom__WEBPACK_IMPORTED_MODULE_3__.isVisible);
+}; // --- Props ---
+
+
+var props = (0,_utils_props__WEBPACK_IMPORTED_MODULE_4__.makePropsConfigurable)((0,_utils_object__WEBPACK_IMPORTED_MODULE_5__.sortKeys)(_objectSpread(_objectSpread({}, _id__WEBPACK_IMPORTED_MODULE_6__.props), {}, {
+  // String: `scrollParent`, `window` or `viewport`
+  // HTMLElement: HTML Element reference
+  boundary: (0,_utils_props__WEBPACK_IMPORTED_MODULE_4__.makeProp)([_constants_safe_types__WEBPACK_IMPORTED_MODULE_7__.HTMLElement, _constants_props__WEBPACK_IMPORTED_MODULE_8__.PROP_TYPE_STRING], 'scrollParent'),
+  disabled: (0,_utils_props__WEBPACK_IMPORTED_MODULE_4__.makeProp)(_constants_props__WEBPACK_IMPORTED_MODULE_8__.PROP_TYPE_BOOLEAN, false),
+  // Place left if possible
+  dropleft: (0,_utils_props__WEBPACK_IMPORTED_MODULE_4__.makeProp)(_constants_props__WEBPACK_IMPORTED_MODULE_8__.PROP_TYPE_BOOLEAN, false),
+  // Place right if possible
+  dropright: (0,_utils_props__WEBPACK_IMPORTED_MODULE_4__.makeProp)(_constants_props__WEBPACK_IMPORTED_MODULE_8__.PROP_TYPE_BOOLEAN, false),
+  // Place on top if possible
+  dropup: (0,_utils_props__WEBPACK_IMPORTED_MODULE_4__.makeProp)(_constants_props__WEBPACK_IMPORTED_MODULE_8__.PROP_TYPE_BOOLEAN, false),
+  // Disable auto-flipping of menu from bottom <=> top
+  noFlip: (0,_utils_props__WEBPACK_IMPORTED_MODULE_4__.makeProp)(_constants_props__WEBPACK_IMPORTED_MODULE_8__.PROP_TYPE_BOOLEAN, false),
+  // Number of pixels or a CSS unit value to offset menu
+  // (i.e. `1px`, `1rem`, etc.)
+  offset: (0,_utils_props__WEBPACK_IMPORTED_MODULE_4__.makeProp)(_constants_props__WEBPACK_IMPORTED_MODULE_8__.PROP_TYPE_NUMBER_STRING, 0),
+  popperOpts: (0,_utils_props__WEBPACK_IMPORTED_MODULE_4__.makeProp)(_constants_props__WEBPACK_IMPORTED_MODULE_8__.PROP_TYPE_OBJECT, {}),
+  // Right align menu (default is left align)
+  right: (0,_utils_props__WEBPACK_IMPORTED_MODULE_4__.makeProp)(_constants_props__WEBPACK_IMPORTED_MODULE_8__.PROP_TYPE_BOOLEAN, false)
+})), _constants_components__WEBPACK_IMPORTED_MODULE_1__.NAME_DROPDOWN); // --- Mixin ---
+// @vue/component
+
+var dropdownMixin = _vue__WEBPACK_IMPORTED_MODULE_9__["default"].extend({
+  mixins: [_id__WEBPACK_IMPORTED_MODULE_6__.idMixin, _listen_on_root__WEBPACK_IMPORTED_MODULE_10__.listenOnRootMixin, _click_out__WEBPACK_IMPORTED_MODULE_11__.clickOutMixin, _focus_in__WEBPACK_IMPORTED_MODULE_12__.focusInMixin],
+  provide: function provide() {
+    return {
+      bvDropdown: this
+    };
+  },
+  inject: {
+    bvNavbar: {
+      default: null
+    }
+  },
+  props: props,
+  data: function data() {
+    return {
+      visible: false,
+      visibleChangePrevented: false
+    };
+  },
+  computed: {
+    inNavbar: function inNavbar() {
+      return !(0,_utils_inspect__WEBPACK_IMPORTED_MODULE_13__.isNull)(this.bvNavbar);
+    },
+    toggler: function toggler() {
+      var toggle = this.$refs.toggle;
+      return toggle ? toggle.$el || toggle : null;
+    },
+    directionClass: function directionClass() {
+      if (this.dropup) {
+        return 'dropup';
+      } else if (this.dropright) {
+        return 'dropright';
+      } else if (this.dropleft) {
+        return 'dropleft';
+      }
+
+      return '';
+    },
+    boundaryClass: function boundaryClass() {
+      // Position `static` is needed to allow menu to "breakout" of the `scrollParent`
+      // boundaries when boundary is anything other than `scrollParent`
+      // See: https://github.com/twbs/bootstrap/issues/24251#issuecomment-341413786
+      return this.boundary !== 'scrollParent' && !this.inNavbar ? 'position-static' : '';
+    }
+  },
+  watch: {
+    visible: function visible(newValue, oldValue) {
+      if (this.visibleChangePrevented) {
+        this.visibleChangePrevented = false;
+        return;
+      }
+
+      if (newValue !== oldValue) {
+        var eventName = newValue ? _constants_events__WEBPACK_IMPORTED_MODULE_2__.EVENT_NAME_SHOW : _constants_events__WEBPACK_IMPORTED_MODULE_2__.EVENT_NAME_HIDE;
+        var bvEvent = new _utils_bv_event_class__WEBPACK_IMPORTED_MODULE_14__.BvEvent(eventName, {
+          cancelable: true,
+          vueTarget: this,
+          target: this.$refs.menu,
+          relatedTarget: null,
+          componentId: this.safeId ? this.safeId() : this.id || null
+        });
+        this.emitEvent(bvEvent);
+
+        if (bvEvent.defaultPrevented) {
+          // Reset value and exit if canceled
+          this.visibleChangePrevented = true;
+          this.visible = oldValue; // Just in case a child element triggered `this.hide(true)`
+
+          this.$off(_constants_events__WEBPACK_IMPORTED_MODULE_2__.EVENT_NAME_HIDDEN, this.focusToggler);
+          return;
+        }
+
+        if (newValue) {
+          this.showMenu();
+        } else {
+          this.hideMenu();
+        }
+      }
+    },
+    disabled: function disabled(newValue, oldValue) {
+      if (newValue !== oldValue && newValue && this.visible) {
+        // Hide dropdown if disabled changes to true
+        this.visible = false;
+      }
+    }
+  },
+  created: function created() {
+    // Create private non-reactive props
+    this.$_popper = null;
+    this.$_hideTimeout = null;
+  },
+
+  /* istanbul ignore next */
+  deactivated: function deactivated() {
+    // In case we are inside a `<keep-alive>`
+    this.visible = false;
+    this.whileOpenListen(false);
+    this.destroyPopper();
+  },
+  beforeDestroy: function beforeDestroy() {
+    this.visible = false;
+    this.whileOpenListen(false);
+    this.destroyPopper();
+    this.clearHideTimeout();
+  },
+  methods: {
+    // Event emitter
+    emitEvent: function emitEvent(bvEvent) {
+      var type = bvEvent.type;
+      this.emitOnRoot((0,_utils_events__WEBPACK_IMPORTED_MODULE_0__.getRootEventName)(_constants_components__WEBPACK_IMPORTED_MODULE_1__.NAME_DROPDOWN, type), bvEvent);
+      this.$emit(type, bvEvent);
+    },
+    showMenu: function showMenu() {
+      var _this = this;
+
+      if (this.disabled) {
+        /* istanbul ignore next */
+        return;
+      } // Only instantiate Popper.js when dropdown is not in `<b-navbar>`
+
+
+      if (!this.inNavbar) {
+        if (typeof popper_js__WEBPACK_IMPORTED_MODULE_15__["default"] === 'undefined') {
+          /* istanbul ignore next */
+          (0,_utils_warn__WEBPACK_IMPORTED_MODULE_16__.warn)('Popper.js not found. Falling back to CSS positioning', _constants_components__WEBPACK_IMPORTED_MODULE_1__.NAME_DROPDOWN);
+        } else {
+          // For dropup with alignment we use the parent element as popper container
+          var el = this.dropup && this.right || this.split ? this.$el : this.$refs.toggle; // Make sure we have a reference to an element, not a component!
+
+          el = el.$el || el; // Instantiate Popper.js
+
+          this.createPopper(el);
+        }
+      } // Ensure other menus are closed
+
+
+      this.emitOnRoot(ROOT_EVENT_NAME_SHOWN, this); // Enable listeners
+
+      this.whileOpenListen(true); // Wrap in `$nextTick()` to ensure menu is fully rendered/shown
+
+      this.$nextTick(function () {
+        // Focus on the menu container on show
+        _this.focusMenu(); // Emit the shown event
+
+
+        _this.$emit(_constants_events__WEBPACK_IMPORTED_MODULE_2__.EVENT_NAME_SHOWN);
+      });
+    },
+    hideMenu: function hideMenu() {
+      this.whileOpenListen(false);
+      this.emitOnRoot(ROOT_EVENT_NAME_HIDDEN, this);
+      this.$emit(_constants_events__WEBPACK_IMPORTED_MODULE_2__.EVENT_NAME_HIDDEN);
+      this.destroyPopper();
+    },
+    createPopper: function createPopper(element) {
+      this.destroyPopper();
+      this.$_popper = new popper_js__WEBPACK_IMPORTED_MODULE_15__["default"](element, this.$refs.menu, this.getPopperConfig());
+    },
+    // Ensure popper event listeners are removed cleanly
+    destroyPopper: function destroyPopper() {
+      this.$_popper && this.$_popper.destroy();
+      this.$_popper = null;
+    },
+    // Instructs popper to re-computes the dropdown position
+    // useful if the content changes size
+    updatePopper: function updatePopper() {
+      try {
+        this.$_popper.scheduleUpdate();
+      } catch (_unused) {}
+    },
+    clearHideTimeout: function clearHideTimeout() {
+      clearTimeout(this.$_hideTimeout);
+      this.$_hideTimeout = null;
+    },
+    getPopperConfig: function getPopperConfig() {
+      var placement = _constants_popper__WEBPACK_IMPORTED_MODULE_17__.PLACEMENT_BOTTOM_START;
+
+      if (this.dropup) {
+        placement = this.right ? _constants_popper__WEBPACK_IMPORTED_MODULE_17__.PLACEMENT_TOP_END : _constants_popper__WEBPACK_IMPORTED_MODULE_17__.PLACEMENT_TOP_START;
+      } else if (this.dropright) {
+        placement = _constants_popper__WEBPACK_IMPORTED_MODULE_17__.PLACEMENT_RIGHT_START;
+      } else if (this.dropleft) {
+        placement = _constants_popper__WEBPACK_IMPORTED_MODULE_17__.PLACEMENT_LEFT_START;
+      } else if (this.right) {
+        placement = _constants_popper__WEBPACK_IMPORTED_MODULE_17__.PLACEMENT_BOTTOM_END;
+      }
+
+      var popperConfig = {
+        placement: placement,
+        modifiers: {
+          offset: {
+            offset: this.offset || 0
+          },
+          flip: {
+            enabled: !this.noFlip
+          }
+        }
+      };
+      var boundariesElement = this.boundary;
+
+      if (boundariesElement) {
+        popperConfig.modifiers.preventOverflow = {
+          boundariesElement: boundariesElement
+        };
+      }
+
+      return (0,_utils_object__WEBPACK_IMPORTED_MODULE_5__.mergeDeep)(popperConfig, this.popperOpts || {});
+    },
+    // Turn listeners on/off while open
+    whileOpenListen: function whileOpenListen(isOpen) {
+      // Hide the dropdown when clicked outside
+      this.listenForClickOut = isOpen; // Hide the dropdown when it loses focus
+
+      this.listenForFocusIn = isOpen; // Hide the dropdown when another dropdown is opened
+
+      var method = isOpen ? '$on' : '$off';
+      this.$root[method](ROOT_EVENT_NAME_SHOWN, this.rootCloseListener);
+    },
+    rootCloseListener: function rootCloseListener(vm) {
+      if (vm !== this) {
+        this.visible = false;
+      }
+    },
+    // Public method to show dropdown
+    show: function show() {
+      var _this2 = this;
+
+      if (this.disabled) {
+        return;
+      } // Wrap in a `requestAF()` to allow any previous
+      // click handling to occur first
+
+
+      (0,_utils_dom__WEBPACK_IMPORTED_MODULE_3__.requestAF)(function () {
+        _this2.visible = true;
+      });
+    },
+    // Public method to hide dropdown
+    hide: function hide() {
+      var refocus = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : false;
+
+      /* istanbul ignore next */
+      if (this.disabled) {
+        return;
+      }
+
+      this.visible = false;
+
+      if (refocus) {
+        // Child element is closing the dropdown on click
+        this.$once(_constants_events__WEBPACK_IMPORTED_MODULE_2__.EVENT_NAME_HIDDEN, this.focusToggler);
+      }
+    },
+    // Called only by a button that toggles the menu
+    toggle: function toggle(event) {
+      event = event || {}; // Early exit when not a click event or ENTER, SPACE or DOWN were pressed
+
+      var _event = event,
+          type = _event.type,
+          keyCode = _event.keyCode;
+
+      if (type !== 'click' && !(type === 'keydown' && [_constants_key_codes__WEBPACK_IMPORTED_MODULE_18__.CODE_ENTER, _constants_key_codes__WEBPACK_IMPORTED_MODULE_18__.CODE_SPACE, _constants_key_codes__WEBPACK_IMPORTED_MODULE_18__.CODE_DOWN].indexOf(keyCode) !== -1)) {
+        /* istanbul ignore next */
+        return;
+      }
+      /* istanbul ignore next */
+
+
+      if (this.disabled) {
+        this.visible = false;
+        return;
+      }
+
+      this.$emit(_constants_events__WEBPACK_IMPORTED_MODULE_2__.EVENT_NAME_TOGGLE, event);
+      (0,_utils_events__WEBPACK_IMPORTED_MODULE_0__.stopEvent)(event); // Toggle visibility
+
+      if (this.visible) {
+        this.hide(true);
+      } else {
+        this.show();
+      }
+    },
+    // Mousedown handler for the toggle
+
+    /* istanbul ignore next */
+    onMousedown: function onMousedown(event) {
+      // We prevent the 'mousedown' event for the toggle to stop the
+      // 'focusin' event from being fired
+      // The event would otherwise be picked up by the global 'focusin'
+      // listener and there is no cross-browser solution to detect it
+      // relates to the toggle click
+      // The 'click' event will still be fired and we handle closing
+      // other dropdowns there too
+      // See https://github.com/bootstrap-vue/bootstrap-vue/issues/4328
+      (0,_utils_events__WEBPACK_IMPORTED_MODULE_0__.stopEvent)(event, {
+        propagation: false
+      });
+    },
+    // Called from dropdown menu context
+    onKeydown: function onKeydown(event) {
+      var keyCode = event.keyCode;
+
+      if (keyCode === _constants_key_codes__WEBPACK_IMPORTED_MODULE_18__.CODE_ESC) {
+        // Close on ESC
+        this.onEsc(event);
+      } else if (keyCode === _constants_key_codes__WEBPACK_IMPORTED_MODULE_18__.CODE_DOWN) {
+        // Down Arrow
+        this.focusNext(event, false);
+      } else if (keyCode === _constants_key_codes__WEBPACK_IMPORTED_MODULE_18__.CODE_UP) {
+        // Up Arrow
+        this.focusNext(event, true);
+      }
+    },
+    // If user presses ESC, close the menu
+    onEsc: function onEsc(event) {
+      if (this.visible) {
+        this.visible = false;
+        (0,_utils_events__WEBPACK_IMPORTED_MODULE_0__.stopEvent)(event); // Return focus to original trigger button
+
+        this.$once(_constants_events__WEBPACK_IMPORTED_MODULE_2__.EVENT_NAME_HIDDEN, this.focusToggler);
+      }
+    },
+    // Called only in split button mode, for the split button
+    onSplitClick: function onSplitClick(event) {
+      /* istanbul ignore next */
+      if (this.disabled) {
+        this.visible = false;
+        return;
+      }
+
+      this.$emit(_constants_events__WEBPACK_IMPORTED_MODULE_2__.EVENT_NAME_CLICK, event);
+    },
+    // Shared hide handler between click-out and focus-in events
+    hideHandler: function hideHandler(event) {
+      var _this3 = this;
+
+      var target = event.target;
+
+      if (this.visible && !(0,_utils_dom__WEBPACK_IMPORTED_MODULE_3__.contains)(this.$refs.menu, target) && !(0,_utils_dom__WEBPACK_IMPORTED_MODULE_3__.contains)(this.toggler, target)) {
+        this.clearHideTimeout();
+        this.$_hideTimeout = setTimeout(function () {
+          return _this3.hide();
+        }, this.inNavbar ? 300 : 0);
+      }
+    },
+    // Document click-out listener
+    clickOutHandler: function clickOutHandler(event) {
+      this.hideHandler(event);
+    },
+    // Document focus-in listener
+    focusInHandler: function focusInHandler(event) {
+      this.hideHandler(event);
+    },
+    // Keyboard nav
+    focusNext: function focusNext(event, up) {
+      var _this4 = this;
+
+      // Ignore key up/down on form elements
+      var target = event.target;
+
+      if (!this.visible || event && (0,_utils_dom__WEBPACK_IMPORTED_MODULE_3__.closest)(SELECTOR_FORM_CHILD, target)) {
+        /* istanbul ignore next: should never happen */
+        return;
+      }
+
+      (0,_utils_events__WEBPACK_IMPORTED_MODULE_0__.stopEvent)(event);
+      this.$nextTick(function () {
+        var items = _this4.getItems();
+
+        if (items.length < 1) {
+          /* istanbul ignore next: should never happen */
+          return;
+        }
+
+        var index = items.indexOf(target);
+
+        if (up && index > 0) {
+          index--;
+        } else if (!up && index < items.length - 1) {
+          index++;
+        }
+
+        if (index < 0) {
+          /* istanbul ignore next: should never happen */
+          index = 0;
+        }
+
+        _this4.focusItem(index, items);
+      });
+    },
+    focusItem: function focusItem(index, items) {
+      var el = items.find(function (el, i) {
+        return i === index;
+      });
+      (0,_utils_dom__WEBPACK_IMPORTED_MODULE_3__.attemptFocus)(el);
+    },
+    getItems: function getItems() {
+      // Get all items
+      return filterVisibles((0,_utils_dom__WEBPACK_IMPORTED_MODULE_3__.selectAll)(SELECTOR_ITEM, this.$refs.menu));
+    },
+    focusMenu: function focusMenu() {
+      (0,_utils_dom__WEBPACK_IMPORTED_MODULE_3__.attemptFocus)(this.$refs.menu);
+    },
+    focusToggler: function focusToggler() {
+      var _this5 = this;
+
+      this.$nextTick(function () {
+        (0,_utils_dom__WEBPACK_IMPORTED_MODULE_3__.attemptFocus)(_this5.toggler);
+      });
+    }
+  }
+});
+
+/***/ }),
+
+/***/ "./node_modules/bootstrap-vue/esm/mixins/focus-in.js":
+/*!***********************************************************!*\
+  !*** ./node_modules/bootstrap-vue/esm/mixins/focus-in.js ***!
+  \***********************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "focusInMixin": () => (/* binding */ focusInMixin)
+/* harmony export */ });
+/* harmony import */ var _vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../vue */ "./node_modules/vue/dist/vue.esm.js");
+/* harmony import */ var _constants_events__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../constants/events */ "./node_modules/bootstrap-vue/esm/constants/events.js");
+/* harmony import */ var _utils_events__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../utils/events */ "./node_modules/bootstrap-vue/esm/utils/events.js");
+
+
+ // @vue/component
+
+var focusInMixin = _vue__WEBPACK_IMPORTED_MODULE_0__["default"].extend({
+  data: function data() {
+    return {
+      listenForFocusIn: false
+    };
+  },
+  watch: {
+    listenForFocusIn: function listenForFocusIn(newValue, oldValue) {
+      if (newValue !== oldValue) {
+        (0,_utils_events__WEBPACK_IMPORTED_MODULE_1__.eventOff)(this.focusInElement, 'focusin', this._focusInHandler, _constants_events__WEBPACK_IMPORTED_MODULE_2__.EVENT_OPTIONS_NO_CAPTURE);
+
+        if (newValue) {
+          (0,_utils_events__WEBPACK_IMPORTED_MODULE_1__.eventOn)(this.focusInElement, 'focusin', this._focusInHandler, _constants_events__WEBPACK_IMPORTED_MODULE_2__.EVENT_OPTIONS_NO_CAPTURE);
+        }
+      }
+    }
+  },
+  beforeCreate: function beforeCreate() {
+    // Declare non-reactive properties
+    this.focusInElement = null;
+  },
+  mounted: function mounted() {
+    if (!this.focusInElement) {
+      this.focusInElement = document;
+    }
+
+    if (this.listenForFocusIn) {
+      (0,_utils_events__WEBPACK_IMPORTED_MODULE_1__.eventOn)(this.focusInElement, 'focusin', this._focusInHandler, _constants_events__WEBPACK_IMPORTED_MODULE_2__.EVENT_OPTIONS_NO_CAPTURE);
+    }
+  },
+  beforeDestroy: function beforeDestroy() {
+    (0,_utils_events__WEBPACK_IMPORTED_MODULE_1__.eventOff)(this.focusInElement, 'focusin', this._focusInHandler, _constants_events__WEBPACK_IMPORTED_MODULE_2__.EVENT_OPTIONS_NO_CAPTURE);
+  },
+  methods: {
+    _focusInHandler: function _focusInHandler(event) {
+      if (this.focusInHandler) {
+        this.focusInHandler(event);
+      }
+    }
+  }
+});
 
 /***/ }),
 
@@ -15935,7 +16973,7 @@ var ___CSS_LOADER_URL_REPLACEMENT_0___ = _node_modules_css_loader_dist_runtime_g
 var ___CSS_LOADER_URL_REPLACEMENT_1___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_1___default()(_public_assets_client_svg__WEBPACK_IMPORTED_MODULE_3__["default"]);
 var ___CSS_LOADER_URL_REPLACEMENT_2___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_1___default()(_public_assets_question_svg__WEBPACK_IMPORTED_MODULE_4__["default"]);
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".main[data-v-b3c5cf30] {\n  display: flex;\n}\n.main .invisible[data-v-b3c5cf30] {\n  opacity: 0;\n}\n.main .fade-in[data-v-b3c5cf30] {\n  opacity: 1;\n  transition: 1.5s all ease-out;\n  transform: scale(1);\n}\n.main .side-nav[data-v-b3c5cf30] {\n  background-color: white;\n  position: sticky;\n  width: 230px;\n  border-right: 1px solid #0000001c;\n  position: -webkit-sticky;\n  position: sticky;\n  top: 0;\n}\n@media (max-width: 767px) {\n.main .side-nav[data-v-b3c5cf30] {\n    display: none;\n}\n}\n.main .side-nav .initials[data-v-b3c5cf30],\n.main .side-nav .button[data-v-b3c5cf30] {\n  color: #9d8c5d;\n}\n.main .side-nav .initials[data-v-b3c5cf30] {\n  font-size: 35px;\n  text-align: center;\n  padding: 30px;\n  background-color: white;\n  position: -webkit-sticky;\n  position: sticky;\n  top: 0;\n}\n.main .side-nav .button-container[data-v-b3c5cf30] {\n  position: -webkit-sticky;\n  position: sticky;\n  top: 275px;\n}\n.main .side-nav .button[data-v-b3c5cf30] {\n  padding: 0 38px;\n  margin: 10px;\n  font-size: 22px;\n  border-radius: 5px;\n  height: 48px;\n  display: flex;\n  align-items: center;\n}\n.main .side-nav .button[data-v-b3c5cf30]:hover {\n  color: white;\n  background-color: #9d8c5d;\n  box-shadow: 5px 10px #a8a8a85c;\n  cursor: pointer;\n  text-decoration: none;\n}\n.main .side-nav .button .fas[data-v-b3c5cf30],\n.main .side-nav .button .far[data-v-b3c5cf30],\n.main .side-nav .button .fa[data-v-b3c5cf30] {\n  margin-right: 12px;\n}\n.main .background-img[data-v-b3c5cf30] {\n  background: url(\"/images/abstract-background-wide.jpg\");\n  background-position: center;\n  background-size: inherit;\n  background-repeat: no-repeat;\n  background-size: cover;\n}\n.main .faded-overlay[data-v-b3c5cf30] {\n  height: 100%;\n  width: 100%;\n  background-color: #ffffffde;\n  padding: 25px;\n}\n.main .content[data-v-b3c5cf30] {\n  width: 100%;\n  background-color: white;\n}\n.main .content .pop-out-container[data-v-b3c5cf30] {\n  width: calc(100% - 230px);\n  position: absolute;\n  top: 895px;\n}\n.main .content .pop-out[data-v-b3c5cf30] {\n  background-color: white;\n  border: 1px solid #8080804f;\n  border-radius: 50px;\n  display: flex;\n  padding: 15px;\n  bottom: 40px;\n  margin: auto;\n  text-align: center;\n  box-shadow: 6.2px 12.5px 12.5px rgba(0, 0, 0, 0.12);\n  width: 650px;\n  height: 80px;\n  justify-content: center;\n}\n.main .content .pop-out div[data-v-b3c5cf30] {\n  width: 33.3%;\n}\n.main .content .pop-out .stack[data-v-b3c5cf30] {\n  background: url(" + ___CSS_LOADER_URL_REPLACEMENT_0___ + ");\n}\n.main .content .pop-out .client[data-v-b3c5cf30] {\n  background: url(" + ___CSS_LOADER_URL_REPLACEMENT_1___ + ");\n}\n.main .content .pop-out .question[data-v-b3c5cf30] {\n  background: url(" + ___CSS_LOADER_URL_REPLACEMENT_2___ + ");\n}\n.main .content .pop-out .stack[data-v-b3c5cf30],\n.main .content .pop-out .client[data-v-b3c5cf30],\n.main .content .pop-out .question[data-v-b3c5cf30] {\n  height: 23px;\n  width: 23px;\n  margin-right: 10px;\n  background-repeat: no-repeat;\n}\n.main .content .pop-out .left[data-v-b3c5cf30],\n.main .content .pop-out .center[data-v-b3c5cf30],\n.main .content .pop-out .right[data-v-b3c5cf30] {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  font-weight: bold;\n  color: #646363;\n}\n.main .content .pop-out .left[data-v-b3c5cf30],\n.main .content .pop-out .right[data-v-b3c5cf30] {\n  width: 28%;\n}\n.main .content .pop-out .center[data-v-b3c5cf30] {\n  width: 41.3%;\n  border-left: 2px solid #00000042;\n  border-right: 2px solid #00000042;\n}\n.main .content .about[data-v-b3c5cf30],\n.main .content .skills[data-v-b3c5cf30],\n.main .content .works[data-v-b3c5cf30],\n.main .content .contact[data-v-b3c5cf30] {\n  height: 50vh;\n}\n.main .content .about .header[data-v-b3c5cf30],\n.main .content .skills .header[data-v-b3c5cf30],\n.main .content .works .header[data-v-b3c5cf30],\n.main .content .contact .header[data-v-b3c5cf30] {\n  text-align: center;\n  margin-bottom: 20px;\n}\n.main .content .about .header hr[data-v-b3c5cf30],\n.main .content .skills .header hr[data-v-b3c5cf30],\n.main .content .works .header hr[data-v-b3c5cf30],\n.main .content .contact .header hr[data-v-b3c5cf30] {\n  width: 40px;\n  margin-top: 12px;\n  border-top: 2px solid rgba(0, 0, 0, 0.45);\n}\n.main .content .about .card[data-v-b3c5cf30],\n.main .content .skills .card[data-v-b3c5cf30],\n.main .content .works .card[data-v-b3c5cf30],\n.main .content .contact .card[data-v-b3c5cf30] {\n  padding: 40px;\n  background-color: transparent;\n  border: none;\n}\n.main .content .about .card svg[data-v-b3c5cf30],\n.main .content .about .card img[data-v-b3c5cf30],\n.main .content .skills .card svg[data-v-b3c5cf30],\n.main .content .skills .card img[data-v-b3c5cf30],\n.main .content .works .card svg[data-v-b3c5cf30],\n.main .content .works .card img[data-v-b3c5cf30],\n.main .content .contact .card svg[data-v-b3c5cf30],\n.main .content .contact .card img[data-v-b3c5cf30] {\n  width: 70px;\n}\n.main .content .home[data-v-b3c5cf30] {\n  display: flex;\n  height: 100vh;\n  contain: content;\n}\n.main .content .home h1[data-v-b3c5cf30] {\n  font-weight: bold;\n  font-size: 49px;\n}\n.main .content .home .style[data-v-b3c5cf30] {\n  font-size: 24px;\n}\n@media (max-width: 767px) {\n.main .content .home[data-v-b3c5cf30] {\n    flex-direction: column;\n}\n}\n.main .content .home .faded-overlay[data-v-b3c5cf30] {\n  position: absolute;\n  z-index: 1;\n  background-color: unset;\n  background-image: linear-gradient(to right, #e4e6e5 50%, #e4e6e500 70%, #fff0);\n}\n.main .content .home .left[data-v-b3c5cf30] {\n  display: flex;\n  justify-content: center;\n  flex-direction: column;\n  width: 50%;\n  padding: 50px;\n  position: relative;\n  z-index: 1;\n}\n@media (max-width: 767px) {\n.main .content .home .left[data-v-b3c5cf30] {\n    width: 100%;\n    margin: 20px auto auto auto;\n}\n}\n.main .content .home .left h2[data-v-b3c5cf30] {\n  font-weight: bold;\n}\n.main .content .home .left .style[data-v-b3c5cf30] {\n  color: #9d8c5d;\n  font-weight: bold;\n}\n.main .content .home .left p[data-v-b3c5cf30]:nth-child(4) {\n  color: #383838;\n}\n.main .content .home .left .btn-container[data-v-b3c5cf30] {\n  display: flex;\n}\n.main .content .home .left .btn-container .resume-btn[data-v-b3c5cf30],\n.main .content .home .left .btn-container .contact-btn[data-v-b3c5cf30] {\n  padding: 10px 20px;\n  border-radius: 25px;\n  display: flex;\n  align-items: center;\n}\n.main .content .home .left .btn-container .resume-btn[data-v-b3c5cf30]:hover,\n.main .content .home .left .btn-container .contact-btn[data-v-b3c5cf30]:hover {\n  cursor: pointer;\n}\n.main .content .home .left .btn-container .resume-btn[data-v-b3c5cf30] {\n  color: white;\n  margin-right: 20px;\n  background-color: #9d8c5d;\n}\n.main .content .home .left .btn-container .resume-btn[data-v-b3c5cf30]:hover {\n  background-color: #c6b176;\n}\n.main .content .home .left .btn-container .contact-btn[data-v-b3c5cf30] {\n  border: 2px solid #9d8c5d;\n}\n.main .content .home .left .btn-container .contact-btn[data-v-b3c5cf30]:hover {\n  border: 2px solid #c6b176;\n  background-color: #c6b176;\n  color: white;\n}\n.main .content .home .right[data-v-b3c5cf30] {\n  width: 50%;\n  background-image: url(\"/images/self-photo.png\");\n  transform: scaleX(-1);\n  background-repeat: no-repeat;\n  background-position: 20% 50%;\n  position: relative;\n  background-size: cover;\n  z-index: 0;\n}\n.main .content .about[data-v-b3c5cf30] {\n  color: black;\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  height: 45vh;\n}\n.main .content .about .faded-overlay[data-v-b3c5cf30] {\n  display: flex;\n  flex-direction: row;\n}\n.main .content .about .faded-overlay .about-container[data-v-b3c5cf30] {\n  padding: 0 50px;\n}\n.main .content .about .faded-overlay .about-container .header[data-v-b3c5cf30] {\n  font-weight: bold;\n  color: #9d8c5d;\n  text-align: center;\n  margin: 50px 0;\n}\n.main .content .about .faded-overlay .about-container .description[data-v-b3c5cf30] {\n  margin: 110px 0;\n}\n.main .content .about .faded-overlay .about-container .info-container .name[data-v-b3c5cf30],\n.main .content .about .faded-overlay .about-container .info-container .phone[data-v-b3c5cf30],\n.main .content .about .faded-overlay .about-container .info-container .email[data-v-b3c5cf30] {\n  display: flex;\n}\n.main .content .about .faded-overlay .about-container .info-container .name div[data-v-b3c5cf30],\n.main .content .about .faded-overlay .about-container .info-container .phone div[data-v-b3c5cf30],\n.main .content .about .faded-overlay .about-container .info-container .email div[data-v-b3c5cf30] {\n  width: 25%;\n}\n.main .content .skills[data-v-b3c5cf30] {\n  background-color: #e4e6e5;\n  height: 45vh;\n  padding: 25px;\n}\n.main .content .skills .skills-header[data-v-b3c5cf30] {\n  margin: 50px 0;\n  text-align: center;\n  font-weight: bold;\n  color: #9d8c5d;\n}\n.main .content .skills .skills-container[data-v-b3c5cf30] {\n  display: flex;\n}\n.main .content .skills .skills-container .left[data-v-b3c5cf30] {\n  padding-left: 50px;\n}\n.main .content .skills .skills-container .right[data-v-b3c5cf30] {\n  padding-right: 50px;\n  display: flex;\n  flex-direction: column;\n  align-items: flex-end;\n}\n.main .content .skills .skills-container .left[data-v-b3c5cf30],\n.main .content .skills .skills-container .right[data-v-b3c5cf30] {\n  width: 50%;\n}\n.main .content .skills .skills-container .left .skill-container[data-v-b3c5cf30],\n.main .content .skills .skills-container .right .skill-container[data-v-b3c5cf30] {\n  margin-bottom: 20px;\n}\n.main .content .skills .skills-container .skill-container[data-v-b3c5cf30] {\n  width: 90%;\n}\n.main .content .skills .skills-container .skill-container .header[data-v-b3c5cf30] {\n  width: auto;\n  font-weight: bold;\n  color: #6a5d5d;\n}\n.main .content .skills .skills-container .skill-container .header span[data-v-b3c5cf30] {\n  margin-left: auto;\n}\n.main .content .skills .skills-container .skill-container .skill-bar[data-v-b3c5cf30] {\n  height: 10px;\n  border: 1px solid #00000042;\n}\n.main .content .skills .skills-container .skill-container #barBackground[data-v-b3c5cf30] {\n  width: 100%;\n  background-color: #fff;\n  border-radius: 10px;\n}\n.main .content .skills .skills-container .skill-container .bar[data-v-b3c5cf30] {\n  height: 10px;\n  background-color: #9d8c5d;\n  border-radius: 10px;\n}\n.main .content .skills .skills-container .skill-container #vue[data-v-b3c5cf30],\n.main .content .skills .skills-container .skill-container #php[data-v-b3c5cf30],\n.main .content .skills .skills-container .skill-container #mysql[data-v-b3c5cf30],\n.main .content .skills .skills-container .skill-container #html[data-v-b3c5cf30],\n.main .content .skills .skills-container .skill-container #cssScss[data-v-b3c5cf30] {\n  width: 1%;\n}\n.main .content .education-work[data-v-b3c5cf30] {\n  height: 50vh;\n}\n.main .content .education-work .faded-overlay .education-work-header[data-v-b3c5cf30] {\n  text-align: center;\n  margin: 50px 0;\n  font-weight: bold;\n  color: #9d8c5d;\n}\n.main .content .education-work .faded-overlay .education-work-container[data-v-b3c5cf30] {\n  display: flex;\n  justify-content: space-between;\n  flex-direction: column;\n  margin: 70px 0;\n}\n.main .content .education-work .faded-overlay .education-work-container .education[data-v-b3c5cf30],\n.main .content .education-work .faded-overlay .education-work-container .experience[data-v-b3c5cf30] {\n  display: flex;\n  flex-direction: row;\n  justify-content: center;\n}\n.main .content .education-work .faded-overlay .education-work-container .education .header[data-v-b3c5cf30],\n.main .content .education-work .faded-overlay .education-work-container .experience .header[data-v-b3c5cf30] {\n  margin-bottom: 15px;\n  font-weight: bold;\n  color: #6a5d5d;\n  display: flex;\n  align-items: center;\n  min-width: 140px;\n  justify-content: center;\n}\n.main .content .education-work .faded-overlay .education-work-container .education .content-container[data-v-b3c5cf30],\n.main .content .education-work .faded-overlay .education-work-container .experience .content-container[data-v-b3c5cf30] {\n  display: flex;\n  flex-direction: column;\n  padding: 5px 23px;\n  margin-bottom: 15px;\n  border-left-color: #9d8c5d;\n  border-left-style: solid;\n  border-left-width: 2px;\n  min-width: 260px;\n  background-color: #dedede00;\n}\n.main .content .education-work .faded-overlay .education-work-container .education .content-container .exp-gradient[data-v-b3c5cf30],\n.main .content .education-work .faded-overlay .education-work-container .experience .content-container .exp-gradient[data-v-b3c5cf30] {\n  background-color: grey;\n}\n.main .content .education-work .faded-overlay .education-work-container .education .content-container .title[data-v-b3c5cf30],\n.main .content .education-work .faded-overlay .education-work-container .experience .content-container .title[data-v-b3c5cf30] {\n  font-style: italic;\n}\n.main .content .education-work .faded-overlay .education-work-container .education .content-container[data-v-b3c5cf30]:hover,\n.main .content .education-work .faded-overlay .education-work-container .experience .content-container[data-v-b3c5cf30]:hover {\n  cursor: default;\n}\n.main .content .education-work .faded-overlay .education-work-container .education .content-container:hover .text[data-v-b3c5cf30],\n.main .content .education-work .faded-overlay .education-work-container .education .content-container:hover .title[data-v-b3c5cf30],\n.main .content .education-work .faded-overlay .education-work-container .education .content-container:hover .date[data-v-b3c5cf30],\n.main .content .education-work .faded-overlay .education-work-container .experience .content-container:hover .text[data-v-b3c5cf30],\n.main .content .education-work .faded-overlay .education-work-container .experience .content-container:hover .title[data-v-b3c5cf30],\n.main .content .education-work .faded-overlay .education-work-container .experience .content-container:hover .date[data-v-b3c5cf30] {\n  color: #6a5d5d;\n}\n.main .content .product[data-v-b3c5cf30] {\n  height: 65vh;\n  background-color: #e4e6e5;\n  padding: 25px;\n}\n.main .content .product .skills-header[data-v-b3c5cf30] {\n  text-align: center;\n  font-weight: bold;\n  color: #9d8c5d;\n  margin: 50px 0 30px 0;\n}\n.main .content .product .top[data-v-b3c5cf30],\n.main .content .product .bottom[data-v-b3c5cf30] {\n  display: flex;\n  flex-direction: row;\n  justify-content: space-evenly;\n}\n.main .content .product .offer-container .fa[data-v-b3c5cf30] {\n  position: relative;\n  top: 14px;\n  right: 25px;\n  background-color: #9d8c5d;\n  padding: 10px;\n  border-radius: 10px;\n  color: white;\n  box-shadow: 2.9px 8px 3.3px rgba(0, 0, 0, 0.48);\n  height: 50px;\n  width: 50px;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  transition: all 0.2s;\n  -moz-transition: all 0.2s;\n  -webkit-transition: all 0.2s;\n  -o-transition: all 0.2s;\n}\n.main .content .product .offer-container .fa[data-v-b3c5cf30]::before {\n  font-size: 25px;\n}\n.main .content .product .offer-container .offer-box[data-v-b3c5cf30] {\n  border: 1px solid #00000030;\n  border-radius: 5px 25px 5px 5px;\n  padding: 20px;\n  width: 280px;\n  height: 140px;\n  top: 20px;\n}\n.main .content .product .offer-container .offer-box .header[data-v-b3c5cf30] {\n  font-weight: bold;\n  margin-bottom: 10px;\n  color: #6a5d5d;\n}\n.main .content .product .offer-container[data-v-b3c5cf30]:hover {\n  cursor: pointer;\n}\n.main .content .product .offer-container:hover .fa[data-v-b3c5cf30] {\n  top: 5px;\n}\n.main .content .product .offer-container:hover .text[data-v-b3c5cf30] {\n  color: #6a5d5d;\n}\n.main .content .recent-works[data-v-b3c5cf30] {\n  height: 48vh;\n}\n.main .content .recent-works .faded-overlay .header[data-v-b3c5cf30] {\n  text-align: center;\n  font-weight: bold;\n  color: #9d8c5d;\n  margin: 50px 0;\n}\n.main .content .recent-works .faded-overlay .works-container[data-v-b3c5cf30] {\n  display: flex;\n  justify-content: space-evenly;\n  align-items: center;\n}\n.main .content .recent-works .faded-overlay .works-container .work[data-v-b3c5cf30] {\n  height: 180px;\n  width: 260px;\n  background-color: grey;\n  border-radius: 10px;\n  box-shadow: 1px 0px 13.5px rgba(0, 0, 0, 0.5);\n  transition: all 0.2s;\n  -moz-transition: all 0.2s;\n  -webkit-transition: all 0.2s;\n  -o-transition: all 0.2s;\n}\n.main .content .recent-works .faded-overlay .works-container .work.coffee[data-v-b3c5cf30], .main .content .recent-works .faded-overlay .works-container .work.black-white[data-v-b3c5cf30], .main .content .recent-works .faded-overlay .works-container .work.finder[data-v-b3c5cf30] {\n  background-size: cover;\n  background-repeat: no-repeat;\n}\n.main .content .recent-works .faded-overlay .works-container .work.coffee[data-v-b3c5cf30] {\n  background-image: url(\"/images/coffee-site-preview.png\");\n}\n.main .content .recent-works .faded-overlay .works-container .work.black-white[data-v-b3c5cf30] {\n  background-image: url(\"/images/black-white-site-preview.png\");\n}\n.main .content .recent-works .faded-overlay .works-container .work.finder[data-v-b3c5cf30] {\n  background-image: url(\"/images/business-finder-preview.png\");\n}\n.main .content .recent-works .faded-overlay .works-container .work[data-v-b3c5cf30]:hover {\n  position: relative;\n  cursor: pointer;\n  box-shadow: 6px 0px 17px rgba(0, 0, 0, 0.699);\n  bottom: 5px;\n}\n.main .content .contact[data-v-b3c5cf30] {\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  height: 45vh;\n  background-color: #e4e6e5;\n  padding: 25px 20%;\n}\n.main .content .contact .header[data-v-b3c5cf30] {\n  text-align: center;\n  font-weight: bold;\n  color: #9d8c5d;\n}\n.main .content .contact .contact-container[data-v-b3c5cf30] {\n  display: flex;\n  flex-direction: column;\n}\n.main .content .contact .contact-container .fa[data-v-b3c5cf30] {\n  font-size: 40px;\n}\n.main .content .contact .contact-container #group-contact #name[data-v-b3c5cf30],\n.main .content .contact .contact-container #group-contact #subject[data-v-b3c5cf30],\n.main .content .contact .contact-container #group-message #name[data-v-b3c5cf30],\n.main .content .contact .contact-container #group-message #subject[data-v-b3c5cf30] {\n  margin-bottom: 1rem;\n}\n.main .content .contact .contact-container .form-control[data-v-b3c5cf30] {\n  border-radius: 10px;\n}\n.main .content .contact .contact-container .btn-container[data-v-b3c5cf30] {\n  display: flex;\n  justify-content: center;\n}\n.main .content .contact .contact-container .btn-container .btn[data-v-b3c5cf30] {\n  background-color: #9d8c5d;\n  border-color: #9d8c5d;\n  border-radius: 25px;\n}\n.main .content .contact .contact-container .btn-container .btn[data-v-b3c5cf30]:hover {\n  cursor: pointer;\n  border-color: #c6b176;\n  background-color: #c6b176;\n}\n.main .content .footer[data-v-b3c5cf30] {\n  height: 70px;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  background-color: #9d8c5d;\n  color: white;\n  font-weight: bold;\n  font-size: 18px;\n}\n.main .modal-content[data-v-b3c5cf30] {\n  border-radius: 15px;\n  height: 320px;\n}\n.main .modal-backdrop[data-v-b3c5cf30] {\n  opacity: 0.5 !important;\n}", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, ".main[data-v-b3c5cf30] {\n  display: flex;\n}\n@media (max-width: 767px) {\n.main[data-v-b3c5cf30] {\n    display: inherit;\n}\n}\n.main .invisible[data-v-b3c5cf30] {\n  opacity: 0;\n}\n.main .fade-in[data-v-b3c5cf30] {\n  opacity: 1;\n  transition: 1.5s all ease-out;\n  transform: scale(1);\n}\n.main .side-nav[data-v-b3c5cf30] {\n  background-color: white;\n  position: sticky;\n  width: 230px;\n  border-right: 1px solid #0000001c;\n  position: -webkit-sticky;\n  position: sticky;\n  top: 0;\n}\n@media (max-width: 767px) {\n.main .side-nav[data-v-b3c5cf30] {\n    display: none;\n}\n}\n.main .side-nav .initials[data-v-b3c5cf30],\n.main .side-nav .button[data-v-b3c5cf30] {\n  color: #9d8c5d;\n}\n.main .side-nav .initials[data-v-b3c5cf30] {\n  font-size: 35px;\n  text-align: center;\n  padding: 30px;\n  background-color: white;\n  position: -webkit-sticky;\n  position: sticky;\n  top: 0;\n}\n.main .side-nav .button-container[data-v-b3c5cf30] {\n  position: -webkit-sticky;\n  position: sticky;\n  top: 20%;\n}\n.main .side-nav .button[data-v-b3c5cf30] {\n  padding: 0 38px;\n  margin: 10px;\n  font-size: 22px;\n  border-radius: 5px;\n  height: 48px;\n  display: flex;\n  align-items: center;\n}\n.main .side-nav .button i[data-v-b3c5cf30] {\n  margin-right: 5px;\n  width: 27px;\n}\n.main .side-nav .button[data-v-b3c5cf30]:hover {\n  color: white;\n  background-color: #9d8c5d;\n  box-shadow: 5px 10px #a8a8a85c;\n  cursor: pointer;\n  text-decoration: none;\n}\n.main .side-nav .button .fas[data-v-b3c5cf30],\n.main .side-nav .button .far[data-v-b3c5cf30],\n.main .side-nav .button .fa[data-v-b3c5cf30] {\n  margin-right: 12px;\n}\n.main .drop-down[data-v-b3c5cf30] {\n  width: 100%;\n  position: -webkit-sticky;\n  position: sticky;\n  top: 0;\n  display: flex;\n  flex-direction: column;\n  z-index: 10;\n}\n@media not all and (max-width: 767px) {\n.main .drop-down[data-v-b3c5cf30] {\n    display: none;\n}\n}\n.main .drop-down[data-v-b3c5cf30]  .btn {\n  background-color: white;\n  border: none;\n}\n.main .drop-down[data-v-b3c5cf30]  .dropdown-menu:focus-visible {\n  outline: none;\n  box-shadow: none;\n}\n.main .drop-down[data-v-b3c5cf30]  .dropdown-menu {\n  transform: translate3d(0px, -3px, 0px) !important;\n  border-radius: 0;\n  width: 100%;\n  position: -webkit-sticky !important;\n  position: sticky !important;\n}\n.main .drop-down[data-v-b3c5cf30]  .dropdown-menu li {\n  width: 140px;\n  margin: auto;\n}\n.main .drop-down[data-v-b3c5cf30]  .dropdown-menu li a.button {\n  color: #9d8c5d;\n}\n.main .drop-down[data-v-b3c5cf30]  .dropdown-menu li a.button i {\n  margin-right: 5px;\n  width: 20px;\n}\n.main .drop-down[data-v-b3c5cf30]  .dropdown-menu li a:active {\n  color: white;\n  background-color: #9d8c5d;\n  box-shadow: 5px 10px #a8a8a85c;\n  cursor: pointer;\n  text-decoration: none;\n}\n.main .drop-down[data-v-b3c5cf30] :after {\n  color: #9d8c5d;\n  font-size: 40px;\n  top: 7px;\n  position: relative;\n}\n.main .background-img[data-v-b3c5cf30] {\n  background: url(\"/images/abstract-background-wide.jpg\");\n  background-position: center;\n  background-size: inherit;\n  background-repeat: no-repeat;\n  background-size: cover;\n}\n.main .faded-overlay[data-v-b3c5cf30] {\n  height: 100%;\n  width: 100%;\n  background-color: #ffffffde;\n  padding: 25px;\n}\n.main .content[data-v-b3c5cf30] {\n  width: calc(100% - 230px);\n  background-color: white;\n}\n@media (max-width: 767px) {\n.main .content[data-v-b3c5cf30] {\n    width: 100%;\n}\n}\n.main .content .pop-out-container[data-v-b3c5cf30] {\n  width: calc(100% - 230px);\n  position: absolute;\n  top: 895px;\n}\n.main .content .pop-out[data-v-b3c5cf30] {\n  background-color: white;\n  border: 1px solid #8080804f;\n  border-radius: 50px;\n  display: flex;\n  padding: 15px;\n  bottom: 40px;\n  margin: auto;\n  text-align: center;\n  box-shadow: 6.2px 12.5px 12.5px rgba(0, 0, 0, 0.12);\n  width: 650px;\n  height: 80px;\n  justify-content: center;\n}\n.main .content .pop-out div[data-v-b3c5cf30] {\n  width: 33.3%;\n}\n.main .content .pop-out .stack[data-v-b3c5cf30] {\n  background: url(" + ___CSS_LOADER_URL_REPLACEMENT_0___ + ");\n}\n.main .content .pop-out .client[data-v-b3c5cf30] {\n  background: url(" + ___CSS_LOADER_URL_REPLACEMENT_1___ + ");\n}\n.main .content .pop-out .question[data-v-b3c5cf30] {\n  background: url(" + ___CSS_LOADER_URL_REPLACEMENT_2___ + ");\n}\n.main .content .pop-out .stack[data-v-b3c5cf30],\n.main .content .pop-out .client[data-v-b3c5cf30],\n.main .content .pop-out .question[data-v-b3c5cf30] {\n  height: 23px;\n  width: 23px;\n  margin-right: 10px;\n  background-repeat: no-repeat;\n}\n.main .content .pop-out .left[data-v-b3c5cf30],\n.main .content .pop-out .center[data-v-b3c5cf30],\n.main .content .pop-out .right[data-v-b3c5cf30] {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  font-weight: bold;\n  color: #646363;\n}\n.main .content .pop-out .left[data-v-b3c5cf30],\n.main .content .pop-out .right[data-v-b3c5cf30] {\n  width: 28%;\n}\n.main .content .pop-out .center[data-v-b3c5cf30] {\n  width: 41.3%;\n  border-left: 2px solid #00000042;\n  border-right: 2px solid #00000042;\n}\n.main .content .about .header[data-v-b3c5cf30],\n.main .content .skills .header[data-v-b3c5cf30],\n.main .content .works .header[data-v-b3c5cf30],\n.main .content .contact .header[data-v-b3c5cf30] {\n  text-align: center;\n  margin-bottom: 20px;\n}\n.main .content .about .header hr[data-v-b3c5cf30],\n.main .content .skills .header hr[data-v-b3c5cf30],\n.main .content .works .header hr[data-v-b3c5cf30],\n.main .content .contact .header hr[data-v-b3c5cf30] {\n  width: 40px;\n  margin-top: 12px;\n  border-top: 2px solid rgba(0, 0, 0, 0.45);\n}\n.main .content .about .card[data-v-b3c5cf30],\n.main .content .skills .card[data-v-b3c5cf30],\n.main .content .works .card[data-v-b3c5cf30],\n.main .content .contact .card[data-v-b3c5cf30] {\n  padding: 40px;\n  background-color: transparent;\n  border: none;\n}\n.main .content .about .card svg[data-v-b3c5cf30],\n.main .content .about .card img[data-v-b3c5cf30],\n.main .content .skills .card svg[data-v-b3c5cf30],\n.main .content .skills .card img[data-v-b3c5cf30],\n.main .content .works .card svg[data-v-b3c5cf30],\n.main .content .works .card img[data-v-b3c5cf30],\n.main .content .contact .card svg[data-v-b3c5cf30],\n.main .content .contact .card img[data-v-b3c5cf30] {\n  width: 70px;\n}\n.main .content .home[data-v-b3c5cf30] {\n  display: flex;\n  height: 100vh;\n  contain: content;\n}\n.main .content .home h1[data-v-b3c5cf30] {\n  font-weight: bold;\n  font-size: 49px;\n}\n.main .content .home .style[data-v-b3c5cf30] {\n  font-size: 24px;\n}\n.main .content .home .faded-overlay[data-v-b3c5cf30] {\n  position: absolute;\n  z-index: 1;\n  background-color: unset;\n  background-image: linear-gradient(to right, #e4e6e5 40%, #e4e6e500 55%, #fff0);\n}\n.main .content .home .left[data-v-b3c5cf30] {\n  display: flex;\n  justify-content: center;\n  flex-direction: column;\n  width: 47%;\n  padding: 20px;\n  position: relative;\n  z-index: 1;\n}\n.main .content .home .left h2[data-v-b3c5cf30] {\n  font-weight: bold;\n}\n.main .content .home .left .style[data-v-b3c5cf30] {\n  color: #9d8c5d;\n  font-weight: bold;\n}\n.main .content .home .left p[data-v-b3c5cf30]:nth-child(4) {\n  color: #383838;\n}\n.main .content .home .left .btn-container[data-v-b3c5cf30] {\n  display: flex;\n}\n.main .content .home .left .btn-container .resume-btn[data-v-b3c5cf30],\n.main .content .home .left .btn-container .contact-btn[data-v-b3c5cf30] {\n  padding: 10px 20px;\n  border-radius: 25px;\n  display: flex;\n  align-items: center;\n}\n.main .content .home .left .btn-container .resume-btn[data-v-b3c5cf30]:hover,\n.main .content .home .left .btn-container .contact-btn[data-v-b3c5cf30]:hover {\n  cursor: pointer;\n}\n.main .content .home .left .btn-container .resume-btn[data-v-b3c5cf30] {\n  color: white;\n  margin-right: 5px;\n  background-color: #9d8c5d;\n}\n.main .content .home .left .btn-container .resume-btn[data-v-b3c5cf30]:hover {\n  background-color: #c6b176;\n}\n.main .content .home .left .btn-container .contact-btn[data-v-b3c5cf30] {\n  border: 2px solid #9d8c5d;\n}\n.main .content .home .left .btn-container .contact-btn[data-v-b3c5cf30]:hover {\n  border: 2px solid #c6b176;\n  background-color: #c6b176;\n  color: white;\n}\n.main .content .home .right[data-v-b3c5cf30] {\n  width: 70%;\n  background-image: url(\"/images/self-photo.png\");\n  transform: scaleX(-1);\n  background-repeat: no-repeat;\n  background-position: 20% 50%;\n  position: relative;\n  background-size: cover;\n  z-index: 0;\n}\n@media (max-width: 767px), (min-width: 768px) and (max-width: 991px) {\n.main .content .home .faded-overlay[data-v-b3c5cf30] {\n    display: none;\n}\n.main .content .home .left[data-v-b3c5cf30] {\n    width: 100%;\n    height: 100%;\n    background-color: #e4e6e5;\n}\n.main .content .home .left .content-container[data-v-b3c5cf30] {\n    width: auto;\n    margin: 0 auto;\n}\n.main .content .home .left .content-container p.description[data-v-b3c5cf30] {\n    max-width: 380px;\n}\n.main .content .home .left .content-container .btn-container[data-v-b3c5cf30] {\n    justify-content: space-evenly;\n}\n.main .content .home .right[data-v-b3c5cf30] {\n    width: 0%;\n}\n}\n@media (min-width: 1200px) {\n.main .content .home .left[data-v-b3c5cf30] {\n    padding: 50px;\n}\n.main .content .home .left .resume-btn[data-v-b3c5cf30] {\n    margin-right: 20px;\n}\n}\n@media (min-width: 1500px) {\n.main .content .home .faded-overlay[data-v-b3c5cf30] {\n    background-image: linear-gradient(to right, #e4e6e5 50%, #e4e6e500 70%, #fff0);\n}\n.main .content .home .left[data-v-b3c5cf30],\n.main .content .home .right[data-v-b3c5cf30] {\n    width: 50%;\n}\n}\n.main .content .about[data-v-b3c5cf30] {\n  color: black;\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  height: 460px;\n}\n.main .content .about .faded-overlay[data-v-b3c5cf30] {\n  display: flex;\n  flex-direction: row;\n}\n.main .content .about .faded-overlay .about-container[data-v-b3c5cf30] {\n  padding: 0 50px;\n}\n.main .content .about .faded-overlay .about-container .header[data-v-b3c5cf30] {\n  font-weight: bold;\n  color: #9d8c5d;\n  text-align: center;\n  margin: 50px 0;\n}\n.main .content .about .faded-overlay .about-container .description[data-v-b3c5cf30] {\n  margin: 110px 0;\n}\n.main .content .about .faded-overlay .about-container .info-container .name[data-v-b3c5cf30],\n.main .content .about .faded-overlay .about-container .info-container .phone[data-v-b3c5cf30],\n.main .content .about .faded-overlay .about-container .info-container .email[data-v-b3c5cf30] {\n  display: flex;\n}\n.main .content .about .faded-overlay .about-container .info-container .name div[data-v-b3c5cf30],\n.main .content .about .faded-overlay .about-container .info-container .phone div[data-v-b3c5cf30],\n.main .content .about .faded-overlay .about-container .info-container .email div[data-v-b3c5cf30] {\n  width: 25%;\n}\n@media (min-width: 768px) and (max-width: 991px) {\n.main .content .about .faded-overlay .about-container[data-v-b3c5cf30] {\n    padding: 0;\n}\n.main .content .about .faded-overlay .about-container .description[data-v-b3c5cf30] {\n    margin: 70px 0;\n}\n}\n@media (min-width: 768px) and (max-width: 991px), (max-width: 767px) {\n.main .content .about[data-v-b3c5cf30] {\n    height: auto;\n}\n.main .content .about .faded-overlay .about-container[data-v-b3c5cf30] {\n    padding: 0 20px;\n}\n}\n.main .content .skills[data-v-b3c5cf30] {\n  background-color: #e4e6e5;\n  height: 460px;\n  padding: 25px;\n}\n.main .content .skills .skills-header[data-v-b3c5cf30] {\n  margin: 50px 0;\n  text-align: center;\n  font-weight: bold;\n  color: #9d8c5d;\n}\n.main .content .skills .skills-container[data-v-b3c5cf30] {\n  display: flex;\n}\n.main .content .skills .skills-container .left[data-v-b3c5cf30] {\n  padding-left: 50px;\n}\n.main .content .skills .skills-container .right[data-v-b3c5cf30] {\n  padding-right: 50px;\n  display: flex;\n  flex-direction: column;\n  align-items: flex-end;\n}\n.main .content .skills .skills-container .left[data-v-b3c5cf30],\n.main .content .skills .skills-container .right[data-v-b3c5cf30] {\n  width: 50%;\n}\n.main .content .skills .skills-container .left .skill-container[data-v-b3c5cf30],\n.main .content .skills .skills-container .right .skill-container[data-v-b3c5cf30] {\n  margin-bottom: 20px;\n}\n.main .content .skills .skills-container .skill-container[data-v-b3c5cf30] {\n  width: 90%;\n}\n.main .content .skills .skills-container .skill-container .header[data-v-b3c5cf30] {\n  width: auto;\n  font-weight: bold;\n  color: #6a5d5d;\n}\n.main .content .skills .skills-container .skill-container .header span[data-v-b3c5cf30] {\n  margin-left: auto;\n}\n.main .content .skills .skills-container .skill-container .skill-bar[data-v-b3c5cf30] {\n  height: 10px;\n  border: 1px solid #00000042;\n}\n.main .content .skills .skills-container .skill-container #barBackground[data-v-b3c5cf30] {\n  width: 100%;\n  background-color: #fff;\n  border-radius: 10px;\n}\n.main .content .skills .skills-container .skill-container .bar[data-v-b3c5cf30] {\n  height: 10px;\n  background-color: #9d8c5d;\n  border-radius: 10px;\n}\n.main .content .skills .skills-container .skill-container #vue[data-v-b3c5cf30],\n.main .content .skills .skills-container .skill-container #php[data-v-b3c5cf30],\n.main .content .skills .skills-container .skill-container #mysql[data-v-b3c5cf30],\n.main .content .skills .skills-container .skill-container #html[data-v-b3c5cf30],\n.main .content .skills .skills-container .skill-container #cssScss[data-v-b3c5cf30] {\n  width: 1%;\n}\n.main .content .education-work[data-v-b3c5cf30] {\n  height: auto;\n}\n.main .content .education-work .faded-overlay .education-work-header[data-v-b3c5cf30] {\n  text-align: center;\n  margin: 50px 0;\n  font-weight: bold;\n  color: #9d8c5d;\n}\n.main .content .education-work .faded-overlay .education-work-container[data-v-b3c5cf30] {\n  display: flex;\n  justify-content: space-evenly;\n  flex-direction: row;\n  margin: 70px 0;\n}\n.main .content .education-work .faded-overlay .education-work-container .education[data-v-b3c5cf30],\n.main .content .education-work .faded-overlay .education-work-container .experience[data-v-b3c5cf30] {\n  display: flex;\n  flex-direction: column;\n}\n.main .content .education-work .faded-overlay .education-work-container .education .header[data-v-b3c5cf30],\n.main .content .education-work .faded-overlay .education-work-container .experience .header[data-v-b3c5cf30] {\n  margin-bottom: 15px;\n  font-weight: bold;\n  color: #6a5d5d;\n  display: flex;\n  align-items: center;\n  min-width: 140px;\n  justify-content: center;\n}\n.main .content .education-work .faded-overlay .education-work-container .education .content-container[data-v-b3c5cf30],\n.main .content .education-work .faded-overlay .education-work-container .experience .content-container[data-v-b3c5cf30] {\n  display: flex;\n  flex-direction: column;\n  padding: 5px 23px;\n  margin-bottom: 15px;\n  border-left-color: #9d8c5d;\n  border-left-style: solid;\n  border-left-width: 2px;\n  min-width: 260px;\n  background-color: #dedede00;\n}\n.main .content .education-work .faded-overlay .education-work-container .education .content-container .exp-gradient[data-v-b3c5cf30],\n.main .content .education-work .faded-overlay .education-work-container .experience .content-container .exp-gradient[data-v-b3c5cf30] {\n  background-color: grey;\n}\n.main .content .education-work .faded-overlay .education-work-container .education .content-container .title[data-v-b3c5cf30],\n.main .content .education-work .faded-overlay .education-work-container .experience .content-container .title[data-v-b3c5cf30] {\n  font-style: italic;\n}\n.main .content .education-work .faded-overlay .education-work-container .education .content-container[data-v-b3c5cf30]:hover,\n.main .content .education-work .faded-overlay .education-work-container .experience .content-container[data-v-b3c5cf30]:hover {\n  cursor: default;\n}\n.main .content .education-work .faded-overlay .education-work-container .education .content-container:hover .text[data-v-b3c5cf30],\n.main .content .education-work .faded-overlay .education-work-container .education .content-container:hover .title[data-v-b3c5cf30],\n.main .content .education-work .faded-overlay .education-work-container .education .content-container:hover .date[data-v-b3c5cf30],\n.main .content .education-work .faded-overlay .education-work-container .experience .content-container:hover .text[data-v-b3c5cf30],\n.main .content .education-work .faded-overlay .education-work-container .experience .content-container:hover .title[data-v-b3c5cf30],\n.main .content .education-work .faded-overlay .education-work-container .experience .content-container:hover .date[data-v-b3c5cf30] {\n  color: #6a5d5d;\n}\n@media (min-width: 1700px) {\n.main .content .education-work .faded-overlay .education-work-container[data-v-b3c5cf30] {\n    flex-direction: column;\n    justify-content: space-between;\n}\n.main .content .education-work .faded-overlay .education-work-container .education[data-v-b3c5cf30],\n.main .content .education-work .faded-overlay .education-work-container .experience[data-v-b3c5cf30] {\n    flex-direction: row;\n    justify-content: center;\n}\n}\n@media (max-width: 767px) {\n.main .content .education-work[data-v-b3c5cf30] {\n    height: auto;\n}\n.main .content .education-work .faded-overlay .education-work-container[data-v-b3c5cf30] {\n    flex-direction: column;\n}\n.main .content .education-work .faded-overlay .education-work-container .experience[data-v-b3c5cf30],\n.main .content .education-work .faded-overlay .education-work-container .education[data-v-b3c5cf30] {\n    width: 250px;\n    margin: auto;\n}\n}\n.main .content .product[data-v-b3c5cf30] {\n  height: auto;\n  background-color: #e4e6e5;\n  padding: 25px;\n}\n.main .content .product .skills-header[data-v-b3c5cf30] {\n  text-align: center;\n  font-weight: bold;\n  color: #9d8c5d;\n  margin: 50px 0 30px 0;\n}\n.main .content .product .content-container[data-v-b3c5cf30] {\n  display: flex;\n  flex-direction: row;\n  justify-content: space-evenly;\n  margin-bottom: 50px;\n}\n.main .content .product .content-container .content-a[data-v-b3c5cf30],\n.main .content .product .content-container .content-b[data-v-b3c5cf30] {\n  display: flex;\n  justify-content: space-evenly;\n  flex-direction: column;\n}\n.main .content .product .offer-container .fa[data-v-b3c5cf30] {\n  position: relative;\n  top: 14px;\n  right: 25px;\n  background-color: #9d8c5d;\n  padding: 10px;\n  border-radius: 10px;\n  color: white;\n  box-shadow: 2.9px 8px 3.3px rgba(0, 0, 0, 0.48);\n  height: 50px;\n  width: 50px;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  transition: all 0.2s;\n  -moz-transition: all 0.2s;\n  -webkit-transition: all 0.2s;\n  -o-transition: all 0.2s;\n}\n.main .content .product .offer-container .fa[data-v-b3c5cf30]::before {\n  font-size: 25px;\n}\n.main .content .product .offer-container .offer-box[data-v-b3c5cf30] {\n  border: 1px solid #00000030;\n  border-radius: 5px 25px 5px 5px;\n  padding: 20px;\n  width: 280px;\n  height: 140px;\n  top: 20px;\n}\n.main .content .product .offer-container .offer-box .header[data-v-b3c5cf30] {\n  font-weight: bold;\n  margin-bottom: 10px;\n  color: #6a5d5d;\n}\n.main .content .product .offer-container[data-v-b3c5cf30]:hover {\n  cursor: pointer;\n}\n.main .content .product .offer-container:hover .fa[data-v-b3c5cf30] {\n  top: 5px;\n}\n.main .content .product .offer-container:hover .text[data-v-b3c5cf30] {\n  color: #6a5d5d;\n}\n@media (min-width: 768px) and (max-width: 991px), (max-width: 767px) {\n.main .content .product .content-container[data-v-b3c5cf30] {\n    flex-direction: column;\n    width: 280px;\n    margin: auto auto 50px auto;\n}\n}\n@media (min-width: 1500px) {\n.main .content .product .content-container[data-v-b3c5cf30] {\n    display: inherit;\n}\n.main .content .product .content-container .content-a[data-v-b3c5cf30],\n.main .content .product .content-container .content-b[data-v-b3c5cf30] {\n    flex-direction: row;\n}\n}\n.main .content .recent-works[data-v-b3c5cf30] {\n  height: auto;\n}\n.main .content .recent-works .faded-overlay .header[data-v-b3c5cf30] {\n  text-align: center;\n  font-weight: bold;\n  color: #9d8c5d;\n  margin: 50px 0;\n}\n.main .content .recent-works .faded-overlay .works-container[data-v-b3c5cf30] {\n  display: flex;\n  justify-content: space-evenly;\n  align-items: center;\n  flex-direction: column;\n}\n.main .content .recent-works .faded-overlay .works-container .work[data-v-b3c5cf30] {\n  height: 180px;\n  width: 260px;\n  background-color: grey;\n  border-radius: 10px;\n  box-shadow: 1px 0px 13.5px rgba(0, 0, 0, 0.5);\n  margin: 50px;\n  transition: all 0.2s;\n  -moz-transition: all 0.2s;\n  -webkit-transition: all 0.2s;\n  -o-transition: all 0.2s;\n}\n.main .content .recent-works .faded-overlay .works-container .work.coffee[data-v-b3c5cf30], .main .content .recent-works .faded-overlay .works-container .work.black-white[data-v-b3c5cf30], .main .content .recent-works .faded-overlay .works-container .work.finder[data-v-b3c5cf30] {\n  background-size: cover;\n  background-repeat: no-repeat;\n}\n.main .content .recent-works .faded-overlay .works-container .work.coffee[data-v-b3c5cf30] {\n  background-image: url(\"/images/coffee-site-preview.png\");\n}\n.main .content .recent-works .faded-overlay .works-container .work.black-white[data-v-b3c5cf30] {\n  background-image: url(\"/images/black-white-site-preview.png\");\n}\n.main .content .recent-works .faded-overlay .works-container .work.finder[data-v-b3c5cf30] {\n  background-image: url(\"/images/business-finder-preview.png\");\n}\n.main .content .recent-works .faded-overlay .works-container .work[data-v-b3c5cf30]:hover {\n  position: relative;\n  cursor: pointer;\n  box-shadow: 6px 0px 17px rgba(0, 0, 0, 0.699);\n  bottom: 5px;\n}\n@media (min-width: 1200px) {\n.main .content .recent-works[data-v-b3c5cf30] {\n    height: 460px;\n}\n.main .content .recent-works .faded-overlay .works-container[data-v-b3c5cf30] {\n    flex-direction: row;\n}\n.main .content .recent-works .faded-overlay .works-container .work[data-v-b3c5cf30] {\n    margin: auto;\n}\n}\n.main .content .contact[data-v-b3c5cf30] {\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  height: 460px;\n  background-color: #e4e6e5;\n  padding: 25px 20%;\n}\n.main .content .contact .header[data-v-b3c5cf30] {\n  text-align: center;\n  font-weight: bold;\n  color: #9d8c5d;\n}\n.main .content .contact .contact-container[data-v-b3c5cf30] {\n  display: flex;\n  flex-direction: column;\n}\n.main .content .contact .contact-container .fa[data-v-b3c5cf30] {\n  font-size: 40px;\n}\n.main .content .contact .contact-container #group-contact #name[data-v-b3c5cf30],\n.main .content .contact .contact-container #group-contact #subject[data-v-b3c5cf30],\n.main .content .contact .contact-container #group-message #name[data-v-b3c5cf30],\n.main .content .contact .contact-container #group-message #subject[data-v-b3c5cf30] {\n  margin-bottom: 1rem;\n}\n.main .content .contact .contact-container .form-control[data-v-b3c5cf30] {\n  border-radius: 10px;\n}\n.main .content .contact .contact-container .btn-container[data-v-b3c5cf30] {\n  display: flex;\n  justify-content: center;\n}\n.main .content .contact .contact-container .btn-container .btn[data-v-b3c5cf30] {\n  background-color: #9d8c5d;\n  border-color: #9d8c5d;\n  border-radius: 25px;\n}\n.main .content .contact .contact-container .btn-container .btn[data-v-b3c5cf30]:hover {\n  cursor: pointer;\n  border-color: #c6b176;\n  background-color: #c6b176;\n}\n.main .content .footer[data-v-b3c5cf30] {\n  height: 70px;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  background-color: #9d8c5d;\n  color: white;\n  font-weight: bold;\n  font-size: 18px;\n}\n.main .modal-content[data-v-b3c5cf30] {\n  border-radius: 15px;\n  height: 320px;\n}\n.main .modal-backdrop[data-v-b3c5cf30] {\n  opacity: 0.5 !important;\n}", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -49804,7 +50842,7 @@ var render = function () {
                 },
               },
             },
-            [_c("i", { staticClass: "fas fa-house-user" }), _vm._v(" Home")]
+            [_c("i", { staticClass: "fas fa-house-user" }), _vm._v("Home")]
           ),
           _vm._v(" "),
           _c(
@@ -49817,7 +50855,7 @@ var render = function () {
                 },
               },
             },
-            [_c("i", { staticClass: "far fa-address-card" }), _vm._v(" About")]
+            [_c("i", { staticClass: "far fa-address-card" }), _vm._v("About")]
           ),
           _vm._v(" "),
           _c(
@@ -49830,7 +50868,7 @@ var render = function () {
                 },
               },
             },
-            [_c("i", { staticClass: "fas fa-laptop-code" }), _vm._v(" Skills")]
+            [_c("i", { staticClass: "fas fa-laptop-code" }), _vm._v("Skills")]
           ),
           _vm._v(" "),
           _c(
@@ -49845,7 +50883,7 @@ var render = function () {
             },
             [
               _c("i", { staticClass: "fa fa-graduation-cap" }),
-              _vm._v(" Education"),
+              _vm._v("Education"),
             ]
           ),
           _vm._v(" "),
@@ -49859,7 +50897,7 @@ var render = function () {
                 },
               },
             },
-            [_c("i", { staticClass: "fa fa-cubes" }), _vm._v(" Product")]
+            [_c("i", { staticClass: "fa fa-cubes" }), _vm._v("Product")]
           ),
           _vm._v(" "),
           _c(
@@ -49887,23 +50925,170 @@ var render = function () {
             },
             [
               _c("i", { staticClass: "fas fa-envelope-open" }),
-              _vm._v(" Contact"),
+              _vm._v("Contact"),
             ]
           ),
         ]),
       ]),
       _vm._v(" "),
+      _c(
+        "b-dropdown",
+        { staticClass: "drop-down" },
+        [
+          _c("b-dropdown-item", [
+            _c(
+              "a",
+              {
+                staticClass: "button",
+                on: {
+                  click: function ($event) {
+                    return _vm.scrollToRef("home")
+                  },
+                },
+              },
+              [_c("i", { staticClass: "fas fa-house-user" }), _vm._v("Home")]
+            ),
+          ]),
+          _vm._v(" "),
+          _c("b-dropdown-item", [
+            _c(
+              "a",
+              {
+                staticClass: "button",
+                on: {
+                  click: function ($event) {
+                    return _vm.scrollToRef("about")
+                  },
+                },
+              },
+              [_c("i", { staticClass: "far fa-address-card" }), _vm._v("About")]
+            ),
+          ]),
+          _vm._v(" "),
+          _c("b-dropdown-item", [
+            _c(
+              "a",
+              {
+                staticClass: "button",
+                on: {
+                  click: function ($event) {
+                    return _vm.scrollToRef("skills")
+                  },
+                },
+              },
+              [_c("i", { staticClass: "fas fa-laptop-code" }), _vm._v("Skills")]
+            ),
+          ]),
+          _vm._v(" "),
+          _c("b-dropdown-item", [
+            _c(
+              "a",
+              {
+                staticClass: "button",
+                on: {
+                  click: function ($event) {
+                    return _vm.scrollToRef("education")
+                  },
+                },
+              },
+              [
+                _c("i", { staticClass: "fa fa-graduation-cap" }),
+                _vm._v("Education"),
+              ]
+            ),
+          ]),
+          _vm._v(" "),
+          _c("b-dropdown-item", [
+            _c(
+              "a",
+              {
+                staticClass: "button",
+                on: {
+                  click: function ($event) {
+                    return _vm.scrollToRef("product")
+                  },
+                },
+              },
+              [_c("i", { staticClass: "fa fa-cubes" }), _vm._v("Product")]
+            ),
+          ]),
+          _vm._v(" "),
+          _c("b-dropdown-item", [
+            _c(
+              "a",
+              {
+                staticClass: "button",
+                on: {
+                  click: function ($event) {
+                    return _vm.scrollToRef("work")
+                  },
+                },
+              },
+              [_c("i", { staticClass: "fas fa-briefcase" }), _vm._v("Work")]
+            ),
+          ]),
+          _vm._v(" "),
+          _c("b-dropdown-item", [
+            _c(
+              "a",
+              {
+                staticClass: "button",
+                on: {
+                  click: function ($event) {
+                    return _vm.scrollToRef("contact")
+                  },
+                },
+              },
+              [
+                _c("i", { staticClass: "fas fa-envelope-open" }),
+                _vm._v("Contact"),
+              ]
+            ),
+          ]),
+        ],
+        1
+      ),
+      _vm._v(" "),
       _c("div", { staticClass: "content" }, [
         _c("div", { ref: "home", staticClass: "home" }, [
           _c("div", { staticClass: "faded-overlay" }),
           _vm._v(" "),
-          _vm._m(0),
+          _c("div", { staticClass: "left" }, [
+            _c("div", { staticClass: "content-container" }, [
+              _c("p", { staticClass: "style" }, [_vm._v("Hi, I'm")]),
+              _vm._v(" "),
+              _c("h1", [_vm._v("Mario Fernandez")]),
+              _vm._v(" "),
+              _c("p", { staticClass: "style" }, [_vm._v("Web Developer")]),
+              _vm._v(" "),
+              _c("p", { staticClass: "description" }, [
+                _vm._v(
+                  "\n            Full-Stack Web Developer passionate about creating interactive\n            applications that solve real world problems\n          "
+                ),
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "btn-container" }, [
+                _c(
+                  "div",
+                  {
+                    staticClass: "contact-btn",
+                    on: {
+                      click: function ($event) {
+                        return _vm.scrollToRef("contact")
+                      },
+                    },
+                  },
+                  [_vm._v("\n              Contact Me\n            ")]
+                ),
+              ]),
+            ]),
+          ]),
           _vm._v(" "),
-          _vm._m(1),
+          _vm._m(0),
         ]),
         _vm._v(" "),
         _c("div", { ref: "about", staticClass: "about background-img" }, [
-          _vm._m(2),
+          _vm._m(1),
         ]),
         _vm._v(" "),
         _c("div", { ref: "skills", staticClass: "skills" }, [
@@ -49911,21 +51096,19 @@ var render = function () {
             _vm._v("My Expertise Areas"),
           ]),
           _vm._v(" "),
-          _vm._m(3),
+          _vm._m(2),
         ]),
         _vm._v(" "),
         _c(
           "div",
           { ref: "education", staticClass: "education-work background-img" },
-          [_vm._m(4)]
+          [_vm._m(3)]
         ),
         _vm._v(" "),
         _c("div", { ref: "product", staticClass: "product" }, [
           _c("h3", { staticClass: "skills-header" }, [_vm._v("What I Offer")]),
           _vm._v(" "),
-          _vm._m(5),
-          _vm._v(" "),
-          _vm._m(6),
+          _vm._m(4),
         ]),
         _vm._v(" "),
         _c("div", { ref: "work", staticClass: "recent-works background-img" }, [
@@ -50117,30 +51300,6 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "left" }, [
-      _c("p", { staticClass: "style" }, [_vm._v("Hi, I'm")]),
-      _vm._v(" "),
-      _c("h1", [_vm._v("Mario Fernandez")]),
-      _vm._v(" "),
-      _c("p", { staticClass: "style" }, [_vm._v("Web Developer")]),
-      _vm._v(" "),
-      _c("p", [
-        _vm._v(
-          "\n          Full-Stack Web Developer passionate about creating interactive\n          applications that solve real world problems\n        "
-        ),
-      ]),
-      _vm._v(" "),
-      _c("div", { staticClass: "btn-container" }, [
-        _c("div", { staticClass: "resume-btn" }, [_vm._v("Download CV")]),
-        _vm._v(" "),
-        _c("div", { staticClass: "contact-btn" }, [_vm._v("Contact Me")]),
-      ]),
-    ])
-  },
-  function () {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
     return _c("div", { staticClass: "right" }, [
       _c("div", { staticClass: "self-img" }),
     ])
@@ -50320,91 +51479,91 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "top" }, [
-      _c("div", { staticClass: "offer-container" }, [
-        _c("i", { staticClass: "fa fa-code" }),
-        _vm._v(" "),
-        _c("div", { staticClass: "offer-box" }, [
-          _c("div", { staticClass: "header" }, [_vm._v("Web Design")]),
+    return _c("div", { staticClass: "content-container" }, [
+      _c("div", { staticClass: "content-a" }, [
+        _c("div", { staticClass: "offer-container" }, [
+          _c("i", { staticClass: "fa fa-code" }),
           _vm._v(" "),
-          _c("div", { staticClass: "text" }, [
-            _vm._v(
-              "\n              Modern web layouts to best showcase your products\n            "
-            ),
+          _c("div", { staticClass: "offer-box" }, [
+            _c("div", { staticClass: "header" }, [_vm._v("Web Design")]),
+            _vm._v(" "),
+            _c("div", { staticClass: "text" }, [
+              _vm._v(
+                "\n                Modern web layouts to best showcase your products\n              "
+              ),
+            ]),
+          ]),
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "offer-container" }, [
+          _c("i", { staticClass: "fa fa-laptop-code" }),
+          _vm._v(" "),
+          _c("div", { staticClass: "offer-box" }, [
+            _c("div", { staticClass: "header" }, [
+              _vm._v("Full Web Development"),
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "text" }, [
+              _vm._v(
+                "\n                Modern and responsive websites from scratch\n              "
+              ),
+            ]),
+          ]),
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "offer-container" }, [
+          _c("i", { staticClass: "fa fa-pen-fancy" }),
+          _vm._v(" "),
+          _c("div", { staticClass: "offer-box" }, [
+            _c("div", { staticClass: "header" }, [_vm._v("UI/UX Updates")]),
+            _vm._v(" "),
+            _c("div", { staticClass: "text" }, [
+              _vm._v("Breath new life into existing websites"),
+            ]),
           ]),
         ]),
       ]),
       _vm._v(" "),
-      _c("div", { staticClass: "offer-container" }, [
-        _c("i", { staticClass: "fa fa-laptop-code" }),
-        _vm._v(" "),
-        _c("div", { staticClass: "offer-box" }, [
-          _c("div", { staticClass: "header" }, [
-            _vm._v("Full Web Development"),
-          ]),
+      _c("div", { staticClass: "content-b" }, [
+        _c("div", { staticClass: "offer-container" }, [
+          _c("i", { staticClass: "fa fa-eye" }),
           _vm._v(" "),
-          _c("div", { staticClass: "text" }, [
-            _vm._v(
-              "\n              Implement all aspects of modern and responsive websites\n            "
-            ),
-          ]),
-        ]),
-      ]),
-      _vm._v(" "),
-      _c("div", { staticClass: "offer-container" }, [
-        _c("i", { staticClass: "fa fa-pen-fancy" }),
-        _vm._v(" "),
-        _c("div", { staticClass: "offer-box" }, [
-          _c("div", { staticClass: "header" }, [_vm._v("UI/UX Updates")]),
-          _vm._v(" "),
-          _c("div", { staticClass: "text" }, [
-            _vm._v("Breath new life into existing websites"),
+          _c("div", { staticClass: "offer-box" }, [
+            _c("div", { staticClass: "header" }, [_vm._v("SEO")]),
+            _vm._v(" "),
+            _c("div", { staticClass: "text" }, [
+              _vm._v(
+                "\n                Ensure website is able to rate well on modern search engines\n              "
+              ),
+            ]),
           ]),
         ]),
-      ]),
-    ])
-  },
-  function () {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "bottom" }, [
-      _c("div", { staticClass: "offer-container" }, [
-        _c("i", { staticClass: "fa fa-eye" }),
         _vm._v(" "),
-        _c("div", { staticClass: "offer-box" }, [
-          _c("div", { staticClass: "header" }, [_vm._v("SEO")]),
+        _c("div", { staticClass: "offer-container" }, [
+          _c("i", { staticClass: "fa fa-headset" }),
           _vm._v(" "),
-          _c("div", { staticClass: "text" }, [
-            _vm._v(
-              "\n              Ensure website is able to rate well in modern search engines\n            "
-            ),
+          _c("div", { staticClass: "offer-box" }, [
+            _c("div", { staticClass: "header" }, [_vm._v("Flexible Support")]),
+            _vm._v(" "),
+            _c("div", { staticClass: "text" }, [
+              _vm._v(
+                "\n                Support schedule to fit all business types\n              "
+              ),
+            ]),
           ]),
         ]),
-      ]),
-      _vm._v(" "),
-      _c("div", { staticClass: "offer-container" }, [
-        _c("i", { staticClass: "fa fa-headset" }),
         _vm._v(" "),
-        _c("div", { staticClass: "offer-box" }, [
-          _c("div", { staticClass: "header" }, [_vm._v("Flexible Support")]),
+        _c("div", { staticClass: "offer-container" }, [
+          _c("i", { staticClass: "fa fa-comments-dollar" }),
           _vm._v(" "),
-          _c("div", { staticClass: "text" }, [
-            _vm._v("Support schedule to fit all business types"),
-          ]),
-        ]),
-      ]),
-      _vm._v(" "),
-      _c("div", { staticClass: "offer-container" }, [
-        _c("i", { staticClass: "fa fa-comments-dollar" }),
-        _vm._v(" "),
-        _c("div", { staticClass: "offer-box" }, [
-          _c("div", { staticClass: "header" }, [_vm._v("Flixible Plans")]),
-          _vm._v(" "),
-          _c("div", { staticClass: "text" }, [
-            _vm._v(
-              "\n              Plans that are catered to everyones needs and budgets\n            "
-            ),
+          _c("div", { staticClass: "offer-box" }, [
+            _c("div", { staticClass: "header" }, [_vm._v("Flixible Plans")]),
+            _vm._v(" "),
+            _c("div", { staticClass: "text" }, [
+              _vm._v(
+                "\n                Plans that are catered to everyones needs and budgets\n              "
+              ),
+            ]),
           ]),
         ]),
       ]),

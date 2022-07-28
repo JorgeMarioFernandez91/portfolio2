@@ -4,42 +4,83 @@
       <div class="initials">MF</div>
       <div class="button-container">
         <a class="button" @click="scrollToRef('home')"
-          ><i class="fas fa-house-user"></i> Home</a
+          ><i class="fas fa-house-user"></i>Home</a
         >
         <a class="button" @click="scrollToRef('about')"
-          ><i class="far fa-address-card"></i> About</a
+          ><i class="far fa-address-card"></i>About</a
         >
         <a class="button" @click="scrollToRef('skills')"
-          ><i class="fas fa-laptop-code"></i> Skills</a
+          ><i class="fas fa-laptop-code"></i>Skills</a
         >
         <a class="button" @click="scrollToRef('education')"
-          ><i class="fa fa-graduation-cap"></i> Education</a
+          ><i class="fa fa-graduation-cap"></i>Education</a
         >
         <a class="button" @click="scrollToRef('product')"
-          ><i class="fa fa-cubes"></i> Product</a
+          ><i class="fa fa-cubes"></i>Product</a
         >
         <a class="button" @click="scrollToRef('work')"
           ><i class="fas fa-briefcase"></i>Work</a
         >
         <a @click="scrollToRef('contact')" class="button"
-          ><i class="fas fa-envelope-open"></i> Contact</a
+          ><i class="fas fa-envelope-open"></i>Contact</a
         >
       </div>
     </div>
+    <b-dropdown class="drop-down">
+      <b-dropdown-item
+        ><a class="button" @click="scrollToRef('home')"
+          ><i class="fas fa-house-user"></i>Home</a
+        ></b-dropdown-item
+      >
+      <b-dropdown-item
+        ><a class="button" @click="scrollToRef('about')"
+          ><i class="far fa-address-card"></i>About</a
+        ></b-dropdown-item
+      >
+      <b-dropdown-item>
+        <a class="button" @click="scrollToRef('skills')"
+          ><i class="fas fa-laptop-code"></i>Skills</a
+        ></b-dropdown-item
+      >
+      <b-dropdown-item>
+        <a class="button" @click="scrollToRef('education')"
+          ><i class="fa fa-graduation-cap"></i>Education</a
+        ></b-dropdown-item
+      >
+      <b-dropdown-item>
+        <a class="button" @click="scrollToRef('product')"
+          ><i class="fa fa-cubes"></i>Product</a
+        ></b-dropdown-item
+      >
+      <b-dropdown-item>
+        <a class="button" @click="scrollToRef('work')"
+          ><i class="fas fa-briefcase"></i>Work</a
+        ></b-dropdown-item
+      >
+      <b-dropdown-item
+        ><a @click="scrollToRef('contact')" class="button"
+          ><i class="fas fa-envelope-open"></i>Contact</a
+        ></b-dropdown-item
+      >
+    </b-dropdown>
     <div class="content">
       <div class="home" ref="home">
         <div class="faded-overlay"></div>
         <div class="left">
-          <p class="style">Hi, I'm</p>
-          <h1>Mario Fernandez</h1>
-          <p class="style">Web Developer</p>
-          <p>
-            Full-Stack Web Developer passionate about creating interactive
-            applications that solve real world problems
-          </p>
-          <div class="btn-container">
-            <div class="resume-btn">Download CV</div>
-            <div class="contact-btn">Contact Me</div>
+          <div class="content-container">
+            <p class="style">Hi, I'm</p>
+            <h1>Mario Fernandez</h1>
+            <p class="style">Web Developer</p>
+            <p class="description">
+              Full-Stack Web Developer passionate about creating interactive
+              applications that solve real world problems
+            </p>
+            <div class="btn-container">
+              <!-- <div class="resume-btn">Download CV</div> -->
+              <div class="contact-btn" @click="scrollToRef('contact')">
+                Contact Me
+              </div>
+            </div>
           </div>
         </div>
         <div class="right">
@@ -173,56 +214,60 @@
       </div>
       <div class="product" ref="product">
         <h3 class="skills-header">What I Offer</h3>
-        <div class="top">
-          <div class="offer-container">
-            <i class="fa fa-code"></i>
-            <div class="offer-box">
-              <div class="header">Web Design</div>
-              <div class="text">
-                Modern web layouts to best showcase your products
+        <div class="content-container">
+          <div class="content-a">
+            <div class="offer-container">
+              <i class="fa fa-code"></i>
+              <div class="offer-box">
+                <div class="header">Web Design</div>
+                <div class="text">
+                  Modern web layouts to best showcase your products
+                </div>
+              </div>
+            </div>
+            <div class="offer-container">
+              <i class="fa fa-laptop-code"></i>
+              <div class="offer-box">
+                <div class="header">Full Web Development</div>
+                <div class="text">
+                  Modern and responsive websites from scratch
+                </div>
+              </div>
+            </div>
+            <div class="offer-container">
+              <i class="fa fa-pen-fancy"></i>
+              <div class="offer-box">
+                <div class="header">UI/UX Updates</div>
+                <div class="text">Breath new life into existing websites</div>
               </div>
             </div>
           </div>
-          <div class="offer-container">
-            <i class="fa fa-laptop-code"></i>
-            <div class="offer-box">
-              <div class="header">Full Web Development</div>
-              <div class="text">
-                Implement all aspects of modern and responsive websites
+          <div class="content-b">
+            <div class="offer-container">
+              <i class="fa fa-eye"></i>
+              <div class="offer-box">
+                <div class="header">SEO</div>
+                <div class="text">
+                  Ensure website is able to rate well on modern search engines
+                </div>
               </div>
             </div>
-          </div>
-          <div class="offer-container">
-            <i class="fa fa-pen-fancy"></i>
-            <div class="offer-box">
-              <div class="header">UI/UX Updates</div>
-              <div class="text">Breath new life into existing websites</div>
-            </div>
-          </div>
-        </div>
-        <div class="bottom">
-          <div class="offer-container">
-            <i class="fa fa-eye"></i>
-            <div class="offer-box">
-              <div class="header">SEO</div>
-              <div class="text">
-                Ensure website is able to rate well in modern search engines
+            <div class="offer-container">
+              <i class="fa fa-headset"></i>
+              <div class="offer-box">
+                <div class="header">Flexible Support</div>
+                <div class="text">
+                  Support schedule to fit all business types
+                </div>
               </div>
             </div>
-          </div>
-          <div class="offer-container">
-            <i class="fa fa-headset"></i>
-            <div class="offer-box">
-              <div class="header">Flexible Support</div>
-              <div class="text">Support schedule to fit all business types</div>
-            </div>
-          </div>
-          <div class="offer-container">
-            <i class="fa fa-comments-dollar"></i>
-            <div class="offer-box">
-              <div class="header">Flixible Plans</div>
-              <div class="text">
-                Plans that are catered to everyones needs and budgets
+            <div class="offer-container">
+              <i class="fa fa-comments-dollar"></i>
+              <div class="offer-box">
+                <div class="header">Flixible Plans</div>
+                <div class="text">
+                  Plans that are catered to everyones needs and budgets
+                </div>
               </div>
             </div>
           </div>
@@ -313,6 +358,8 @@ import {
   BButton,
   BFormTextarea,
   BModal,
+  BDropdown,
+  BDropdownItem,
 } from "bootstrap-vue";
 import API from "../../../routes/api/api";
 export default {
@@ -326,6 +373,8 @@ export default {
     BFormTextarea,
     BModal,
     API,
+    BDropdown,
+    BDropdownItem,
   },
   data() {
     return {
