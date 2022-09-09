@@ -11,9 +11,7 @@
     <div class="master-header-gradient">
       <div class="content-container">
         <h1>Black And White</h1>
-        <div class="subtitle">
-          An artistic landing page to showcase your emotions.
-        </div>
+        <div class="subtitle">An artistic landing page to showcase your emotions.</div>
         <div class="btn-container">
           <div class="btn">Get Started</div>
         </div>
@@ -24,8 +22,7 @@
     <section class="about">
       <h3>A modern responsive site to suite your artistic needs</h3>
       <div class="text">
-        Fits well with modern artistic creators in need of a way to express
-        themseleves.
+        Fits well with modern artistic creators in need of a way to express themseleves.
       </div>
     </section>
     <section class="projects">
@@ -35,9 +32,8 @@
           <div class="right">
             <div class="title">Shoreline</div>
             <div class="text">
-              Black and White web theme is available for all businesses big or
-              small. Contact us to find out how we can best match out talents to
-              your needs.
+              Black and White web theme is available for all businesses big or small. Contact us to
+              find out how we can best match out talents to your needs.
             </div>
           </div>
         </div>
@@ -47,8 +43,8 @@
             <div class="right">
               <div class="title">Black Waves</div>
               <div class="text">
-                An example of where you can put an image of a project, or
-                anything else, along with a description.
+                An example of where you can put an image of a project, or anything else, along with
+                a description.
               </div>
             </div>
           </div>
@@ -56,8 +52,8 @@
             <div class="left">
               <div class="title">White Waves</div>
               <div class="text">
-                An example of where you can put an image of a project, or
-                anything else, along with a description.
+                An example of where you can put an image of a project, or anything else, along with
+                a description.
               </div>
             </div>
             <div class="right"></div>
@@ -83,9 +79,7 @@
         ></b-form-input>
         <div
           class="btn-container"
-          :class="
-            form.email === '' || form.email === null ? 'inactive' : 'active'
-          "
+          :class="form.email === '' || form.email === null ? 'inactive' : 'active'"
         >
           <div class="btn">Notify Me!</div>
         </div>
@@ -185,9 +179,10 @@ export default {
   },
 
   mounted() {
-    window.addEventListener("scroll", (event) => {
-      this.handleScroll();
-    });
+    window.addEventListener("scroll", this.handleScroll);
+  },
+  beforeDestroy() {
+    window.removeEventListener("scroll", this.handleScroll);
   },
 
   methods: {

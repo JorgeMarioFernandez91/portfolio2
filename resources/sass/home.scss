@@ -916,4 +916,16 @@ $sidenav-width: 230px;
         opacity: 0.5 !important;
     }
 
+    .modal-body {
+        h3.my-4 {
+            font-weight: bold;
+            color: gold;
+            text-align: center;
+        }
+
+        p.my-4 {
+            font-weight: bold;
+            text-align: center;
+        }
+    }
 }

@@ -3,24 +3,16 @@
     <div class="side-nav">
       <div class="initials">MF</div>
       <div class="button-container">
-        <a class="button" @click="scrollToRef('home')"
-          ><i class="fas fa-house-user"></i>Home</a
-        >
-        <a class="button" @click="scrollToRef('about')"
-          ><i class="far fa-address-card"></i>About</a
-        >
+        <a class="button" @click="scrollToRef('home')"><i class="fas fa-house-user"></i>Home</a>
+        <a class="button" @click="scrollToRef('about')"><i class="far fa-address-card"></i>About</a>
         <a class="button" @click="scrollToRef('skills')"
           ><i class="fas fa-laptop-code"></i>Skills</a
         >
         <a class="button" @click="scrollToRef('education')"
           ><i class="fa fa-graduation-cap"></i>Education</a
         >
-        <a class="button" @click="scrollToRef('product')"
-          ><i class="fa fa-cubes"></i>Product</a
-        >
-        <a class="button" @click="scrollToRef('work')"
-          ><i class="fas fa-briefcase"></i>Work</a
-        >
+        <a class="button" @click="scrollToRef('product')"><i class="fa fa-cubes"></i>Product</a>
+        <a class="button" @click="scrollToRef('work')"><i class="fas fa-briefcase"></i>Work</a>
         <a @click="scrollToRef('contact')" class="button"
           ><i class="fas fa-envelope-open"></i>Contact</a
         >
@@ -72,14 +64,12 @@
             <h1>Mario Fernandez</h1>
             <p class="style">Web Developer</p>
             <p class="description">
-              Full-Stack Web Developer passionate about creating interactive
-              applications that solve real world problems
+              Full-Stack Web Developer passionate about creating interactive applications that solve
+              real world problems
             </p>
             <div class="btn-container">
               <!-- <div class="resume-btn">Download CV</div> -->
-              <div class="contact-btn" @click="scrollToRef('contact')">
-                Contact Me
-              </div>
+              <div class="contact-btn" @click="scrollToRef('contact')">Contact Me</div>
             </div>
           </div>
         </div>
@@ -99,14 +89,12 @@
           <div class="about-container">
             <h3 class="header">About Me</h3>
             <div class="description">
-              I'm a Full-Stack Developer with professional development
-              experience in working with international companies. I offer a wide
-              range of services that are aimed at delivering high value products
-              for all types of websites. Wheather it's for a small start-up, an
-              aspiring artistic venture, or even for a more robust enterpirse
-              there's a solution for all. If you're interested below are some
-              sample projects that showcase various types of websites. And feel
-              free to reach out to me with the contact form below and I'll be
+              I'm a Full-Stack Developer with professional development experience in working with
+              international companies. I offer a wide range of services that are aimed at delivering
+              high value products for all types of websites. Wheather it's for a small start-up, an
+              aspiring artistic venture, or even for a more robust enterpirse there's a solution for
+              all. If you're interested below are some sample projects that showcase various types
+              of websites. And feel free to reach out to me with the contact form below and I'll be
               sure to be in contact shortly.
             </div>
             <!-- <div class="info-container">
@@ -220,18 +208,14 @@
               <i class="fa fa-code"></i>
               <div class="offer-box">
                 <div class="header">Web Design</div>
-                <div class="text">
-                  Modern web layouts to best showcase your products
-                </div>
+                <div class="text">Modern web layouts to best showcase your products</div>
               </div>
             </div>
             <div class="offer-container">
               <i class="fa fa-laptop-code"></i>
               <div class="offer-box">
                 <div class="header">Full Web Development</div>
-                <div class="text">
-                  Modern and responsive websites from scratch
-                </div>
+                <div class="text">Modern and responsive websites from scratch</div>
               </div>
             </div>
             <div class="offer-container">
@@ -247,27 +231,21 @@
               <i class="fa fa-eye"></i>
               <div class="offer-box">
                 <div class="header">SEO</div>
-                <div class="text">
-                  Ensure website is able to rate well on modern search engines
-                </div>
+                <div class="text">Ensure website is able to rate well on modern search engines</div>
               </div>
             </div>
             <div class="offer-container">
               <i class="fa fa-headset"></i>
               <div class="offer-box">
                 <div class="header">Flexible Support</div>
-                <div class="text">
-                  Support schedule to fit all business types
-                </div>
+                <div class="text">Support schedule to fit all business types</div>
               </div>
             </div>
             <div class="offer-container">
               <i class="fa fa-comments-dollar"></i>
               <div class="offer-box">
                 <div class="header">Flixible Plans</div>
-                <div class="text">
-                  Plans that are catered to everyones needs and budgets
-                </div>
+                <div class="text">Plans that are catered to everyones needs and budgets</div>
               </div>
             </div>
           </div>
@@ -278,14 +256,8 @@
           <h3 class="header">Recent Works</h3>
           <div class="works-container">
             <div class="work coffee" @click="toSite('coffee-site')"></div>
-            <div
-              class="work black-white"
-              @click="toSite('black-white-site')"
-            ></div>
-            <div
-              class="work finder"
-              @click="toSite('business-finder-site')"
-            ></div>
+            <div class="work black-white" @click="toSite('black-white-site')"></div>
+            <div class="work finder" @click="toSite('business-finder-site')"></div>
           </div>
         </div>
       </div>
@@ -337,13 +309,7 @@
       </div>
       <div class="footer">&copy; Mario Fernandez 2022</div>
     </div>
-    <b-modal
-      id="modal"
-      title="Message Received"
-      ref="contactModal"
-      hide-footer
-      centered
-    >
+    <b-modal id="modal" title="Message Received" ref="contactModal" hide-footer centered>
       <h3 class="my-4">Thank you for your message!</h3>
       <p class="my-4">We'll get in touch with you soon.</p>
     </b-modal>
@@ -410,7 +376,6 @@ export default {
   mounted() {
     // Setup the event listener and execute it once in case we are already scrolled
     window.addEventListener("scroll", this.scrollHandler);
-    this.scrollHandler();
   },
   beforeDestroy() {
     window.removeEventListener("scroll", this.scrollHandler);
@@ -450,10 +415,7 @@ export default {
         this.popOut = false;
       }
 
-      if (
-        this.canReset &&
-        (window.pageYOffset < 250 || window.pageYOffset > 1800)
-      ) {
+      if (this.canReset && (window.pageYOffset < 250 || window.pageYOffset > 1800)) {
         this.isVueBarFilled = false;
         this.isPhpBarFilled = false;
         this.isMySqlBarFilled = false;
