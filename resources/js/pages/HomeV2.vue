@@ -647,12 +647,25 @@ export default {
 
   mounted() {
     setTimeout(() => (this.loading = false), 3000);
-    window.addEventListener("scroll", this.handleNav);
+    // window.addEventListener("scroll", this.handleNav);
     window.addEventListener("scroll", this.reveal);
     window.addEventListener("scroll", this.scrollHandler);
+
+    var prevScrollpos = window.pageYOffset;
+    window.onscroll = function () {
+      var currentScrollPos = window.pageYOffset;
+      if (prevScrollpos > currentScrollPos) {
+        document.getElementById("navbar").style.top = "0";
+      }
+      setTimeout(() => {
+        document.getElementById("navbar").style.top = "-80px";
+      }, 2200);
+
+      prevScrollpos = currentScrollPos;
+    };
   },
   beforeDestroy() {
-    window.removeEventListener("scroll", this.handleNav);
+    // window.removeEventListener("scroll", this.handleNav);
     window.removeEventListener("scroll", this.reveal);
     window.removeEventListener("scroll", this.scrollHandler);
   },
@@ -697,14 +710,16 @@ export default {
       window.open("https://www.linkedin.com/in/jorge-mario-fernandez-67578b106/");
     },
     handleNav() {
-      let prevScrollpos = window.pageYOffset;
-      let currentScrollPos = window.pageYOffset;
-      if (prevScrollpos > currentScrollPos) {
-        document.getElementById("navbar").style.top = "0";
-      }
-      setTimeout(() => (document.getElementById("navbar").style.top = "-80px"), 3000);
-
-      prevScrollpos = currentScrollPos;
+      // let currentScrollPos = window.pageYOffset;
+      // if (prevScrollpos > currentScrollPos) {
+      //   document.getElementById("navbar").style.top = "0";
+      // } else {
+      //   document.getElementById("navbar").style.top = "-80px";
+      // }
+      // setTimeout(() => {
+      //   document.getElementById("navbar").style.top = "-80px";
+      // }, 3000);
+      // prevScrollpos = currentScrollPos;
     },
     openResume() {
       this.$router.push({
