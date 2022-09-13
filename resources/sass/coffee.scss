@@ -16,7 +16,7 @@ $xwide: "(min-width: 1700px)";
 $gigantic: "(min-width: 1921px)";
 
 .main {
-    background-image: url("/images/coffee-background.jpg");
+    background-image: url("/images/coffee-shop.jpg");
     background-attachment: fixed;
     background-position: center;
     background-size: cover;
@@ -31,6 +31,7 @@ $gigantic: "(min-width: 1921px)";
         align-items: center;
         padding: 20px;
         background-color: #00000038;
+        height: 20vh;
 
         h2 {
             color: #e6a756;
@@ -50,7 +51,7 @@ $gigantic: "(min-width: 1921px)";
     .nav {
         padding: 20px;
         background-color: #361e17e3;
-
+        height: 11vh;
 
         ul {
             padding-left: 0;
@@ -58,6 +59,12 @@ $gigantic: "(min-width: 1921px)";
             justify-content: center;
             width: 100%;
             margin-bottom: 0;
+            font-size: 1.5vw;
+
+            @media #{$small},
+            #{$mobile} {
+                font-size: 18px;
+            }
 
             li {
                 list-style: none;
@@ -65,6 +72,10 @@ $gigantic: "(min-width: 1921px)";
                 color: white;
                 text-transform: uppercase;
                 font-weight: bold;
+
+                display: flex;
+                justify-content: center;
+                align-items: center;
 
                 &:hover {
                     cursor: pointer;
@@ -76,8 +87,7 @@ $gigantic: "(min-width: 1921px)";
 
     .section-1 {
         padding: 20px;
-        height: 450px;
-        height: 600px;
+        height: 72vh;
         display: flex;
         justify-content: center;
 
@@ -87,12 +97,15 @@ $gigantic: "(min-width: 1921px)";
         }
 
         .inner-container {
-            height: 100%;
             width: 770px;
+            height: 550px;
+            margin: auto;
 
             @media #{$small},
             #{$mobile} {
+                height: 100%;
                 width: 100%;
+                margin: none;
             }
         }
 

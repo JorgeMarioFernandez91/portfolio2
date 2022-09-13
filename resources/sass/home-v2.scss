@@ -453,6 +453,7 @@ $dark-theme-text-dark: #1D3E6F;
                 align-items: center;
                 width: 800px;
                 height: 45%;
+                min-height: 350px;
 
                 .list {
                     width: 50%;
@@ -531,6 +532,12 @@ $dark-theme-text-dark: #1D3E6F;
 
     .section-4 {
         padding: 50px 100px;
+
+        .notice {
+            text-align: center;
+            margin: 20px 0;
+            color: #1D3E6F7D;
+        }
 
         .content-container {
             display: flex;
@@ -1021,6 +1028,10 @@ $dark-theme-text-dark: #1D3E6F;
         .section-4 {
             .featured-text {
                 @include text-color('dark', 'highlight');
+            }
+
+            .notice {
+                @include text-color('dark', '');
             }
 
             .info-box {

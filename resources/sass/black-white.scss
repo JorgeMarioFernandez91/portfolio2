@@ -71,11 +71,12 @@ $gigantic: "(min-width: 1921px)";
     .master-header-gradient,
     .master-header {
         padding-top: 70px;
-        height: 700px;
+        height: 100vh;
     }
 
     .master-header-gradient {
-        background: linear-gradient(#fff0 0%, #040404);
+        background: linear-gradient(rgba(255, 255, 255, 0) 0%, #040404 80%);
+
         position: absolute;
         width: 100%;
         display: flex;
@@ -102,7 +103,7 @@ $gigantic: "(min-width: 1921px)";
         .btn-container {
             display: flex;
             justify-content: center;
-            margin-top: 50px;
+            margin: 50px 0;
 
             .btn {
                 background-color: #64a19d;
@@ -115,6 +116,16 @@ $gigantic: "(min-width: 1921px)";
 
             :hover {
                 background-color: #77b4b0;
+            }
+        }
+
+        .down-arrow {
+            display: flex;
+            justify-content: center;
+
+            svg {
+                height: 60px;
+                width: 40px;
             }
         }
     }

@@ -343,6 +343,7 @@
       </div>
       <div class="section-4" ref="projects">
         <div class="header reveal">Some Things I've Built</div>
+        <div class="notice reveal">Select a project to view demo</div>
         <div class="content-container">
           <div class="content reveal">
             <div class="info">
