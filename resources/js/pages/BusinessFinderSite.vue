@@ -24,8 +24,8 @@
       <div class="content-container">
         <h1>Find the best business in town</h1>
         <div class="subtitle">
-          Search for restaurants, contractors, and other local businesses in
-          your area to find out which ones are the best!
+          Search for restaurants, contractors, and other local businesses in your area to find out
+          which ones are the best!
         </div>
         <div class="input-container">
           <b-form-input
@@ -34,7 +34,7 @@
             placeholder="Find a local business..."
           ></b-form-input>
           <div class="btn-container">
-            <div class="btn">Get Started</div>
+            <div class="btn" @click="openMap()">Get Started</div>
           </div>
         </div>
       </div>
@@ -43,43 +43,42 @@
       <div class="header-container">
         <div class="title-1">Browse Local Businesses</div>
         <div class="title-2">
-          Not sure what you're looking for? Here are some popoular business near
-          you!
+          Not sure what you're looking for? Here are some popoular business near you!
         </div>
       </div>
       <div class="card-container">
         <div class="top">
-          <div class="card-item">
+          <div class="card-item" @click="showActivationModal('restaurant')">
             <div class="img-background resto"></div>
             <div class="text">Restaurants</div>
           </div>
-          <div class="card-item">
+          <div class="card-item" @click="showActivationModal('coffee')">
             <div class="img-background coffee"></div>
             <div class="text">Coffee</div>
           </div>
-          <div class="card-item">
+          <div class="card-item" @click="showActivationModal('hospital')">
             <div class="img-background medical"></div>
             <div class="text">Medical</div>
           </div>
-          <div class="card-item">
+          <div class="card-item" @click="showActivationModal('auto_repair')">
             <div class="img-background auto"></div>
             <div class="text">Auto</div>
           </div>
         </div>
         <div class="bottom">
-          <div class="card-item">
+          <div class="card-item" @click="showActivationModal('concert_hall')">
             <div class="img-background events"></div>
             <div class="text">Events</div>
           </div>
-          <div class="card-item">
+          <div class="card-item" @click="showActivationModal('brewery')">
             <div class="img-background breweries"></div>
             <div class="text">Breweries</div>
           </div>
-          <div class="card-item">
+          <div class="card-item" @click="showActivationModal('concert_hall')">
             <div class="img-background gym"></div>
             <div class="text">Gyms</div>
           </div>
-          <div class="card-item">
+          <div class="card-item" @click="showActivationModal('brewery')">
             <div class="img-background marketing"></div>
             <div class="text">Marketing</div>
           </div>
@@ -94,11 +93,7 @@
           <div class="subtitle">Sign up now to receive the latest news</div>
         </div>
         <div class="right">
-          <b-form-input
-            id="email"
-            v-model="email"
-            placeholder="Enter your email..."
-          ></b-form-input>
+          <b-form-input id="email" v-model="email" placeholder="Enter your email..."></b-form-input>
           <div class="btn-container">
             <div class="btn">Sign Up</div>
           </div>
@@ -219,25 +214,53 @@
         <div class="column"><div class="link">Terms and Conditions</div></div>
       </div>
     </footer>
+    <b-modal
+      id="activation_modal"
+      ref="activation_modal"
+      centered
+      modal-class="landlord-modal activation-modal"
+      size="lg"
+      :hide-header="true"
+      :hide-footer="true"
+    >
+      <map-page :category="category" />
+    </b-modal>
   </div>
 </template>
 
 <script>
-import { BFormInput } from "bootstrap-vue";
+import { BFormInput, BModal, VBModal } from "bootstrap-vue";
+import MapPage from "./MapPage.vue";
 export default {
   name: "BusinessFinderSite",
-  components: { BFormInput },
-
-  props: {},
+  components: { BFormInput, MapPage, BModal, VBModal },
 
   data() {
     return {
       search: null,
       email: null,
+      category: "coffee",
     };
   },
 
-  methods: {},
+  methods: {
+    showActivationModal(input) {
+      this.category = input;
+      this.$refs.activation_modal.show();
+    },
+
+    hideActivationModal() {
+      this.$refs.activation_modal.hide();
+    },
+    openMap() {
+      this.$router.push({
+        path: "/business-finder-site/map",
+      });
+    },
+    sendCategoryRequest(request) {
+      this.category = request;
+    },
+  },
 };
 </script>
 <style lang="scss" scoped>

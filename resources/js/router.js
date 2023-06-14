@@ -3,10 +3,12 @@ import VueRouter from 'vue-router';
 
 import Home from './pages/Home.vue';
 import HomeV2 from './pages/HomeV2.vue';
+import HomeV3 from './pages/HomeV3.vue';
 import CoffeeSite from './pages/CoffeeSite.vue';
 import BlackWhiteSite from './pages/BlackWhiteSite.vue';
 import BusinessFinderSite from './pages/BusinessFinderSite.vue';
 import ShowPDF from './pages/ShowPdf.vue';
+import MapPage from './pages/MapPage.vue';
 
 Vue.use(VueRouter);
 
@@ -16,13 +18,18 @@ const router = new VueRouter({
     routes: [
         // {
         //     path: '/',
+        //     name: 'home',
+        //     component: Home
+        // },
+        // {
+        //     path: '/',
         //     name: 'homev2',
         //     component: HomeV2
         // },
         {
             path: '/',
-            name: 'homev2',
-            component: HomeV2
+            name: 'homev3',
+            component: HomeV3
         },
         {
             path: '/coffee-site',
@@ -38,6 +45,11 @@ const router = new VueRouter({
             path: '/business-finder-site',
             name: 'business-finder-site',
             component: BusinessFinderSite
+        },
+        {
+            path: '/business-finder-site/map',
+            name: 'map',
+            component: MapPage
         },
         {
             path: '/resume',

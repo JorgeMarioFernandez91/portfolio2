@@ -9,6 +9,10 @@ class API extends BaseApi {
         // console.log(params)
         return this.get('send-mail', params);
     }
+
+    mapbox(params) {
+        return this.get('results', params)
+    }
 }
 
 export default new API();
