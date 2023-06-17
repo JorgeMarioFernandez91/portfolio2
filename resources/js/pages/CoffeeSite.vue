@@ -8,7 +8,7 @@
       <ul>
         <li>Home</li>
         <li>About</li>
-        <li>Products</li>
+        <li @click="navigate()">Products</li>
         <li>store</li>
       </ul>
     </nav>
@@ -19,10 +19,9 @@
             <div class="title-1">Fresh Coffee</div>
             <div class="title-2">Worth Drinking</div>
             <div class="text">
-              Every cup of our quality artisan coffee starts with locally
-              sourced, hand picked ingredients. Once you try it, our coffee will
-              be a blissful addition to your everyday morning routine - we
-              guarantee it!
+              Every cup of our quality artisan coffee starts with locally sourced, hand picked
+              ingredients. Once you try it, our coffee will be a blissful addition to your everyday
+              morning routine - we guarantee it!
             </div>
           </div>
           <div class="action-btn">Visit Us Today!</div>
@@ -38,11 +37,10 @@
           <div class="title-1">Our Promise</div>
           <div class="title-2">To You</div>
           <div class="text">
-            When you walk into our shop to start your day, we are dedicated to
-            providing you with friendly service, a welcoming atmosphere, and
-            above all else, excellent products made with the highest quality
-            ingredients. If you are not satisfied, please let us know and we
-            will do whatever we can to make things right!
+            When you walk into our shop to start your day, we are dedicated to providing you with
+            friendly service, a welcoming atmosphere, and above all else, excellent products made
+            with the highest quality ingredients. If you are not satisfied, please let us know and
+            we will do whatever we can to make things right!
           </div>
         </div>
       </div>
@@ -52,7 +50,15 @@
 </template>
 
 <script>
-export default {};
+export default {
+  methods: {
+    navigate() {
+      this.$router.push({
+        path: "/coffee-site/products",
+      });
+    },
+  },
+};
 </script>
 <style lang="scss" scoped>
 @import "resources/sass/coffee.scss";

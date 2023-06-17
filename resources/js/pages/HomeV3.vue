@@ -34,16 +34,26 @@
       <!-- Evolution of portfolio sites -->
       <div class="project even"><span>WEB PORTFOLIO -- AN INTERACTIVE RESUME</span></div>
       <div class="line odd"></div>
-      <div class="desc odd">Vue, Laravel, HTML, CSS</div>
-      <div class="project odd" @click="navigate('business-finder-site')">
-        <span>BUSINESS FINDER -- FIND BUSINESSES NEAR YOU</span>
+      <div class="desc odd">Vue, Laravel, HTML, CSS, Mapbox API</div>
+      <div class="project odd">
+        <router-link to="/business-finder-site" target="_blank"
+          >BUSINESS FINDER -- FIND BUSINESSES NEAR YOU</router-link
+        >
       </div>
       <div class="line even"></div>
       <div class="desc even">Vue, Laravel, HTML, CSS</div>
-      <div class="project even"><span>COFFEE SITE -- A VIRTUAL STORE FRONT</span></div>
+      <div class="project even">
+        <router-link to="/coffee-site" target="_blank"
+          >COFFEE SITE -- A VIRTUAL STORE FRONT</router-link
+        >
+      </div>
       <div class="line odd"></div>
       <div class="desc odd">React, HTML, CSS</div>
-      <div class="project odd"><span>CLICKER GAME -- A CLASSIC</span></div>
+      <div class="project odd">
+        <a href="https://cookieclickerstartup.netlify.app/" target="_blank"
+          >CLICKER GAME -- A CLASSIC</a
+        >
+      </div>
       <div class="line even"></div>
       <div class="icon">
         <i class="fa fa-arrow-down"></i>
@@ -200,16 +210,6 @@ export default {
     });
   },
   methods: {
-    navigate(location) {
-      this.$router
-        .push({
-          path: location,
-        })
-        .then(() => {
-          if (location === "business-finder-site") this.$router.go();
-        });
-    },
-
     handleFirstScroll(event) {
       if (!this.homeLoaded) {
         setTimeout(() => {

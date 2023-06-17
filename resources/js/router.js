@@ -5,6 +5,7 @@ import Home from './pages/Home.vue';
 import HomeV2 from './pages/HomeV2.vue';
 import HomeV3 from './pages/HomeV3.vue';
 import CoffeeSite from './pages/CoffeeSite.vue';
+import CoffeeSiteProducts from './pages/CoffeeSiteProducts.vue';
 import BlackWhiteSite from './pages/BlackWhiteSite.vue';
 import BusinessFinderSite from './pages/BusinessFinderSite.vue';
 import ShowPDF from './pages/ShowPdf.vue';
@@ -35,6 +36,11 @@ const router = new VueRouter({
             path: '/coffee-site',
             name: 'coffee-site',
             component: CoffeeSite
+        },
+        {
+            path: '/coffee-site/products',
+            name: 'products',
+            component: CoffeeSiteProducts
         },
         {
             path: '/black-white-site',
