@@ -238,7 +238,6 @@
     </b-modal>
   </div>
 </template>
-
 <script>
 import { BFormInput, BModal, VBModal } from "bootstrap-vue";
 import MapPage from "./MapPage.vue";

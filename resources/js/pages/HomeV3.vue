@@ -35,7 +35,9 @@
       <div class="project even"><span>WEB PORTFOLIO -- AN INTERACTIVE RESUME</span></div>
       <div class="line odd"></div>
       <div class="desc odd">Vue, Laravel, HTML, CSS</div>
-      <div class="project odd"><span>BUSINESS FINDER -- FIND BUSINESSES NEAR YOU</span></div>
+      <div class="project odd" @click="navigate('business-finder-site')">
+        <span>BUSINESS FINDER -- FIND BUSINESSES NEAR YOU</span>
+      </div>
       <div class="line even"></div>
       <div class="desc even">Vue, Laravel, HTML, CSS</div>
       <div class="project even"><span>COFFEE SITE -- A VIRTUAL STORE FRONT</span></div>
@@ -196,54 +198,18 @@ export default {
         this.handleFourthScroll(event);
       }
     });
-
-    //https://api.ipify.org?format=json
-
-    const xhr = new XMLHttpRequest();
-    xhr.open("GET", "https://api.ipify.org?format=json", true);
-    xhr.getResponseHeader("Content-type", "application/json");
-    xhr.send();
-
-    this.getData();
   },
   methods: {
-    async getData() {
-      // this.getMapBox();
-    },
-    async getMapBox() {
-      this.getCoords();
-
-      setTimeout(() => {
-        console.log(
-          `https://api.mapbox.com/search/searchbox/v1/category/coffee?access_token=pk.eyJ1IjoibWFyaW9mZXJuYW5kZXoiLCJhIjoiY2xpa3Z0ZGZ0MGY2dzNqcDl0ejlobHZ5ciJ9.M1d7TXJTIvlTcMtk6B7mhg&language=en&limit=5&proximity=${this.long},${this.lat}`
-        );
-        // for testing --- toronto downtown long and lat since colombia doesn't seem to work. Can try VPN to test out north america
-        this.long = -79.3817871057276;
-        this.lat = 43.65626547595187;
-        axios
-          .get(
-            `https://api.mapbox.com/search/searchbox/v1/suggest?q=coffee&language=en&proximity=${this.long},${this.lat}&session_token=0d13bd56-5b00-4548-8188-92f262320222&access_token=pk.eyJ1IjoibWFyaW9mZXJuYW5kZXoiLCJhIjoiY2xpa3Z0ZGZ0MGY2dzNqcDl0ejlobHZ5ciJ9.M1d7TXJTIvlTcMtk6B7mhg`
-          )
-          .then((response) => {
-            console.log(response.data);
-          });
-      }, 10000);
+    navigate(location) {
+      this.$router
+        .push({
+          path: location,
+        })
+        .then(() => {
+          if (location === "business-finder-site") this.$router.go();
+        });
     },
 
-    async getCoords() {
-      if (navigator.geolocation) {
-        return await navigator.geolocation.getCurrentPosition(this.showPosition);
-      }
-      return null;
-    },
-
-    showPosition(position) {
-      console.log(position.coords.latitude);
-      console.log(position.coords.longitude);
-      this.long = position.coords.longitude;
-      this.lat = position.coords.latitude;
-      // return [position.coords.longitude, position.coords.latitude];
-    },
     handleFirstScroll(event) {
       if (!this.homeLoaded) {
         setTimeout(() => {
