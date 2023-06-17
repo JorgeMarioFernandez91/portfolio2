@@ -1,13 +1,15 @@
 <template>
   <div>
     <div id="map" ref="map" style="height: 500px"></div>
-    <!-- <div class="input-container">
-      <input type="text" v-model="inputText" />
-      <div class="btn" @click="search()">Search</div>
-    </div> -->
 
     <!-- <form>
-      <input name="address" placeholder="Address" type="text" autocomplete="address-line1" />
+      <input
+        name="address"
+        placeholder="Address"
+        type="text"
+        autocomplete="address-line1"
+        @keyup.enter="search()"
+      />
       <input
         name="apartment"
         placeholder="Apartment number"
@@ -23,7 +25,6 @@
 </template>
 
 <script>
-import Mapbox from "mapbox-gl";
 import { MglMap } from "vue-mapbox";
 
 export default {
@@ -36,115 +37,93 @@ export default {
       type: String,
       default: "",
     },
+    searchStr: {
+      type: String,
+      default: "",
+    },
+    categorySearchFlag: {
+      type: Boolean,
+      default: false,
+    },
+    inputSearchFlag: {
+      type: Boolean,
+      default: false,
+    },
   },
 
   data() {
     return {
+      mapboxURL: "https://api.mapbox.com/search/searchbox/v1",
       mapboxAccessToken:
         "pk.eyJ1IjoibWFyaW9mZXJuYW5kZXoiLCJhIjoiY2xpa3Z0ZGZ0MGY2dzNqcDl0ejlobHZ5ciJ9.M1d7TXJTIvlTcMtk6B7mhg",
       mapStyle: "mapbox://styles/mapbox/streets-v10",
-      coordinates: [0.0, 0.0], // long, lat
-      zoom: 0,
-      marker: {
-        color: "black",
-      },
+      limit: 5,
       map: null,
       coords: {
         lat: null,
         long: null,
       },
       inputText: null,
+      mapboxData: null,
     };
   },
-  watch: {
-    coords: {
-      deep: true,
 
-      handler() {
-        if (this.coords.lat && this.coords.long) {
-          this.getData();
-        }
-      },
-    },
-  },
-  created() {},
   mounted() {
-    // const script = document.getElementById("search-js");
-    // script.onload = function () {
-    //   mapboxsearch.autofill({
-    //     accessToken:
-    //       "pk.eyJ1IjoibWFyaW9mZXJuYW5kZXoiLCJhIjoiY2xpa3Z0ZGZ0MGY2dzNqcDl0ejlobHZ5ciJ9.M1d7TXJTIvlTcMtk6B7mhg",
-    //   });
-    // };
+    this.getCoords();
     this.createMap();
-    // const xhr = new XMLHttpRequest();
-    // xhr.open("GET", "https://api.ipify.org?format=json", true);
-    // xhr.getResponseHeader("Content-type", "application/json");
-    // xhr.send();
-    // this.getCoords();
-    this.getData();
+
+    if (this.categorySearchFlag) {
+      this.getData();
+    } else if (this.inputSearchFlag) {
+      this.search();
+    }
+
+    this.resetFlags();
   },
   methods: {
-    // search() {
-    //   //https://api.mapbox.com/search/searchbox/v1/suggest?q={search_text}
-
-    //   var long = -79.3817871057276;
-    //   var lat = 43.65626547595187;
-    //   axios
-    //     .get(
-    //       `https://api.mapbox.com/search/searchbox/v1/suggest?1=coffee?access_token=pk.eyJ1IjoibWFyaW9mZXJuYW5kZXoiLCJhIjoiY2xpa3Z0ZGZ0MGY2dzNqcDl0ejlobHZ5ciJ9.M1d7TXJTIvlTcMtk6B7mhg&language=en&limit=5&proximity=${long},${lat}`
-    //     )
-    //     .then((response) => {
-    //       console.log(response.data);
-    //     });
-    // },
-    async getData() {
-      console.log("Axios Call");
-      // setTimeout(() => {
-      // console.log(
-      //   `https://api.mapbox.com/search/searchbox/v1/category/coffee?access_token=pk.eyJ1IjoibWFyaW9mZXJuYW5kZXoiLCJhIjoiY2xpa3Z0ZGZ0MGY2dzNqcDl0ejlobHZ5ciJ9.M1d7TXJTIvlTcMtk6B7mhg&language=en&limit=5&proximity=${this.long},${this.lat}`
-      // );
-      // for testing --- toronto downtown long and lat since colombia doesn't seem to work. Can try VPN to test out north america
-
+    resetFlags() {
+      this.$emit("resetFlags");
+    },
+    search() {
       axios
-        // .get(
-        //   `https://api.mapbox.com/search/searchbox/v1/category/coffee&language=en&proximity=${this.coords.long},${this.coords.lat}&limit=5&session_token=0d13bd56-5b00-4548-8188-92f262320222&access_token=pk.eyJ1IjoibWFyaW9mZXJuYW5kZXoiLCJhIjoiY2xpa3Z0ZGZ0MGY2dzNqcDl0ejlobHZ5ciJ9.M1d7TXJTIvlTcMtk6B7mhg`
-
-        // )
         .get(
-          `https://api.mapbox.com/search/searchbox/v1/category/${this.category}?access_token=pk.eyJ1IjoibWFyaW9mZXJuYW5kZXoiLCJhIjoiY2xpa3Z0ZGZ0MGY2dzNqcDl0ejlobHZ5ciJ9.M1d7TXJTIvlTcMtk6B7mhg&language=en&limit=5`
+          `${this.mapboxURL}/suggest?q=${this.searchStr}&language=en&session_token=0b4b52e7-dcc3-4611-888c-546eec109681&access_token=${this.mapboxAccessToken}`
         )
         .then((response) => {
-          // console.log(response.data);
-          console.log("retrieved successfully");
-          console.log(response.data);
+          this.mapboxData = response.data;
 
+          axios
+            .get(
+              `${this.mapboxURL}/retrieve/${response.data.suggestions[0].mapbox_id}?session_token=0b4b52e7-dcc3-4611-888c-546eec109681&access_token=${this.mapboxAccessToken}`
+            )
+            .then((response) => {
+              this.mapboxData = response.data;
+              this.addMarkers();
+            });
+        });
+    },
+    async getData() {
+      axios
+        .get(
+          `${this.mapboxURL}/category/${this.category}?access_token=${this.mapboxAccessToken}&language=en&limit=${this.limit}`
+        )
+        .then((response) => {
+          this.mapboxData = response.data;
           this.addMarkers(response.data);
         });
-      // }, 5000);
     },
 
     async getCoords() {
-      console.log("Getting Coords");
       if (navigator.geolocation) {
-        return await navigator.geolocation.getCurrentPosition(this.getPosition);
+        return navigator.geolocation.getCurrentPosition((position) => {
+          this.coords.lat = position.coords.latitude;
+          this.coords.long = position.coords.longitude;
+        });
       }
       return null;
     },
 
-    getPosition(position) {
-      this.coords.lat = position.coords.latitude;
-      this.coords.long = position.coords.longitude;
-
-      console.log("lat: " + this.coords.lat);
-      console.log("long: " + this.coord.long);
-      // testing downtown toronto
-      // this.coords.long = -79.3817871057276;
-      // this.coords.lat = 43.65626547595187;
-    },
-
     createMap() {
-      console.log("Creating Map");
       mapboxgl.accessToken = this.mapboxAccessToken;
 
       // init the map
@@ -155,20 +134,79 @@ export default {
         center: [-74.0073, 40.7124], // Manhattan
         zoom: 10,
       });
+
+      // Create a popup, but don't add it to the map yet.
+      const popup = new mapboxgl.Popup({
+        closeButton: false,
+        closeOnClick: false,
+      });
+
       setTimeout(() => {
         this.map.resize();
       }, 100);
     },
 
-    addMarkers(data) {
-      for (const feature of data.features) {
-        // create a HTML element for each feature
-        const el = document.createElement("div");
-        el.className = "marker";
+    async addMarkers() {
+      var data = this.mapboxData;
+      // for (var feature of data.features) {
+      //   new Mapbox.Marker().setLngLat(feature.geometry.coordinates).setPopup(popup).addTo(this.map);
+      // }
+      this.map.addSource("places", {
+        type: "geojson",
+        data: {
+          type: "FeatureCollection",
+          features: data.features,
+        },
+      });
 
-        // make a marker for each feature and add to the map
-        new Mapbox.Marker(el).setLngLat(feature.geometry.coordinates).addTo(this.map);
-      }
+      // Add a layer showing the places.
+      this.map.addLayer({
+        id: "places",
+        type: "circle",
+        source: "places",
+        layout: {},
+        paint: {
+          "circle-color": "#4264fb",
+          "circle-radius": 6,
+          "circle-stroke-width": 2,
+          "circle-stroke-color": "#ffffff",
+        },
+      });
+
+      // // Create a popup, but don't add it to the map yet.
+      const popup = new mapboxgl.Popup({
+        closeButton: false,
+        closeOnClick: false,
+      });
+
+      this.map.on("mouseenter", "places", (e) => {
+        // Change the cursor style as a UI indicator.
+        this.map.getCanvas().style.cursor = "pointer";
+
+        // Copy coordinates array.
+        const coordinates = e.features[0].geometry.coordinates.slice();
+        const description = e.features[0].properties.description;
+        const address = e.features[0].properties.full_address;
+        const name = e.features[0].properties.name;
+
+        const html = "<h5 style='text-align: center;'>" + name + "</h5><p style='text-align: center'>" + address + "</p>";
+
+        // Ensure that if the map is zoomed out such that multiple
+        // copies of the feature are visible, the popup appears
+        // over the copy being pointed to.
+        while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
+          coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
+        }
+
+        // Populate the popup and set its coordinates
+        // based on the feature found.
+        popup.setLngLat(coordinates).setHTML(html).addTo(this.map);
+      });
+
+      this.map.on("mouseleave", "places", () => {
+        this.map.getCanvas().style.cursor = "";
+        popup.remove();
+      });
 
       this.map.flyTo({
         center: data.features[0].geometry.coordinates,
@@ -183,6 +221,16 @@ export default {
 <style lang="scss" scoped>
 ::v-deep .marker {
   //   background-image: url('mapbox-icon.png');
+  color: green;
+  background-size: cover;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+::v-deep .center-marker {
+  //   background-image: url('mapbox-icon.png');
   color: red;
   background-size: cover;
   width: 50px;
@@ -192,17 +240,19 @@ export default {
 }
 
 ::v-deep .mapboxgl-marker {
-  width: 25px;
-  height: 25px;
-  border-radius: 50%;
-  border: 1px solid gray;
-  background-color: lightblue;
-  color: lightblue;
+  // width: 25px;
+  // height: 25px;
+  // border-radius: 50%;
+  // border: 1px solid gray;
+  // background-color: lightblue;
+  // color: lightblue;
 }
-::v-deep .mapboxgl-canvas {
-  // height: 700px !important;
-  // width: auto !important;
+
+::v-deep .mapboxgl-popup {
+  max-width: 400px;
+  font: 12px/20px "Helvetica Neue", Arial, Helvetica, sans-serif;
 }
+
 .input-container {
   display: flex;
   flex-direction: column;

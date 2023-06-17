@@ -21,9 +21,7 @@
     <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.js'></script>
     <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.css' rel='stylesheet' />
 
-    <!-- <script id="search-js" defer src="https://api.mapbox.com/search-js/v1.0.0-beta.16/web.js" > -->
-
-</script>
+    <script id="search-js" defer src="https://api.mapbox.com/search-js/v1.0.0-beta.16/web.js" ></script>
 
 </head>
 

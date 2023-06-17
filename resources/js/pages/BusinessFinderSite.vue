@@ -28,14 +28,18 @@
           which ones are the best!
         </div>
         <div class="input-container">
-          <b-form-input
-            id="search"
-            v-model="search"
-            placeholder="Find a local business..."
-          ></b-form-input>
-          <div class="btn-container">
-            <div class="btn" @click="openMap()">Get Started</div>
-          </div>
+          <form>
+            <input
+              v-model="search"
+              name="address"
+              placeholder="Find a local business..."
+              type="text"
+              autocomplete="address-line1"
+            />
+            <div class="btn-container">
+              <div class="btn" @click="customInputMapSearch()">Get Started</div>
+            </div>
+          </form>
         </div>
       </div>
     </div>
@@ -48,37 +52,37 @@
       </div>
       <div class="card-container">
         <div class="top">
-          <div class="card-item" @click="showActivationModal('restaurant')">
+          <div class="card-item" @click="categoryMapSearch('restaurant')">
             <div class="img-background resto"></div>
             <div class="text">Restaurants</div>
           </div>
-          <div class="card-item" @click="showActivationModal('coffee')">
+          <div class="card-item" @click="categoryMapSearch('coffee')">
             <div class="img-background coffee"></div>
             <div class="text">Coffee</div>
           </div>
-          <div class="card-item" @click="showActivationModal('hospital')">
+          <div class="card-item" @click="categoryMapSearch('hospital')">
             <div class="img-background medical"></div>
             <div class="text">Medical</div>
           </div>
-          <div class="card-item" @click="showActivationModal('auto_repair')">
+          <div class="card-item" @click="categoryMapSearch('auto_repair')">
             <div class="img-background auto"></div>
             <div class="text">Auto</div>
           </div>
         </div>
         <div class="bottom">
-          <div class="card-item" @click="showActivationModal('concert_hall')">
+          <div class="card-item" @click="categoryMapSearch('concert_hall')">
             <div class="img-background events"></div>
             <div class="text">Events</div>
           </div>
-          <div class="card-item" @click="showActivationModal('brewery')">
+          <div class="card-item" @click="categoryMapSearch('brewery')">
             <div class="img-background breweries"></div>
             <div class="text">Breweries</div>
           </div>
-          <div class="card-item" @click="showActivationModal('concert_hall')">
+          <div class="card-item" @click="categoryMapSearch('concert_hall')">
             <div class="img-background gym"></div>
             <div class="text">Gyms</div>
           </div>
-          <div class="card-item" @click="showActivationModal('brewery')">
+          <div class="card-item" @click="categoryMapSearch('brewery')">
             <div class="img-background marketing"></div>
             <div class="text">Marketing</div>
           </div>
@@ -101,7 +105,7 @@
       </div>
     </section>
 
-    <section class="section-3">
+    <section class="section-3" style="display: none">
       <div class="content-container">
         <div class="title">Top New Businesses</div>
         <div class="subtitle">Here are the top new businesses in your area</div>
@@ -220,10 +224,17 @@
       centered
       modal-class="landlord-modal activation-modal"
       size="lg"
+      hide-backdrop
       :hide-header="true"
       :hide-footer="true"
     >
-      <map-page :category="category" />
+      <map-page
+        :category="category"
+        :searchStr="search"
+        :categorySearchFlag="categorySearch"
+        :inputSearchFlag="customInputSearch"
+        @resetFlags="resetFlags"
+      />
     </b-modal>
   </div>
 </template>
@@ -239,13 +250,42 @@ export default {
     return {
       search: null,
       email: null,
-      category: "coffee",
+      category: null,
+      categorySearch: false,
+      customInputSearch: false,
+    };
+  },
+
+  mounted() {
+    const script = document.getElementById("search-js");
+    script.onload = function () {
+      mapboxsearch.autofill({
+        accessToken:
+          "pk.eyJ1IjoibWFyaW9mZXJuYW5kZXoiLCJhIjoiY2xpa3Z0ZGZ0MGY2dzNqcDl0ejlobHZ5ciJ9.M1d7TXJTIvlTcMtk6B7mhg",
+      });
     };
   },
 
   methods: {
-    showActivationModal(input) {
+    resetFlags() {
+      this.categorySearch = false;
+      this.customInputSearch = false;
+    },
+
+    categoryMapSearch(input) {
       this.category = input;
+      this.categorySearch = true;
+      this.showActivationModal();
+    },
+
+    customInputMapSearch() {
+      if (this.search !== null && this.search !== "") {
+        this.customInputSearch = true;
+        this.showActivationModal();
+      }
+    },
+
+    showActivationModal() {
       this.$refs.activation_modal.show();
     },
 
@@ -265,4 +305,8 @@ export default {
 </script>
 <style lang="scss" scoped>
 @import "resources/sass/business-finder.scss";
+
+::v-deep .modal {
+  background-color: #000000c4;
+}
 </style>
