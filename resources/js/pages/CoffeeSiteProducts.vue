@@ -6,10 +6,10 @@
     </header>
     <nav class="nav">
       <ul>
-        <li>Home</li>
-        <li>About</li>
-        <li @click="navigate()">Products</li>
-        <li>store</li>
+        <li @click="navigate('/coffee-site')">Home</li>
+        <li @click="navigate('/coffee-site')">About</li>
+        <li @click="navigate('/coffee-site/products')">Products</li>
+        <li @click="navigate('/coffee-site/products')">store</li>
       </ul>
     </nav>
     <section class="products-checkout-container">
@@ -212,9 +212,9 @@ export default {
     };
   },
   methods: {
-    navigate() {
+    navigate(site) {
       this.$router.push({
-        path: "/coffee-site/products",
+        path: site,
       });
     },
     subtractProduct(index) {
@@ -345,6 +345,7 @@ export default {
 
           .price {
             margin-top: 40px;
+            text-align: center;
           }
         }
       }

@@ -6,10 +6,10 @@
     </header>
     <nav class="nav">
       <ul>
-        <li>Home</li>
-        <li>About</li>
-        <li @click="navigate()">Products</li>
-        <li>store</li>
+        <li @click="navigate('/coffee-site')">Home</li>
+        <li @click="navigate('/coffee-site')">About</li>
+        <li @click="navigate('/coffee-site/products')">Products</li>
+        <li @click="navigate('/coffee-site/products')">store</li>
       </ul>
     </nav>
     <section class="section-1">
@@ -52,9 +52,9 @@
 <script>
 export default {
   methods: {
-    navigate() {
+    navigate(site) {
       this.$router.push({
-        path: "/coffee-site/products",
+        path: site,
       });
     },
   },
