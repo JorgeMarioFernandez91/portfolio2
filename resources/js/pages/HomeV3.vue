@@ -65,16 +65,43 @@
         <div class="left">
           <div>Interests</div>
           <br />
-          <div>
-            Learning new about new technologies and how I can utilize them to make my crafted
-            websites better
-          </div>
+          <ul>
+            <li>
+              Personal Web Development Projects: Actively engaged in building and maintaining
+              personal web projects using HTML, CSS, and JavaScript. Projects include responsive web
+              design, interactive interfaces, and integration with RESTful APIs.
+            </li>
+            <li>
+              Continuous Learning: Dedicated to staying up-to-date with emerging web technologies
+              and frameworks. Follow designers/developers on social media platforms and have taken
+              courses to build my skillset.
+            </li>
+            <li>
+              UX/UI Design: Keen interest in user-centric design principles, wireframing, and
+              prototyping. Strong focus on creating intuitive and visually appealing interfaces that
+              enhance the user experience.
+            </li>
+          </ul>
         </div>
         <div class="line vert"></div>
         <div class="center">
           <div>Ice Breakers</div>
           <br />
-          <div>I enjoy traveling, electronic/latin music, and philosophy</div>
+          <ul>
+            <li>
+              Traveling: Over the past few years I've had the opportunity to visit 10 countries on 5
+              different continents.
+            </li>
+            <li>
+              Self Improvement: Whether it's challenging my physical fitness, trying a new diet,
+              adopting a new mindset, or learning something new, I always find myself trying to
+              better the person I am to see how far I can go.
+            </li>
+            <li>
+              Gaming: I don't find much time for video games nowadays but when I do I find myself
+              gravitating to games like Zelda, Age of Empires, Stardew, and Diablo.
+            </li>
+          </ul>
         </div>
         <div class="line vert"></div>
         <div class="right">
@@ -125,9 +152,23 @@
         <div class="scrolling-text">SAY HI - LET'S TALK - LET'S COLLABORATE</div>
         <div class="line even"></div>
         <div class="socials">
-          <div class="left">github</div>
+          <div class="left">
+            <a
+              style="color: inherit"
+              href="https://github.com/JorgeMarioFernandez91"
+              target="_blank"
+              >GitHub</a
+            >
+          </div>
           <div class="center">jmferna91@gmail.com</div>
-          <div class="right">linkedIn</div>
+          <div class="right">
+            <a
+              style="color: inherit"
+              href="https://www.linkedin.com/in/jorge-mario-fernandez-67578b106/"
+              target="_blank"
+              >LinkedIn</a
+            >
+          </div>
         </div>
         <div class="line odd"></div>
       </div>

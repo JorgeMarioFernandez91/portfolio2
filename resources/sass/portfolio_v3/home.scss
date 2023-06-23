@@ -362,7 +362,7 @@
 
             &.even,
             &.odd {
-                animation-duration: 16s;
+                animation-duration: 22s;
                 animation-timing-function: linear;
                 animation-fill-mode: forwards;
                 animation-iteration-count: infinite;
@@ -529,11 +529,17 @@
             align-items: center;
             height: 90vh;
 
+            .left, .center {
+                ul {
+                    font-size: 18px;
+                }
+            }
+
             .left,
             .center,
             .right {
                 width: 33%;
-                height: 40%;
+                height: 80%;
                 padding: 20px;
                 font-size: 24px;
                 opacity: 0;
@@ -722,6 +728,10 @@
         .socials {
             justify-content: space-evenly;
             animation: fade-in-content 1s ease-in-out 4s forwards;
+            a {
+                text-decoration: none;
+                color: inherit;
+            }
         }
 
         @keyframes fade-in-content {
