@@ -358,6 +358,7 @@ export default {
 
   .checkout-container {
     width: 35%;
+    max-width: 460px;
     .checkout-header {
       font-size: 32px;
       margin: 10px 0;
