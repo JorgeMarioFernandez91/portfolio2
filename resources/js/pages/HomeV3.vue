@@ -214,7 +214,7 @@ export default {
       if (!this.homeLoaded) {
         setTimeout(() => {
           this.homeLoaded = true;
-        }, 1500);
+        }, 3000);
       } else {
         const screenHeight = parseInt(document.body.scrollHeight);
         var projects = document.getElementById("projects");
@@ -483,10 +483,10 @@ export default {
       var contact = document.getElementById("contact");
       contact.classList.remove("animate-contact");
       contact.classList.add("contact-fade-out");
+      this.homeLoaded = false;
 
       setTimeout(() => {
         this.contactLoaded = false;
-        this.homeLoaded = false;
 
         contact.style.opacity = "";
         contact.style.height = "";
