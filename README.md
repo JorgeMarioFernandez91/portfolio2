@@ -1,4 +1,4 @@
-## ======= To install and use laravel 8 with Vue ===========
+## To install and use laravel 8 with Vue 
 
 composer create-project laravel/laravel example-app
 
@@ -34,7 +34,7 @@ npm run watch
 
 npm install vue bootstrap bootstrap-vue
 
-### when uploading to hostinger
+## Uploading to Hostinger
 
 make sure to `run npm prod`
 
