@@ -41,3 +41,7 @@ make sure to `run npm prod`
 upload new files to respective directories
 
 and the new files created from running previous comman, `app.js` and `app.css`, to put them in `public_html/js` or `public_html/css` 
+
+## Uploading an entire new project
+
+`npm run prod`, zip contents of new project, and change `index.php` file in `public_html` to point to new folder
